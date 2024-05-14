@@ -9,3 +9,11 @@
         </div>
     </nav>
 </template>
+
+<style>
+    .nav-logo {
+        height: 50px;
+        width: 50px;
+    }
+
+</style>
