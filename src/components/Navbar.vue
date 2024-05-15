@@ -4,8 +4,16 @@
             <img src="@/assets/images/logo.jpg" class="nav-logo" alt="Logo for Web Design Project Website">
         </div>
         
-        <div class="left-nav-bar-container">
-            <i class="right-nav-second-button">Chi siamo</i>
+        <div class="right-nav-bar-container">
+            
+            <router-link to="./../Home" class="right-nav-first-button">
+                Home
+            </router-link>
+
+            <router-link to="./../ChiSiamo" class="right-nav-second-button">
+                Chi siamo
+            </router-link>
+
         </div>
     </nav>
 </template>
@@ -31,5 +39,24 @@
         padding-right: 10px;
         background: linear-gradient();
     }
+
+    .right-nav-bar-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .right-nav-first-button {
+        color: white;
+        padding-right: 10px;
+        background: linear-gradient();
+    }
+
+    .right-nav-second-button {
+        color: white;
+        padding-right: 10px;
+        background: linear-gradient();
+    }
+
+
 
 </style>

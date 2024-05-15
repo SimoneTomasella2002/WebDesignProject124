@@ -1,12 +1,7 @@
-<script setup>
-    import NavBar from './components/Navbar.vue';
-    import Footer from './components/Footer.vue';
-</script>
-
 <template>
-    <NavBar />
+
     <main>  
-        <h1>Hello world</h1>
+        <h1>Chi siamo</h1>
 
         <div class="first-paragraph">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi odio sed accusantium facere, minus natus laboriosam quas quia illo nesciunt aliquam corporis. Ex nisi quas itaque, beatae molestias ratione praesentium.</p>
@@ -19,10 +14,11 @@
         </div>
         
     </main>
-    <Footer />
+
 </template>
 
 <style>
+
     main {
         display: flex;
         flex-direction: column;
@@ -40,4 +36,5 @@
     div.second-paragraph {
         width: 75%;
     }
+
 </style>
