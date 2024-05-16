@@ -5,12 +5,8 @@
         </div>
         
         <div class="right-nav-bar-container">
-            
-            <router-link to="./../Home" class="right-nav-first-button">
-                Home
-            </router-link>
 
-            <router-link to="./../ChiSiamo" class="right-nav-second-button">
+            <router-link :to="'@/views/ChiSiamo'" class="right-nav-second-button">
                 Chi siamo
             </router-link>
 
