@@ -1,7 +1,6 @@
 <template>
-
     <main>  
-        <h1>Chi siamo</h1>
+        <h1>Hello world</h1>
 
         <div class="first-paragraph">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi odio sed accusantium facere, minus natus laboriosam quas quia illo nesciunt aliquam corporis. Ex nisi quas itaque, beatae molestias ratione praesentium.</p>
@@ -12,17 +11,10 @@
         <div class="second-paragraph">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi odio sed accusantium facere, minus natus laboriosam quas quia illo nesciunt aliquam corporis. Ex nisi quas itaque, beatae molestias ratione praesentium.</p>
         </div>
-
-        <div class="third-paragraph">
-            <p>Boh spero che funzioni</p>
-        </div>
-        
     </main>
-
 </template>
 
 <style>
-
     main {
         display: flex;
         flex-direction: column;
@@ -40,5 +32,4 @@
     div.second-paragraph {
         width: 75%;
     }
-
 </style>
