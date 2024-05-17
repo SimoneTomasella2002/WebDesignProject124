@@ -6,17 +6,15 @@
     <div class="app-container">
         <nav class="nav-container">
             <div class="right-nav-bar-container">
-                <RouterLink to='/'>
+                <RouterLink to='/' class="a-container">
                     <img src="@/assets/images/logo.jpg" class="nav-logo" alt="Logo for Web Design Project Website">
                 </RouterLink>
             </div>
             
             <div class="right-nav-bar-container">
-
                 <RouterLink to='/views/ChiSiamo.vue' class="right-nav-first-button">
                     Chi Siamo
                 </RouterLink>
-
             </div>
         </nav>
 
@@ -24,17 +22,21 @@
             <RouterView />
         </main>
 
-        <Footer></Footer>
+        <Footer />
     </div>
 </template>
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+    
     .app-container {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
-        font-family: "Gameboy Style Font";
-        src: url(./assets/fonts/EarlyGameBoy.ttf);
+        font-family: "Pixelify Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
     }
 
     .nav-container {
@@ -45,21 +47,49 @@
         height: max-content;
     }
     
-    .nav-logo {
+    .a-container, .nav-logo {
         height: 50px;
         width: 50px;
-        padding: 5px;
         border-radius: 100%;
+    }
+
+    .a-container:hover {
+        filter:brightness(125%);
+    }
+
+    .a-container {
+        margin: 5px;
     }
 
     .right-nav-bar-container {
         display: flex;
         align-items: center;
+        text-align: center;
     }
 
-    .right-nav-first-button, .right-nav-second-button {
+    .right-nav-first-button {
+        background: linear-gradient(0deg, #34b7c4, #51a6ce, #6295d6, #6f83de, #796fe6);
         color: white;
         margin-right: 10px;
+        padding: 5px;
+        border-radius: 8px;
+        border-style: solid;
+        border-color: black;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .right-nav-first-button:hover {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 3px 10px 0 rgba(0, 0, 0, 0.39);
+    
+        animation-name: nav-button-hover;
+        animation-duration: 0.2s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards
+    }
+
+    @keyframes nav-button-hover {
+        0% {background: linear-gradient(0deg, #34b7c4, #51a6ce, #6295d6, #6f83de, #796fe6);}
+        100% {background: #796fe6;}
     }
 
     main {
@@ -70,7 +100,6 @@
         background: linear-gradient(#34b7c4, #51a6ce, #6295d6, #6f83de, #796fe6)
     }
 </style>
-
 
 
 

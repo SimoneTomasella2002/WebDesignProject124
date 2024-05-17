@@ -6,6 +6,9 @@
                 <p>Telefono: 1234567890</p>
                 <p>Email: place@holder.com</p>
             </div>
+            <div class="footer-center">
+                <h3>Credits for used assets (WIP)</h3>
+            </div>
             <div class="footer-right">
                 <h3>Orari</h3>
                 <p>Lun - Ven: 9:00 - 18:00</p>

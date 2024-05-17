@@ -28,5 +28,4 @@
     div.second-paragraph {
         width: 75%;
     }
-
 </style>
