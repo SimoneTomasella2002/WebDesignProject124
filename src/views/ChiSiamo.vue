@@ -1,34 +1,22 @@
-<template>
+<template> 
+    <h1>Chi siamo</h1>
 
-    <main>  
-        <h1>Chi siamo</h1>
+    <div class="first-paragraph">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi odio sed accusantium facere, minus natus laboriosam quas quia illo nesciunt aliquam corporis. Ex nisi quas itaque, beatae molestias ratione praesentium.</p>
+    </div>
 
-        <div class="first-paragraph">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi odio sed accusantium facere, minus natus laboriosam quas quia illo nesciunt aliquam corporis. Ex nisi quas itaque, beatae molestias ratione praesentium.</p>
-        </div>
+    <div class="blank-space"></div>
 
-        <div class="blank-space"></div>
+    <div class="second-paragraph">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi odio sed accusantium facere, minus natus laboriosam quas quia illo nesciunt aliquam corporis. Ex nisi quas itaque, beatae molestias ratione praesentium.</p>
+    </div>
 
-        <div class="second-paragraph">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi odio sed accusantium facere, minus natus laboriosam quas quia illo nesciunt aliquam corporis. Ex nisi quas itaque, beatae molestias ratione praesentium.</p>
-        </div>
-
-        <div class="third-paragraph">
-            <p>Boh spero che funzioni</p>
-        </div>
-        
-    </main>
-
+    <div class="third-paragraph">
+        <p>Boh spero che funzioni</p>
+    </div>
 </template>
 
-<style>
-
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
+<style scoped>
     div.first-paragraph {
         width: 50%;
     }

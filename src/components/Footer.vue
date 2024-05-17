@@ -15,11 +15,11 @@
     </footer>
 </template>
 
-<style>
+<style scoped>
     footer {
         margin-top: auto;
         flex-direction: column;
-        background: black;
+        background: #796fe6;
         color: white;
         padding: 20px;
     }
