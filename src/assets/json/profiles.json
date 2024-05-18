@@ -1,0 +1,12 @@
+{
+    "profiles": [
+        {
+            "firstName":"Simone", "lastName":"Tomasella",
+            "photoLocation":"", "description":"Sono bellissimo"
+        },
+        {
+            "firstName":"Thomas", "lastName":"Ghione",
+            "photoLocation":"", "description":"Boh"
+        }
+    ]
+}
