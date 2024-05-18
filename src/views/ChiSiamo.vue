@@ -7,6 +7,7 @@
 
     <div class="pictures-container">
         <pictureContainer ProfileName="Simone"/>
+        <pictureContainer ProfileName="Thomas"/>
     </div>
 
 </template>
