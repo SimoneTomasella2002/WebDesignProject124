@@ -1,6 +1,6 @@
 <script setup>
     import profileData from "@/assets/json/profiles.json";
-    import { onMounted, ref } from "vue";
+    import { watch, ref } from "vue";
 
     const props = defineProps(["ProfileName"]);
 
@@ -17,9 +17,11 @@
         }
     }
 
-    onMounted(() => {
-        loadProfile(props.ProfileName);
-    });
+    loadProfile(props.ProfileName);
+
+    watch(() => props.ProfileName, (newProfileName) => {
+        loadProfile(newProfileName);
+    })
 
     console.log(props.ProfileName);
 </script>
