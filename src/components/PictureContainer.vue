@@ -29,6 +29,8 @@
 <template>
     <div class="picture-container">
         <h1>{{ profile.firstName }} {{ profile.lastName }}</h1>
+        <img>
+        <p>{{ profile.description }}</p>
     </div>
 </template>
 
@@ -36,6 +38,8 @@
     .picture-container {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        
         height: fit-content;
         width: fit-content;
         background-color: white;

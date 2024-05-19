@@ -26,16 +26,4 @@
         flex-wrap: wrap;
         align-items: stretch;
     }
-
-    div.first-paragraph {
-        width: 50%;
-    }
-
-    div.blank-space {
-        height: 50px;
-    }
-
-    div.second-paragraph {
-        width: 75%;
-    }
 </style>
