@@ -15,9 +15,9 @@
                 <h3>Credits for used assets (WIP)</h3>
             </div>
             <div class="footer-right">
-                <h3>Orari</h3>
-                <p>Lun - Ven: 9:00 - 18:00</p>
-                <p>Sab: 9:00 - 13:00</p>
+                <h3>La nostra squadra:</h3>
+                <p>Devs: Simone Tomasella, Thomas Ghione, Loris Prataiolo, Kevin Barragan</p>
+                <p>Designers: Giulia Salaris, Gabriel Oddone, Francesca Vernasca, Lorenzo Sacco</p>
             </div>
         </div>
     </footer>
