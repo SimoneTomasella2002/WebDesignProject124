@@ -104,7 +104,7 @@
         cursor: pointer;
     }
 
-    .right-nav-about-button:active, .right-nav-choose-language-button:active {
+    .right-nav-about-button:active, .right-nav-choose-language-button:active, .nav-logo:active {
         filter:brightness( 75% );
     }
 
