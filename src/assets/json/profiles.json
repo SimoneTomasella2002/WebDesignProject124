@@ -1,36 +1,48 @@
 {
     "profiles": [
         {
-            "firstName":"Simone", "lastName":"Tomasella",
-            "photoLocation":"", "description":"Sono bellissimo"
+            "firstName":"Simone",
+            "lastName":"Tomasella",
+            "photoLocation":"",
+            "description":"Sono bellissimo"
         },
         {
-            "firstName":"Thomas", "lastName":"Ghione",
-            "photoLocation":"", "description":"Boh"
+            "firstName":"Thomas",
+            "lastName":"Ghione",
+            "photoLocation":"",
+            "description":"Thomas Ghione, studente del terzo anno di Informatica all'Università di Genova, è un appassionato di programmazione low level e ha lavorato su progetti molto interessanti. Tra questi, la ricreazione delle librerie standard del C in x86 e C, la creazione di un linguaggio di programmazione in Java e la ricreazione degli scacchi su terminale in C++. Ha esperienza in gare di matematica, avendo partecipato alle competizioni della Bocconi e ottenendo il terzo posto nello stage nazionale di Bardonecchia organizzato da UniTO. Inoltre, ha preso parte alla Cyberchallenge, dimostrando il suo profondo interesse per la sicurezza informatica."
         },
         {
-            "firstName":"Loris", "lastName":"Prataiolo",
-            "photoLocation":"", "description":"Palle"
+            "firstName":"Loris",
+            "lastName":"",
+            "photoLocation":"",
+            "description":"Palle"
         },
         {
-            "firstName":"Kevin", "lastName":"Barragan",
-            "photoLocation":"", "description":"Bellissime"
+            "firstName":"Kevin",
+            "lastName":"Barragan",
+            "photoLocation":"",
+            "description":"Bellissime"
         },
         {
-            "firstName":"Giulia", "lastName":"Salaris",
-            "photoLocation":"", "description":"Incredibili"
+            "firstName":"Giulia",
+            "lastName":"Salaris",
+            "photoLocation":"",
+            "description":"Incredibili"
         },
         {
-            "firstName":"Francesca", "lastName":"Vernazza",
+            "firstName":"Francesca", "lastName":"",
             "photoLocation":"", "description":"Godo"
         },
         {
-            "firstName":"Gabriel", "lastName":"",
-            "photoLocation":"", "description":"Chad"
+            "firstName":"Gabriel",
+            "lastName":"",
+            "photoLocation":"",
+            "description":"Chad"
         },
         {
             "firstName":"Lorenzo", "lastName":"Sacco",
-            "photoLocation":"", "description":"Laureato in Design e Comunicazione Visiva al Politecnico di Torino, ha realizzato progetti di branding e visual content design. Nel 2019 ha ideato per l'associazione Alumni del Politecnico uno dei merchandising del Castello del Valentino. Nel 2023 ha esposto alla Genova BeDesign Week con il progetto “Ensō”. Attualmente frequenta il corso di Laurea Magistrale in Design Prodotto Evento all'Università di Genova."
+            "photoLocation":"", "description":"Mio fratello"
         }
     ]
 }
