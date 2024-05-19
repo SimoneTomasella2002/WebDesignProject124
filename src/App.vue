@@ -10,7 +10,19 @@
                     <img src="@/assets/images/logo.jpg" class="nav-logo" alt="Logo for Web Design Project Website">
                 </RouterLink>
             </div>
-            
+
+            <div class="center-nav-bar-container">
+                <div class="nationality-selector">
+                    <p>Nationality selector 1</p>
+                </div>
+
+                <h1 id="logotype"> logotype</h1>
+
+                <div class="nationality-selector">
+                    <p>Nationality selector 2</p>
+                </div>
+            </div>
+
             <div class="right-nav-bar-container">
                 <RouterLink to='/views/ChiSiamo.vue' class="right-nav-about-button">
                     About
@@ -48,6 +60,11 @@
         justify-content: space-between;
         background: #34b7c4;
         height: max-content;
+        margin-top: 0;
+    }
+
+    .nav-container .center-nav-bar-container {
+        justify-content: center;
     }
     
     .a-container, .nav-logo {
@@ -111,6 +128,31 @@
     @keyframes nav-button-hover {
         0% {background: linear-gradient(0deg, #34b7c4, #51a6ce, #6295d6, #6f83de, #796fe6);}
         100% {background: #796fe6;}
+    }
+
+
+    .center-nav-bar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%;
+        padding: 0 20px; 
+        box-sizing: border-box;
+        margin-left: 100px;
+
+    }
+
+    
+    .nationality-selector {
+        flex: 1;
+        text-align: center; 
+    }
+
+    #logotype {
+        flex: 1;
+
+        text-align: center;
+        font-size: 40px; 
     }
 
     main {
