@@ -7,6 +7,30 @@
         {
             "firstName":"Thomas", "lastName":"Ghione",
             "photoLocation":"", "description":"Boh"
+        },
+        {
+            "firstName":"Loris", "lastName":"",
+            "photoLocation":"", "description":"Palle"
+        },
+        {
+            "firstName":"Kevin", "lastName":"Barragan",
+            "photoLocation":"", "description":"Bellissime"
+        },
+        {
+            "firstName":"Giulia", "lastName":"Salaris",
+            "photoLocation":"", "description":"Incredibili"
+        },
+        {
+            "firstName":"Francesca", "lastName":"",
+            "photoLocation":"", "description":"Godo"
+        },
+        {
+            "firstName":"Gabriel", "lastName":"",
+            "photoLocation":"", "description":"Chad"
+        },
+        {
+            "firstName":"Lorenzo", "lastName":"Sacco",
+            "photoLocation":"", "description":"Mio fratello"
         }
     ]
 }
