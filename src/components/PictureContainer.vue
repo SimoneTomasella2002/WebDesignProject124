@@ -39,9 +39,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
-        height: fit-content;
-        width: fit-content;
         background-color: white;
     }
 </style>

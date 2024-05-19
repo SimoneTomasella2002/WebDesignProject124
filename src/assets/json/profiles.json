@@ -14,7 +14,7 @@
         },
         {
             "firstName":"Loris",
-            "lastName":"",
+            "lastName":"Prataiolo",
             "photoLocation":"",
             "description":"Palle"
         },
@@ -28,21 +28,25 @@
             "firstName":"Giulia",
             "lastName":"Salaris",
             "photoLocation":"",
-            "description":"Incredibili"
+            "description":"Nata a Genova e residente ad Arenzano. Dopo il diploma di Liceo Artistico (sezione architettura), si iscrive all'università di Genova dove consegue la laurea in Design del Prodotto e della Comunicazione con la tesi “Accessibilità web: un redesign del sito di Uici Liguria”. Dopo un periodo da tirocinante nello studio dell'architetto Droghi, decide di proseguire gli studi per ottenere la laurea magistrale Design Prodotto Evento."
         },
         {
-            "firstName":"Francesca", "lastName":"",
-            "photoLocation":"", "description":"Godo"
+            "firstName":"Francesca",
+            "lastName":"Vernasca",
+            "photoLocation":"",
+            "description":"Godo"
         },
         {
             "firstName":"Gabriel",
-            "lastName":"",
+            "lastName":"Oddone",
             "photoLocation":"",
             "description":"Chad"
         },
         {
-            "firstName":"Lorenzo", "lastName":"Sacco",
-            "photoLocation":"", "description":"Mio fratello"
+            "firstName":"Lorenzo", 
+            "lastName":"Sacco",
+            "photoLocation":"", 
+            "description":"Mio fratello"
         }
     ]
 }

@@ -5,16 +5,19 @@
 <template>
     <div class="app-container">
         <nav class="nav-container">
-            <div class="right-nav-bar-container">
+            <div class="left-nav-bar-container">
                 <RouterLink to='/' class="a-container">
                     <img src="@/assets/images/logo.jpg" class="nav-logo" alt="Logo for Web Design Project Website">
                 </RouterLink>
             </div>
             
             <div class="right-nav-bar-container">
-                <RouterLink to='/views/ChiSiamo.vue' class="right-nav-first-button">
-                    Chi Siamo
+                <RouterLink to='/views/ChiSiamo.vue' class="right-nav-about-button">
+                    About
                 </RouterLink>
+                <button @click="chooseLanguage" class="right-nav-choose-language-button">
+                    Language
+                </button>
             </div>
         </nav>
 
@@ -61,13 +64,13 @@
         margin: 5px;
     }
 
-    .right-nav-bar-container {
+    .left-nav-bar-container, .right-nav-bar-container {
         display: flex;
         align-items: center;
         text-align: center;
     }
 
-    .right-nav-first-button {
+    .right-nav-about-button, .right-nav-choose-language-button {
         background: linear-gradient(0deg, #34b7c4, #51a6ce, #6295d6, #6f83de, #796fe6);
         color: white;
         margin-right: 10px;
@@ -78,13 +81,31 @@
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
     }
 
-    .right-nav-first-button:hover {
+    .right-nav-choose-language-button {
+        padding: 6.5px;
+        border-width: 3px;
+
+        font-family: "Pixelify Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .right-nav-about-button:hover, .right-nav-choose-language-button:hover {
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 3px 10px 0 rgba(0, 0, 0, 0.39);
     
         animation-name: nav-button-hover;
         animation-duration: 0.2s;
         animation-timing-function: linear;
         animation-fill-mode: forwards
+    }
+
+    .right-nav-choose-language-button:hover {
+        cursor: pointer;
+    }
+
+    .right-nav-about-button:active, .right-nav-choose-language-button:active {
+        filter:brightness( 75% );
     }
 
     @keyframes nav-button-hover {
