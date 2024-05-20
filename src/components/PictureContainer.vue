@@ -29,7 +29,7 @@
 <template>
     <div class="picture-container">
         <h1 class="picture-container-firstname-and-lastname">{{ profile.firstName }} {{ profile.lastName }}</h1>
-        <img :src="`./src/assets/images/personal-pictures/${profile.photoLocation}`" class="picture-container-image" :alt="`An image of ${profile.firstName}`">
+        <img :src="`/assets/images/personal-pictures/${profile.photoLocation}`" class="picture-container-image" :alt="`An image of ${profile.firstName}`">
         <div class="picture-container-description-container">
             <p class="picture-container-description">{{ profile.description }}</p>
         </div>
