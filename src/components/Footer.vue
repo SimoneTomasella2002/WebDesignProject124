@@ -12,12 +12,26 @@
                 </div>
             </div>
             <div class="footer-center">
-                <h3>Credits for used assets (WIP)</h3>
+                <h3 class="footer-center-h3">Credits for used assets (WIP)</h3>
             </div>
             <div class="footer-right">
-                <h3>La nostra squadra:</h3>
-                <p>Devs: Simone Tomasella, Thomas Ghione, Loris Prataiolo, Kevin Barragan</p>
-                <p>Designers: Giulia Salaris, Gabriel Oddone, Francesca Vernasca, Lorenzo Sacco</p>
+                <h3 class="footer-right-h3">La nostra squadra:</h3>
+                <div class="team">
+                    <ul class="list-team">
+                        <h4 class="list-name">Devs:</h4>
+                        <li>Simone Tomasella</li>
+                        <li>Thomas Ghione</li>
+                        <li>Loris Prataiolo</li>
+                        <li>Kevin Barragan</li>
+                    </ul>
+                    <ul class="list-team">
+                        <h4 class="list-name">Designers:</h4>
+                        <li>Giulia Salaris</li>
+                        <li>Gabriel Oddone</li>
+                        <li>Francesca Vernasca</li>
+                        <li>Lorenzo Sacco</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
@@ -29,7 +43,10 @@
         flex-direction: column;
         background: #796fe6;
         color: white;
-        padding: 20px;
+        padding-top: 48px;
+        padding-bottom: 12px;
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
     .footer-container {
@@ -55,6 +72,11 @@
         align-items: center;
     }
 
+    .footer-center-h3, .footer-right-h3 {
+        margin-top: 16px;
+        margin-bottom: 0px;
+    }
+
     .github-logo {
         height: 25px;
         width: 25px;
@@ -65,10 +87,26 @@
     .footer-general, .footer-right {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
-    h3 {
-        margin-bottom: 5px;
+    .footer-right {
+        margin-top: 0px;
+    }
+
+    .list-team {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    .team {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .list-name {
+        margin-top: 4px;
+        margin-bottom: 4px;
     }
 
     p {
