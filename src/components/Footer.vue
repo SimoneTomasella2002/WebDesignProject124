@@ -38,6 +38,7 @@
 </template>
 
 <style scoped>
+
     footer {
         margin-top: auto;
         flex-direction: column;
@@ -72,11 +73,6 @@
         align-items: center;
     }
 
-    .footer-center-h3, .footer-right-h3 {
-        margin-top: 16px;
-        margin-bottom: 0px;
-    }
-
     .github-logo {
         height: 25px;
         width: 25px;
@@ -92,6 +88,11 @@
 
     .footer-right {
         margin-top: 0px;
+    }
+
+    .footer-center-h3, .footer-right-h3 {
+        margin-top: 16px;
+        margin-bottom: 0px;
     }
 
     .list-team {
@@ -112,4 +113,5 @@
     p {
         margin: 0;
     }
+    
 </style>
