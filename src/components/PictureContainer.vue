@@ -29,7 +29,6 @@
 <template>
     <div class="picture-container">
         <h1 class="picture-container-firstname-and-lastname">{{ profile.firstName }} {{ profile.lastName }}</h1>
-        <img src="@/assets/images/la-guida-del-gattino1.jpg" class="picture-container-image">
         <img :src="`/src/assets/images/personal-pictures/${profile.photoLocation}`" class="picture-container-image" :alt="`An image of ${profile.firstName}`">
         <div class="picture-container-description-container">
             <p class="picture-container-description">{{ profile.description }}</p>
