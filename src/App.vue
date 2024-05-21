@@ -18,6 +18,3 @@
 <style>
     @import "./assets/style/app.css";
 </style>
-
-
-
