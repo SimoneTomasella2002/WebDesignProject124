@@ -45,7 +45,7 @@
     footer {
         margin-top: auto;
         flex-direction: column;
-        background: #796fe6;
+        background: black;
         color: white;
         padding-top: 48px;
         padding-bottom: 12px;
