@@ -1,20 +1,19 @@
-<script setup>
-    import Footer from './components/Footer.vue';
-    import NavBar from './components/NavBar.vue';
-</script>
-
 <template>
-    <div class="app-container">
-        <NavBar />
-
-        <main>
-            <RouterView />
-        </main>
-
-        <Footer />
-    </div>
-</template>
-
-<style>
-    @import "./assets/style/app.css";
-</style>
+    <v-app>
+      <NavBar />
+      <v-main>
+        <router-view />
+      </v-main>
+      <Footer />
+    </v-app>
+  </template>
+  
+  <script setup>
+  import Footer from './components/Footer.vue'
+  import NavBar from './components/NavBar.vue'
+  </script>
+  
+  <style>
+  @import "./assets/style/app.css";
+  </style>
+  
