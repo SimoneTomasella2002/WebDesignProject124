@@ -108,6 +108,11 @@
         flex-direction: row;
     }
 
+    .list-team {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
     .list-name {
         margin-top: 4px;
         margin-bottom: 4px;
