@@ -34,10 +34,15 @@
         <div class="picture-container-description-container">
             <p class="picture-container-description">{{ profile.description }}</p>
         </div>
+        <div class="profile-links">
+            <a :href="profile.linkedin">LinkedIn</a>
+            <a :href="profile.github">GitHub</a>
+        </div>
     </div>
 </template>
 
 <style scoped>
+
     .picture-container {
         text-align: center;
 
@@ -81,6 +86,13 @@
     .picture-container-description {
         padding-inline-start: 10px;
         padding-inline-end: 10px;
+    }
+    
+    .profile-links {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin: 8px;
     }
 
 </style>
