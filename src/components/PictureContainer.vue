@@ -25,12 +25,12 @@
 </script>
 
 <template>
-    <div class="picture-container">
-        <h1 class="picture-container-firstname-and-lastname">{{ profile.firstName }} {{ profile.lastName }}</h1>
+    <div class="pic-container">
+        <h1 class="pic-container-firstname-and-lastname">{{ profile.firstName }} {{ profile.lastName }}</h1>
         <!-- Doesn't work in local server, but it works in deployment server -->
-        <img :src="`/personal-images/${profile.photoLocation}`" class="picture-container-image" :alt="`An image of ${profile.firstName}`">
-        <div class="picture-container-description-container">
-            <p class="picture-container-description">{{ profile.description }}</p>
+        <img :src="`/personal-images/${profile.photoLocation}`" class="pic-container-image" :alt="`An image of ${profile.firstName}`">
+        <div class="pic-container-desc-container">
+            <p class="pic-container-desc">{{ profile.description }}</p>
         </div>
         <div class="profile-links">
             <button class="profile-linkedin">
@@ -54,7 +54,7 @@
         background-color: lightgray;
     }
 
-    .picture-container {
+    .pic-container {
         text-align: center;
 
         border-color: black;
@@ -67,34 +67,35 @@
 
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: center; /* doesn't align anything after the image because descs have different lengths */
         align-items: center;
         background-color: white;
     }
 
-    .picture-container-firstname-and-lastname {
+    .pic-container-firstname-and-lastname {
         padding-bottom: 15px;
         width: 100%;
         border-bottom: solid gray 2px;
     }
 
-    .picture-container-image {
+    .pic-container-image {
         height: 250px;
         width: 250px;
         border-radius: 20px;
+        
+        margin-top: 16px;
+        margin-bottom: 16px;
 
         border-style: solid;
         border-width: 1px;
     }
 
-    .picture-container-description-container {
-        margin-top: 15px;
-
+    .pic-container-desc-container {
         width: 100%;
         border-top: solid gray 2px;
     }
 
-    .picture-container-description {
+    .pic-container-desc {
         padding-inline-start: 10px;
         padding-inline-end: 10px;
     }
