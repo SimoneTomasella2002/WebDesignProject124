@@ -10,19 +10,19 @@
             "firstName":"Thomas",
             "lastName":"Ghione",
             "photoLocation":"",
-            "description":"Thomas Ghione, studente del terzo anno di Informatica all'Università di Genova, è un appassionato di programmazione low level e ha lavorato su progetti molto interessanti. Tra questi, la ricreazione delle librerie standard del C in x86 e C, la creazione di un linguaggio di programmazione in Java e la ricreazione degli scacchi su terminale in C++. Ha esperienza in gare di matematica, avendo partecipato alle competizioni della Bocconi e ottenendo il terzo posto nello stage nazionale di Bardonecchia organizzato da UniTO. Inoltre, ha preso parte alla Cyberchallenge, dimostrando il suo profondo interesse per la sicurezza informatica."
+            "description":"Studente del terzo anno di Informatica all'Università di Genova, è un appassionato di programmazione low level e ha lavorato su progetti molto interessanti. Tra questi, la ricreazione delle librerie standard del C in x86 e C, la creazione di un linguaggio di programmazione in Java e la ricreazione degli scacchi su terminale in C++. Ha esperienza in gare di matematica, avendo partecipato alle competizioni della Bocconi e ottenendo il terzo posto nello stage nazionale di Bardonecchia organizzato da UniTO. Inoltre, ha preso parte alla Cyberchallenge, dimostrando il suo profondo interesse per la sicurezza informatica."
         },
         {
             "firstName":"Loris",
             "lastName":"Prataiolo",
-            "photoLocation":"",
-            "description":"Palle"
+            "photoLocation":"Loris.jpeg",
+            "description":"Nasco come bartender, mi sono diplomato all'Istituto Alberghiero di Stresa. Dopo un anno di lavoro a Firenze, ho deciso di intraprendere una nuova carriera iscrivendomi al corso di laurea in Informatica a Genova. Attualmente, continuo a lavorare mentre studio, accumulando esperienza pratica nel settore. Nel corso del mio percorso accademico, ho già realizzato diversi progetti, che spaziano dallo sviluppo di protocolli di comunicazione client-server al modello probabilistico Monte Carlo. Il mio obiettivo è specializzarmi ulteriormente nel campo della bioinformatica."
         },
         {
             "firstName":"Kevin",
             "lastName":"Barragan",
             "photoLocation":"",
-            "description":"Bellissime"
+            "description":"Sono uno studente al terzo anno di Computer Science e, come impiego part-time, offro ripetizioni di materie scientifiche a studenti delle scuole. Ho competenze in vari linguaggi di programmazione, tra cui C, C++, C#, Java e Python. La mia passione per la programmazione è iniziata alle superiori, quando ho scritto il mio primo 'Hello World' e sviluppato giochi come Tic Tac Toe e Snake in C++. Nutro una forte passione per la musica e suono il pianoforte e la chitarra."
         },
         {
             "firstName":"Giulia",
@@ -34,7 +34,7 @@
             "firstName":"Francesca",
             "lastName":"Vernasca",
             "photoLocation":"",
-            "description":"Godo"
+            "description":"Nata a Genova vive a Varazze, è una creativa con un diploma in Grafica e Comunicazione dal Mazzini Da Vinci di Savona. Ha collaborato con il FAI Giovani Savona, il Nuovofilmstudio e altri enti pubblici e privati. Nel tempo libero, si dedica al CrossFit. Se fosse un cibo, sarebbe la pasta al pesto; se fosse un album musicale, 'Bar Mediterraneo' dei Nu Genea. Francesca è un mix di creatività, buon gusto e amore per le cose belle della vita!"
         },
         {
             "firstName":"Gabriel",
