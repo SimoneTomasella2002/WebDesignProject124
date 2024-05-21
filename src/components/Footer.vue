@@ -10,9 +10,12 @@
                     <img src="@/assets/images/github-logo.png" class="github-logo" alt="The github logo">
                     <a href="https://github.com/SimoneTomasella2002/WebDesignProject124">Take a look at our code</a>
                 </div>
+                <p>Where to contact us: placeholder@gmail.com</p>
+                <p>PLACEHOLDER Terms of service</p>
             </div>
             <div class="footer-center">
                 <h3 class="footer-center-h3">Credits for used assets (WIP)</h3>
+                <p>placeholder for a future link</p>
             </div>
             <div class="footer-right">
                 <h3 class="footer-right-h3">La nostra squadra:</h3>
