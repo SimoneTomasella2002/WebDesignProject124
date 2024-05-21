@@ -10,11 +10,9 @@
     const loadProfile = (profileName) => {
         profile.value = profiles.find(p => p.firstName.toLowerCase() === profileName.toLowerCase()) || null;
     
-        if (profile.value === null) {
-            console.log("Can't find profile data for " + profileName);
-        } else {
-            console.log("Profile found: ", profile.value)
-        }
+        profile.value === null
+            ? console.log("Can't find profile data for " + profileName)
+            : console.log("Profile found: ", profile.value);
     }
 
     loadProfile(props.ProfileName);
@@ -35,13 +33,26 @@
             <p class="picture-container-description">{{ profile.description }}</p>
         </div>
         <div class="profile-links">
-            <a :href="profile.linkedin">LinkedIn</a>
-            <a :href="profile.github">GitHub</a>
+            <button class="profile-linkedin">
+                <a :href="profile.linkedin">LinkedIn</a>
+            </button>
+            <button class="profile-github">
+                <a :href="profile.github">GitHub</a>
+            </button>
         </div>
     </div>
 </template>
 
 <style scoped>
+
+    .profile-linkedin, .profile-github {
+        border-color: black;
+        border-style: solid;
+        border-width: 3px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        background-color: lightgray;
+    }
 
     .picture-container {
         text-align: center;
