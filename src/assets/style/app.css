@@ -1,15 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
-
     /* Style for app container */
 
     .app-container {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
-        font-family: "Pixelify Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
     }
 
     /* Style for navbar */
