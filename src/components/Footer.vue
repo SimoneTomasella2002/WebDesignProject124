@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <v-footer>
         <div class="footer-container">
             <div class="footer-general-information">
                 <div class="footer-general-information-logo">
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </v-footer>
 </template>
 
 <style scoped>

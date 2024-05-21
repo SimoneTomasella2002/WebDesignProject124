@@ -12,24 +12,24 @@
             </div>
 
             <div class="center-nav-bar-container">
-                <button @click="chooseFirstPassport" class="center-nav-choose-first-passport-button">
+                <v-btn @click="chooseFirstPassport" class="center-nav-choose-first-passport-button">
                     Choose first passport
-                </button>
+                </v-btn>
 
                 <img src="" class="center-nav-logotype" alt="Logotype for Web Design Project">
 
-                <button @click="chooseSecondPassport" class="center-nav-choose-second-passport-button">
+                <v-btn @click="chooseSecondPassport" class="center-nav-choose-second-passport-button">
                     Choose second passport
-                </button>
+                </v-btn>
             </div>
 
             <div class="right-nav-bar-container">
                 <RouterLink to='/views/ChiSiamo.vue' class="right-nav-about-button">
                     About
                 </RouterLink>
-                <button @click="chooseLanguage" class="right-nav-choose-language-button">
+                <v-btn @click="chooseLanguage" class="right-nav-choose-language-button">
                     Language
-                </button>
+                </v-btn>
             </div>
         </nav>
 
