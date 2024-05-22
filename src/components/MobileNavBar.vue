@@ -1,33 +1,66 @@
 <template>
-    <v-app-bar app color="primary" dark>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Mobile Navbar</v-toolbar-title>
-  
-      <v-navigation-drawer v-model="drawer" app>
-        <v-list>
-          <v-list-item @click="drawer = false">
-            <RouterLink to="/">
-              <v-list-item-title>Home</v-list-item-title>
-            </RouterLink>
-          </v-list-item>
-          <v-list-item @click="drawer = false">
-            <RouterLink to="/views/ChiSiamo.vue">
-              <v-list-item-title>About</v-list-item-title>
-            </RouterLink>
-          </v-list-item>
-        </v-list>
-      </v-navigation-drawer>
-    </v-app-bar>
-  </template>
-  
-  <script setup>
-  import { ref } from 'vue'
-  import { RouterLink } from 'vue-router'
-  
-  const drawer = ref(false)
-  </script>
+  <v-app-bar
+    app
+    color="primary"
+    elevate-on-scroll
+  >
+    <v-app-bar-nav-icon @click="drawer = !drawer" />
 
-  <style scoped>
+    <v-toolbar-title>My App</v-toolbar-title>
 
-  </style>
-  
+    <v-spacer />
+
+    <v-btn
+      icon
+      :to="{ name: 'home' }"
+    >
+      <v-icon>mdi-home</v-icon>
+    </v-btn>
+    <v-btn
+      icon
+      :to="{ name: 'whoWeAre' }"
+    >
+      <v-icon>mdi-information</v-icon>
+    </v-btn>
+
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+      temporary
+    >
+      <v-list>
+        <v-list-item
+          v-for="(item, index) in items"
+          :key="index"
+          :to="item.to"
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+  </v-app-bar>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      drawer: false,
+      items: [
+        { title: 'Home', icon: 'mdi-home', to: { name: 'home' } },
+        { title: 'Chi Siamo', icon: 'mdi-information', to: { name: 'whoWeAre' } },
+        { title: 'Terms of Service', icon: 'mdi-gavel', to: { name: 'termsOfService' } },
+      ],
+    }
+  },
+}
+</script>
+
+<style scoped>
+.v-app-bar {
+  z-index: 10; /* Assicurati che la navbar stia sopra altri elementi */
+}
+</style>
