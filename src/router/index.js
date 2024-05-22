@@ -6,8 +6,8 @@ import TermsOfServiceView from '@/views/TermsOfService.vue';
 
 const routes = [
     { path: '/', name: 'home', component: HomeView },
-    { path: '/chi-siamo', name: 'whoWeAre', component: WhoWeAreView },
-    { path: '/terms-of-service', name: 'termsOfService', component: TermsOfServiceView },
+    { path: '/views/ChiSiamo.vue', name: 'whoWeAre', component: WhoWeAreView },
+    { path: '/views/TermsOfService.vue', name: 'termsOfService', component: TermsOfServiceView },
 ]
 
 const router = createRouter({
