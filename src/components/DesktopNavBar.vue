@@ -11,7 +11,7 @@
                 Select first passport
             </button>
 
-            <img src="" class="center-nav-logotype" alt="Logotype for Web Design Project">
+            <img src="@/assets/images/logotype.svg" class="center-nav-logotype" alt="Logotype for Web Design Project">
 
             <button @click="chooseSecondPassport" class="center-nav-choose-second-passport-button">
                 Select second passport
@@ -92,6 +92,7 @@
     }
 
     .center-nav-logotype {
+        width: 200px;
         margin-right: 10px;
     }
 
@@ -159,6 +160,24 @@
 
         100% {
             background: #796fe6;
+        }
+    }
+
+    @media screen and (max-width: 1115px) {
+        .center-nav-choose-first-passport-button,
+        .center-nav-choose-second-passport-button,
+        .right-nav-choose-language-button,
+        .right-nav-about-button {
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (max-width: 1045px) {
+        .center-nav-choose-first-passport-button,
+        .center-nav-choose-second-passport-button,
+        .right-nav-choose-language-button,
+        .right-nav-about-button {
+            font-size: 12px;
         }
     }
 
