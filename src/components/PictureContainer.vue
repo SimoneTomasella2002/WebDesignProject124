@@ -27,7 +27,6 @@
 <template>
     <div class="pic-container">
         <h1 class="pic-container-firstname-and-lastname">{{ profile.firstName }} {{ profile.lastName }}</h1>
-        <!-- Doesn't work in local server, but it works in deployment server -->
         <img :src="`/personal-images/${profile.photoLocation}`" class="pic-container-image" :alt="`An image of ${profile.firstName}`">
         <div class="pic-container-desc-container">
             <p class="pic-container-desc">{{ profile.description }}</p>
@@ -73,6 +72,7 @@
     }
 
     .pic-container-firstname-and-lastname {
+        padding-top: 15px;
         padding-bottom: 15px;
         width: 100%;
         border-bottom: solid gray 2px;
@@ -93,11 +93,14 @@
     .pic-container-desc-container {
         width: 100%;
         border-top: solid gray 2px;
+        border-bottom: solid gray 2px;
     }
 
     .pic-container-desc {
         padding-inline-start: 10px;
         padding-inline-end: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     
     .profile-links {

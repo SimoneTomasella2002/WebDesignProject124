@@ -1,17 +1,15 @@
 <template>
     <nav class="nav-container">
-        <div class="left-nav-bar-container">
-            <RouterLink to='/' class="a-container">
-                <img src="@/assets/images/logo.jpg" class="nav-logo" alt="Logo for Web Design Project Website">
-            </RouterLink>
-        </div>
-
+        <div class="left-nav-blankspace"></div>
+        
         <div class="center-nav-bar-container">
             <button @click="chooseFirstPassport" class="center-nav-choose-first-passport-button">
                 Select first passport
             </button>
 
-            <img src="@/assets/images/logotype.svg" class="center-nav-logotype" alt="Logotype for Web Design Project">
+            <RouterLink to="/" class="center-nav-a-container">
+                <img src="@/assets/images/logotype.svg" class="center-nav-logotype" alt="Logotype for Web Design Project">
+            </RouterLink>
 
             <button @click="chooseSecondPassport" class="center-nav-choose-second-passport-button">
                 Select second passport
@@ -65,42 +63,20 @@
         margin-left: 100px;
     }
 
-
-    /* Contents of left navbar (it's gonna be deleted) */
-
-    .a-container,
-    .nav-logo {
-        height: 50px;
-        width: 50px;
-        border-radius: 100%;
+    /* Contents of left blankspace */
+    .left-nav-blankspace {
+        margin-right: 55px;
     }
-
-    .a-container:hover {
-        filter: brightness(125%);
-    }
-
-    .a-container {
-        margin: 5px;
-    }
-
 
     /* Contents of center navbar*/
 
-    .nationality-selector {
-        flex: 1;
-        text-align: center;
+    .center-nav-a-container:hover {
+        filter:brightness(125%);
     }
 
     .center-nav-logotype {
         width: 200px;
         margin-right: 10px;
-    }
-
-    #logotype {
-        flex: 1;
-
-        text-align: center;
-        font-size: 40px;
     }
 
 
@@ -122,6 +98,7 @@
         margin-right: 10px;
         border-radius: 5px;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+        font-weight: bold;
     }
 
     .right-nav-choose-language-button,
@@ -149,7 +126,7 @@
     .right-nav-choose-language-button:active,
     .center-nav-choose-first-passport-button:active,
     .center-nav-choose-second-passport-button:active,
-    .nav-logo:active {
+    .center-nav-logotype:active {
         filter: brightness(75%);
     }
 
