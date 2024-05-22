@@ -12,4 +12,8 @@
         align-items: center;
         flex: 1;
         background: #f3efd4;
+        border-top: 25px;
+        border-bottom: 10px;
+        border-style: solid;
+        border-color: #f3efd4;
     }

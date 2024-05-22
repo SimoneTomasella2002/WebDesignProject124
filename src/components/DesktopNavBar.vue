@@ -8,13 +8,13 @@
 
         <div class="center-nav-bar-container">
             <button @click="chooseFirstPassport" class="center-nav-choose-first-passport-button">
-                Choose first passport
+                Select first passport
             </button>
 
             <img src="" class="center-nav-logotype" alt="Logotype for Web Design Project">
 
             <button @click="chooseSecondPassport" class="center-nav-choose-second-passport-button">
-                Choose second passport
+                Select second passport
             </button>
         </div>
 
@@ -48,9 +48,25 @@
         box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
     }
 
-    .center-nav-bar-container {
-        justify-content: center;
+    .left-nav-bar-container,
+    .right-nav-bar-container {
+        display: flex;
+        align-items: center;
+        text-align: center;
     }
+
+    .center-nav-bar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin-left: 100px;
+    }
+
+
+    /* Contents of left navbar (it's gonna be deleted) */
 
     .a-container,
     .nav-logo {
@@ -67,24 +83,43 @@
         margin: 5px;
     }
 
-    .left-nav-bar-container,
-    .right-nav-bar-container {
-        display: flex;
-        align-items: center;
+
+    /* Contents of center navbar*/
+
+    .nationality-selector {
+        flex: 1;
         text-align: center;
     }
+
+    .center-nav-logotype {
+        margin-right: 10px;
+    }
+
+    #logotype {
+        flex: 1;
+
+        text-align: center;
+        font-size: 40px;
+    }
+
+
+    /* Contents of right navbar */
+
+    .right-nav-about-button {
+        padding: 6.5px;
+    }
+
+
+    /* Shared content */
 
     .right-nav-about-button,
     .right-nav-choose-language-button,
     .center-nav-choose-first-passport-button,
     .center-nav-choose-second-passport-button {
-        background: linear-gradient(0deg, #34b7c4, #51a6ce, #6295d6, #6f83de, #796fe6);
+        background: #338495;
         color: white;
         margin-right: 10px;
-        padding: 5px;
-        border-radius: 8px;
-        border-style: solid;
-        border-color: black;
+        border-radius: 5px;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
     }
 
@@ -93,11 +128,6 @@
     .center-nav-choose-second-passport-button {
         padding: 6.5px;
         border-width: 3px;
-
-        font-family: "Pixelify Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
     }
 
     .right-nav-about-button:hover,
@@ -117,13 +147,14 @@
     .right-nav-about-button:active,
     .right-nav-choose-language-button:active,
     .center-nav-choose-first-passport-button:active,
-    .center-nav-choose-second-passport-button:active .nav-logo:active {
+    .center-nav-choose-second-passport-button:active,
+    .nav-logo:active {
         filter: brightness(75%);
     }
 
     @keyframes nav-button-hover {
         0% {
-            background: linear-gradient(0deg, #34b7c4, #51a6ce, #6295d6, #6f83de, #796fe6);
+            background: #338495;
         }
 
         100% {
@@ -131,28 +162,5 @@
         }
     }
 
-
-    .center-nav-bar-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 60%;
-        padding: 0 20px;
-        box-sizing: border-box;
-        margin-left: 100px;
-
-    }
-
-
-    .nationality-selector {
-        flex: 1;
-        text-align: center;
-    }
-
-    #logotype {
-        flex: 1;
-
-        text-align: center;
-        font-size: 40px;
-    }
 </style>
+

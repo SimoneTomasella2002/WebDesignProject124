@@ -45,9 +45,10 @@
 <style scoped>
 
     footer {
+        z-index: 1;
         margin-top: auto;
         flex-direction: column;
-        background: black;
+        background: #C7BDB1;
         color: white;
         padding-top: 48px;
         padding-bottom: 12px;
