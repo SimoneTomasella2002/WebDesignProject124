@@ -21,4 +21,3 @@ onUnmounted(() => {
 <template>
     <component :is="isMobile ? MobileNavBar : DesktopNavBar" />
 </template>
-

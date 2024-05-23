@@ -15,7 +15,7 @@
                                     code</a>
                             </div>
                             <p>Where to contact us: placeholder@gmail.com</p>
-                            <RouterLink to='/views/TermsOfService.vue' class="right-nav-about-button">
+                            <RouterLink to='/terms' class="right-nav-about-button">
                                 Terms of service
                             </RouterLink>
                         </div>

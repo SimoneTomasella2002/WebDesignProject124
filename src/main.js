@@ -1,4 +1,4 @@
-import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
+import '@mdi/font/css/materialdesignicons.css'
 import "./assets/style/main.css";
 import { createApp } from 'vue'
 
@@ -58,6 +58,9 @@ const vuetify = createVuetify({
         themes: {
             myAccessibleTheme,
         },
+    },
+    icons: {
+        iconfont: 'mdi',
     },
 })
 

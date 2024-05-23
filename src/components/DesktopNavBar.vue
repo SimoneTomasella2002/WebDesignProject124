@@ -1,31 +1,27 @@
 <template>
     <nav class="nav-container">
-        <div class="left-nav-blankspace"></div>
-        
-        <div class="center-nav-bar-container">
-            <button @click="chooseFirstPassport" class="center-nav-choose-first-passport-button">
-                Select first passport
-            </button>
-
-            <RouterLink to="/" class="center-nav-a-container">
-                <img src="@/assets/images/logotype.svg" class="center-nav-logotype" alt="Logotype for Web Design Project">
-            </RouterLink>
-
-            <button @click="chooseSecondPassport" class="center-nav-choose-second-passport-button">
-                Select second passport
-            </button>
-        </div>
-
-        <div class="right-nav-bar-container">
-            <RouterLink to='/views/ChiSiamo.vue' class="right-nav-about-button">
-                About
-            </RouterLink>
-            <button @click="chooseLanguage" class="right-nav-choose-language-button">
-                Language
-            </button>
-        </div>
+      <div class="left-nav-blankspace"></div>
+      <div class="center-nav-bar-container">
+        <button @click="chooseFirstPassport" class="center-nav-choose-first-passport-button">
+          Select first passport
+        </button>
+        <RouterLink to="/" class="center-nav-a-container">
+          <img src="@/assets/images/logotype.svg" class="center-nav-logotype" alt="Logotype for Web Design Project">
+        </RouterLink>
+        <button @click="chooseSecondPassport" class="center-nav-choose-second-passport-button">
+          Select second passport
+        </button>
+      </div>
+      <div class="right-nav-bar-container">
+        <RouterLink to="/about" class="right-nav-about-button">
+          About
+        </RouterLink>
+        <button @click="chooseLanguage" class="right-nav-choose-language-button">
+          Language
+        </button>
+      </div>
     </nav>
-</template>
+  </template>
 
 <script>
 
