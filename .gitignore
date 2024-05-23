@@ -1,36 +1,36 @@
-# Node.js dependencies
-/node_modules
+# # Node.js dependencies
+# /node_modules
 
-# Build output
-/dist
+# # Build output
+# /dist
 
-# Environment variables
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# # Environment variables
+# .env.local
+# .env.development.local
+# .env.test.local
+# .env.production.local
 
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# # Logs
+# npm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
 
-# Editor files
-.vscode/
-.idea/
+# # Editor files
+# .vscode/
+# .idea/
 
-# Compiled output
-*.map
+# # Compiled output
+# *.map
 
-# Dependency lock files
-package-lock.json
-yarn.lock
+# # Dependency lock files
+# package-lock.json
+# yarn.lock
 
-# Custom build configuration
-vue.config.js
+# # Custom build configuration
+# vue.config.js
 
-# Vuetify build output
-/vuetify/dist
+# # Vuetify build output
+# /vuetify/dist
 
-# Vue Router build output
-/router/dist
+# # Vue Router build output
+# /router/dist

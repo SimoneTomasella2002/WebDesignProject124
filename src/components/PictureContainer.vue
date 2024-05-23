@@ -1,34 +1,34 @@
 <script setup>
-    import profileData from "@/assets/json/profiles.json";
-    import { watch, ref } from "vue";
+import profileData from "@/assets/json/profiles.json";
+import { watch, ref } from "vue";
 
-    const props = defineProps(["ProfileName"]);
+const props = defineProps(["ProfileName"]);
 
-    const profiles = profileData.profiles;
-    const profile = ref(null);
+const profiles = profileData.profiles;
+const profile = ref(null);
 
-    const loadProfile = (profileName) => {
-        profile.value = profiles.find(p => p.firstName.toLowerCase() === profileName.toLowerCase()) || null;
-    
-        profile.value === null
-            ? console.log("Can't find profile data for " + profileName)
-            : console.log("Profile found: ", profile.value);
-    }
+const loadProfile = (profileName) => {
+    profile.value = profiles.find(p => p.firstName.toLowerCase() === profileName.toLowerCase()) || null;
 
-    loadProfile(props.ProfileName);
+    profile.value === null
+        ? console.log("Can't find profile data for " + profileName)
+        : console.log("Profile found: ", profile.value);
+}
 
-    watch(() => props.ProfileName, (newProfileName) => {
-        loadProfile(newProfileName);
-    })
+loadProfile(props.ProfileName);
 
-    console.log(props.ProfileName);
+watch(() => props.ProfileName, (newProfileName) => {
+    loadProfile(newProfileName);
+})
+
+console.log(props.ProfileName);
 </script>
 
 <template>
     <div class="pic-container">
         <h1 class="pic-container-firstname-and-lastname">{{ profile.firstName }} {{ profile.lastName }}</h1>
-        <!-- Doesn't work in local server, but it works in deployment server -->
-        <img :src="`/personal-images/${profile.photoLocation}`" class="pic-container-image" :alt="`An image of ${profile.firstName}`">
+        <img :src="`/personal-images/${profile.photoLocation}`" class="pic-container-image"
+            :alt="`An image of ${profile.firstName}`">
         <div class="pic-container-desc-container">
             <p class="pic-container-desc">{{ profile.description }}</p>
         </div>
@@ -44,67 +44,71 @@
 </template>
 
 <style scoped>
+.profile-linkedin,
+.profile-github {
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background-color: lightgray;
+}
 
-    .profile-linkedin, .profile-github {
-        border-color: black;
-        border-style: solid;
-        border-width: 3px;
-        border-radius: 8px;
-        margin-bottom: 8px;
-        background-color: lightgray;
-    }
+.pic-container {
+    text-align: center;
 
-    .pic-container {
-        text-align: center;
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 20px;
+    margin-bottom: 20px;
 
-        border-color: black;
-        border-style: solid;
-        border-width: 5px;
-        border-radius: 20px;
-        margin-bottom: 20px;
+    width: 360px;
 
-        width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* doesn't align anything after the image because descs have different lengths */
+    align-items: center;
+    background-color: white;
+}
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* doesn't align anything after the image because descs have different lengths */
-        align-items: center;
-        background-color: white;
-    }
+.pic-container-firstname-and-lastname {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    border-bottom: solid gray 2px;
+}
 
-    .pic-container-firstname-and-lastname {
-        padding-bottom: 15px;
-        width: 100%;
-        border-bottom: solid gray 2px;
-    }
+.pic-container-image {
+    height: 250px;
+    width: 250px;
+    border-radius: 20px;
 
-    .pic-container-image {
-        height: 250px;
-        width: 250px;
-        border-radius: 20px;
-        
-        margin-top: 16px;
-        margin-bottom: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
 
-        border-style: solid;
-        border-width: 1px;
-    }
+    border-style: solid;
+    border-width: 1px;
+}
 
-    .pic-container-desc-container {
-        width: 100%;
-        border-top: solid gray 2px;
-    }
+.pic-container-desc-container {
+    width: 100%;
+    border-top: solid gray 2px;
+    border-bottom: solid gray 2px;
+}
 
-    .pic-container-desc {
-        padding-inline-start: 10px;
-        padding-inline-end: 10px;
-    }
-    
-    .profile-links {
-        display: flex;
-        justify-content: space-around;
-        width: 50%;
-        margin: 8px;
-    }
+.pic-container-desc {
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
+.profile-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: 8px;
+}
 </style>
