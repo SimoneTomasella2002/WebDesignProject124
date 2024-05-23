@@ -1,4 +1,31 @@
 <template>
+    <v-app-bar>
+        <v-row>
+            <v-col>
+                <v-btn>How to use the website</v-btn>
+            </v-col>
+            
+            <v-col>
+                <v-btn append-icon="">
+                   Alessandro 
+                </v-btn>
+                <v-btn append-icon="">
+                    Tara
+                </v-btn>
+            </v-col>
+            
+            <v-col align="right">
+                <v-btn>
+                    About
+                </v-btn>
+                <v-btn icon>
+                    <v-icon icon="mdi-web"></v-icon>
+                </v-btn>
+            </v-col>
+        </v-row>
+
+    </v-app-bar>
+    
     <nav class="nav-container">
         <div class="left-nav-blankspace"></div>
         <div class="center-nav-bar-container">
