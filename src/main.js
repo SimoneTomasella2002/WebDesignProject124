@@ -1,3 +1,4 @@
+import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
 import "./assets/style/main.css";
 import { createApp } from 'vue'
 
@@ -14,6 +15,7 @@ import Router from './router/index'
 const vuetify = createVuetify({
     components,
     directives,
+    iconsets,
 })
 
 createApp(App)
