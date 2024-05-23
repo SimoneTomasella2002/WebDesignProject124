@@ -34,7 +34,7 @@
 
         <v-row>
             <v-col>
-                <img src="../assets/images/la-guida-del-gattino1.jpg" :width="300" cover
+                <img src="../assets/images/la-guida-del-gattino1.jpg" width="100%"
                     alt="Immagine di un gattino rossiccio patato lo voglio strapazzare"></img>
             </v-col>
         </v-row>
