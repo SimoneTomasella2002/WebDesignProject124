@@ -7,7 +7,7 @@ import websiteLogo from "@/assets/images/logotype.svg";
         <v-row>
             <v-app-bar scroll-behavior="hide" scroll-threshold="1" :height="100">
                 <v-col align="center" cols="1" align-self="end" >
-                    <v-btn variant="text">
+                    <v-btn variant="text" rounded>
                         <div class="d-flex flex-column">
                             <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-button-text">
                                 How to use
@@ -22,7 +22,7 @@ import websiteLogo from "@/assets/images/logotype.svg";
                     <v-spacer></v-spacer>
                 </v-col>
                 <v-col align="center" cols="2" align-self="end">
-                    <v-btn variant="outlined" rounded append-icon="">Alessandro</v-btn>
+                    <v-btn variant="outlined" rounded append-icon="" class="text-button-text"><p class="text-primary font-weight-bold">Alessandro</p></v-btn>
                 </v-col>
                 <v-col align="center" cols="4" align-self="center">
                     <router-link to="/">
@@ -30,13 +30,15 @@ import websiteLogo from "@/assets/images/logotype.svg";
                     </router-link>
                 </v-col>
                 <v-col align="center" cols="2" align-self="end">
-                    <v-btn variant="outlined" rounded append-icon="">Tara</v-btn>
+                    <v-btn variant="outlined" rounded append-icon="" class="text-button-text"><p class="text-primary font-weight-bold">Tara</p></v-btn>
                 </v-col>
                 <v-col align="center" cols="1" align-self="end">
-                    <v-btn rounded to="/about">About</v-btn>
+                    <v-btn rounded to="/about" variant="text">
+                        <v-card-text class="ma-0 pa-0 text-center text-button-text">About</v-card-text>
+                    </v-btn>
                 </v-col>
                 <v-col align="center" cols="1" align-self="end">
-                    <v-btn icon="mdi-web" density="compact"></v-btn>
+                    <v-btn icon="mdi-web" height="36px" class="text-button-text"></v-btn>
                 </v-col>
             </v-app-bar>
         </v-row>

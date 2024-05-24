@@ -1,29 +1,23 @@
 <script setup>
-import pictureContainer from "@/components/PictureContainer.vue";
+import PictureContainer from "@/components/PictureContainer.vue";
 </script>
 
 <template>
-    <h1>Chi siamo</h1>
-
-    <div class="pictures-container">
-        <pictureContainer ProfileName="Simone" />
-        <pictureContainer ProfileName="Thomas" />
-        <pictureContainer ProfileName="Kevin" />
-        <pictureContainer ProfileName="Loris" />
-        <pictureContainer ProfileName="Gabriel" />
-        <pictureContainer ProfileName="Giulia" />
-        <pictureContainer ProfileName="Francesca" />
-        <pictureContainer ProfileName="Lorenzo" />
-    </div>
-
+  <v-container>
+    <v-row class="text-center">
+      <v-col cols="12">
+        <h1>Chi siamo</h1>
+      </v-col>
+      <v-col
+        v-for="name in ['Simone', 'Thomas', 'Kevin', 'Loris', 'Gabriel', 'Giulia', 'Francesca', 'Lorenzo']"
+        :key="name"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+      >
+        <PictureContainer :ProfileName="name" />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
-
-<style scoped>
-.pictures-container {
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: stretch;
-}
-</style>
