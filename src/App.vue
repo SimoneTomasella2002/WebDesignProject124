@@ -1,20 +1,20 @@
 <template>
   <v-app>
-    <v-container fluid class="ma-0 pa-0">
+    <v-container>
       <v-row>
-        <v-col>
+        <v-col cols="12">
           <NavBar />
         </v-col>
       </v-row>
       <v-row>
-        <v-col>
+        <v-col cols="12">
           <v-main>
             <router-view />
           </v-main>
         </v-col>
       </v-row>
       <v-row>
-        <v-col>
+        <v-col cols="12">
           <Footer />
         </v-col>
       </v-row>
@@ -28,5 +28,5 @@ import NavBar from './components/NavBar.vue'
 </script>
 
 <style>
-@import "./assets/style/app.css";
+/* @import "./assets/style/app.css"; */
 </style>
