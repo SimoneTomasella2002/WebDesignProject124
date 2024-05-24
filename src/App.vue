@@ -1,3 +1,8 @@
+<script setup>
+import Footer from './components/Footer.vue'
+import NavBar from './components/NavBar.vue'
+</script>
+
 <template>
   <v-app>
     <v-container>
@@ -21,12 +26,3 @@
     </v-container>
   </v-app>
 </template>
-
-<script setup>
-import Footer from './components/Footer.vue'
-import NavBar from './components/NavBar.vue'
-</script>
-
-<style>
-/* @import "./assets/style/app.css"; */
-</style>

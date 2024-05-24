@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="primary" class="rounded">
+  <v-app-bar color="primary" class="rounded" scroll-behavior="hide" scroll-threshold="1">
     <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     <v-toolbar-title>
       <RouterLink to="/">
