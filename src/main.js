@@ -30,6 +30,7 @@ const myAccessibleTheme = {
         info: '#2196F3', // Blu per informazioni
         success: '#4CAF50', // Verde per successo
         warning: '#FB8C00', // Giallo per avvertenze
+        'button-text': '#6E662F', // Testo dei pulsanti
     },
     variables: {
         'border-color': '#000000',
