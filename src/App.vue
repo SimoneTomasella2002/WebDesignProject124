@@ -5,21 +5,21 @@ import NavBar from './components/NavBar.vue'
 
 <template>
   <v-app class="text-center pa-0 ma-0">
-    <v-container>
+    <v-container fluid>
       <v-row>
-        <v-col cols="12">
+        <v-col>
           <NavBar />
         </v-col>
       </v-row>
       <v-row>
-        <v-col cols="12">
+        <v-col>
           <v-main>
             <router-view />
           </v-main>
         </v-col>
       </v-row>
       <v-row>
-        <v-col cols="12">
+        <v-col>
           <Footer />
         </v-col>
       </v-row>
