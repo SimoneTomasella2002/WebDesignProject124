@@ -1,3 +1,7 @@
+<script setup>
+import fotoGattino from "@/assets/images/la-guida-del-gattino1.jpg";
+</script>
+
 <template>
     <v-container>
         <v-row class="d-flex justify-center">
@@ -44,8 +48,7 @@
         </v-row>
         <v-row class="d-flex justify-center">
             <v-col style="max-width: 100rem;">
-                <img src="../assets/images/la-guida-del-gattino1.jpg"
-                    alt="Immagine di un gattino rossiccio patato lo voglio strapazzare"></img>
+                <v-img :src="fotoGattino" alt="Immagine di un gattino rossiccio patato lo voglio strapazzare"></v-img>
             </v-col>
         </v-row>
     </v-container>
