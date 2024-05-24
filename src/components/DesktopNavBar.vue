@@ -6,7 +6,7 @@ import websiteLogo from "@/assets/images/logotype.svg";
     <v-container>
         <v-row>
             <v-app-bar scroll-behavior="hide" scroll-threshold="1" :height="100">
-                <v-col align="center" cols="1" align-self="end" >
+                <v-col align="center" cols="1" align-self="end">
                     <v-btn variant="text" rounded>
                         <div class="d-flex flex-column">
                             <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-button-text">
@@ -22,15 +22,19 @@ import websiteLogo from "@/assets/images/logotype.svg";
                     <v-spacer></v-spacer>
                 </v-col>
                 <v-col align="center" cols="2" align-self="end">
-                    <v-btn variant="outlined" rounded append-icon="" class="text-button-text"><p class="text-primary font-weight-bold">Alessandro</p></v-btn>
+                    <v-btn variant="outlined" rounded append-icon="" class="text-button-text">
+                        <v-card-text
+                            class="ma-0 pa-0 text-center text-primary font-weight-bold">Alessandro</v-card-text></v-btn>
                 </v-col>
                 <v-col align="center" cols="4" align-self="center">
                     <router-link to="/">
-                        <v-img :src='websiteLogo' alt="Logo for the website" max-width="19rem" position="top -20px right 0px"</v-img>
+                        <v-img :src='websiteLogo' alt="Logo for the website" max-width="19rem"
+                            position="top -20px right 0px" </v-img>
                     </router-link>
                 </v-col>
                 <v-col align="center" cols="2" align-self="end">
-                    <v-btn variant="outlined" rounded append-icon="" class="text-button-text"><p class="text-primary font-weight-bold">Tara</p></v-btn>
+                    <v-btn variant="outlined" rounded append-icon="" class="text-button-text"><v-card-text
+                            class="ma-0 pa-0 text-center text-primary font-weight-bold">Tara</v-card-text></v-btn>
                 </v-col>
                 <v-col align="center" cols="1" align-self="end">
                     <v-btn rounded to="/about" variant="text">
