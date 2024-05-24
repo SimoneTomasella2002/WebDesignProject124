@@ -1,7 +1,11 @@
+<script setup>
+import websiteLogo from "@/assets/images/logotype.svg";
+</script>
+
 <template>
     <v-container>
         <v-row>
-            <v-app-bar scroll-behavior="hide" scroll-threshold="1" class="custom-app-bar">
+            <v-app-bar scroll-behavior="hide" scroll-threshold="1">
                 <v-col align="center" cols="1">
                     <v-btn variant="text">
                         <div class="d-flex flex-column">
@@ -21,9 +25,7 @@
                     <v-btn variant="outlined" rounded append-icon="">Alessandro</v-btn>
                 </v-col>
                 <v-col align="center" cols="4">
-                    <router-link to="/">
-                        <img src="@/assets/images/logotype.svg" alt="Logo for the website" width="40%"/>
-                    </router-link>
+                    <v-img :src='websiteLogo' alt="Logo for the website" max-width="15em" position="top -15px right 0px"</v-img>
                 </v-col>
                 <v-col align="center" cols="2">
                     <v-btn variant="outlined" rounded append-icon="">Tara</v-btn>
@@ -38,6 +40,3 @@
         </v-row>
     </v-container>
 </template>
-
-<style scoped>
-</style>
