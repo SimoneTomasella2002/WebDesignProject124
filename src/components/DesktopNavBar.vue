@@ -1,4 +1,36 @@
 <template>
+    <!-- 
+        <v-app-bar>
+        <v-row align="center" justify="center">
+            <v-col align="left">
+               <v-btn>
+                    <p class="navbar-how-to-use-website-button-text">How to use the website</p>
+                </v-btn> 
+            </v-col>
+            
+            <v-col align="center">
+                <v-btn variant="outlined" rounded append-icon="">Alessandro</v-btn>
+            </v-col>
+                
+            <v-col>
+                <router-link to="/">
+                    <img src="@/assets/images/logotype.svg" alt="Logo for the website" width="200" />
+                </router-link>
+            </v-col>
+
+            <v-col align="center">
+                <v-btn variant="outlined" rounded append-icon="">Tara</v-btn>
+            </v-col>
+            
+            <v-col align="right">
+                <v-btn rounded to="/about">About</v-btn>
+                <v-btn icon="mdi-web" density="compact"></v-btn>
+            </v-col>
+        </v-row>
+    </v-app-bar>
+    -->
+    
+    
     <nav class="nav-container">
         <div class="left-nav-blankspace"></div>
         <div class="center-nav-bar-container">
@@ -29,6 +61,25 @@
 </script>
 
 <style scoped>
+
+/* Style for vuetify navbar */
+.navbar-how-to-use-website-button-text {
+    max-width: 50px;
+}
+
+@media screen and (max-width: 930px) {
+    .v-btn { 
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 878px) {
+    .v-btn {
+        font-size: x-small;
+    }
+}
+
+
 /* Style for navbar */
 /* (STYLES NEEDS TO BE READ FROM LEFT TO RIGHT) */
 
