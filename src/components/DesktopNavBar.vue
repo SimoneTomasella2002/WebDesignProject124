@@ -2,7 +2,7 @@
     <v-app-bar>
         <v-row align="center">
             <v-col align="center" cols="1">
-                <v-btn variant="text" class="h-auto">
+                <v-btn variant="text">
                     <div class="d-flex flex-column">
                         <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-button-text">
                             How to use 
