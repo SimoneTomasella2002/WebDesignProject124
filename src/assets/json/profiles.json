@@ -1,66 +1,66 @@
 {
-    "profiles": [
-        {
-            "firstName":"Simone",
-            "lastName":"Tomasella",
-            "photoLocation":"",
-            "description":"Sono bellissimo",
-            "linkedin":"placeholder",
-            "github":"placeholder"
-        },
-        {
-            "firstName":"Thomas",
-            "lastName":"Ghione",
-            "photoLocation":"Thomas.jpeg",
-            "description":"Studente del terzo anno di Informatica all'Università di Genova, è un appassionato di programmazione low level e ha lavorato su progetti molto interessanti. Tra questi, la ricreazione delle librerie standard del C in x86 e C, la creazione di un linguaggio di programmazione in Java e la ricreazione degli scacchi su terminale in C++. Ha esperienza in gare di matematica, avendo partecipato alle competizioni della Bocconi e ottenendo il terzo posto nello stage nazionale di Bardonecchia organizzato da UniTO. Inoltre, ha preso parte alla Cyberchallenge, dimostrando il suo profondo interesse per la sicurezza informatica.",
-            "linkedin":"https://www.linkedin.com/in/thomasghione/",
-            "github":"https://github.com/ThomasGhione"
-        },
-        {
-            "firstName":"Loris",
-            "lastName":"Prataiolo",
-            "photoLocation":"Loris.jpeg",
-            "description":"Nasco come bartender, mi sono diplomato all'Istituto Alberghiero di Stresa. Dopo un anno di lavoro a Firenze, ho deciso di intraprendere una nuova carriera iscrivendomi al corso di laurea in Informatica a Genova. Attualmente, continuo a lavorare mentre studio, accumulando esperienza pratica nel settore. Nel corso del mio percorso accademico, ho già realizzato diversi progetti, che spaziano dallo sviluppo di protocolli di comunicazione client-server al modello probabilistico Monte Carlo. Il mio obiettivo è specializzarmi ulteriormente nel campo della bioinformatica.",
-            "linkedin":"placeholder",
-            "github":"placeholder"
-        },
-        {
-            "firstName":"Kevin",
-            "lastName":"Barragan",
-            "photoLocation":"",
-            "description":"Sono uno studente al terzo anno di Computer Science e, come impiego part-time, offro ripetizioni di materie scientifiche a studenti delle scuole. Ho competenze in vari linguaggi di programmazione, tra cui C, C++, C#, Java e Python. La mia passione per la programmazione è iniziata alle superiori, quando ho scritto il mio primo 'Hello World' e sviluppato giochi come Tic Tac Toe e Snake in C++. Nutro una forte passione per la musica e suono il pianoforte e la chitarra.",
-            "linkedin":"placeholder",
-            "github":"placeholder"
-        },
-        {
-            "firstName":"Giulia",
-            "lastName":"Salaris",
-            "photoLocation":"",
-            "description":"Nata a Genova e residente ad Arenzano. Dopo il diploma di Liceo Artistico (sezione architettura), si iscrive all'università di Genova dove consegue la laurea in Design del Prodotto e della Comunicazione con la tesi “Accessibilità web: un redesign del sito di Uici Liguria”. Dopo un periodo da tirocinante nello studio dell'architetto Droghi, decide di proseguire gli studi per ottenere la laurea magistrale Design Prodotto Evento.",
-            "linkedin":"placeholder",
-            "github":"placeholder"
-        },
-        {
-            "firstName":"Francesca",
-            "lastName":"Vernasca",
-            "photoLocation":"Francesca.jpeg",
-            "description":"Nata a Genova vive a Varazze, è una creativa con un diploma in Grafica e Comunicazione dal Mazzini Da Vinci di Savona. Ha collaborato con il FAI Giovani Savona, il Nuovofilmstudio e altri enti pubblici e privati. Nel tempo libero, si dedica al CrossFit. Se fosse un cibo, sarebbe la pasta al pesto; se fosse una canzone sarebbe 'Maledetta discoteca' dei Fankool Orchestra. Francesca è un mix di creatività, buon gusto e amore per le cose belle della vita!",
-            "linkedin":"placeholder",
-            "github":"placeholder"
-        },
-        {
-            "firstName":"Gabriel",
-            "lastName":"Oddone",
-            "photoLocation":"",
-            "description":"Conseguito il diploma al liceo artistico a Genova, mi trasferisco a Torino e mi laureo in Design del Prodotto. Lavoro poi per due anni in uno studio di progettazione occupandomi di modellazione 3D, rendering e grafica. Tornato a Genova lavoro un anno in una falegnameria, per poi fondare Dual Design Lab, un laboratorio di progettazione e produzione di mobili e complementi d'arredo, attivo per cinque anni. Attualmente, sono docente in progettazione multimediale e grafica e freelancer per progetti di artigianato, grafica e organizzazione eventi.",
-            "linkedin":"placeholder",
-            "github":"placeholder"
-        },
-        {
-            "firstName":"Lorenzo", 
-            "lastName":"Sacco",
-            "photoLocation":"Lorenzo.jpeg", 
-            "description":"Laureato in Design e Comunicazione Visiva al Politecnico di Torino, ha realizzato progetti di branding e visual content design. Nel 2019 ha ideato per l'associazione Alumni del Politecnico uno dei merchandising del Castello del Valentino. Nel 2023 ha esposto alla Genova BeDesign Week con il progetto “Ensō”. Attualmente frequenta il corso di Laurea Magistrale in Design Prodotto Evento all'Università di Genova"
-        }
-    ]
+  "profiles": [
+    {
+      "firstName": "Simone",
+      "lastName": "Tomasella",
+      "photoLocation": "",
+      "description": "Sono bellissimo",
+      "linkedin": "placeholder",
+      "github": "placeholder"
+    },
+    {
+      "firstName": "Thomas",
+      "lastName": "Ghione",
+      "photoLocation": "Thomas.jpeg",
+      "description": "Studente del terzo anno di Informatica all'Università di Genova, è un appassionato di programmazione low level e ha lavorato su progetti molto interessanti. Tra questi, la ricreazione delle librerie standard del C in x86 e C, la creazione di un linguaggio di programmazione in Java e la ricreazione degli scacchi su terminale in C++. Ha esperienza in gare di matematica, avendo partecipato alle competizioni della Bocconi e ottenendo il terzo posto nello stage nazionale di Bardonecchia organizzato da UniTO. Inoltre, ha preso parte alla Cyberchallenge, dimostrando il suo profondo interesse per la sicurezza informatica.",
+      "linkedin": "https://www.linkedin.com/in/thomasghione/",
+      "github": "https://github.com/ThomasGhione"
+    },
+    {
+      "firstName": "Loris",
+      "lastName": "Prataiolo",
+      "photoLocation": "Loris.jpeg",
+      "description": "Nasco come bartender, mi sono diplomato all'Istituto Alberghiero di Stresa. Dopo un anno di lavoro a Firenze, ho deciso di intraprendere una nuova carriera iscrivendomi al corso di laurea in Informatica a Genova. Attualmente, continuo a lavorare mentre studio, accumulando esperienza pratica nel settore. Nel corso del mio percorso accademico, ho già realizzato diversi progetti, che spaziano dallo sviluppo di protocolli di comunicazione client-server al modello probabilistico Monte Carlo. Il mio obiettivo è specializzarmi ulteriormente nel campo della bioinformatica.",
+      "linkedin": "placeholder",
+      "github": "placeholder"
+    },
+    {
+      "firstName": "Kevin",
+      "lastName": "Barragan",
+      "photoLocation": "",
+      "description": "Sono uno studente al terzo anno di Computer Science e, come impiego part-time, offro ripetizioni di materie scientifiche a studenti delle scuole. Ho competenze in vari linguaggi di programmazione, tra cui C, C++, C#, Java e Python. La mia passione per la programmazione è iniziata alle superiori, quando ho scritto il mio primo 'Hello World' e sviluppato giochi come Tic Tac Toe e Snake in C++. Nutro una forte passione per la musica e suono il pianoforte e la chitarra.",
+      "linkedin": "placeholder",
+      "github": "placeholder"
+    },
+    {
+      "firstName": "Giulia",
+      "lastName": "Salaris",
+      "photoLocation": "",
+      "description": "Nata a Genova e residente ad Arenzano. Dopo il diploma di Liceo Artistico (sezione architettura), si iscrive all'università di Genova dove consegue la laurea in Design del Prodotto e della Comunicazione con la tesi “Accessibilità web: un redesign del sito di Uici Liguria”. Dopo un periodo da tirocinante nello studio dell'architetto Droghi, decide di proseguire gli studi per ottenere la laurea magistrale Design Prodotto Evento.",
+      "linkedin": "placeholder",
+      "github": "placeholder"
+    },
+    {
+      "firstName": "Francesca",
+      "lastName": "Vernasca",
+      "photoLocation": "Francesca.jpeg",
+      "description": "Nata a Genova vive a Varazze, è una creativa con un diploma in Grafica e Comunicazione dal Mazzini Da Vinci di Savona. Ha collaborato con il FAI Giovani Savona, il Nuovofilmstudio e altri enti pubblici e privati. Nel tempo libero, si dedica al CrossFit. Se fosse un cibo, sarebbe la pasta al pesto; se fosse una canzone sarebbe 'Maledetta discoteca' dei Fankool Orchestra. Francesca è un mix di creatività, buon gusto e amore per le cose belle della vita!",
+      "linkedin": "placeholder",
+      "github": "placeholder"
+    },
+    {
+      "firstName": "Gabriel",
+      "lastName": "Oddone",
+      "photoLocation": "",
+      "description": "Conseguito il diploma al liceo artistico a Genova, mi trasferisco a Torino e mi laureo in Design del Prodotto. Lavoro poi per due anni in uno studio di progettazione occupandomi di modellazione 3D, rendering e grafica. Tornato a Genova lavoro un anno in una falegnameria, per poi fondare Dual Design Lab, un laboratorio di progettazione e produzione di mobili e complementi d'arredo, attivo per cinque anni. Attualmente, sono docente in progettazione multimediale e grafica e freelancer per progetti di artigianato, grafica e organizzazione eventi.",
+      "linkedin": "placeholder",
+      "github": "placeholder"
+    },
+    {
+      "firstName": "Lorenzo",
+      "lastName": "Sacco",
+      "photoLocation": "Lorenzo.jpeg",
+      "description": "Laureato in Design e Comunicazione Visiva al Politecnico di Torino, ha realizzato progetti di branding e visual content design. Nel 2019 ha ideato per l'associazione Alumni del Politecnico uno dei merchandising del Castello del Valentino. Nel 2023 ha esposto alla Genova BeDesign Week con il progetto “Ensō”. Attualmente frequenta il corso di Laurea Magistrale in Design Prodotto Evento all'Università di Genova"
+    }
+  ]
 }

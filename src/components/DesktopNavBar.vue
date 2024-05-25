@@ -22,7 +22,7 @@ import websiteLogo from "@/assets/images/logotype.svg";
                     <v-spacer></v-spacer>
                 </v-col>
                 <v-col align="center" cols="2" align-self="end">
-                    <v-btn variant="outlined" rounded append-icon="" class="text-button-text">
+                    <v-btn variant="outlined" rounded append-icon="" class="text-button-text" block>
                         <v-card-text
                             class="ma-0 pa-0 text-center text-primary font-weight-bold">Alessandro</v-card-text></v-btn>
                 </v-col>
@@ -33,7 +33,7 @@ import websiteLogo from "@/assets/images/logotype.svg";
                     </router-link>
                 </v-col>
                 <v-col align="center" cols="2" align-self="end">
-                    <v-btn variant="outlined" rounded append-icon="" class="text-button-text"><v-card-text
+                    <v-btn variant="outlined" rounded append-icon="" class="text-button-text" block><v-card-text
                             class="ma-0 pa-0 text-center text-primary font-weight-bold">Tara</v-card-text></v-btn>
                 </v-col>
                 <v-col align="center" cols="1" align-self="end">
@@ -42,7 +42,7 @@ import websiteLogo from "@/assets/images/logotype.svg";
                     </v-btn>
                 </v-col>
                 <v-col align="center" cols="1" align-self="end">
-                    <v-btn icon="mdi-web" height="36px" class="text-button-text"></v-btn>
+                    <v-btn icon="mdi-web" height="36px" class="text-button-text" aria-label="Change language"></v-btn>
                 </v-col>
             </v-app-bar>
         </v-row>

@@ -26,7 +26,8 @@ console.log(props.ProfileName);
 
 <template>
   <v-card v-if="profile" class="mx-auto my-4">
-    <v-img :src="`/personal-images/${profile.photoLocation}`" height="200px" :alt="`An image of ${profile.firstName}`"></v-img>
+    <v-img :src="`/personal-images/${profile.photoLocation}`" height="200px"
+      :alt="`An image of ${profile.firstName}`"></v-img>
     <v-card-title>{{ profile.firstName }} {{ profile.lastName }}</v-card-title>
     <v-card-text>
       <p>{{ profile.description }}</p>

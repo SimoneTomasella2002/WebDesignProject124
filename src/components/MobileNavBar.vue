@@ -20,7 +20,8 @@ const items = [
         <v-col align="center" cols="6">
           <v-toolbar-title>
             <RouterLink to="/">
-              <v-img :src="websiteLogo" alt="Logo for the website" max-width="10rem" position="top -10px right 0px"></v-img>
+              <v-img :src="websiteLogo" alt="Logo for the website" max-width="10rem"
+                position="top -10px right 0px"></v-img>
             </RouterLink>
           </v-toolbar-title>
         </v-col>
@@ -31,8 +32,8 @@ const items = [
   <v-navigation-drawer v-model="drawer" :width="100" temporary>
     <v-list>
       <v-list-item v-for="(item, index) in items" :key="index" :to="item.to" link>
-          <v-icon>{{ item.icon }}</v-icon>
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        <v-icon>{{ item.icon }}</v-icon>
+        <v-list-item-title>{{ item.title }}</v-list-item-title>
       </v-list-item>
     </v-list>
   </v-navigation-drawer>

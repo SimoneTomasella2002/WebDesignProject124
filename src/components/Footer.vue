@@ -1,139 +1,90 @@
+<script setup>
+import websiteLogo from "@/assets/images/logo.jpg";
+import githubLogo from "@/assets/images/github-logo.png";
+</script>
+
 <template>
-    <footer>
+    <v-footer padless class="footer-background">
         <v-container>
-            <div class="footer-container">
-                <v-row>
-                    <v-col>
-                        <div class="footer-general-information">
-                            <div class="footer-general-information-logo">
-                                <img src="@/assets/images/logo.jpg" class="footer-logo" alt="The website logo">
+            <v-row>
+                <!-- General Information Column -->
+                <v-col>
+                    <v-card flat class="d-flex flex-column align-center pa-3 footer-card-background">
+                        <v-row class="align-center mb-4">
+                            <v-col cols="auto">
+                                <v-img :src="websiteLogo" alt="The website logo" width="50" height="50"
+                                    class="rounded-circle"></v-img>
+                            </v-col>
+                            <v-col>
                                 <i>Behind a passport</i>
-                            </div>
-                            <div class="footer-general-information-github">
-                                <img src="@/assets/images/github-logo.png" class="github-logo" alt="The github logo">
-                                <a href="https://github.com/SimoneTomasella2002/WebDesignProject124">Take a look at our
-                                    code</a>
-                            </div>
-                            <p>Where to contact us: placeholder@gmail.com</p>
-                            <RouterLink to='/terms' class="right-nav-about-button">
-                                Terms of service
-                            </RouterLink>
-                        </div>
-                    </v-col>
-                    <v-col>
-                        <div class="footer-center">
-                            <h3 class="footer-center-h3">Credits for used assets (WIP)</h3>
-                            <p>placeholder for a future link</p>
-                        </div>
-                    </v-col>
-                    <v-col>
-                        <div class="footer-right">
-                            <h3 class="footer-right-h3">La nostra squadra:</h3>
-                            <div class="team">
-                                <ul class="list-team">
-                                    <h4 class="list-name">Devs:</h4>
-                                    <li>Simone Tomasella</li>
-                                    <li>Thomas Ghione</li>
-                                    <li>Loris Prataiolo</li>
-                                    <li>Kevin Barragan</li>
-                                </ul>
-                                <ul class="list-team">
-                                    <h4 class="list-name">Designers:</h4>
-                                    <li>Giulia Salaris</li>
-                                    <li>Gabriel Oddone</li>
-                                    <li>Francesca Vernasca</li>
-                                    <li>Lorenzo Sacco</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </v-col>
-                </v-row>
-            </div>
+                            </v-col>
+                        </v-row>
+                        <v-row class="align-center mb-2">
+                            <v-col cols="auto">
+                                <v-img :src="githubLogo" alt="The github logo" width="25" height="25"
+                                    class="rounded-circle"></v-img>
+                            </v-col>
+                            <v-col>
+                                <v-btn text href="https://github.com/SimoneTomasella2002/WebDesignProject124"
+                                    color="primary">
+                                    Take a look at our code
+                                </v-btn>
+                            </v-col>
+                        </v-row>
+                        <v-row>
+                            <v-col>
+                                <p>Where to contact us: placeholder@gmail.com</p>
+                                <RouterLink to="/terms">
+                                    <v-btn text color="primary">Terms of service</v-btn>
+                                </RouterLink>
+                            </v-col>
+                        </v-row>
+                    </v-card>
+                </v-col>
+
+                <!-- Credits Column -->
+                <v-col>
+                    <v-card flat class="d-flex flex-column align-center pa-3 footer-card-background">
+                        <v-row>
+                            <v-col>
+                                <h3>Credits for used assets (WIP)</h3>
+                                <p>placeholder for a future link</p>
+                            </v-col>
+                        </v-row>
+                    </v-card>
+                </v-col>
+
+                <!-- Team Column -->
+                <v-col>
+                    <v-card flat class="d-flex flex-column align-center pa-3 footer-card-background">
+                        <v-row>
+                            <v-col>
+                                <h3>La nostra squadra:</h3>
+                                <v-row>
+                                    <v-col>
+                                        <h4>Devs:</h4>
+                                        <ul class="list-unstyled">
+                                            <li>Simone Tomasella</li>
+                                            <li>Thomas Ghione</li>
+                                            <li>Loris Prataiolo</li>
+                                            <li>Kevin Barragan</li>
+                                        </ul>
+                                    </v-col>
+                                    <v-col>
+                                        <h4>Designers:</h4>
+                                        <ul class="list-unstyled">
+                                            <li>Giulia Salaris</li>
+                                            <li>Gabriel Oddone</li>
+                                            <li>Francesca Vernasca</li>
+                                            <li>Lorenzo Sacco</li>
+                                        </ul>
+                                    </v-col>
+                                </v-row>
+                            </v-col>
+                        </v-row>
+                    </v-card>
+                </v-col>
+            </v-row>
         </v-container>
-    </footer>
+    </v-footer>
 </template>
-
-<style scoped>
-footer {
-    z-index: 1;
-    margin-top: auto;
-    flex-direction: column;
-    background: #C7BDB1;
-    color: white;
-    padding-top: 48px;
-    padding-bottom: 12px;
-    padding-left: 12px;
-    padding-right: 12px;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-general-information-logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.footer-logo {
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    margin-right: 5px;
-}
-
-.footer-general-information-github {
-    display: flex;
-    align-items: center;
-}
-
-.github-logo {
-    height: 25px;
-    width: 25px;
-    border-radius: 100%;
-    margin-right: 5px;
-}
-
-.footer-general,
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-right {
-    margin-top: 0px;
-}
-
-.footer-center-h3,
-.footer-right-h3 {
-    margin-top: 16px;
-    margin-bottom: 0px;
-}
-
-.list-team {
-    margin-top: 4px;
-    margin-bottom: 4px;
-}
-
-.team {
-    display: flex;
-    flex-direction: row;
-}
-
-.list-team {
-    margin-left: 12px;
-    margin-right: 12px;
-}
-
-.list-name {
-    margin-top: 4px;
-    margin-bottom: 4px;
-}
-
-p {
-    margin: 0;
-}
-</style>
