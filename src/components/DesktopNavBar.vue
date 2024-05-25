@@ -5,7 +5,7 @@ import websiteLogo from "@/assets/images/logotype.svg";
 <template>
     <v-container>
         <v-row>
-            <v-app-bar scroll-behavior="hide" scroll-threshold="1" :height="100">
+            <v-app-bar scroll-behavior="hide" :height="100">
                 <v-col align="center" cols="1" align-self="end">
                     <v-btn variant="text" rounded>
                         <div class="d-flex flex-column">
