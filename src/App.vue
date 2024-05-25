@@ -7,7 +7,7 @@ import NavBar from './components/NavBar.vue'
   <v-app class="text-center pa-0 ma-0">
     <v-container fluid class="ma-0 pa-0">
       <v-row>
-        <v-col>
+        <v-col class="pa-0 ma-0">
           <NavBar />
         </v-col>
       </v-row>
