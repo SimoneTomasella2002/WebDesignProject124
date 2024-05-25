@@ -27,7 +27,7 @@
     {
       "firstName": "Kevin",
       "lastName": "Barragan",
-      "photoLocation": "",
+      "photoLocation": "Kevin.jpg",
       "description": "Sono uno studente al terzo anno di Computer Science e, come impiego part-time, offro ripetizioni di materie scientifiche a studenti delle scuole. Ho competenze in vari linguaggi di programmazione, tra cui C, C++, C#, Java e Python. La mia passione per la programmazione è iniziata alle superiori, quando ho scritto il mio primo 'Hello World' e sviluppato giochi come Tic Tac Toe e Snake in C++. Nutro una forte passione per la musica e suono il pianoforte e la chitarra.",
       "linkedin": "placeholder",
       "github": "placeholder"

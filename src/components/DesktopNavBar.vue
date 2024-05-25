@@ -1,12 +1,21 @@
 <script setup>
 import websiteLogo from "@/assets/images/logotype.svg";
+import afFlag from "@/assets/images/afghanistan-flag.png";
+import itFlag from "@/assets/images/italian-flag.png";
+
+import { ref } from "vue";
+
+const people = ref([
+    { name: "Alessandro", img: itFlag },
+    { name: "Tara", img: afFlag },
+])
 </script>
 
 <template>
     <v-container>
         <v-row>
-            <v-app-bar scroll-behavior="hide" :height="100">
-                <v-col align="center" cols="1" align-self="end">
+            <v-app-bar :height="100" absolute="">
+                <v-col cols="1" align-self="end">
                     <v-btn variant="text" rounded>
                         <div class="d-flex flex-column">
                             <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-button-text">
@@ -21,10 +30,15 @@ import websiteLogo from "@/assets/images/logotype.svg";
                 <v-col cols="1">
                     <v-spacer></v-spacer>
                 </v-col>
-                <v-col align="center" cols="2" align-self="end">
-                    <v-btn variant="outlined" rounded append-icon="" class="text-button-text" block>
-                        <v-card-text
-                            class="ma-0 pa-0 text-center text-primary font-weight-bold">Alessandro</v-card-text></v-btn>
+                <v-col cols="2" align-self="end">
+                    <v-select variant="outlined" density="compact" class="text-button-text" rounded :items="people"
+                        item-title="name" label="User">
+                        <template v-slot:item="{ props, item }">
+                            <v-list-item v-bind="props">
+                            <v-img :src="item.raw.img" alt="Flag" width="24" height="16" class="mr-2"></v-img>
+                            </v-list-item>
+                        </template>
+                    </v-select>
                 </v-col>
                 <v-col align="center" cols="4" align-self="center">
                     <router-link to="/">
@@ -32,16 +46,18 @@ import websiteLogo from "@/assets/images/logotype.svg";
                             position="top -20px right 0px" </v-img>
                     </router-link>
                 </v-col>
-                <v-col align="center" cols="2" align-self="end">
-                    <v-btn variant="outlined" rounded append-icon="" class="text-button-text" block><v-card-text
-                            class="ma-0 pa-0 text-center text-primary font-weight-bold">Tara</v-card-text></v-btn>
+                <v-col cols="2" align-self="end">
+                    <v-btn variant="outlined" rounded class="text-button-text" block>
+                        <v-card-text class="ma-0 pa-0 text-primary font-weight-bold mr-2">Tara</v-card-text>
+                        <v-img :src="afFlag" alt="Afghanistan flag" width="24" height="16"></v-img>
+                    </v-btn>
                 </v-col>
-                <v-col align="center" cols="1" align-self="end">
+                <v-col cols="1" align-self="end">
                     <v-btn rounded to="/about" variant="text">
                         <v-card-text class="ma-0 pa-0 text-center text-button-text">About</v-card-text>
                     </v-btn>
                 </v-col>
-                <v-col align="center" cols="1" align-self="end">
+                <v-col cols="1" align-self="end">
                     <v-btn icon="mdi-web" height="36px" class="text-button-text" aria-label="Change language"></v-btn>
                 </v-col>
             </v-app-bar>
