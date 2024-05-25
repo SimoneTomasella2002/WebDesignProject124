@@ -14,7 +14,15 @@ import NavBar from './components/NavBar.vue'
       <v-row>
         <v-col class="pa-0 ma-0">
           <v-main>
-            <router-view />
+            <router-view v-slot="{ Component, route }">
+              <transition 
+                :enter-active-class="route.meta.enterClass"
+                :leave-active-class="route.meta.leaveClass"
+                mode="out-in"
+              >
+                <component :is="Component" />
+              </transition>
+            </router-view>
           </v-main>
         </v-col>
       </v-row>
@@ -26,3 +34,7 @@ import NavBar from './components/NavBar.vue'
     </v-container>
   </v-app>
 </template>
+
+<style scoped>
+
+</style>

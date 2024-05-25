@@ -8,6 +8,9 @@ import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
 
+// Animate.css
+import 'animate.css'
+
 // Importa la configurazione del tema
 import { myAccessibleTheme } from "./themeConfig.js";
 
