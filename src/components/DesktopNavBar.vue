@@ -16,23 +16,41 @@ const people = ref([
         <v-row>
             <v-app-bar :height="100" absolute="">
                 <v-col cols="1" align-self="end">
-                    <v-btn variant="text" rounded>
-                        <div class="d-flex flex-column">
-                            <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-button-text">
-                                How to use
-                            </v-card-text>
-                            <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-button-text">
-                                this website?
-                            </v-card-text>
-                        </div>
-                    </v-btn>
+                    <v-dialog transition="dialog-top-transition">
+                        <template v-slot:activator="{ props: activatorProps }">
+                            <v-btn variant="text" rounded v-bind="activatorProps">
+                                <div class="d-flex flex-column">
+                                    <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-button-text">
+                                        How to use
+                                    </v-card-text>
+                                    <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-button-text">
+                                        this website?
+                                    </v-card-text>
+                                </div>
+                            </v-btn>
+                        </template>
+
+                        <template v-slot:default="{ isActive }">
+                            <v-card>
+                                <v-col class="pa-0 ma-0">
+                                    <v-toolbar title="How to use the website">
+                                        <v-btn icon="mdi-check-circle-outline" @click="isActive.value = false"></v-btn>
+                                    </v-toolbar>
+                                </v-col>
+                                
+                                <v-card-text>
+                                    Palle
+                                </v-card-text>
+                            </v-card>
+                        </template>
+                    </v-dialog>
                 </v-col>
                 <v-col cols="1">
                     <v-spacer></v-spacer>
                 </v-col>
                 <v-col cols="2" align-self="end">
                     <v-select variant="outlined" density="compact" class="text-button-text" rounded :items="people"
-                        item-title="name" label="User">
+                        item-title="name" label="Person">
                         <template v-slot:item="{ props, item }">
                             <v-list-item v-bind="props">
                             <v-img :src="item.raw.img" alt="Flag" width="24" height="16" class="mr-2"></v-img>
