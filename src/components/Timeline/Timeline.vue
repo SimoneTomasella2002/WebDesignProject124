@@ -19,7 +19,7 @@ export default {
   padding: 20px 0;
 }
 
-/* Create the vertical timeline line in the middle of the page */
+/* vertical timeline line */
 .timeline::before {
   content: "";
   position: absolute;

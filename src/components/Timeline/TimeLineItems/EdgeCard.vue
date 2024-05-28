@@ -53,16 +53,16 @@ export default {
 }
 
 .edge-card.expanded {
-  width: 250px; /* Adjusted width for better visualization */
+  width: 250px;
   height: 150px;
   z-index: 6;
 }
 
 .edge-card.expanded h3 {
-  opacity: 1; /* Start with full opacity */
-  transform: scale(1, 1); /* Scale from the center */
-  transform-origin: 50% 50%; /* Set transform origin */
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smoother transition */
+  opacity: 1; 
+  transform: scale(1, 1); 
+  transform-origin: 50% 50%; 
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 
 }
 
@@ -76,13 +76,7 @@ export default {
   z-index: 5;
 }
 
-.arrow {
-  transition: transform 0.3s ease;
-}
 
-.arrow.rotate {
-  transform: rotate(180deg); /* Rotate arrow on expansion */
-}
 
 
 </style>

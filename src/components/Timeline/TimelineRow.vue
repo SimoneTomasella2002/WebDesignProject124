@@ -30,10 +30,10 @@ export default {
 
 <style scoped>
 .timeline-row {
-  display: flex; /* Use flexbox for horizontal arrangement */
-  align-items: center; /* Align content vertically */
+  display: flex; 
+  align-items: center; 
   width: 100%;
-  gap: 20px; /* Gap between elements */
+  gap: 20px; 
   margin-bottom: 25px;
   position: relative;
   box-sizing: border-box;
@@ -41,26 +41,24 @@ export default {
 
 .sx-side,
 .dx-side {
-  flex: 1; /* Allow sides to expand */
-  display: flex; /* Arrange children inline */
-  justify-content: space-between; /* Distribute space evenly within sides */
-  /* Add other styles for sides (e.g., border, padding) */
+  flex: 1; 
+  display: flex; 
+  justify-content: space-between; 
 }
 
 .age-indicator {
-  display: flex; /* Arrange content inline */
-  align-items: center; /* Align content vertically */
-  justify-content: center; /* Center content horizontally */
-  width: 50px; /* Fixed width for age indicator */
-  height: 50px; /* Adjust height as needed */
-  border-radius: 50%; /* Create a circle */
-  background-color: #ddd; /* Set background color */
-  /* Add other styles for age indicator (e.g., border, text color) */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  background-color: #ddd;
 }
 
 .age-indicator span {
-  font-size: 16px; /* Adjust font size */
-  font-weight: bold; /* Make text bold */
+  font-size: 16px; 
+  font-weight: bold; 
   color: black;
 }
 </style>
