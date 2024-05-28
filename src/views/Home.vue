@@ -1,60 +1,89 @@
-<script setup>
-import fotoGattino from "@/assets/images/la-guida-del-gattino1.jpg";
+<template>
+  <div class="home">
+    <h1>Età</h1>
+
+    <Timeline>
+      <TimelineRow :age="25">
+        <template v-slot:sx-edge-card>
+          <EdgeCard title="left edge card one" />
+        </template>
+
+        <template v-slot:sx-story-board>
+          <StoryBoardCard title="left story board card one" />
+        </template>
+
+        <template v-slot:dx-story-board>
+          <StoryBoardCard title="right story board card one" />
+        </template>
+
+        <template v-slot:dx-edge-card>
+          <EdgeCard title="right edge card one" />
+        </template>
+      </TimelineRow>
+
+      <TimelineRow :age="30">
+        <template v-slot:sx-edge-card>
+          <EdgeCard title="left edge card two" />
+        </template>
+
+        <template v-slot:sx-story-board>
+          <StoryBoardCard title="left story board card two" />
+        </template>
+
+        <template v-slot:dx-story-board>
+          <StoryBoardCard title="right story board card two" />
+        </template>
+
+        <template v-slot:dx-edge-card>
+          <EdgeCard title="right edge card two" />
+        </template>
+      </TimelineRow>
+
+      </Timeline>
+  </div>
+</template>
+
+
+<script>
+import Timeline from "@/components/Timeline/Timeline.vue";
+import TimelineRow from "@/components/Timeline/TimelineRow.vue";
+import StoryBoardCard from "@/components/Timeline/TimeLineItems/StoryBoard.vue";
+import EdgeCard from "@/components/Timeline/TimeLineItems/EdgeCard.vue";
+
+
+export default {
+  name: "Home",
+  components: {
+    Timeline,
+    TimelineRow,
+    StoryBoardCard,
+    EdgeCard
+  }
+};
 </script>
 
-<template>
-    <v-container>
-        <v-row class="d-flex justify-center">
-            <v-col cols="12" md="8">
-                <v-card class="pa-4 mb-4">
-                    <v-card-text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi odio sed accusantium facere,
-                        minus natus laboriosam quas quia illo nesciunt aliquam corporis. Ex nisi quas itaque, beatae
-                        molestias ratione praesentium.
-                    </v-card-text>
-                </v-card>
-            </v-col>
-        </v-row>
-        <v-row class="d-flex justify-center">
-            <v-col cols="12" md="8">
-                <v-card class="pa-4 mb-4">
-                    <v-card-text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi odio sed accusantium facere,
-                        minus natus laboriosam quas quia illo nesciunt aliquam corporis. Ex nisi quas itaque, beatae
-                        molestias ratione praesentium.
-                    </v-card-text>
-                </v-card>
-            </v-col>
-        </v-row>
-        <v-row class="d-flex justify-center">
-            <v-col cols="12" md="8">
-                <v-card class="pa-4 mb-4">
-                    <v-card-text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi odio sed accusantium facere,
-                        minus natus laboriosam quas quia illo nesciunt aliquam corporis. Ex nisi quas itaque, beatae
-                        molestias ratione praesentium.
-                    </v-card-text>
-                </v-card>
-            </v-col>
-        </v-row>
-        <v-row class="d-flex justify-center">
-            <v-col cols="12" md="8">
-                <v-card class="pa-4 mb-4">
-                    <v-card-text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi odio sed accusantium facere,
-                        minus natus laboriosam quas quia illo nesciunt aliquam corporis. Ex nisi quas itaque, beatae
-                        molestias ratione praesentium.
-                    </v-card-text>
-                </v-card>
-            </v-col>
-        </v-row>
-        <v-row class="d-flex justify-center">
-            <v-col cols="12" md="8">
-                <v-card class="pa-4 mb-4">
-                    <v-img :src="fotoGattino" alt="Immagine di un gattino rossiccio patato lo voglio strapazzare"
-                        class="rounded"></v-img>
-                </v-card>
-            </v-col>
-        </v-row>
-    </v-container>
-</template>
+<style scoped>
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+.home {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 20px 0;
+}
+</style>
