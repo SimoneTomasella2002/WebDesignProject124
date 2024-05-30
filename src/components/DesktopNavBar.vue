@@ -37,7 +37,7 @@ const people = ref([
                                         <v-btn icon="mdi-check-circle-outline" @click="isActive.value = false"></v-btn>
                                     </v-toolbar>
                                 </v-col>
-                                
+
                                 <v-card-text>
                                     Palle
                                 </v-card-text>
@@ -50,10 +50,12 @@ const people = ref([
                 </v-col>
                 <v-col cols="2" align-self="end">
                     <v-select variant="outlined" density="compact" class="text-button-text" rounded :items="people"
-                        item-title="name" label="Person">
+                        item-title="name" label="">
                         <template v-slot:item="{ props, item }">
                             <v-list-item v-bind="props">
-                            <v-img :src="item.raw.img" alt="Flag" width="24" height="16" class="mr-2"></v-img>
+                                <template v-slot:title>
+                                    <span class="d-flex"> {{ item.raw.name }} <v-img :src="item.raw.img" alt="Flag" width="24" height="16"></v-img></span>
+                                </template>
                             </v-list-item>
                         </template>
                     </v-select>
