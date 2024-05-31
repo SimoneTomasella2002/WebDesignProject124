@@ -50,11 +50,14 @@ const people = ref([
                 </v-col>
                 <v-col cols="2" align-self="end">
                     <v-select variant="outlined" density="compact" class="text-button-text" rounded :items="people"
-                        item-title="name" label="">
+                        item-title="name" :label="people[0].name">
                         <template v-slot:item="{ props, item }">
                             <v-list-item v-bind="props">
                                 <template v-slot:title>
-                                    <span class="d-flex"> {{ item.raw.name }} <v-img :src="item.raw.img" alt="Flag" width="24" height="16"></v-img></span>
+                                    <span class="text-button-text">
+                                        {{ item.raw.name }}
+                                        <v-img :src="item.raw.img" alt="Flag" width="24" height="16"></v-img>
+                                    </span>
                                 </template>
                             </v-list-item>
                         </template>
