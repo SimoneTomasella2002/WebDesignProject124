@@ -15,7 +15,7 @@ const people = ref([
 <template>
     <v-container>
         <v-row>
-            <v-app-bar scroll-behavior="hide" scroll-threshold="0" :height="100">
+            <v-app-bar scroll-behavior="hide" scroll-threshold="1" :height="100">
                 <v-col cols="1">
                     <v-dialog transition="dialog-top-transition">
                         <template v-slot:activator="{ props: activatorProps }">
