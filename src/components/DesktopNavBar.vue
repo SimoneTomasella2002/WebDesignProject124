@@ -2,6 +2,7 @@
 import websiteLogo from "@/assets/images/logotype.svg";
 import afFlag from "@/assets/images/afghanistan-flag.png";
 import itFlag from "@/assets/images/italian-flag.png";
+import Select from "@/components/Select.vue";
 
 import { ref } from "vue";
 
@@ -14,8 +15,8 @@ const people = ref([
 <template>
     <v-container>
         <v-row>
-            <v-app-bar :height="100" absolute="">
-                <v-col cols="1" align-self="end">
+            <v-app-bar :height="100">
+                <v-col cols="1">
                     <v-dialog transition="dialog-top-transition">
                         <template v-slot:activator="{ props: activatorProps }">
                             <v-btn variant="text" rounded v-bind="activatorProps">
@@ -48,39 +49,24 @@ const people = ref([
                 <v-col cols="1">
                     <v-spacer></v-spacer>
                 </v-col>
-                <v-col cols="2" align-self="end">
-                    <v-select variant="outlined" density="compact" class="text-button-text" rounded :items="people"
-                        item-title="name" :label="people[0].name">
-                        <template v-slot:item="{ props, item }">
-                            <v-list-item v-bind="props">
-                                <template v-slot:title>
-                                    <span class="text-button-text">
-                                        {{ item.raw.name }}
-                                        <v-img :src="item.raw.img" alt="Flag" width="24" height="16"></v-img>
-                                    </span>
-                                </template>
-                            </v-list-item>
-                        </template>
-                    </v-select>
+                <v-col cols="2" align-self="end" class="pa-2">
+                    <Select :people="people" label="Passport 1"/>
                 </v-col>
-                <v-col align="center" cols="4" align-self="center">
+                <v-col align="center" cols="4">
                     <router-link to="/">
                         <v-img :src='websiteLogo' alt="Logo for the website" max-width="19rem"
                             position="top -20px right 0px" </v-img>
                     </router-link>
                 </v-col>
-                <v-col cols="2" align-self="end">
-                    <v-btn variant="outlined" rounded class="text-button-text" block>
-                        <v-card-text class="ma-0 pa-0 text-primary font-weight-bold mr-2">Tara</v-card-text>
-                        <v-img :src="afFlag" alt="Afghanistan flag" width="24" height="16"></v-img>
-                    </v-btn>
+                <v-col cols="2" align-self="end" class="pa-2">
+                    <Select :people="people" label="Passport 2"/>
                 </v-col>
-                <v-col cols="1" align-self="end">
+                <v-col cols="1">
                     <v-btn rounded to="/about" variant="text">
                         <v-card-text class="ma-0 pa-0 text-center text-button-text">About</v-card-text>
                     </v-btn>
                 </v-col>
-                <v-col cols="1" align-self="end">
+                <v-col cols="1">
                     <v-btn icon="mdi-web" height="36px" class="text-button-text" aria-label="Change language"></v-btn>
                 </v-col>
             </v-app-bar>
