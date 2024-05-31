@@ -10,6 +10,16 @@ const people = ref([
     { name: "Alessandro", img: itFlag },
     { name: "Tara", img: afFlag },
 ])
+
+// Funzione per gestire la selezione della persona e disabilitarla
+const handlePersonSelected = (selectedPerson) => {
+    // Cerca la persona selezionata nell'array e disabilita la selezione
+    // const personIndex = people.value.findIndex(person => person.name === selectedPerson.name);
+    // if (personIndex !== -1) {
+    //     people.value[personIndex].disabled = true;
+    // }
+    console.log(selectedPerson);
+};
 </script>
 
 <template>
@@ -50,7 +60,7 @@ const people = ref([
                     <v-spacer></v-spacer>
                 </v-col>
                 <v-col cols="2" align-self="end" class="pa-2">
-                    <Select :people="people" label="Passport 1"/>
+                    <Select :people="people" label="Passport 1" @personSelected="handlePersonSelected" />
                 </v-col>
                 <v-col align="center" cols="4">
                     <router-link to="/content">
@@ -59,7 +69,7 @@ const people = ref([
                     </router-link>
                 </v-col>
                 <v-col cols="2" align-self="end" class="pa-2">
-                    <Select :people="people" label="Passport 2"/>
+                    <Select :people="people" label="Passport 2" @personSelected="handlePersonSelected" />
                 </v-col>
                 <v-col cols="1">
                     <v-btn rounded to="/about" variant="text">

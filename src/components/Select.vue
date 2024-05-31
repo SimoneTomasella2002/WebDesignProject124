@@ -1,11 +1,20 @@
 <script setup>
-import {defineProps} from 'vue'
-const props = defineProps(['people','label'])
+import { defineProps, defineEmits } from 'vue'
+const props = defineProps(['people', 'label'])
+const emits = defineEmits(['personSelected'])
+
+let selectedPerson = null
+
+const handleSelect = (selected) => {
+    console.log(selected)
+    selectedPerson = selected
+    emits.personSelected(selectedPerson)
+}
 </script>
 
 <template>
     <v-select variant="outlined" density="compact" class="text-button-text" rounded :items="people" item-title="name"
-        :label="label" hint="Choose a passport" persistent-hint>
+        :label="label" hint="Choose a passport" persistent-hint hide-selected>
         <template v-slot:item="{ props, item }">
             <v-list-item v-bind="props">
                 <template v-slot:title>
