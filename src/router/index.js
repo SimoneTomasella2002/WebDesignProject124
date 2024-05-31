@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/views/Home.vue";
 import ChiSiamo from "@/views/ChiSiamo.vue";
 import TermsOfService from "@/views/TermsOfService.vue";
+import MainContent from "@/views/MainContent.vue";
 
 const routes = [
   { path: "/", name: "Home", component: Home, 
@@ -18,6 +19,12 @@ const routes = [
     }
   },
   { path: "/terms", name: "TermsOfService", component: TermsOfService, 
+    meta: { 
+      enterClass: 'animate__animated animate__fadeInRight',
+      leaveClass: 'animate__animated animate__fadeOutLeft'
+    }
+  },
+  { path: "/content", name:"MainContent", component: MainContent,
     meta: { 
       enterClass: 'animate__animated animate__fadeInRight',
       leaveClass: 'animate__animated animate__fadeOutLeft'

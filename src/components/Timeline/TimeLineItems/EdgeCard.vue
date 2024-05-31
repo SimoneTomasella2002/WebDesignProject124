@@ -59,9 +59,9 @@ export default {
 }
 
 .edge-card.expanded h3 {
-  opacity: 1; 
-  transform: scale(1, 1); 
-  transform-origin: 50% 50%; 
+  opacity: 1;
+  transform: scale(1, 1);
+  transform-origin: 50% 50%;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 
 }
@@ -75,8 +75,4 @@ export default {
   background: rgba(0, 0, 0, 0.5);
   z-index: 5;
 }
-
-
-
-
 </style>

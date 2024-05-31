@@ -15,7 +15,7 @@ const people = ref([
 <template>
     <v-container>
         <v-row>
-            <v-app-bar scroll-behavior="hide" scroll-threshold="0" :height="100">
+            <v-app-bar scroll-behavior="hide" scroll-threshold="10" :height="100">
                 <v-col cols="1">
                     <v-dialog transition="dialog-top-transition">
                         <template v-slot:activator="{ props: activatorProps }">
@@ -53,7 +53,7 @@ const people = ref([
                     <Select :people="people" label="Passport 1"/>
                 </v-col>
                 <v-col align="center" cols="4">
-                    <router-link to="/">
+                    <router-link to="/content">
                         <v-img :src='websiteLogo' alt="Logo for the website" max-width="19rem"
                             position="top -20px right 0px" </v-img>
                     </router-link>

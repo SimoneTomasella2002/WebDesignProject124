@@ -11,7 +11,6 @@ export default {
 </script>
 
 <style scoped>
-
 .timeline {
   position: relative;
   width: 100vh;

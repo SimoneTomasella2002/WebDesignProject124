@@ -8,7 +8,7 @@
     <div class="age-indicator">
       <span>{{ age }}</span>
     </div>
-    
+
     <div class="dx-side">
       <slot name="dx-story-board"></slot>
       <slot name="dx-edge-card"></slot>
@@ -30,10 +30,10 @@ export default {
 
 <style scoped>
 .timeline-row {
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   width: 100%;
-  gap: 20px; 
+  gap: 20px;
   margin-bottom: 25px;
   position: relative;
   box-sizing: border-box;
@@ -41,24 +41,24 @@ export default {
 
 .sx-side,
 .dx-side {
-  flex: 1; 
-  display: flex; 
-  justify-content: space-between; 
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
 }
 
 .age-indicator {
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  width: 50px; 
-  height: 50px; 
-  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   background-color: #ddd;
 }
 
 .age-indicator span {
-  font-size: 16px; 
-  font-weight: bold; 
+  font-size: 16px;
+  font-weight: bold;
   color: black;
 }
 </style>
