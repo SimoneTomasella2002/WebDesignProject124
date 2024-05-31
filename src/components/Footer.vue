@@ -4,6 +4,10 @@ import websiteLogo from "@/assets/images/logo.jpg";
 function scrollToTheTop () {
     window.scrollTo(0,0);
 }
+
+function openGithubPageInASeparateTab () {
+    window.open("https://github.com/SimoneTomasella2002/WebDesignProject124", "_blank");
+}
 </script>
 
 <template>
@@ -16,7 +20,7 @@ function scrollToTheTop () {
                         <v-img :src="websiteLogo" alt="The website logo" width="50" height="50"
                             class="rounded-circle mb-2"></v-img>
                         <i class="mb-2">Behind a passport</i>
-                        <v-btn @click="openGithubPageInASeparateTab" text href="https://github.com/SimoneTomasella2002/WebDesignProject124" color="primary"
+                        <v-btn @click="openGithubPageInASeparateTab" text color="primary"
                             class="mb-2">
                             Take a look at our code
                         </v-btn>

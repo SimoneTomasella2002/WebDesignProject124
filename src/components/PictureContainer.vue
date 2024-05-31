@@ -32,7 +32,7 @@ console.log(props.ProfileName);
     <v-card-text>
       <p>{{ profile.description }}</p>
     </v-card-text>
-    <v-card-actions>
+    <v-card-actions class="d-flex justify-center">
       <v-btn v-if="profile.linkedin" :href="profile.linkedin" target="_blank" color="primary">
         LinkedIn
       </v-btn>
