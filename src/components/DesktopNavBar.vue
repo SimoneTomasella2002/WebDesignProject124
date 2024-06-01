@@ -64,7 +64,7 @@ const handlePersonSelected = (selectedPerson) => {
                 </v-col>
                 <v-col align="center" cols="4">
                     <router-link to="/content">
-                        <v-img :src='websiteLogo' alt="Logo for the website" width="19rem"
+                        <v-img :src='websiteLogo' alt="Logo for the website" max-width="19rem"
                             position="top -20px right 0px" </v-img>
                     </router-link>
                 </v-col>
