@@ -62,12 +62,13 @@ const handlePersonSelected = (selectedPerson) => {
                 <v-col cols="2" align-self="end" class="pa-2">
                     <Select :people="people" label="Passport 1" @personSelected="handlePersonSelected" />
                 </v-col>
+                
                 <v-col align="center" cols="4">
                     <router-link to="/content">
-                        <v-img :src='websiteLogo' alt="Logo for the website" max-width="19rem"
-                            position="top -20px right 0px" </v-img>
+                        <v-img :src='websiteLogo' alt="Logo for the website" max-width="19rem" position="top -20px right 0px"></v-img>
                     </router-link>
                 </v-col>
+                
                 <v-col cols="2" align-self="end" class="pa-2">
                     <Select :people="people" label="Passport 2" @personSelected="handlePersonSelected" />
                 </v-col>
