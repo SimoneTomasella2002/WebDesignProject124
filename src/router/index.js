@@ -6,7 +6,7 @@ import TermsOfService from "@/views/TermsOfService.vue";
 import MainContent from "@/views/MainContent.vue";
 
 const routes = [
-  { path: "/", name: "Home", component: Home, 
+  { path: "/", name: "Home", component: MainContent, 
     meta: { 
       enterClass: 'animate__animated animate__fadeInLeft',
       leaveClass: 'animate__animated animate__fadeOutRight'
