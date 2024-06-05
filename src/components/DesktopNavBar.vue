@@ -1,4 +1,5 @@
 <script setup>
+import Dialog from "@/components/Dialog.vue";
 import websiteLogo from "@/assets/images/logotype.svg";
 import afFlag from "@/assets/images/flags/afghanistan-flag.png";
 import itFlag from "@/assets/images/flags/italian-flag.png";
@@ -27,58 +28,7 @@ const handlePersonSelected = (selectedPerson) => {
         <v-row>
             <v-app-bar scroll-behavior="hide" scroll-threshold="100" :height="100">
                 <v-col cols="1">
-                    <v-dialog max-width="800" transition="dialog-top-transition">
-                        <template v-slot:activator="{ props: activatorProps }">
-                            <v-btn variant="text" rounded v-bind="activatorProps">
-                                <div class="d-flex flex-column">
-                                    <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-button-text">
-                                        How to use
-                                    </v-card-text>
-                                    <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-button-text">
-                                        this website?
-                                    </v-card-text>
-                                </div>
-                            </v-btn>
-                        </template>
-
-                        <template v-slot:default="{ isActive }">
-                            <v-card>
-                                <v-col align="right">
-                                    <v-btn icon="mdi-close" class="text-button-text" @click="isActive.value = false"></v-btn>
-                                </v-col>
-
-                                <v-card-text align="center">
-                                    <h1>How the possibilities change based on where you're from?</h1>
-                                </v-card-text>
-                                
-                                <v-card-text align="center">
-                                    <p>Find out by comparing the stories that are behind passports</p>
-                                </v-card-text>
-
-                                <v-row>
-                                    <v-col>
-                                        <v-card >
-
-                                        </v-card>
-                                    </v-col>
-                                    <v-col>
-                                        <v-img>
-                                            
-                                        </v-img>
-                                    </v-col>
-                                    <v-col>
-                                        <v-img>
-                                            
-                                        </v-img>
-                                    </v-col>
-                                </v-row>
-
-                                <v-col align="center">
-                                    <v-btn text="Ok, I understand" @click="isActive.value = false"></v-btn>
-                                </v-col>
-                            </v-card>
-                        </template>
-                    </v-dialog>
+                    <Dialog />
                 </v-col>
                 <v-col cols="1">
                     <v-spacer></v-spacer>
@@ -86,13 +36,13 @@ const handlePersonSelected = (selectedPerson) => {
                 <v-col cols="2" align-self="end" class="pa-2">
                     <Select :people="people" label="Passport 1" @personSelected="handlePersonSelected" />
                 </v-col>
-                
-                <v-col align="center" cols="4">
+
+                <v-col align-self="center" cols="4" class="d-flex justify-center align-center">
                     <router-link to="/">
-                        <v-img :src='websiteLogo' alt="Logo for the website" max-width="19rem" position="top -20px right 0px"></v-img>
+                        <v-img :src='websiteLogo' alt="Logo for the website" width="22vw" height="13vh" style="top: -1vh;"></v-img>
                     </router-link>
                 </v-col>
-                
+
                 <v-col cols="2" align-self="end" class="pa-2">
                     <Select :people="people" label="Passport 2" @personSelected="handlePersonSelected" />
                 </v-col>
@@ -108,3 +58,12 @@ const handlePersonSelected = (selectedPerson) => {
         </v-row>
     </v-container>
 </template>
+
+<style scoped>
+.responsive-logo {
+  width: 20vw;
+  height: 10vh;
+  max-width: 390px; /* Aggiungi un limite massimo se necessario */
+  max-height: 70px; /* Aggiungi un limite massimo se necessario */
+}
+</style>

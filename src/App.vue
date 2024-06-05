@@ -4,7 +4,7 @@ import NavBar from './components/NavBar.vue'
 </script>
 
 <template>
-  <v-app class="d-flex flex-column text-center pa-0 ma-0">
+  <v-app>
     <NavBar />
     <v-main>
       <router-view v-slot="{ Component, route }">
