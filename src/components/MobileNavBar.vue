@@ -14,14 +14,13 @@ const items = [
   <v-container>
     <v-row>
       <v-app-bar color="background" class="rounded" scroll-behavior="hide">
-        <v-col align="start" cols="3">
+        <v-col align-self="start" cols="3">
           <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
         </v-col>
-        <v-col align="center" cols="6">
-          <v-toolbar-title>
+        <v-col align-self="center" cols="6" >
+          <v-toolbar-title class="d-flex justify-center align-center">
             <RouterLink to="/">
-              <v-img :src="websiteLogo" alt="Logo for the website" max-width="10rem"
-                position="top -10px right 0px"></v-img>
+              <v-img :src="websiteLogo" alt="Logo for the website" width="50vw" height="7vh" style="top: -1vh"></v-img>
             </RouterLink>
           </v-toolbar-title>
         </v-col>
