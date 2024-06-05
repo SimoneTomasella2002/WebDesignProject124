@@ -20,7 +20,7 @@ import PictureContainer from "@/components/PictureContainer.vue";
         <h1>Chi siamo</h1>
       </v-col>
       <v-col v-for="name in ['Simone', 'Thomas', 'Kevin', 'Loris', 'Gabriel', 'Giulia', 'Francesca', 'Lorenzo']"
-        :key="name">
+        :key="name" cols="12" sm="6" md="3" lg="3">
         <PictureContainer :ProfileName="name" />
       </v-col>
     </v-row>
