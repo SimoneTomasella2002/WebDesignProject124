@@ -1,7 +1,7 @@
 <script setup>
 import websiteLogo from "@/assets/images/logotype.svg";
-import afFlag from "@/assets/images/afghanistan-flag.png";
-import itFlag from "@/assets/images/italian-flag.png";
+import afFlag from "@/assets/images/flags/afghanistan-flag.png";
+import itFlag from "@/assets/images/flags/italian-flag.png";
 import Select from "@/components/Select.vue";
 
 import { ref } from "vue";
@@ -27,7 +27,7 @@ const handlePersonSelected = (selectedPerson) => {
         <v-row>
             <v-app-bar scroll-behavior="hide" scroll-threshold="100" :height="100">
                 <v-col cols="1">
-                    <v-dialog transition="dialog-top-transition">
+                    <v-dialog max-width="800" transition="dialog-top-transition">
                         <template v-slot:activator="{ props: activatorProps }">
                             <v-btn variant="text" rounded v-bind="activatorProps">
                                 <div class="d-flex flex-column">
@@ -43,15 +43,39 @@ const handlePersonSelected = (selectedPerson) => {
 
                         <template v-slot:default="{ isActive }">
                             <v-card>
-                                <v-col class="pa-0 ma-0">
-                                    <v-toolbar title="How to use the website">
-                                        <v-btn icon="mdi-check-circle-outline" @click="isActive.value = false"></v-btn>
-                                    </v-toolbar>
+                                <v-col align="right">
+                                    <v-btn icon="mdi-close" class="text-button-text" @click="isActive.value = false"></v-btn>
                                 </v-col>
 
-                                <v-card-text>
-                                    Palle
+                                <v-card-text align="center">
+                                    <h1>How the possibilities change based on where you're from?</h1>
                                 </v-card-text>
+                                
+                                <v-card-text align="center">
+                                    <p>Find out by comparing the stories that are behind passports</p>
+                                </v-card-text>
+
+                                <v-row>
+                                    <v-col>
+                                        <v-card >
+
+                                        </v-card>
+                                    </v-col>
+                                    <v-col>
+                                        <v-img>
+                                            
+                                        </v-img>
+                                    </v-col>
+                                    <v-col>
+                                        <v-img>
+                                            
+                                        </v-img>
+                                    </v-col>
+                                </v-row>
+
+                                <v-col align="center">
+                                    <v-btn text="Ok, I understand" @click="isActive.value = false"></v-btn>
+                                </v-col>
                             </v-card>
                         </template>
                     </v-dialog>

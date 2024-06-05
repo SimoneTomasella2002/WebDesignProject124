@@ -8,10 +8,12 @@ import PictureContainer from "@/components/PictureContainer.vue";
       <v-col cols="12">
         <h1>Il messaggio</h1>
       </v-col>
-      <v-col cols="12">
-        <p>“Come cambiano le possibilità di trovare un posto in cui stare nel mondo in base al nostro paese di origine? Abbiamo tutti le stesse opportunità e diritti?”</p>
-        <p>Siamo un gruppo di designer e informatici, uniti dalla passione per il racconto delle storie umane e dall'impegno per un mondo più giusto e consapevole.</p>
-        <p>Crediamo che la comprensione delle esperienze degli altri sia il primo passo verso l'empatia e il cambiamento. Con questo progetto, vogliamo aprire uno spazio di riflessione, rivolgendo uno sguardo a tutte le storie delle persone che migrano da ogni parte del mondo per motivi diversi, mettendole a confronto.</p>
+      <v-col align="left" cols="12">
+        <v-card>
+          <p>“Come cambiano le possibilità di trovare un posto in cui stare nel mondo in base al nostro paese di origine? Abbiamo tutti le stesse opportunità e diritti?”</p>
+          <p>Siamo un gruppo di designer e informatici, uniti dalla passione per il racconto delle storie umane e dall'impegno per un mondo più giusto e consapevole.</p>
+          <p>Crediamo che la comprensione delle esperienze degli altri sia il primo passo verso l'empatia e il cambiamento. Con questo progetto, vogliamo aprire uno spazio di riflessione, rivolgendo uno sguardo a tutte le storie delle persone che migrano da ogni parte del mondo per motivi diversi, mettendole a confronto.</p>
+        </v-card>
       </v-col>
       
       <v-col cols="12">
