@@ -1,6 +1,6 @@
 <script setup>
 import Dialog from "@/components/Dialog.vue";
-import websiteLogo from "@/assets/images/logotype.svg";
+import websiteLogo from "@/assets/images/logopassport.svg";
 import afFlag from "@/assets/images/flags/afghanistan-flag.png";
 import itFlag from "@/assets/images/flags/italian-flag.png";
 import Select from "@/components/Select.vue";
@@ -39,7 +39,7 @@ const handlePersonSelected = (selectedPerson) => {
 
                 <v-col align-self="center" cols="4" class="d-flex justify-center align-center">
                     <router-link to="/">
-                        <v-img :src='websiteLogo' alt="Logo for the website" width="18vw" height="13vh" style="top: -1.5vh;"></v-img>
+                        <v-img :src='websiteLogo' alt="Logo for the website" width="18vw" height="9vh"></v-img>
                     </router-link>
                 </v-col>
 
