@@ -26,18 +26,26 @@ console.log(props.ProfileName);
 
 <template>
   <v-card v-if="profile" class="mx-auto my-4">
-    <v-img :src="`/personal-images/${profile.photoLocation}`" height="200px"
+    <v-col>
+      <v-img :src="`/personal-images/${profile.photoLocation}`" height="200px" class="border-lg" 
       :alt="`An image of ${profile.firstName}`"></v-img>
+    </v-col>
     <v-card-title>{{ profile.firstName }} {{ profile.lastName }}</v-card-title>
     <v-card-text>
       <p>{{ profile.description }}</p>
     </v-card-text>
     <v-card-actions class="d-flex justify-center">
-      <v-btn v-if="profile.linkedin" :href="profile.linkedin" target="_blank" color="primary">
+      <v-btn v-if="profile.linkedin !== ''" :href="profile.linkedin" target="_blank" color="primary">
         LinkedIn
       </v-btn>
-      <v-btn v-if="profile.github" :href="profile.github" target="_blank" color="secondary">
+      <v-btn v-else disabled>
+        LinkedIn
+      </v-btn>
+      <v-btn v-if="profile.github !== ''" :href="profile.github" target="_blank" color="secondary">
         GitHub
+      </v-btn>
+      <v-btn v-else disabled>
+        Github
       </v-btn>
     </v-card-actions>
   </v-card>

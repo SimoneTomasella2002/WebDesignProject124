@@ -24,7 +24,7 @@
                 </v-card-text>
 
                 <v-card-text align="center">
-                    <p>Find out by comparing the stories that are behind passports palle</p>
+                    <p>Find out by comparing the stories that are behind passports</p>
                 </v-card-text>
 
                 <v-row>
