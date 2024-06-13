@@ -50,3 +50,10 @@ console.log(props.ProfileName);
     </v-card-actions>
   </v-card>
 </template>
+
+<style scoped>
+  .d-inline-block {
+    display: inline-block;
+  }
+
+</style>

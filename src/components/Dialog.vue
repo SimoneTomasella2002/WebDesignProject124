@@ -1,5 +1,21 @@
+<script setup>
+import { ref, onMounted } from 'vue';
+
+// Reactive variable to control dialog visibility
+const isDialogActive = ref(false);
+
+// Open the dialog after 2 seconds when the component is mounted
+onMounted(() => {
+  setTimeout(() => {
+    isDialogActive.value = true;
+  }, 2000);
+});
+
+</script>
+
+
 <template>
-    <v-dialog max-width="800" transition="dialog-top-transition">
+    <v-dialog v-model="isDialogActive" max-width="800" transition="dialog-top-transition">
         <template v-slot:activator="{ props: activatorProps }">
             <v-btn variant="text" rounded v-bind="activatorProps">
                 <div class="d-flex flex-column">
