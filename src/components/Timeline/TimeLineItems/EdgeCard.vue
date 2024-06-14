@@ -65,10 +65,10 @@ export default {
   --border-angle: 0turn;
   --main-bg: conic-gradient(
     from var(--border-angle),
-    rgb(241, 237, 245),
-    rgb(237, 237, 243) 5%,
-    rgb(241, 237, 245) 60%,
-    rgb(241, 237, 245) 95%
+    white,
+    white 5%,
+    white 60%,
+    white 95%
   );
   
   --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #f3d2b8 , rgb(240, 216, 186) 99%, transparent);
