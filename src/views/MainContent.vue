@@ -69,7 +69,7 @@ body, html {
 }
 
 .timeline-wrapper {
-  width: 100%;
+  padding-bottom: 30px;
   overflow: hidden;
 }
 
@@ -80,7 +80,7 @@ body, html {
   width: 100%;
   margin: 0;
   right: inherit;
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 h1 {
