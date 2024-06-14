@@ -12,3 +12,48 @@ body {
   margin-right: 0 !important;
   margin-left: 0 !important;
 }
+
+
+
+/*css per la scroll bar ---------------------------------------------*/
+/* Definisco la scroll bar customizzata */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* Track  aka. la barra "totale" */
+::-webkit-scrollbar-track {
+  background: #f5f5dc; 
+  border-radius: 10px;
+}
+
+/* Handle aka. Il barretta a scorrimento */
+::-webkit-scrollbar-thumb {
+  background: #d2b48c; 
+  border-radius: 10px;
+  border: 3px solid #f5f5dc; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c2a685; 
+}
+
+/* Definisco la scrollbar per Firefoz */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d2b48c #f5f5dc;
+}
+
+
+body, html {
+  scrollbar-face-color: #d2b48c;
+  scrollbar-base-color: #f5f5dc;
+  scrollbar-3dlight-color: #f5f5dc;
+  scrollbar-highlight-color: #f5f5dc;
+  scrollbar-track-color: #f5f5dc;
+  scrollbar-arrow-color: #f5f5dc;
+  scrollbar-shadow-color: #f5f5dc;
+  scrollbar-darkshadow-color: #d2b48c;
+}
