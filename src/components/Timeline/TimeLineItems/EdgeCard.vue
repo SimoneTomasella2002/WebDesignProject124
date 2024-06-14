@@ -2,8 +2,6 @@
   <div class="container">
     <div v-if="isExpanded" class="overlay" @click="toggleExpand"></div>
     <div class="edge-card" :class="{ expanded: isExpanded }" @click="toggleExpand">
-      <span class="arrow" :class="{ rotate: isExpanded }">
-        <i class="fas fa-chevron-right"></i> </span>
       <h3 v-if="isExpanded">{{ title }}</h3>
     </div>
   </div>
@@ -32,6 +30,18 @@ export default {
 </script>
 
 <style scoped>
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
 .container {
   position: relative;
   width: fit-content;
@@ -42,15 +52,37 @@ export default {
   position: relative;
   width: 50px;
   height: 150px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #223;
+  border: solid 5px transparent;
+  border-radius: 2em;
+  display: grid;
+  place-content: center;
+  color: black;
+  cursor: pointer;
   transition: all 0.3s ease;
   z-index: 1;
+
+  --border-angle: 0turn;
+  --main-bg: conic-gradient(
+    from var(--border-angle),
+    rgb(241, 237, 245),
+    rgb(237, 237, 243) 5%,
+    rgb(241, 237, 245) 60%,
+    rgb(241, 237, 245) 95%
+  );
+  
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #f3d2b8 , rgb(240, 216, 186) 99%, transparent);
+
+  background: 
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box, 
+    var(--main-bg) border-box;
+
+  background-position: center center;
+  animation: bg-spin 3s linear infinite;
 }
+
+
 
 .edge-card.expanded {
   width: 250px;
@@ -63,7 +95,6 @@ export default {
   transform: scale(1, 1);
   transform-origin: 50% 50%;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-
 }
 
 .overlay {
