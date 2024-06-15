@@ -1,5 +1,5 @@
 <template>
-  <div class="story-board-card">
+  <div class="story-board-card" @click="handleClick">
     <h3>{{ title }}</h3>
   </div>
 </template>
@@ -10,9 +10,18 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+    onClick: {
+      type: Function,
+      required: true,
+    },
+  },
+  methods: {
+    handleClick() {
+      this.onClick();
+    },
+  },
 };
 </script>
 
@@ -27,4 +36,7 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
+
+
 </style>
