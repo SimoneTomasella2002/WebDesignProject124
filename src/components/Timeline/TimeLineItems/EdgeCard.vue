@@ -7,6 +7,7 @@
       @mouseleave="onMouseLeave"
     >
       <h3>{{ title }}</h3>
+      <p>{{ text }}</p>
     </div>
   </div>
 </template>
@@ -16,6 +17,11 @@ export default {
   name: "EdgeCard",
   props: {
     title: {
+      type: String,
+      required: true,
+    },
+
+    text: {
       type: String,
       required: true,
     },
@@ -57,9 +63,17 @@ export default {
 
 
 .edge-card h3 {
+  text-align: left;
   margin: 0;
   padding: 10px;
   color: #014C78;
+}
+
+.edge-card p {
+  text-align: left;
+  margin: 0;
+  padding: 10px;
+  color: rgb(37, 35, 35);
 }
 
 

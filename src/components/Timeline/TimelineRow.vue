@@ -75,24 +75,23 @@ export default {
 }
 
 #sx-edge-card {
-  transition: transform 0.3s ease; 
-  transform: translateX(-120px); 
+  transition: transform 0.3s ease; /* Transition for transform */
+  transform: translateX(-120px); /* Shift card up initially to show only 30px */
 }
 
 #dx-edge-card {
-  transition: transform 0.3s ease; 
-  transform: translateX(120px); 
-}
-
-#sx-edge-card:hover{
-  transform: translateX(0); /* Shift card to original position on hover */
+  transition: transform 0.3s ease; /* Transition for transform */
+  transform: translateX(120px); /* Shift card up initially to show only 30px */
 
 }
 
+#sx-edge-card:hover,
 #dx-edge-card:hover{
   transform: translateX(0); /* Shift card to original position on hover */
 
 }
+
+
 
 .age-indicator {
   display: flex;

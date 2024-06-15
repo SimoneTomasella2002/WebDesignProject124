@@ -12,21 +12,21 @@ import EdgeCard from "@/components/Timeline/TimeLineItems/EdgeCard.vue";
       <Timeline>
         <TimelineRow :age="25">
           <template v-slot:sx-edge-card>
-            <EdgeCard title="left edge card one" />
+            <EdgeCard title="left edge card one"  text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id perspiciatis error suscipit vitae " />
           </template>
           <template v-slot:sx-story-board>
-            <StoryBoardCard title="left story board card one" />
+            <StoryBoardCard title="left story board card one"  />
           </template>
           <template v-slot:dx-story-board>
             <StoryBoardCard title="right story board card one" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard title="right edge card one" />
+            <EdgeCard title="right edge card one" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id perspiciatis error suscipit vitae " />
           </template>
         </TimelineRow>
         <TimelineRow :age="30">
           <template v-slot:sx-edge-card>
-            <EdgeCard title="left edge card two" />
+            <EdgeCard title="left edge card two" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id perspiciatis error suscipit vitae " />
           </template>
           <template v-slot:sx-story-board>
             <StoryBoardCard title="left story board card two" />
@@ -35,11 +35,12 @@ import EdgeCard from "@/components/Timeline/TimeLineItems/EdgeCard.vue";
             <StoryBoardCard title="right story board card two" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard title="right edge card two" />
+            <EdgeCard title="right edge card two" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id perspiciatis error suscipit vitae " />
           </template>
         </TimelineRow>
       </Timeline>
     </div>
+
   </div>
 </template>
 
@@ -80,7 +81,7 @@ body, html {
   width: 100%;
   margin: 0;
   right: inherit;
-  box-sizing: border-box; 
+  box-sizing: border-box; /* Include padding and border in the element's total width */
 }
 
 h1 {
