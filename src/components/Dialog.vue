@@ -1,5 +1,8 @@
 <script setup>
 import { ref, onMounted } from 'vue';
+import DialogImage1 from '@/assets/images/dialog/Dialog-Image-1.png';
+import DialogImage2 from '@/assets/images/dialog/Dialog-Image-2.png';
+import DialogImage3 from '@/assets/images/dialog/Dialog-Image-3.png';
 
 // Reactive variable to control dialog visibility
 const isDialogActive = ref(false);
@@ -44,24 +47,18 @@ onMounted(() => {
                 </v-card-text>
 
                 <v-row>
-                    <v-col>
-                        <v-card>
-
-                        </v-card>
+                    <v-col align="right">
+                        <v-img :src="DialogImage1" alt="Placeholder" width="150px"></v-img>
+                    </v-col>
+                    <v-col align="center">
+                        <v-img :src="DialogImage2" alt="Placeholder" width="150px"></v-img>
                     </v-col>
                     <v-col>
-                        <v-img>
-
-                        </v-img>
-                    </v-col>
-                    <v-col>
-                        <v-img>
-
-                        </v-img>
+                        <v-img :src="DialogImage3" alt="Placeholder" width="150px"></v-img> 
                     </v-col>
                 </v-row>
 
-                <v-col align="center">
+                <v-col align="center" class="mt-4">
                     <v-btn text="Ok, I understand" @click="isActive.value = false"></v-btn>
                 </v-col>
             </v-card>
