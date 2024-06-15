@@ -24,7 +24,7 @@ const people = ref([
                     <v-spacer></v-spacer>
                 </v-col>
                 <v-col cols="2" align-self="end" class="pa-2">
-                    <Select :people="people" label="Passport 1" @personSelected="handlePersonSelected" />
+                    <Select :people="people" label="Passport 1" />
                 </v-col>
 
                 <v-col align-self="center" cols="4" class="d-flex justify-center align-center">
@@ -34,7 +34,7 @@ const people = ref([
                 </v-col>
 
                 <v-col cols="2" align-self="end" class="pa-2">
-                    <Select :people="people" label="Passport 2" @personSelected="handlePersonSelected" />
+                    <Select :people="people" label="Passport 2" />
                 </v-col>
                 <v-col cols="1">
                     <v-btn rounded to="/about" variant="text">
