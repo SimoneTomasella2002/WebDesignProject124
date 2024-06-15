@@ -11,16 +11,6 @@ const people = ref([
     { name: "Alessandro", img: itFlag },
     { name: "Tara", img: afFlag },
 ])
-
-// Funzione per gestire la selezione della persona e disabilitarla
-const handlePersonSelected = (selectedPerson) => {
-    // Cerca la persona selezionata nell'array e disabilita la selezione
-    // const personIndex = people.value.findIndex(person => person.name === selectedPerson.name);
-    // if (personIndex !== -1) {
-    //     people.value[personIndex].disabled = true;
-    // }
-    console.log(selectedPerson);
-};
 </script>
 
 <template>
