@@ -66,7 +66,6 @@ body, html {
 
 .main-content {
   text-align: center;
-  font-family: Arial, sans-serif;
 }
 
 .timeline-wrapper {
@@ -87,5 +86,8 @@ body, html {
 h1 {
   text-align: center;
   margin: 20px 0;
+  background-color: #BA2D0B;
+  color: #FFF2DB;
+
 }
 </style>

@@ -51,13 +51,15 @@ export default {
 
 .edge-card {
   position: relative;
-  width: 250px;
-  height: 150px;
+  width: 700px;
+  height: 450px;
   background: #eae4d9; 
   border: solid 5px transparent;
   border-radius: 2em;
   color: black;
   cursor: pointer;
+
+  z-index: 3;
  
 }
 

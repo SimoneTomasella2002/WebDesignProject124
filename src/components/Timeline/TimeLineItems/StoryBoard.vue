@@ -27,8 +27,9 @@ export default {
 
 <style scoped>
 .story-board-card {
-  width: 250px;
-  height: 150px;
+  position: static;
+  width: 700px;
+  height: 450px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
