@@ -7,15 +7,15 @@ import EdgeCard from "@/components/Timeline/TimeLineItems/EdgeCard.vue";
 
 <template>
   <div class="main-content">
-    <h1>Età</h1>
+    <h1 class="title">Età</h1>
     <div class="timeline-wrapper">
       <Timeline>
         <TimelineRow :age="25">
           <template v-slot:sx-edge-card>
-            <EdgeCard title="left edge card one"  text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id perspiciatis error suscipit vitae " />
+            <EdgeCard title="left edge card one" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id perspiciatis error suscipit vitae " />
           </template>
           <template v-slot:sx-story-board>
-            <StoryBoardCard title="left story board card one"  />
+            <StoryBoardCard title="left story board card one" />
           </template>
           <template v-slot:dx-story-board>
             <StoryBoardCard title="right story board card one" />
@@ -40,7 +40,6 @@ import EdgeCard from "@/components/Timeline/TimeLineItems/EdgeCard.vue";
         </TimelineRow>
       </Timeline>
     </div>
-
   </div>
 </template>
 
@@ -71,23 +70,20 @@ body, html {
 .timeline-wrapper {
   padding-bottom: 30px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
-.timeline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 0;
-  right: inherit;
-  box-sizing: border-box; /* Include padding and border in the element's total width */
+h1.title {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 15px; 
+  background-color: #BA2D0B;
+  color: #FFF2DB;
+  border-radius: 15px;
 }
 
 h1 {
   text-align: center;
-  margin: 20px 0;
-  background-color: #BA2D0B;
-  color: #FFF2DB;
-
 }
 </style>
