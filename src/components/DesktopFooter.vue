@@ -16,24 +16,24 @@ function openGithubPageInASeparateTab () {
             <v-row>
                 <!-- General Information Column -->
                 <v-col cols="12" md="4">
-                    <v-card flat class="d-flex flex-column align-center pa-3 footer-card-background">
+                    <v-card flat class="d-flex flex-column align-center pa-3 bg-primary">
                         <v-img :src="websiteLogo" alt="The website logo" width="50" height="50"
                             class="rounded-circle mb-2"></v-img>
                         <i class="mb-2">Behind a passport</i>
-                        <v-btn @click="openGithubPageInASeparateTab" text color="primary"
+                        <v-btn @click="openGithubPageInASeparateTab" text color="blue"
                             class="mb-2">
                             Take a look at our code
                         </v-btn>
                         <p class="mb-2">Where to contact us: placeholder@gmail.com</p>
                         <RouterLink to="/terms">
-                            <v-btn @click="scrollToTheTop" text color="primary">Terms of service</v-btn>
+                            <v-btn @click="scrollToTheTop" text color="blue">Terms of service</v-btn>
                         </RouterLink>
                     </v-card>
                 </v-col>
 
                 <!-- Credits Column -->
                 <v-col cols="12" md="4">
-                    <v-card flat class="d-flex flex-column align-center pa-3 footer-card-background">
+                    <v-card flat class="d-flex flex-column align-center pa-3 bg-primary">
                         <h3 class="mb-2">Credits for used assets (WIP)</h3>
                         <p class="mb-2">placeholder for a future link</p>
                     </v-card>
@@ -41,7 +41,7 @@ function openGithubPageInASeparateTab () {
 
                 <!-- Team Column -->
                 <v-col cols="12" md="4">
-                    <v-card flat class="d-flex flex-column align-center pa-3 footer-card-background">
+                    <v-card flat class="d-flex flex-column align-center pa-3 bg-primary">
                         <h3 class="mb-2">La nostra squadra:</h3>
                         <v-row>
                             <v-col cols="6">
