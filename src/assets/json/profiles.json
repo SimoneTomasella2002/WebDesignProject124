@@ -29,8 +29,8 @@
       "lastName": "Barragan",
       "photoLocation": "Kevin.jpg",
       "description": "Sono uno studente al terzo anno di Computer Science e, come impiego part-time, offro ripetizioni di materie scientifiche a studenti delle scuole. Ho competenze in vari linguaggi di programmazione, tra cui C, C++, C#, Java e Python. La mia passione per la programmazione è iniziata alle superiori, quando ho scritto il mio primo 'Hello World' e sviluppato giochi come Tic Tac Toe e Snake in C++. Nutro una forte passione per la musica e suono il pianoforte e la chitarra.",
-      "linkedin": "",
-      "github": ""
+      "linkedin": "https://www.linkedin.com/in/kevinslashgun/",
+      "github": "https://github.com/kevinslashgun"
     },
     {
       "firstName": "Giulia",
@@ -51,7 +51,7 @@
     {
       "firstName": "Gabriel",
       "lastName": "Oddone",
-      "photoLocation": "",
+      "photoLocation": "Gabriel.jpg",
       "description": "Conseguito il diploma al liceo artistico a Genova, mi trasferisco a Torino e mi laureo in Design del Prodotto. Lavoro poi per due anni in uno studio di progettazione occupandomi di modellazione 3D, rendering e grafica. Tornato a Genova lavoro un anno in una falegnameria, per poi fondare Dual Design Lab, un laboratorio di progettazione e produzione di mobili e complementi d'arredo, attivo per cinque anni. Attualmente, sono docente in progettazione multimediale e grafica e freelancer per progetti di artigianato, grafica e organizzazione eventi.",
       "linkedin": "",
       "github": ""
