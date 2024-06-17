@@ -1,26 +1,22 @@
 <script setup>
+import { useDisplay } from 'vuetify'
 import Footer from './components/Footer.vue'
 import NavBar from './components/NavBar.vue'
 
-
-
-
+const { mobile } = useDisplay()
 </script>
 
 <template>
   <v-app>
-    <NavBar />
-    <v-main>
+    <NavBar :is-mobile="mobile" />
+    <v-main :is-mobile="mobile">
       <router-view v-slot="{ Component, route }">
-        <transition 
-          :enter-active-class="route.meta.enterClass"
-          :leave-active-class="route.meta.leaveClass"
-          mode="out-in"
-        >
+        <transition :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass"
+          mode="out-in">
           <component :is="Component" />
         </transition>
       </router-view>
     </v-main>
-    <Footer />
+    <Footer :is-mobile="mobile" />
   </v-app>
 </template>

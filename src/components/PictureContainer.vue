@@ -11,8 +11,8 @@ const loadProfile = (profileName) => {
   profile.value = profiles.find(p => p.firstName.toLowerCase() === profileName.toLowerCase()) || null;
 
   profile.value === null
-    ? console.log("Can't find profile data for " + profileName)
-    : console.log("Profile found: ", profile.value);
+    // ? console.log("Can't find profile data for " + profileName)
+    // : console.log("Profile found: ", profile.value);
 }
 
 loadProfile(props.ProfileName);
@@ -21,7 +21,7 @@ watch(() => props.ProfileName, (newProfileName) => {
   loadProfile(newProfileName);
 })
 
-console.log(props.ProfileName);
+// console.log(props.ProfileName);
 </script>
 
 <template>

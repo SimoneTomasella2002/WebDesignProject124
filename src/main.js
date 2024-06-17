@@ -39,6 +39,9 @@ const vuetify = createVuetify({
   icons: {
     iconfont: "mdi",
   },
+  display: {
+    mobileBreakpoint: 'md',
+  },
 });
 
 // Crea e monta l'applicazione Vue
