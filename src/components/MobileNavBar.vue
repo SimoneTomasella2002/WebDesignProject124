@@ -13,7 +13,7 @@ const items = [
 <template>
   <v-container>
     <v-row>
-      <v-app-bar color="background" class="rounded" scroll-behavior="hide">
+      <v-app-bar color="primary" class="rounded" scroll-behavior="hide">
         <v-col align-self="start" cols="3">
           <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
         </v-col>

@@ -16,7 +16,7 @@ const people = ref([
 <template>
     <v-container>
         <v-row>
-            <v-app-bar scroll-behavior="hide" scroll-threshold="100" :height="100">
+            <v-app-bar scroll-behavior="hide" scroll-threshold="100" :height="100" color="primary">
                 <v-col cols="1">
                     <Dialog />
                 </v-col>
@@ -38,11 +38,11 @@ const people = ref([
                 </v-col>
                 <v-col cols="1">
                     <v-btn rounded to="/about" variant="text">
-                        <v-card-text class="ma-0 pa-0 text-center text-button-text">About</v-card-text>
+                        <v-card-text class="ma-0 pa-0 text-center text-secondary">About</v-card-text>
                     </v-btn>
                 </v-col>
                 <v-col cols="1">
-                    <v-btn icon="mdi-web" height="36px" class="text-button-text" aria-label="Change language"></v-btn>
+                    <v-btn icon="mdi-web" height="36px" class="text-secondary" aria-label="Change language"></v-btn>
                 </v-col>
             </v-app-bar>
         </v-row>

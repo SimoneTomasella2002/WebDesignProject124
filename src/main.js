@@ -12,7 +12,7 @@ import * as directives from "vuetify/directives";
 import 'animate.css'
 
 // Importa la configurazione del tema
-import { myAccessibleTheme } from "./themeConfig.js";
+import { myCustomTheme } from "./themeConfig.js";
 
 // Components
 import App from "./App.vue";
@@ -23,9 +23,9 @@ const vuetify = createVuetify({
   components,
   directives,
   theme: {
-    defaultTheme: "myAccessibleTheme",
+    defaultTheme: "myCustomTheme",
     themes: {
-      myAccessibleTheme,
+      myCustomTheme,
     },
     options: {
       customProperties: true,

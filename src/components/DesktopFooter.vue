@@ -11,7 +11,7 @@ function openGithubPageInASeparateTab () {
 </script>
 
 <template>
-    <v-footer padless class="footer-background">
+    <v-footer padless color="primary">
         <v-container>
             <v-row>
                 <!-- General Information Column -->
