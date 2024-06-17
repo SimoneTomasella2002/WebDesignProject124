@@ -15,7 +15,16 @@ import ale8 from "@/assets/images/Illustrazioni/alessandro/Alessandro8.svg";
 import ale9 from "@/assets/images/Illustrazioni/alessandro/Alessandro9.svg";
 import ale10 from "@/assets/images/Illustrazioni/alessandro/Alessandro10.svg";
 
-import placeholder from "@/assets/images/Illustrazioni/tara/miss-you.jpg";
+import tara1 from "@/assets/images/Illustrazioni/tara/Tara1.svg";
+import tara2 from "@/assets/images/Illustrazioni/tara/Tara2.svg";
+import tara3 from "@/assets/images/Illustrazioni/tara/Tara3.svg";
+import tara4 from "@/assets/images/Illustrazioni/tara/Tara4.svg";
+import tara5 from "@/assets/images/Illustrazioni/tara/Tara5.svg";
+import tara6 from "@/assets/images/Illustrazioni/tara/Tara6.svg";
+import tara7 from "@/assets/images/Illustrazioni/tara/Tara7.svg";
+import tara8 from "@/assets/images/Illustrazioni/tara/Tara8.svg";
+import tara9 from "@/assets/images/Illustrazioni/tara/Tara9.svg";
+import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
 </script>
 
 <template>
@@ -31,7 +40,7 @@ import placeholder from "@/assets/images/Illustrazioni/tara/miss-you.jpg";
             <StoryBoardCard :imageSrc="ale1" />
           </template>
           <template v-slot:dx-story-board>
-            <StoryBoardCard :imageSrc="placeholder" />
+            <StoryBoardCard :imageSrc="tara1" />
           </template>
           <template v-slot:dx-edge-card>
             <EdgeCard title="right edge card one" text="Tara vive in un paese sulle montagne dell’Afghanistan, nella regione del Ghazni. Giudiziosa, decisa, d’aspetto sobrio." />
@@ -48,7 +57,7 @@ import placeholder from "@/assets/images/Illustrazioni/tara/miss-you.jpg";
             <StoryBoardCard :imageSrc="ale2"/>
           </template>
           <template v-slot:dx-story-board>
-            <StoryBoardCard :imageSrc="placeholder" />
+            <StoryBoardCard :imageSrc="tara2" />
           </template>
           <template v-slot:dx-edge-card>
             <EdgeCard title="right edge card two" text="I suoi genitori hanno deciso di far studiare lei e i suoi fratelli, così comincia ad andare a scuola in città (zone di influenza e corridoi militari occidentali, sopprattutto USA) " />
@@ -65,7 +74,7 @@ import placeholder from "@/assets/images/Illustrazioni/tara/miss-you.jpg";
             <StoryBoardCard  :imageSrc="ale3" />
           </template>
           <template v-slot:dx-story-board>
-            <StoryBoardCard :imageSrc="placeholder" />
+            <StoryBoardCard :imageSrc="tara3" />
           </template>
           <template v-slot:dx-edge-card>
             <EdgeCard title="right edge card two" text="Mette il velo per la prima volta, come da tradizione della sua cultura quando si diventa donna, il velo non le copre mai i ciuffi più ribelli. " />
@@ -82,7 +91,7 @@ import placeholder from "@/assets/images/Illustrazioni/tara/miss-you.jpg";
             <StoryBoardCard  :imageSrc="ale4" />
           </template>
           <template v-slot:dx-story-board>
-            <StoryBoardCard :imageSrc="placeholder" />
+            <StoryBoardCard :imageSrc="tara4" />
           </template>
           <template v-slot:dx-edge-card>
             <EdgeCard title="right edge card two" text="Essendo in età da marito, si sposa con un uomo sempre originario delle sue zone, lui si è opposto ai talebani ed essendo emigrato da minorenne ha cittadinanza italiana." />
@@ -99,7 +108,7 @@ import placeholder from "@/assets/images/Illustrazioni/tara/miss-you.jpg";
             <StoryBoardCard  :imageSrc="ale5" />
           </template>
           <template v-slot:dx-story-board>
-            <StoryBoardCard :imageSrc="placeholder" />
+            <StoryBoardCard :imageSrc="tara5" />
           </template>
           <template v-slot:dx-edge-card>
             <EdgeCard title="right edge card two" text="Anche suo marito la esorta ad emanciparsi, così si iscrive all’università. Ma una voce però comincia a girare: gli americani voglio andarsene dal paese. " />
@@ -116,7 +125,7 @@ import placeholder from "@/assets/images/Illustrazioni/tara/miss-you.jpg";
             <StoryBoardCard :imageSrc="ale6" />
           </template>
           <template v-slot:dx-story-board>
-            <StoryBoardCard :imageSrc="placeholder" />
+            <StoryBoardCard :imageSrc="tara6" />
           </template>
           <template v-slot:dx-edge-card>
             <EdgeCard title="right edge card two" text="Tara è incinta, ma l’ombra dei talebani si fa sempre più presente. Bisogna dare un futro a questo bambino...bisogna andare via dal paese. Suo marito è tornato in Italia, lei nel frattempo si reca a Kabul, fa il passaporto e parte per l’Iran. " />
@@ -133,7 +142,7 @@ import placeholder from "@/assets/images/Illustrazioni/tara/miss-you.jpg";
             <StoryBoardCard  :imageSrc="ale7"/>
           </template>
           <template v-slot:dx-story-board>
-            <StoryBoardCard :imageSrc="placeholder" />
+            <StoryBoardCard :imageSrc="tara7" />
           </template>
           <template v-slot:dx-edge-card>
             <EdgeCard title="right edge card two" text="In Iran è ospitata da un parente che vive lì da tempo, attende il permesso di partire per raggiungere il marito, nel frattempo nasce il suo primo figlio, ora è mamma e si può solo andare avanti. " />
@@ -149,7 +158,7 @@ import placeholder from "@/assets/images/Illustrazioni/tara/miss-you.jpg";
             <StoryBoardCard  :imageSrc="ale8" />
           </template>
           <template v-slot:dx-story-board>
-            <StoryBoardCard :imageSrc="placeholder" />
+            <StoryBoardCard :imageSrc="tara8" />
           </template>
           <template v-slot:dx-edge-card>
             <EdgeCard title="right edge card two" text="Finalmente arriva il permesso di ricongiungimento. Dopo tanta attesa, prende suo figlio in braccio e si incammina per l’Europa attraverso i canali umanitari della rotta balcanica." />
@@ -166,7 +175,7 @@ import placeholder from "@/assets/images/Illustrazioni/tara/miss-you.jpg";
             <StoryBoardCard  :imageSrc="ale9" />
           </template>
           <template v-slot:dx-story-board>
-            <StoryBoardCard :imageSrc="placeholder" />
+            <StoryBoardCard :imageSrc="tara9" />
           </template>
           <template v-slot:dx-edge-card>
             <EdgeCard title="right edge card two" text="Finalmente, al compimento dei suoi 23 anni, arriva in Italia e raggiunge suo marito nella sua nuova casa. Sà di essere più fortunata di molti altri, il suo prossimo obiettivo è integrarsi nel nuovo paese." />
@@ -182,7 +191,7 @@ import placeholder from "@/assets/images/Illustrazioni/tara/miss-you.jpg";
             <StoryBoardCard :imageSrc="ale10" />
           </template>
           <template v-slot:dx-story-board>
-            <StoryBoardCard :imageSrc="placeholder" />
+            <StoryBoardCard :imageSrc="tara10" />
           </template>
           <template v-slot:dx-edge-card>
             <EdgeCard title="right edge card two" text="Dopo un anno, riesce a parlare abbastanza bene la lingua e suo figlio può andare a scuola. Anche se sà che ci saranno ancora parecchie difficoltà nell’integrarsi, spera di poter riprendere a studiare lei stessa un giorno." />
