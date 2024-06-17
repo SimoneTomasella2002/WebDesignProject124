@@ -20,7 +20,6 @@ export default {
       type: String,
       required: true,
     },
-
     text: {
       type: String,
       required: true,
@@ -51,6 +50,7 @@ export default {
 
 .edge-card {
   position: relative;
+  margin: 0 5.042vw;
   width: 26.042vw;
   height: 18.229vw;
   background: #eae4d9; 
@@ -58,25 +58,22 @@ export default {
   border-radius: 2em;
   color: black;
   cursor: pointer;
-
   z-index: 3;
- 
 }
-
 
 .edge-card h3 {
   text-align: left;
   margin: 0;
   padding: 10px;
   color: #014C78;
+  font-size: 2vw; 
 }
 
 .edge-card p {
   text-align: left;
   margin: 0;
-  padding: 10px;
+  padding: 20px;
   color: rgb(37, 35, 35);
+  font-size: 1.2vw; 
 }
-
-
 </style>
