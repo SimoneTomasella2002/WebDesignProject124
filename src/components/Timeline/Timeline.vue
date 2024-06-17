@@ -13,20 +13,23 @@ export default {
 <style scoped>
 .timeline {
   position: relative;
-  width: 100vh;
+  width: 100%;
   margin: 0 auto;
   padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* vertical timeline line */
 .timeline::before {
   content: "";
   position: absolute;
-  width: 6px;
-  background-color: #333;
+  width: 1.302vw;
+  background-color: #BA2D0B;
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -3px;
+  transform: translateX(-50%);
 }
 </style>
