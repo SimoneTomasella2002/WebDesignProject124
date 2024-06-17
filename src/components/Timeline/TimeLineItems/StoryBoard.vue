@@ -1,6 +1,6 @@
 <template>
-  <div class="story-board-card" @click="handleClick">
-    <h3>{{ title }}</h3>
+  <div class="story-board-card">
+    <img :src="imageSrc" alt="Story Image" class="story-image" />
   </div>
 </template>
 
@@ -8,18 +8,9 @@
 export default {
   name: "StoryBoardCard",
   props: {
-    title: {
+    imageSrc: {
       type: String,
       required: true,
-    },
-    onClick: {
-      type: Function,
-      required: true,
-    },
-  },
-  methods: {
-    handleClick() {
-      this.onClick();
     },
   },
 };
@@ -27,7 +18,7 @@ export default {
 
 <style scoped>
 .story-board-card {
-  position: static;
+  position: relative;
   width: 26.042vw;
   height: 18.229vw;
   background-color: white;
@@ -36,8 +27,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
-
-
+.story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 </style>
