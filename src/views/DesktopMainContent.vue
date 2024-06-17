@@ -77,10 +77,10 @@ body, html {
 h1.title {
   display: inline-block;
   margin: 20px 0;
-  padding: 15px; 
+  padding: 1.042vw; /* 30px total padding (15px per side) */
   background-color: #BA2D0B;
   color: #FFF2DB;
-  border-radius: 15px;
+  border-radius: 1.042vw; /* Rounded corners for a nicer effect */
 }
 
 h1 {

@@ -85,7 +85,7 @@ export default {
 }
 
 .story-board {
-  margin: 0 200px; /* modifica l'elemento di sinistra per cambiare il gap */
+  margin: 0 5.208vw; /* modifica l'elemento di sinistra per cambiare il gap */
 }
 
 #sx-edge-card,
@@ -96,36 +96,36 @@ export default {
 }
 
 #sx-edge-card {
-  transform: translateX(-550px);
+  transform: translateX(-23.438vw);
   left: 0;
 }
 
 #dx-edge-card {
-  transform: translateX(550px);
+  transform: translateX(23.438vw);
   right: 0;
 }
 
 #sx-edge-card:hover {
-  transform: translateX(130px); /* Stop 30px away from the 0 position */
+  transform: translateX(1.563vw); /* Stop 30px away from the 0 position */
 }
 
 #dx-edge-card:hover {
-  transform: translateX(-130px); /* Stop 30px away from the 0 position */
+  transform: translateX(-1.563vw); /* Stop 30px away from the 0 position */
 }
 
 .age-indicator {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 100px;
+  width: 4.167vw;
+  height: 4.167vw;
   border-radius: 50%;
   background-color: #BA2D0B;
-  border: 0.5px  solid #FFF2DB;  
+  border: 2px  solid #FFF2DB;  
 }
 
 .age-indicator span {
-  font-size: 50px;
+  font-size: 1.823vw;
   font-weight: bold;
   color: #FFF2DB;
   

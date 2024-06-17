@@ -51,8 +51,8 @@ export default {
 
 .edge-card {
   position: relative;
-  width: 700px;
-  height: 450px;
+  width: 26.042vw;
+  height: 18.229vw;
   background: #eae4d9; 
   border: solid 5px transparent;
   border-radius: 2em;
