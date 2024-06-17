@@ -66,13 +66,14 @@ export default {
   margin: 0;
   padding: 10px;
   color: #014C78;
-  font-size: 2vw; 
+  font-size: 2vw; /* Font size relative to viewport width */
 }
 
 .edge-card p {
   text-align: left;
   margin: 0;
-  padding: 20px;
+  padding: 30px;
+  margin:20px;
   color: rgb(37, 35, 35);
   font-size: 1.2vw; 
 }
