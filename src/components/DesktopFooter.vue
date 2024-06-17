@@ -58,7 +58,7 @@ function openGithubPageInASeparateTab () {
                                 <ul class="list-unstyled">
                                     <li class="mb-1">Giulia Salaris</li>
                                     <li class="mb-1">Gabriel Oddone</li>
-                                    <li class="mb-1">Francesca Vernasca</li>
+                                    <li class="mb-1">Francesca Vernazza</li>
                                     <li class="mb-1">Lorenzo Sacco</li>
                                 </ul>
                             </v-col>
