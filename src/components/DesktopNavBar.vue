@@ -1,16 +1,9 @@
 <script setup>
 import Dialog from "@/components/Dialog.vue";
 import websiteLogo from "@/assets/images/logopassport.svg";
-import afFlag from "@/assets/images/flags/afghanistan-flag.png";
-import itFlag from "@/assets/images/flags/italian-flag.png";
 import Select from "@/components/Select.vue";
 
-import { ref } from "vue";
-
-const people = ref([
-    { name: "Alessandro", img: itFlag },
-    { name: "Tara", img: afFlag },
-])
+const props = defineProps(["people"]);
 </script>
 
 <template>

@@ -2,15 +2,10 @@
 import { ref } from 'vue'
 import Dialog from "@/components/Dialog.vue";
 import websiteLogo from '@/assets/images/logopassport.svg'
-import afFlag from "@/assets/images/flags/afghanistan-flag.png";
-import itFlag from "@/assets/images/flags/italian-flag.png";
 import Select from "@/components/Select.vue";
 
 const drawer = ref(false)
-const people = ref([
-  { name: "Alessandro", img: itFlag },
-  { name: "Tara", img: afFlag },
-])
+const props = defineProps(["people"]);
 </script>
 
 <template>
@@ -37,12 +32,12 @@ const people = ref([
           </v-list-item>
           <v-list-item>
             <div style="margin-top: 1rem;">
-              <Select :people="people" label="Passport 1" />
+              <Select :people="props.people" label="Passport 1" />
             </div>
           </v-list-item>
           <v-list-item>
             <div style="margin-top: 1rem;">
-              <Select :people="people" label="Passport 2" />
+              <Select :people="props.people" label="Passport 2" />
             </div>
           </v-list-item>
           <v-list-item>
