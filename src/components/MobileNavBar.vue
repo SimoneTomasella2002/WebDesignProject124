@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import Dialog from "@/components/Dialog.vue";
 import websiteLogo from '@/assets/images/logopassport.svg'
 import afFlag from "@/assets/images/flags/afghanistan-flag.png";
 import itFlag from "@/assets/images/flags/italian-flag.png";
@@ -48,14 +49,20 @@ const people = ref([
             <v-spacer></v-spacer>
           </v-list-item>
           <v-list-item>
-            <v-btn prepend-icon="mdi-web" variant="text" color="secondary" class="text-none">
+            <v-btn prepend-icon="mdi-web" variant="text" color="secondary" class="text-none" rounded>
               Language
             </v-btn>
           </v-list-item>
           <v-list-item>
-            <v-btn to="/about" prepend-icon="mdi-information-outline" variant="text" color="secondary" class="text-none">
+            <v-btn to="/about" prepend-icon="mdi-information-outline" variant="text" color="secondary" class="text-none" rounded>
               About
             </v-btn>
+          </v-list-item>
+          <v-list-item>
+            <v-spacer></v-spacer>
+          </v-list-item>
+          <v-list-item>
+            <Dialog />
           </v-list-item>
         </v-list>
       </v-navigation-drawer>
