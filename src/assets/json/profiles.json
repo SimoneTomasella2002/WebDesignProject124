@@ -3,7 +3,7 @@
     {
       "firstName": "Simone",
       "lastName": "Tomasella",
-      "photoLocation": "",
+      "photoLocation": "Simone.jpg",
       "description": "Programmatore, tech enthusiast, e videogiocatore. Dopo il diploma di maturità in un ITIS Informatico e Telecomunicazioni a Sanremo mi sono concentrato sulla laurea triennale di informatica a UniGE. Nel corso della carriera scolastica e universitaria ho lavorato a diversi progetti tra cui un linguaggio di programmazione custom in Java ed un videogioco per UniTO. Il mio obiettivo è quello di lavorare su progetti informatici ambiziosi ed all'avanguardia, guidando i miei team sempre alla vittoria.",
       "linkedin": "https://www.linkedin.com/in/simone-tomasella",
       "github": "https://github.com/SimoneTomasella2002"
@@ -11,7 +11,7 @@
     {
       "firstName": "Thomas",
       "lastName": "Ghione",
-      "photoLocation": "Thomas.jpeg",
+      "photoLocation": "Thomas.jpg",
       "description": "Studente del terzo anno di Informatica all'Università di Genova, è un appassionato di programmazione low level e ha lavorato su progetti molto interessanti. Tra questi, la ricreazione delle librerie standard del C in x86 e C, la creazione di un linguaggio di programmazione in Java e la ricreazione degli scacchi su terminale in C++. Ha esperienza in gare di matematica, avendo partecipato alle competizioni della Bocconi e ottenendo il terzo posto nello stage nazionale di Bardonecchia organizzato da UniTO. Inoltre, ha preso parte alla Cyberchallenge, dimostrando il suo profondo interesse per la sicurezza informatica.",
       "linkedin": "https://www.linkedin.com/in/thomasghione/",
       "github": "https://github.com/ThomasGhione"

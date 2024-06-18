@@ -16,9 +16,37 @@ onMounted(() => {
 });
 
 const { mobile } = useDisplay()
+const window = ref(0);
+const length = ref(3);
+
+function getDialogImage(index) {
+    switch(index) {
+        case 1:
+            return DialogImage1;
+        case 2:
+            return DialogImage2;
+        case 3:
+            return DialogImage3;
+        default:
+            return '';
+    }
+}
 
 </script>
 
+<script>
+
+// Needed by v-window component
+export default {
+    data() {
+        return {
+            window: 0,
+            length: 3
+        };
+    },
+};
+
+</script>
 
 <template>
     <v-dialog v-model="isDialogActive" max-width="800" transition="dialog-top-transition">
@@ -52,17 +80,11 @@ const { mobile } = useDisplay()
                     <p>that are behind passports</p>
                 </v-card-text>
 
-                <v-row v-if="mobile" class="scrollable-row">
-                    <v-col class="non-shrinking-col" align="right">
-                        <v-img :src="DialogImage1" alt="Placeholder" width="150px"></v-img>
-                    </v-col>
-                    <v-col class="non-shrinking-col" align="center">
-                        <v-img :src="DialogImage2" alt="Placeholder" width="150px"></v-img>
-                    </v-col>
-                    <v-col class="non-shrinking-col">
-                        <v-img :src="DialogImage3" alt="Placeholder" width="150px"></v-img>
-                    </v-col>
-                </v-row>
+                <v-window v-if="mobile" v-model="window" show-arrows>
+                    <v-window-item v-for="n in length" :key="n" align="center">
+                        <v-img :src="getDialogImage(n)" alt="Placeholder" width="150px"></v-img>
+                    </v-window-item>
+                </v-window>
                 <v-row v-else>
                     <v-col align="right">
                         <v-img :src="DialogImage1" alt="Placeholder" width="150px"></v-img>
