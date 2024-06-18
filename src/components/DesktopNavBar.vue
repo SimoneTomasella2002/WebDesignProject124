@@ -10,7 +10,7 @@ const props = defineProps(["people"]);
     <v-container>
         <v-row>
             <v-app-bar scroll-behavior="hide" scroll-threshold="100" :height="100" color="primary">
-                <v-col cols="1" class="ma-0 pa-2">
+                <v-col cols="1" class="ma-0 pa-2 pa-md-6">
                     <Dialog />
                 </v-col>
                 <v-col cols="1" class="ma-0 pa-0">
