@@ -26,38 +26,39 @@ const people = ref([
             </RouterLink>
           </v-toolbar-title>
         </v-col>
-        <v-col cols="3"></v-col>
+        <v-col cols="3">
+        </v-col>
       </v-app-bar>
+      <v-navigation-drawer v-model="drawer" color="infoBackground" temporary>
+        <v-list>
+          <v-list-item>
+            <v-spacer></v-spacer>
+          </v-list-item>
+          <v-list-item>
+            <div style="margin-top: 1rem;">
+              <Select :people="people" label="Passport 1" />
+            </div>
+          </v-list-item>
+          <v-list-item>
+            <div style="margin-top: 1rem;">
+              <Select :people="people" label="Passport 2" />
+            </div>
+          </v-list-item>
+          <v-list-item>
+            <v-spacer></v-spacer>
+          </v-list-item>
+          <v-list-item>
+            <v-btn prepend-icon="mdi-web" variant="text" color="secondary" class="text-none">
+              Language
+            </v-btn>
+          </v-list-item>
+          <v-list-item>
+            <v-btn to="/about" prepend-icon="mdi-information-outline" variant="text" color="secondary" class="text-none">
+              About
+            </v-btn>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
     </v-row>
-    <v-navigation-drawer v-model="drawer" color="infoBackground" temporary>
-      <v-list>
-        <v-list-item>
-          <v-spacer></v-spacer>
-        </v-list-item>
-        <v-list-item>
-          <div style="margin-top: 1rem;">
-            <Select :people="people" label="Passport 1" />
-          </div>
-        </v-list-item>
-        <v-list-item>
-          <div style="margin-top: 1rem;">
-            <Select :people="people" label="Passport 2" />
-          </div>
-        </v-list-item>
-        <v-list-item>
-          <v-spacer></v-spacer>
-        </v-list-item>
-        <v-list-item>
-          <v-btn prepend-icon="mdi-web" variant="text" color="secondary" class="text-none">
-            Language
-          </v-btn>
-        </v-list-item>
-        <v-list-item>
-          <v-btn to="/about" prepend-icon="mdi-information-outline" variant="text" color="secondary" class="text-none">
-            About
-          </v-btn>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
   </v-container>
 </template>

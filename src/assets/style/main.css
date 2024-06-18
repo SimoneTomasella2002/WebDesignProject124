@@ -1,17 +1,18 @@
 @import "@/../node_modules/typeface-inter";
+@import "@/../node_modules/animate.css";
 
-body {
+/* body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-}
+} */
 
-/* Aggiungi questa regola per evitare spazi vuoti a destra */
+/* Aggiungi questa regola per evitare spazi vuoti a destra
 .v-row {
   margin-right: 0 !important;
   margin-left: 0 !important;
-}
+} */
 
 
 
