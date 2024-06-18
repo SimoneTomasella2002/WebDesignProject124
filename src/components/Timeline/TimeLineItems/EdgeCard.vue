@@ -59,7 +59,7 @@ export default {
 
   background: #FFF8EC; 
   border: solid 1px #978E4F;
-  border-radius: 2em;
+  border-radius: 8px;
   color: black;
   box-shadow: 0 0 10px 0.3px rgba(0, 0, 0, 0.5); 
   cursor: pointer;

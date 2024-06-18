@@ -31,7 +31,7 @@ watch(() => props.ProfileName, (newProfileName) => {
       :alt="`An image of ${profile.firstName}`"></v-img>
     </v-col>
     <v-card-title>{{ profile.firstName }} {{ profile.lastName }}</v-card-title>
-    <v-card-text>
+    <v-card-text align="left">
       <p>{{ profile.description }}</p>
     </v-card-text>
     <v-card-actions class="d-flex justify-center">
