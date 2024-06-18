@@ -15,9 +15,15 @@ const people = ref([
 
 const filteredPeople = computed(() => people.value.filter(person => person.visible))
 
-const toggleVisibility = (person) => {
+const toggleVisibility = (person, selectId) => {
+    if (selectId) {
+      selection = { person, selectId }
+      console.log(selection)
+    }
     people.value.forEach(p => p.visible = p !== person)
 }
+
+let selection = ref(null)
 </script>
 
 <template>

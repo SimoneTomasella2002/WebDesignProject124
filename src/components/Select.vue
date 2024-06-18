@@ -1,14 +1,19 @@
 <script setup>
 import { ref } from 'vue'
 
-const props = defineProps(['people', 'label'])
+const props = defineProps(['people', 'label', 'selectId'])
 const person = ref(null)
+const emit = defineEmits(['toggleVisibility'])
+const handleUpdate = (person) => {
+    if (props.selectId) emit('toggleVisibility', person, props.selectId)
+    else emit('toggleVisibility', person)
+}
 </script>
 
 <template>
     <v-select variant="outlined" density="compact" rounded :items="people" item-title="name" hint="Choose a passport"
         persistent-hint hide-selected hide-no-data bg-color="background" :label="label" single-line return-object
-        v-model="person" @update:model-value="$emit('toggleVisibility', person)">
+        v-model="person" @update:model-value="handleUpdate">
         <!-- <template v-slot:append-inner>
             <div style="position: relative; left: 1rem;">
                 <v-icon icon="mdi-power-on" class="text-stroke"></v-icon>
