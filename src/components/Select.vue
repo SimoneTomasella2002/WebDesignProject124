@@ -3,9 +3,17 @@ const props = defineProps(['people', 'label'])
 </script>
 
 <template>
-    <v-select variant="outlined" density="compact" rounded :items="people" item-title="name"
-        :label="label" hint="Choose a passport" persistent-hint hide-selected bg-color="background" >
-        <template v-slot:selection=" { item, index } ">
+    <v-select variant="outlined" density="compact" rounded :items="people" item-title="name" hint="Choose a passport"
+        persistent-hint hide-selected bg-color="background">
+        <template v-slot:label>
+            <v-label> {{ label }} </v-label>
+        </template>
+        <template v-slot:append-inner>
+            <div style="position: relative; left: 1rem;">
+                <v-icon icon="mdi-power-on" class="text-stroke"></v-icon>
+            </div>
+        </template>
+        <template v-slot:selection="{ item, index }">
             <span class="text-red d-flex justify-start align-center">
                 {{ item.title }}
                 <v-img :src="item.raw.img" alt="Flag" width="40" height="16"></v-img>
