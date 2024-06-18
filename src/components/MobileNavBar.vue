@@ -6,6 +6,10 @@ import Select from "@/components/Select.vue";
 
 const drawer = ref(false)
 const props = defineProps(["people"]);
+const emit = defineEmits(["toggleVisibility"]);
+const handleToggleVisibility = (person) => {
+    emit("toggleVisibility", person);
+}
 </script>
 
 <template>
@@ -31,10 +35,10 @@ const props = defineProps(["people"]);
             <v-spacer></v-spacer>
           </v-list-item>
           <v-list-item>
-              <Select :people="props.people" label="Passport 1" />
+              <Select :people="props.people" label="Passport 1" @toggle-visibility="handleToggleVisibility"/>
           </v-list-item>
           <v-list-item>
-              <Select :people="props.people" label="Passport 2" />
+              <Select :people="props.people" label="Passport 2" @toggle-visibility="handleToggleVisibility"/>
           </v-list-item>
           <v-list-item>
             <v-spacer></v-spacer>
