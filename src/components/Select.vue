@@ -14,7 +14,7 @@ const props = defineProps(['people', 'label'])
             </div>
         </template>
         <template v-slot:selection="{ item, index }">
-            <span class="text-red d-flex justify-start align-center">
+            <span class="text-red d-flex justify-start align-center overflow-hidden">
                 {{ item.title }}
                 <v-img :src="item.raw.img" alt="Flag" width="40" height="16"></v-img>
             </span>
