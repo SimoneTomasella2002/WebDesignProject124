@@ -10,5 +10,6 @@ export const myCustomTheme = {
     stroke: '#978E4F',
     red: '#BA2D0B',
     blue: '#014C78',
+    surface: '#FFF8EC'
   },
 };
