@@ -6,7 +6,6 @@
       @mouseenter="onMouseEnter"
       @mouseleave="onMouseLeave"
     >
-      <h3>{{ title }}</h3>
       <p>{{ text }}</p>
     </div>
   </div>
@@ -16,10 +15,6 @@
 export default {
   name: "EdgeCard",
   props: {
-    title: {
-      type: String,
-      required: true,
-    },
     text: {
       type: String,
       required: true,
@@ -49,27 +44,30 @@ export default {
 }
 
 .edge-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+
+
+
   position: relative;
-  margin: 0 5.042vw;
+  margin: 1vw 5.042vw;
   width: 26.042vw;
   height: 18.229vw;
-  background: #eae4d9; 
-  border: solid 5px transparent;
+
+
+  background: #FFF8EC; 
+  border: solid 1px #978E4F;
   border-radius: 2em;
   color: black;
+  box-shadow: 0 0 10px 0.3px rgba(0, 0, 0, 0.5); 
   cursor: pointer;
-  z-index: 3;
 }
 
-.edge-card h3 {
-  text-align: left;
-  margin: 0;
-  padding: 10px;
-  color: #014C78;
-  font-size: 2vw; /* Font size relative to viewport width */
-}
 
 .edge-card p {
+  align-items: center;
   text-align: left;
   margin: 0;
   padding: 30px;

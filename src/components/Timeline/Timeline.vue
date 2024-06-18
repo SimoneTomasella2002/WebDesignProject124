@@ -25,7 +25,7 @@ export default {
 .timeline::before {
   content: "";
   position: absolute;
-  width: 1.302vw;
+  width: 2.302vw;
   background-color: #BA2D0B;
   top: 0;
   bottom: 0;

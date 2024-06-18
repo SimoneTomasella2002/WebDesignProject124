@@ -29,12 +29,17 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
 
 <template>
   <div class="main-content">
-    <h1 class="title">Età</h1>
+    <div class="pa-md-4 d-flex justify-center">
+      <v-card class=" rounded-xl mx-auto" width="10.208vw" color="#BA2D0B">
+        <v-card-title class="text-h6 text-md-h5 text-lg-h4" color="#FFF2DB">Età</v-card-title>
+      </v-card>
+    </div>
+
     <div class="timeline-wrapper">
       <Timeline>
         <TimelineRow :age="5">
           <template v-slot:sx-edge-card>
-            <EdgeCard title="left edge card one" text="Alessandro vive in un paese dell’entroterra ligure, in Italia, non molto distante dal capoluogo. Molto curioso, vivace, robusto." />
+            <EdgeCard  text="Alessandro vive in un paese dell’entroterra ligure, in Italia, non molto distante dal capoluogo. Molto curioso, vivace, robusto." />
           </template>
           <template v-slot:sx-story-board>
             <StoryBoardCard :imageSrc="ale1" />
@@ -43,7 +48,7 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
             <StoryBoardCard :imageSrc="tara1" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard title="right edge card one" text="Tara vive in un paese sulle montagne dell’Afghanistan, nella regione del Ghazni. Giudiziosa, decisa, d’aspetto sobrio." />
+            <EdgeCard text="Tara vive in un paese sulle montagne dell’Afghanistan, nella regione del Ghazni. Giudiziosa, decisa, d’aspetto sobrio." />
           </template>
         </TimelineRow>
 
@@ -51,7 +56,7 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
 
         <TimelineRow :age="6">
           <template v-slot:sx-edge-card>
-            <EdgeCard title="left edge card two" text="Fa il primo viaggio all’estero con la famiglia in Spagna, la prima volta in aereo, è facile viaggiare in Europa." />
+            <EdgeCard text="Fa il primo viaggio all’estero con la famiglia in Spagna, la prima volta in aereo, è facile viaggiare in Europa." />
           </template>
           <template v-slot:sx-story-board>
             <StoryBoardCard :imageSrc="ale2"/>
@@ -60,7 +65,7 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
             <StoryBoardCard :imageSrc="tara2" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard title="right edge card two" text="I suoi genitori hanno deciso di far studiare lei e i suoi fratelli, così comincia ad andare a scuola in città (zone di influenza e corridoi militari occidentali, sopprattutto USA) " />
+            <EdgeCard  text="I suoi genitori hanno deciso di far studiare lei e i suoi fratelli, così comincia ad andare a scuola in città (zone di influenza e corridoi militari occidentali, sopprattutto USA) " />
           </template>
         </TimelineRow>
 
@@ -68,7 +73,7 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
 
         <TimelineRow :age="11">
           <template v-slot:sx-edge-card>
-            <EdgeCard title="left edge card two" text="Durante le scuole medie, si innamora della biologia e in futuro decide di iscriversi al liceo scientifico. I genitori lo mandano con amici ai campi estivi inglesi per imparare la lingua." />
+            <EdgeCard text="Durante le scuole medie, si innamora della biologia e in futuro decide di iscriversi al liceo scientifico. I genitori lo mandano con amici ai campi estivi inglesi per imparare la lingua." />
           </template>
           <template v-slot:sx-story-board>
             <StoryBoardCard  :imageSrc="ale3" />
@@ -77,7 +82,7 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
             <StoryBoardCard :imageSrc="tara3" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard title="right edge card two" text="Mette il velo per la prima volta, come da tradizione della sua cultura quando si diventa donna, il velo non le copre mai i ciuffi più ribelli. " />
+            <EdgeCard text="Mette il velo per la prima volta, come da tradizione della sua cultura quando si diventa donna, il velo non le copre mai i ciuffi più ribelli. " />
           </template>
         </TimelineRow>
 
@@ -85,7 +90,7 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
 
         <TimelineRow :age="18">
           <template v-slot:sx-edge-card>
-            <EdgeCard title="left edge card two" text="Durante il suo percorso di studio, ha modo di fare un anno di scambio culturale negli USA, prima volta che fa il passaporto, prima volta otreoceano. " />
+            <EdgeCard text="Durante il suo percorso di studio, ha modo di fare un anno di scambio culturale negli USA, prima volta che fa il passaporto, prima volta otreoceano. " />
           </template>
           <template v-slot:sx-story-board>
             <StoryBoardCard  :imageSrc="ale4" />
@@ -94,7 +99,7 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
             <StoryBoardCard :imageSrc="tara4" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard title="right edge card two" text="Essendo in età da marito, si sposa con un uomo sempre originario delle sue zone, lui si è opposto ai talebani ed essendo emigrato da minorenne ha cittadinanza italiana." />
+            <EdgeCard text="Essendo in età da marito, si sposa con un uomo sempre originario delle sue zone, lui si è opposto ai talebani ed essendo emigrato da minorenne ha cittadinanza italiana." />
           </template>
         </TimelineRow>
 
@@ -102,7 +107,7 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
 
         <TimelineRow :age="19">
           <template v-slot:sx-edge-card>
-            <EdgeCard title="left edge card two" text="Consecuito il diploma, si ritrova a riflettere su dove continuare i suoi studi. Alla fine decide di specializzarsi in biochimica e fa richiesta alla Oxford University e dopo il colloquio viene preso." />
+            <EdgeCard  text="Consecuito il diploma, si ritrova a riflettere su dove continuare i suoi studi. Alla fine decide di specializzarsi in biochimica e fa richiesta alla Oxford University e dopo il colloquio viene preso." />
           </template>
           <template v-slot:sx-story-board>
             <StoryBoardCard  :imageSrc="ale5" />
@@ -111,7 +116,7 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
             <StoryBoardCard :imageSrc="tara5" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard title="right edge card two" text="Anche suo marito la esorta ad emanciparsi, così si iscrive all’università. Ma una voce però comincia a girare: gli americani voglio andarsene dal paese. " />
+            <EdgeCard text="Anche suo marito la esorta ad emanciparsi, così si iscrive all’università. Ma una voce però comincia a girare: gli americani voglio andarsene dal paese. " />
           </template>
         </TimelineRow>
 
@@ -119,7 +124,7 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
 
         <TimelineRow :age="20">
           <template v-slot:sx-edge-card>
-            <EdgeCard title="left edge card two" text="Dopo essersi trasferito nella città britannica giusto per il periodo di studio, incomincia a cercare un lavoretto part-time per poter aiutare economicamente ed essere più indipendente." />
+            <EdgeCard text="Dopo essersi trasferito nella città britannica giusto per il periodo di studio, incomincia a cercare un lavoretto part-time per poter aiutare economicamente ed essere più indipendente." />
           </template>
           <template v-slot:sx-story-board>
             <StoryBoardCard :imageSrc="ale6" />
@@ -128,7 +133,7 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
             <StoryBoardCard :imageSrc="tara6" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard title="right edge card two" text="Tara è incinta, ma l’ombra dei talebani si fa sempre più presente. Bisogna dare un futro a questo bambino...bisogna andare via dal paese. Suo marito è tornato in Italia, lei nel frattempo si reca a Kabul, fa il passaporto e parte per l’Iran. " />
+            <EdgeCard text="Tara è incinta, ma l’ombra dei talebani si fa sempre più presente. Bisogna dare un futro a questo bambino...bisogna andare via dal paese. Suo marito è tornato in Italia, lei nel frattempo si reca a Kabul, fa il passaporto e parte per l’Iran. " />
           </template>
         </TimelineRow>
 
@@ -136,7 +141,7 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
 
         <TimelineRow :age="21">
           <template v-slot:sx-edge-card>
-            <EdgeCard title="left edge card two" text="Il Regno Unito è cambiato dopo la Brexit ed è decisamente più difficile stare dietro alla burocrazia del paese, non riesce a trovare un occupazione che gli permetta di poter fare tutto, è la prima volta che si sente veramente “immigrato”." />
+            <EdgeCard text="Il Regno Unito è cambiato dopo la Brexit ed è decisamente più difficile stare dietro alla burocrazia del paese, non riesce a trovare un occupazione che gli permetta di poter fare tutto, è la prima volta che si sente veramente “immigrato”." />
           </template>
           <template v-slot:sx-story-board>
             <StoryBoardCard  :imageSrc="ale7"/>
@@ -145,14 +150,14 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
             <StoryBoardCard :imageSrc="tara7" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard title="right edge card two" text="In Iran è ospitata da un parente che vive lì da tempo, attende il permesso di partire per raggiungere il marito, nel frattempo nasce il suo primo figlio, ora è mamma e si può solo andare avanti. " />
+            <EdgeCard text="In Iran è ospitata da un parente che vive lì da tempo, attende il permesso di partire per raggiungere il marito, nel frattempo nasce il suo primo figlio, ora è mamma e si può solo andare avanti. " />
           </template>
         </TimelineRow>
         
 
         <TimelineRow :age="22">
           <template v-slot:sx-edge-card>
-            <EdgeCard title="left edge card two" text="Durante un suo periodo a casa, mentre rinnova il suo vecchio passaporto (maggiorenne, 10 anni di durata) fa la conoscenza di quella che diventerà la sua fidanzata, è la sua prima storia d’amore più seria." />
+            <EdgeCard text="Durante un suo periodo a casa, mentre rinnova il suo vecchio passaporto (maggiorenne, 10 anni di durata) fa la conoscenza di quella che diventerà la sua fidanzata, è la sua prima storia d’amore più seria." />
           </template>
           <template v-slot:sx-story-board>
             <StoryBoardCard  :imageSrc="ale8" />
@@ -161,7 +166,7 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
             <StoryBoardCard :imageSrc="tara8" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard title="right edge card two" text="Finalmente arriva il permesso di ricongiungimento. Dopo tanta attesa, prende suo figlio in braccio e si incammina per l’Europa attraverso i canali umanitari della rotta balcanica." />
+            <EdgeCard text="Finalmente arriva il permesso di ricongiungimento. Dopo tanta attesa, prende suo figlio in braccio e si incammina per l’Europa attraverso i canali umanitari della rotta balcanica." />
           </template>
         </TimelineRow>
 
@@ -169,7 +174,7 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
 
         <TimelineRow :age="23">
           <template v-slot:sx-edge-card>
-            <EdgeCard title="left edge card two" text="Sono anni di duro studio, alla fine del terzo anno, può scegliere di poter proseguire con una sua ricerca assistito da un professore. " />
+            <EdgeCard text="Sono anni di duro studio, alla fine del terzo anno, può scegliere di poter proseguire con una sua ricerca assistito da un professore. " />
           </template>
           <template v-slot:sx-story-board>
             <StoryBoardCard  :imageSrc="ale9" />
@@ -178,14 +183,14 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
             <StoryBoardCard :imageSrc="tara9" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard title="right edge card two" text="Finalmente, al compimento dei suoi 23 anni, arriva in Italia e raggiunge suo marito nella sua nuova casa. Sà di essere più fortunata di molti altri, il suo prossimo obiettivo è integrarsi nel nuovo paese." />
+            <EdgeCard text="Finalmente, al compimento dei suoi 23 anni, arriva in Italia e raggiunge suo marito nella sua nuova casa. Sà di essere più fortunata di molti altri, il suo prossimo obiettivo è integrarsi nel nuovo paese." />
           </template>
         </TimelineRow>
 
 
         <TimelineRow :age="24">
           <template v-slot:sx-edge-card>
-            <EdgeCard title="left edge card two" text="Dopo il periodo di ricerca pensa di tornare nell’Unione Europea per poter diventare ricercatore. Per quanto vorrebbe tornare in Italia, pensa che potrà andare avanti nella sua specializzazione solo in altri paesi UE per il momento." />
+            <EdgeCard text="Dopo il periodo di ricerca pensa di tornare nell’Unione Europea per poter diventare ricercatore. Per quanto vorrebbe tornare in Italia, pensa che potrà andare avanti nella sua specializzazione solo in altri paesi UE per il momento." />
           </template>
           <template v-slot:sx-story-board>
             <StoryBoardCard :imageSrc="ale10" />
@@ -194,7 +199,7 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
             <StoryBoardCard :imageSrc="tara10" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard title="right edge card two" text="Dopo un anno, riesce a parlare abbastanza bene la lingua e suo figlio può andare a scuola. Anche se sà che ci saranno ancora parecchie difficoltà nell’integrarsi, spera di poter riprendere a studiare lei stessa un giorno." />
+            <EdgeCard text="Dopo un anno, riesce a parlare abbastanza bene la lingua e suo figlio può andare a scuola. Anche se sà che ci saranno ancora parecchie difficoltà nell’integrarsi, spera di poter riprendere a studiare lei stessa un giorno." />
           </template>
         </TimelineRow>
       </Timeline>
@@ -227,22 +232,11 @@ body, html {
 }
 
 .timeline-wrapper {
-  padding-bottom: 30px;
+  padding-bottom: 1.563vw;
   overflow: hidden;
   display: flex;
   justify-content: center;
 }
 
-h1.title {
-  display: inline-block;
-  margin: 20px 0;
-  padding: 1.042vw; /* 30px total padding (15px per side) */
-  background-color: #BA2D0B;
-  color: #FFF2DB;
-  border-radius: 1.042vw; /* Rounded corners for a nicer effect */
-}
 
-h1 {
-  text-align: center;
-}
 </style>
