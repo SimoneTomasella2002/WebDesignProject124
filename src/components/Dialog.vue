@@ -25,10 +25,10 @@ const { mobile } = useDisplay()
         <template v-slot:activator="{ props: activatorProps }">
             <v-btn variant="text" rounded v-bind="activatorProps" height="60">
                 <div class="d-flex flex-column">
-                    <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-secondary">
+                    <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-secondary font-italic">
                         How to use
                     </v-card-text>
-                    <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-secondary">
+                    <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-secondary font-italic">
                         this website?
                     </v-card-text>
                 </div>
