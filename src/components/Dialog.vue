@@ -1,4 +1,5 @@
 <script setup>
+import { useDisplay } from 'vuetify'
 import { ref, onMounted } from 'vue';
 import DialogImage1 from '@/assets/images/dialog/Dialog-Image-1.png';
 import DialogImage2 from '@/assets/images/dialog/Dialog-Image-2.png';
@@ -13,6 +14,8 @@ onMounted(() => {
         isDialogActive.value = true;
     }, 2000);
 });
+
+const { mobile } = useDisplay()
 
 </script>
 
@@ -38,10 +41,10 @@ onMounted(() => {
                     <v-btn icon="mdi-close" @click="isActive.value = false" color="infoBackground"
                         class="text-secondary"></v-btn>
                 </v-col>
-
+                
+                
                 <v-card-text align="center">
-                    <h1>How the possibilities change</h1>
-                    <h1>based on where you're from?</h1>
+                    <h1>How the possibilities change based on where you're from?</h1>
                 </v-card-text>
 
                 <v-card-text align="center">
@@ -49,7 +52,18 @@ onMounted(() => {
                     <p>that are behind passports</p>
                 </v-card-text>
 
-                <v-row>
+                <v-row v-if="mobile" class="scrollable-row">
+                    <v-col class="non-shrinking-col" align="right">
+                        <v-img :src="DialogImage1" alt="Placeholder" width="150px"></v-img>
+                    </v-col>
+                    <v-col class="non-shrinking-col" align="center">
+                        <v-img :src="DialogImage2" alt="Placeholder" width="150px"></v-img>
+                    </v-col>
+                    <v-col class="non-shrinking-col">
+                        <v-img :src="DialogImage3" alt="Placeholder" width="150px"></v-img>
+                    </v-col>
+                </v-row>
+                <v-row v-else>
                     <v-col align="right">
                         <v-img :src="DialogImage1" alt="Placeholder" width="150px"></v-img>
                     </v-col>
@@ -61,10 +75,24 @@ onMounted(() => {
                     </v-col>
                 </v-row>
 
-                <v-col align="center" class="mt-4">
+                <v-col align="center" class="mt-4 mb-3">
                     <v-btn text="Ok! I understand" @click="isActive.value = false" color="blue" class="text-none"></v-btn>
                 </v-col>
             </v-card>
         </template>
     </v-dialog>
 </template>
+
+<style scoped>
+
+.scrollable-row {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.non-shrinking-col {
+    flex-shrink: 0;
+}
+
+</style>
