@@ -17,7 +17,7 @@ const people = ref([
     <v-container>
         <v-row>
             <v-app-bar scroll-behavior="hide" scroll-threshold="100" :height="100" color="primary">
-                <v-col cols="1">
+                <v-col cols="1" class="pa-2">
                     <Dialog />
                 </v-col>
                 <v-col cols="1">

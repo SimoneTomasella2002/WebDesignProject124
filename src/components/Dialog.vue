@@ -23,7 +23,7 @@ const { mobile } = useDisplay()
 <template>
     <v-dialog v-model="isDialogActive" max-width="800" transition="dialog-top-transition">
         <template v-slot:activator="{ props: activatorProps }">
-            <v-btn variant="text" rounded v-bind="activatorProps">
+            <v-btn variant="text" rounded v-bind="activatorProps" height="60">
                 <div class="d-flex flex-column">
                     <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-secondary">
                         How to use
