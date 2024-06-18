@@ -1,17 +1,22 @@
 <script setup>
+import { ref } from 'vue'
+
 const props = defineProps(['people', 'label'])
+const person = ref(null)
 </script>
 
 <template>
     <v-select variant="outlined" density="compact" rounded :items="people" item-title="name" hint="Choose a passport"
-        persistent-hint hide-selected bg-color="background" :label="label" single-line>
+        persistent-hint hide-selected hide-no-data bg-color="background" :label="label" single-line return-object
+        v-model="person" @update:model-value="$emit('toggleVisibility', person)">
         <!-- <template v-slot:append-inner>
             <div style="position: relative; left: 1rem;">
                 <v-icon icon="mdi-power-on" class="text-stroke"></v-icon>
             </div>
         </template> -->
         <template v-slot:selection="{ item }">
-            <span class="text-red font-weight-bold d-flex justify-start align-center text-truncate text-no-wrap text-md-subtitle-2 text-lg-body-1">
+            <span
+                class="text-red font-weight-bold d-flex justify-start align-center text-truncate text-no-wrap text-md-subtitle-2 text-lg-body-1">
                 {{ item.title }}
                 <v-img :src="item.raw.img" alt="Flag" width="40" height="16"></v-img>
             </span>
