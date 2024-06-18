@@ -31,14 +31,10 @@ const props = defineProps(["people"]);
             <v-spacer></v-spacer>
           </v-list-item>
           <v-list-item>
-            <div style="margin-top: 1rem;">
               <Select :people="props.people" label="Passport 1" />
-            </div>
           </v-list-item>
           <v-list-item>
-            <div style="margin-top: 1rem;">
               <Select :people="props.people" label="Passport 2" />
-            </div>
           </v-list-item>
           <v-list-item>
             <v-spacer></v-spacer>
