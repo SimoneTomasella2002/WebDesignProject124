@@ -7,7 +7,6 @@ import Alessandro from "@/assets/json/stories/alessandro.json";
 import Tara from "@/assets/json/stories/tara.json";
 
 
-/*
 import ale1 from "@/assets/images/Illustrazioni/alessandro/Alessandro1.svg";
 import ale2 from "@/assets/images/Illustrazioni/alessandro/Alessandro2.svg";
 import ale3 from "@/assets/images/Illustrazioni/alessandro/Alessandro3.svg";
@@ -29,7 +28,6 @@ import tara7 from "@/assets/images/Illustrazioni/tara/Tara7.svg";
 import tara8 from "@/assets/images/Illustrazioni/tara/Tara8.svg";
 import tara9 from "@/assets/images/Illustrazioni/tara/Tara9.svg";
 import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
-*/
 
 console.log(Alessandro.description);
 </script>
