@@ -1,0 +1,45 @@
+{
+    "tara": [
+        {
+            "storyboard": "@/assets/images/Illustrazioni/tara/Tara1.svg",
+            "description": "Tara vive in un paese sulle montagne dell’Afghanistan, nella regione del Ghazni. Giudiziosa, decisa, d’aspetto sobrio."
+        },
+        {
+            "storyboard": "@/assets/images/Illustrazioni/tara/Tara2.svg",
+            "description": "I suoi genitori hanno deciso di far studiare lei e i suoi fratelli, così comincia ad andare a scuola in città (zone di influenza e corridoi militari occidentali, sopprattutto USA)"
+        },
+        {
+            "storyboard": "@/assets/images/Illustrazioni/tara/Tara3.svg",
+            "description": "Mette il velo per la prima volta, come da tradizione della sua cultura quando si diventa donna, il velo non le copre mai i ciuffi più ribelli."
+        },
+        {
+            "storyboard": "@/assets/images/Illustrazioni/tara/Tara4.svg",
+            "description": "Essendo in età da marito, si sposa con un uomo sempre originario delle sue zone, lui si è opposto ai talebani ed essendo emigrato da minorenne ha cittadinanza italiana."
+        },
+        {
+            "storyboard": "@/assets/images/Illustrazioni/tara/Tara5.svg",
+            "description": "Anche suo marito la esorta ad emanciparsi, così si iscrive all’università. Ma una voce però comincia a girare: gli americani voglio andarsene dal paese."
+        },
+        {
+            "storyboard": "@/assets/images/Illustrazioni/tara/Tara6.svg",
+            "description": "Tara è incinta, ma l’ombra dei talebani si fa sempre più presente. Bisogna dare un futro a questo bambino...bisogna andare via dal paese. Suo marito è tornato in Italia, lei nel frattempo si reca a Kabul, fa il passaporto e parte per l’Iran."
+        },
+        {
+            "storyboard": "@/assets/images/Illustrazioni/tara/Tara7.svg",
+            "description": "In Iran è ospitata da un parente che vive lì da tempo, attende il permesso di partire per raggiungere il marito, nel frattempo nasce il suo primo figlio, ora è mamma e si può solo andare avanti."
+        },
+        {
+            "storyboard": "@/assets/images/Illustrazioni/tara/Tara8.svg",
+            "description": "Finalmente arriva il permesso di ricongiungimento. Dopo tanta attesa, prende suo figlio in braccio e si incammina per l’Europa attraverso i canali umanitari della rotta balcanica."
+        },
+        {
+            "storyboard": "@/assets/images/Illustrazioni/tara/Tara9.svg",
+            "description": "Finalmente, al compimento dei suoi 23 anni, arriva in Italia e raggiunge suo marito nella sua nuova casa. Sà di essere più fortunata di molti altri, il suo prossimo obiettivo è integrarsi nel nuovo paese."
+        },
+        {
+            "storyboard": "@/assets/images/Illustrazioni/tara/Tara10.svg",
+            "description": "Dopo un anno, riesce a parlare abbastanza bene la lingua e suo figlio può andare a scuola. Anche se sà che ci saranno ancora parecchie difficoltà nell’integrarsi, spera di poter riprendere a studiare lei stessa un giorno."
+        }
+
+    ]
+}
