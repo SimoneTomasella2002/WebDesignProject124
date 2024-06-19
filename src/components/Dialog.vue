@@ -5,6 +5,7 @@ import DialogImage1 from '@/assets/images/dialog/Dialog-Image-1.png';
 import DialogImage2 from '@/assets/images/dialog/Dialog-Image-2.png';
 import DialogImage3 from '@/assets/images/dialog/Dialog-Image-3.png';
 
+
 // Reactive variable to control dialog visibility
 const isDialogActive = ref(false);
 
