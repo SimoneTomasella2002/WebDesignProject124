@@ -2,10 +2,10 @@
 import MobileMainContent from './MobileMainContent.vue'
 import DesktopMainContent from './DesktopMainContent.vue'
 
-const props = defineProps(['isMobile', 'selection'])
+const props = defineProps(['isMobile', 'leftPerson', 'rightPerson'])
 </script>
 
 <template>
     <MobileMainContent v-if="props.isMobile" />
-    <DesktopMainContent v-else :selection="props.selection" />
+    <DesktopMainContent v-else :left-person="props.leftPerson" :right-person="props.rightPerson" />
 </template>

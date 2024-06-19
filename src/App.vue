@@ -16,16 +16,21 @@ const people = ref([
 const filteredPeople = computed(() => people.value.filter(person => person.visible))
 
 const toggleVisibility = (person, selectId) => {
-    if (selectId) {
-      selection = { person, selectId }
-      // console.log(selection)
+    if (parseInt(selectId) === 1) {
+      leftPerson = { person }
+    }
+    if (parseInt(selectId) === 2) {
+      rightPerson = { person }
     }
     people.value.forEach(p => p.visible = p !== person)
 }
 
-let selection = ref({
+let leftPerson = ref({
   person: null,
-  selectId: null
+})
+
+let rightPerson = ref({
+  person: null,
 })
 </script>
 
@@ -36,10 +41,10 @@ let selection = ref({
       <router-view v-slot="{ Component, route }">
         <transition :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass"
           mode="out-in">
-          <component :is="Component" :is-mobile="mobile" :selection="selection" />
+          <component :is="Component" :is-mobile="mobile" :left-person="leftPerson" :right-person="rightPerson"  />
         </transition>
       </router-view>
     </v-main>
-    <Footer :is-mobile="mobile" :selection="selection"/>
+    <Footer :is-mobile="mobile" :people="filteredPeople" @toggle-visibility="toggleVisibility"/>
   </v-app>
 </template>

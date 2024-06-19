@@ -35,15 +35,6 @@ const handleToggleVisibility = (person, selectId) => {
             <v-spacer></v-spacer>
           </v-list-item>
           <v-list-item>
-              <Select :people="props.people" label="Passport 1" select-id="1" @toggle-visibility="handleToggleVisibility"/>
-          </v-list-item>
-          <v-list-item>
-              <Select :people="props.people" label="Passport 2" select-id="2" @toggle-visibility="handleToggleVisibility"/>
-          </v-list-item>
-          <v-list-item>
-            <v-spacer></v-spacer>
-          </v-list-item>
-          <v-list-item>
             <v-btn prepend-icon="mdi-web" variant="text" color="secondary" class="text-none" rounded>
               Language
             </v-btn>
