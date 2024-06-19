@@ -23,7 +23,10 @@ const toggleVisibility = (person, selectId) => {
     people.value.forEach(p => p.visible = p !== person)
 }
 
-let selection = ref(null)
+let selection = ref({
+  person: null,
+  selectId: null
+})
 </script>
 
 <template>
@@ -37,6 +40,6 @@ let selection = ref(null)
         </transition>
       </router-view>
     </v-main>
-    <Footer :is-mobile="mobile" :people="people"/>
+    <Footer :is-mobile="mobile" :selection="selection"/>
   </v-app>
 </template>

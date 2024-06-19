@@ -1,5 +1,8 @@
 <script setup>
-const props = defineProps(['people'])
+import { computed } from 'vue'
+const props = defineProps(['selection'])
+const selectedFirst = computed(() => props.selection !== null && props.selection.selectId === 1)
+const selectedSecond = computed(() => props.selection !== null && props.selection.selectId === 2)
 </script>
 
 <template>
@@ -9,16 +12,16 @@ const props = defineProps(['people'])
                 <v-col>
                     <v-btn class="h-100 text-none" variant="outlined" rounded>
                         <span class="text-red font-weight-bold d-flex justify-start align-center">
-                            {{ props.people[0].name }}
-                            <v-img :src="props.people[0].img" alt="Flag" width="40" height="16"></v-img>
+                            {{ selectedFirst ? props.selection.person.name : 'Passaport 1' }}
+                            <v-img v-if="selectedFirst" :src="props.selection.person.img" alt="Flag" width="40" height="16"></v-img>
                         </span>
                     </v-btn>
                 </v-col>
                 <v-col>
                     <v-btn class="h-100 text-none" variant="outlined" rounded>
                         <span class="text-red font-weight-bold d-flex justify-start align-center">
-                            {{ props.people[1].name }}
-                            <v-img :src="props.people[1].img" alt="Flag" width="40" height="16"></v-img>
+                            Passaport 2
+                            <v-img v-if="selectedSecond" :src="props.selection.person.img" alt="Flag" width="40" height="16"></v-img>
                         </span>
                     </v-btn>
                 </v-col>
