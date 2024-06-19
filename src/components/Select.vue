@@ -5,8 +5,7 @@ const props = defineProps(['people', 'label', 'selectId'])
 const person = ref(null)
 const emit = defineEmits(['toggleVisibility'])
 const handleUpdate = (person) => {
-    if (props.selectId) emit('toggleVisibility', person, props.selectId)
-    else emit('toggleVisibility', person)
+    emit('toggleVisibility', person, props.selectId)
 }
 </script>
 

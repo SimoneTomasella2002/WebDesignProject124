@@ -5,8 +5,8 @@ import Select from "@/components/Select.vue";
 
 const props = defineProps(["people"]);
 const emit = defineEmits(["toggleVisibility"]);
-const handleToggleVisibility = (person) => {
-    emit("toggleVisibility", person);
+const handleToggleVisibility = (person, selectId) => {
+    emit("toggleVisibility", person, selectId);
 }
 </script>
 
@@ -21,7 +21,7 @@ const handleToggleVisibility = (person) => {
                     <v-spacer></v-spacer>
                 </v-col>
                 <v-col cols="2" align-self="end" class="ma-0 pa-2">
-                    <Select :people="props.people" label="Passport 1" @toggle-visibility="handleToggleVisibility" />
+                    <Select :people="props.people" label="Passport 1" select-id="1" @toggle-visibility="handleToggleVisibility" />
                 </v-col>
 
                 <v-col align-self="center" cols="4" class="ma-0 pa-0 d-flex justify-center align-center">
@@ -31,7 +31,7 @@ const handleToggleVisibility = (person) => {
                 </v-col>
 
                 <v-col cols="2" align-self="end" class="ma-0 pa-2">
-                    <Select :people="props.people" label="Passport 2" @toggle-visibility="handleToggleVisibility" />
+                    <Select :people="props.people" label="Passport 2" select-id="2" @toggle-visibility="handleToggleVisibility" />
                 </v-col>
                 <v-col cols="1" align-self="center" class="ma-0 pa-0 text-center">
                     <v-btn rounded to="/about" variant="text">

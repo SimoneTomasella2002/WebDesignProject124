@@ -1,10 +1,10 @@
 <script setup>
+import { computed, watch } from "vue";
+
 import Timeline from "@/components/Timeline/Timeline.vue";
 import TimelineRow from "@/components/Timeline/TimelineRow.vue";
 import StoryBoardCard from "@/components/Timeline/TimeLineItems/StoryBoard.vue";
 import EdgeCard from "@/components/Timeline/TimeLineItems/EdgeCard.vue";
-import Alessandro from "@/assets/json/stories/alessandro.json";
-import Tara from "@/assets/json/stories/tara.json";
 import Stories from "@/assets/json/stories.json";
 
 import ale1 from "@/assets/images/Illustrazioni/alessandro/Alessandro1.svg";
@@ -29,7 +29,33 @@ import tara8 from "@/assets/images/Illustrazioni/tara/Tara8.svg";
 import tara9 from "@/assets/images/Illustrazioni/tara/Tara9.svg";
 import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
 
-console.log(Stories.alessandro[0].description);
+const props = defineProps(["selection"]); // abbiamo person e selectId
+
+// Carica le storie dinamicamente da stories.json
+const storyData = computed(() => {
+  if (props.selection && props.selection.person) {
+    const person = props.selection.person.name;
+    console.log(Stories[person][0].storyboard)
+    return Stories[person];
+  }
+  return null;
+});
+
+// Funzione per caricare le immagini in base al percorso fornito nel JSON
+const loadImage = (path) => {
+  import (`${path}`).then((image) => {
+    return image.default;
+  });
+};
+
+watch(() => props.selection, (newVal) => {
+  if (newVal && newVal.person) {
+    console.log('Selection changed:', newVal.person.name);
+    // Esegui altre azioni basate sulla nuova selezione
+  }
+});
+
+
 
 // sb = storyboard e ds = description
 // var DIM = 10;
@@ -74,10 +100,10 @@ console.log(Stories.alessandro[0].description);
       <Timeline>
         <TimelineRow :age="5">
           <template v-slot:sx-edge-card>
-            <EdgeCard  text="Alessandro vive in un paese dell’entroterra ligure, in Italia, non molto distante dal capoluogo. Molto curioso, vivace, robusto." />
+            <EdgeCard  :text="storyData !== null ? storyData[0].description : 'zioPera'" />
           </template>
           <template v-slot:sx-story-board>
-            <StoryBoardCard :imageSrc="ale1" />
+            <StoryBoardCard :imageSrc="storyData !== null ? loadImage(storyData[0].storyboard) : 'ziopera'" />
           </template>
           <template v-slot:dx-story-board>
             <StoryBoardCard :imageSrc="tara1" />

@@ -18,7 +18,7 @@ const filteredPeople = computed(() => people.value.filter(person => person.visib
 const toggleVisibility = (person, selectId) => {
     if (selectId) {
       selection = { person, selectId }
-      console.log(selection)
+      // console.log(selection)
     }
     people.value.forEach(p => p.visible = p !== person)
 }
@@ -36,7 +36,7 @@ let selection = ref({
       <router-view v-slot="{ Component, route }">
         <transition :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass"
           mode="out-in">
-          <component :is="Component" :is-mobile="mobile" />
+          <component :is="Component" :is-mobile="mobile" :selection="selection" />
         </transition>
       </router-view>
     </v-main>
