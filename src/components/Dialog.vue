@@ -70,8 +70,10 @@ export default {
                         class="text-secondary"></v-btn>
                 </v-col>
                 
-                
-                <v-card-text align="center">
+                <v-card-text v-if="mobile" align="center">
+                    <p class="mobile-dialog-title">How the possibilities change based on where you're from?</p>
+                </v-card-text>
+                <v-card-text v-else align="center">
                     <h1>How the possibilities change based on where you're from?</h1>
                 </v-card-text>
 
@@ -107,14 +109,9 @@ export default {
 
 <style scoped>
 
-.scrollable-row {
-    display: flex;
-    overflow-x: auto;
-    scrollbar-width: thin;
-}
-
-.non-shrinking-col {
-    flex-shrink: 0;
+.mobile-dialog-title {
+    font-size: 22px; 
+    font-weight: bold;
 }
 
 </style>
