@@ -45,6 +45,6 @@ let rightPerson = ref({
         </transition>
       </router-view>
     </v-main>
-    <Footer :is-mobile="mobile"/>
+    <Footer :is-mobile="mobile" :people="filteredPeople" @toggle-visibility="toggleVisibility"/>
   </v-app>
 </template>
