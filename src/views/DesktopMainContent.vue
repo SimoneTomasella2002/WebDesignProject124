@@ -3,6 +3,9 @@ import Timeline from "@/components/Timeline/Timeline.vue";
 import TimelineRow from "@/components/Timeline/TimelineRow.vue";
 import StoryBoardCard from "@/components/Timeline/TimeLineItems/StoryBoard.vue";
 import EdgeCard from "@/components/Timeline/TimeLineItems/EdgeCard.vue";
+import Alessandro from "@/assets/json/stories/alessandro.json";
+import Tara from "@/assets/json/stories/tara.json";
+import Stories from "@/assets/json/stories.json";
 
 import ale1 from "@/assets/images/Illustrazioni/alessandro/Alessandro1.svg";
 import ale2 from "@/assets/images/Illustrazioni/alessandro/Alessandro2.svg";
@@ -25,6 +28,38 @@ import tara7 from "@/assets/images/Illustrazioni/tara/Tara7.svg";
 import tara8 from "@/assets/images/Illustrazioni/tara/Tara8.svg";
 import tara9 from "@/assets/images/Illustrazioni/tara/Tara9.svg";
 import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
+
+console.log(Stories.alessandro[0].description);
+
+// sb = storyboard e ds = description
+var DIM = 10;
+var sb_storia_1 = Array(DIM).fill(null);
+var sb_storia_2 = Array(DIM).fill(null);
+
+var ds_storia_1 = Array(DIM).fill(null);
+var ds_storia_2 = Array(DIM).fill(null);
+
+function fillStoriesVariables(nome, id_posizione) {
+  if (id_posizione === 1) {
+    for (let i = 0; i < Stories[nome].length && i < DIM; i++) {
+      sb_storia_1[i] = Stories[nome][i].storyboard;
+      ds_storia_1[i] = Stories[nome][i].description;
+    }
+  } else {
+    for (let i = 0; i < Stories[nome].length && i < DIM; i++) {
+      sb_storia_2[i] = Stories[nome][i].storyboard;
+      ds_storia_2[i] = Stories[nome][i].description;
+    }
+  }
+}
+
+fillStoriesVariables('alessandro', 1);
+fillStoriesVariables('tara', 2);
+
+console.log(sb_storia_1);
+console.log(ds_storia_1);
+console.log(sb_storia_2);
+console.log(ds_storia_2);
 </script>
 
 <template>
