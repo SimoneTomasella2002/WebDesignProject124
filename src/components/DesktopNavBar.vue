@@ -14,8 +14,8 @@ const props = defineProps({
 
 const emit = defineEmits(['update:selected1', 'update:selected2'])
 
-const selected1 = ref(null)
-const selected2 = ref(null)
+const selected1 = ref(props.items[0])
+const selected2 = ref(props.items[1])
 
 const updateSelected1 = (value) => {
     selected1.value = value
@@ -47,7 +47,8 @@ const filteredItems2 = computed(() => {
                     <v-spacer></v-spacer>
                 </v-col>
                 <v-col cols="2" align-self="end" class="ma-0 pa-2">
-                    <Select :items="filteredItems1" label="Passport 1" :selected="selected1" @update:selected="updateSelected1" />
+                    <Select :items="filteredItems1" label="Passport 1" :selected="selected1"
+                        @update:selected="updateSelected1" />
                 </v-col>
 
                 <v-col align-self="center" cols="4" class="ma-0 pa-0 d-flex justify-center align-center">
@@ -57,7 +58,8 @@ const filteredItems2 = computed(() => {
                 </v-col>
 
                 <v-col cols="2" align-self="end" class="ma-0 pa-2">
-                    <Select :items="filteredItems2" label="Passport 2" :selected="selected2" @update:selected="updateSelected2" />
+                    <Select :items="filteredItems2" label="Passport 2" :selected="selected2"
+                        @update:selected="updateSelected2" />
                 </v-col>
                 <v-col cols="1" align-self="center" class="ma-0 pa-0 text-center">
                     <v-btn rounded to="/about" variant="text">
@@ -74,9 +76,11 @@ const filteredItems2 = computed(() => {
 
 <style scoped>
 .responsive-logo {
-  width: 20vw;
-  height: 10vh;
-  max-width: 390px; /* Aggiungi un limite massimo se necessario */
-  max-height: 70px; /* Aggiungi un limite massimo se necessario */
+    width: 20vw;
+    height: 10vh;
+    max-width: 390px;
+    /* Aggiungi un limite massimo se necessario */
+    max-height: 70px;
+    /* Aggiungi un limite massimo se necessario */
 }
 </style>

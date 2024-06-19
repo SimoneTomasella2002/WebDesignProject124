@@ -1,11 +1,11 @@
 <script setup>
 import websiteLogo from "@/assets/images/logo.jpg";
 
-function scrollToTheTop () {
-    window.scrollTo(0,0);
+function scrollToTheTop() {
+    window.scrollTo(0, 0);
 }
 
-function openGithubPageInASeparateTab () {
+function openGithubPageInASeparateTab() {
     window.open("https://github.com/SimoneTomasella2002/WebDesignProject124", "_blank");
 }
 </script>
@@ -20,8 +20,7 @@ function openGithubPageInASeparateTab () {
                         <v-img :src="websiteLogo" alt="The website logo" width="50" height="50"
                             class="rounded-circle mb-2"></v-img>
                         <i class="mb-2">Behind a passport</i>
-                        <v-btn @click="openGithubPageInASeparateTab" text color="blue"
-                            class="mb-2">
+                        <v-btn @click="openGithubPageInASeparateTab" text color="blue" class="mb-2">
                             Take a look at our code
                         </v-btn>
                         <p class="mb-2">Where to contact us: placeholder@gmail.com</p>

@@ -22,11 +22,11 @@ const leftName = computed(() => props.selected1?.name || null);
 const rightName = computed(() => props.selected2?.name || null);
 
 const getDescription = (name, index) => {
-  return name ? Stories[name][index]?.description || 'zio' : 'zio';
+  return name ? (Stories[name][index]?.description || 'Descrizione non disponibile') : 'Nessun nome selezionato';
 };
 
 const getImageSrc = (name, index) => {
-  return name ? images[`${name}${index + 1}`] || 'zio' : 'zio';
+  return name ? (images[`${name}${index + 1}`] || images['Tara5']) : images['Tara5'];
 };
 </script>
 

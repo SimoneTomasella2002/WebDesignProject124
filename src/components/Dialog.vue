@@ -20,7 +20,7 @@ const window = ref(0);
 const length = ref(3);
 
 function getDialogImage(index) {
-    switch(index) {
+    switch (index) {
         case 1:
             return DialogImage1;
         case 2:
@@ -69,7 +69,7 @@ export default {
                     <v-btn icon="mdi-close" @click="isActive.value = false" color="infoBackground"
                         class="text-secondary"></v-btn>
                 </v-col>
-                
+
                 <v-card-text v-if="mobile" align="center">
                     <p class="mobile-dialog-title">How the possibilities change based on where you're from?</p>
                 </v-card-text>
@@ -100,7 +100,8 @@ export default {
                 </v-row>
 
                 <v-col align="center" class="mt-4 mb-3">
-                    <v-btn text="Ok! I understand" @click="isActive.value = false" color="blue" class="text-none"></v-btn>
+                    <v-btn text="Ok! I understand" @click="isActive.value = false" color="blue"
+                        class="text-none"></v-btn>
                 </v-col>
             </v-card>
         </template>
@@ -108,10 +109,8 @@ export default {
 </template>
 
 <style scoped>
-
 .mobile-dialog-title {
-    font-size: 22px; 
+    font-size: 22px;
     font-weight: bold;
 }
-
 </style>
