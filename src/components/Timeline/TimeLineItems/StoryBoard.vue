@@ -1,6 +1,6 @@
 <template>
   <div class="story-board-card">
-    <img :src="imageSrc" alt="Story Image" class="story-image" />
+    <v-img :src="imageSrc" alt="Story Image" class="story-image" cover></v-img>
   </div>
 </template>
 

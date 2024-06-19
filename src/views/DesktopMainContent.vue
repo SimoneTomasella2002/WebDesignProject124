@@ -56,7 +56,6 @@ const getImageSrc = (name, index) => {
           </template>
         </TimelineRow>
       </Timeline>
-
     </div>
   </div>
 </template>
