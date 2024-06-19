@@ -32,34 +32,34 @@ import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
 console.log(Stories.alessandro[0].description);
 
 // sb = storyboard e ds = description
-var DIM = 10;
-var sb_storia_1 = Array(DIM).fill(null);
-var sb_storia_2 = Array(DIM).fill(null);
+// var DIM = 10;
+// var sb_storia_1 = Array(DIM).fill(null);
+// var sb_storia_2 = Array(DIM).fill(null);
 
-var ds_storia_1 = Array(DIM).fill(null);
-var ds_storia_2 = Array(DIM).fill(null);
+// var ds_storia_1 = Array(DIM).fill(null);
+// var ds_storia_2 = Array(DIM).fill(null);
 
-function fillStoriesVariables(nome, id_posizione) {
-  if (id_posizione === 1) {
-    for (let i = 0; i < Stories[nome].length && i < DIM; i++) {
-      sb_storia_1[i] = Stories[nome][i].storyboard;
-      ds_storia_1[i] = Stories[nome][i].description;
-    }
-  } else {
-    for (let i = 0; i < Stories[nome].length && i < DIM; i++) {
-      sb_storia_2[i] = Stories[nome][i].storyboard;
-      ds_storia_2[i] = Stories[nome][i].description;
-    }
-  }
-}
+// function fillStoriesVariables(nome, id_posizione) {
+//   if (id_posizione === 1) {
+//     for (let i = 0; i < DIM; i++) {
+//       sb_storia_1[i] = Stories[nome][i].storyboard;
+//       ds_storia_1[i] = Stories[nome][i].description;
+//     }
+//   } else {
+//     for (let i = 0; i < DIM; i++) {
+//       sb_storia_2[i] = Stories[nome][i].storyboard;
+//       ds_storia_2[i] = Stories[nome][i].description;
+//     }
+//   }
+// }
 
-fillStoriesVariables('alessandro', 1);
-fillStoriesVariables('tara', 2);
+// fillStoriesVariables('alessandro', 1);
+// fillStoriesVariables('tara', 2);
 
-console.log(sb_storia_1);
-console.log(ds_storia_1);
-console.log(sb_storia_2);
-console.log(ds_storia_2);
+// console.log(sb_storia_1);
+// console.log(ds_storia_1);
+// console.log(sb_storia_2);
+// console.log(ds_storia_2);
 </script>
 
 <template>
