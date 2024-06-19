@@ -2,14 +2,8 @@
 import { ref } from 'vue'
 import Dialog from "@/components/Dialog.vue";
 import websiteLogo from '@/assets/images/logopassport.svg'
-import Select from "@/components/Select.vue";
 
 const drawer = ref(false)
-const props = defineProps(["people"]);
-const emit = defineEmits(["toggleVisibility"]);
-const handleToggleVisibility = (person, selectId) => {
-    emit("toggleVisibility", person, selectId);
-}
 </script>
 
 <template>
@@ -40,7 +34,8 @@ const handleToggleVisibility = (person, selectId) => {
             </v-btn>
           </v-list-item>
           <v-list-item>
-            <v-btn to="/about" prepend-icon="mdi-information-outline" variant="text" color="secondary" class="text-none" rounded>
+            <v-btn to="/about" prepend-icon="mdi-information-outline" variant="text" color="secondary" class="text-none"
+              rounded>
               About
             </v-btn>
           </v-list-item>

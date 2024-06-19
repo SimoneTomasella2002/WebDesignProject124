@@ -2,10 +2,21 @@
 import MobileNavBar from './MobileNavBar.vue'
 import DesktopNavBar from './DesktopNavBar.vue'
 
-const props = defineProps(['isMobile', 'people'])
+const props = defineProps(
+    {
+        isMobile: {
+            type: Boolean,
+            required: true,
+        },
+        items: {
+            type: Array,
+            required: true,
+        },
+    }
+)
 </script>
 
 <template>
-    <MobileNavBar v-if="props.isMobile" :people="props.people" />
-    <DesktopNavBar v-else :people="props.people" />
+    <MobileNavBar v-if="props.isMobile" />
+    <DesktopNavBar v-else :items="items" />
 </template>
