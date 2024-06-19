@@ -40,21 +40,24 @@ const getImageSrc = (name, index) => {
 
     <div class="timeline-wrapper">
       <Timeline>
-        <TimelineRow v-for="age in [5, 6, 11, 18, 19, 20, 21, 22, 23, 24]" :key="age" :age="age">
+        <TimelineRow
+          v-for="([age, index]) in [[5, 0], [6, 1], [11, 2], [18, 3], [19, 4], [20, 5], [21, 6], [22, 7], [23, 8], [24, 9]]"
+          :key="age" :age="age">
           <template v-slot:sx-edge-card>
-            <EdgeCard :text="getDescription(leftName, age - 5)" />
+            <EdgeCard :text="getDescription(leftName, index)" />
           </template>
           <template v-slot:sx-story-board>
-            <StoryBoardCard :imageSrc="getImageSrc(leftName, age - 5)" />
+            <StoryBoardCard :imageSrc="getImageSrc(leftName, index)" />
           </template>
           <template v-slot:dx-story-board>
-            <StoryBoardCard :imageSrc="getImageSrc(rightName, age - 5)" />
+            <StoryBoardCard :imageSrc="getImageSrc(rightName, index)" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard :text="getDescription(rightName, age - 5)" />
+            <EdgeCard :text="getDescription(rightName, index)" />
           </template>
         </TimelineRow>
       </Timeline>
+
     </div>
   </div>
 </template>
