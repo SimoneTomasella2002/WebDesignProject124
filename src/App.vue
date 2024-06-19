@@ -19,7 +19,6 @@ const selected2 = ref(null)
 
 const updateSelected1 = (value) => {
   selected1.value = value
-  console.log('selected1 in App:', value)
 }
 
 const updateSelected2 = (value) => {
