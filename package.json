@@ -11,9 +11,9 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "typeface-inter": "^3.18.1",
-    "vue": "^3.4.21",
+    "vue": "^3.4.29",
     "vue-router": "^4.3.2",
-    "vuetify": "^3.6.7"
+    "vuetify": "^3.6.9"
   },
   "devDependencies": {
     "@mdi/font": "^7.4.47",

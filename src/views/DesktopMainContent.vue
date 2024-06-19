@@ -37,7 +37,6 @@ const getImageSrc = (name, index) => {
         <v-card-title class="text-h6 text-md-h5 text-lg-h4" color="#FFF2DB">Età</v-card-title>
       </v-card>
     </div>
-
     <div class="timeline-wrapper">
       <Timeline>
         <TimelineRow
