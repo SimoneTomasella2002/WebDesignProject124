@@ -40,6 +40,6 @@ let selection = ref({
         </transition>
       </router-view>
     </v-main>
-    <Footer :is-mobile="mobile" :selection="selection"/>
+    <Footer :is-mobile="mobile" :people="filteredPeople" :selection="selection"/>
   </v-app>
 </template>

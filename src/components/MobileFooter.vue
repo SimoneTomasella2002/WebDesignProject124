@@ -1,8 +1,15 @@
 <script setup>
 import { computed } from 'vue'
-const props = defineProps(['selection'])
+import Select from './Select.vue';
+
+const props = defineProps(['selection', 'people'])
 const selectedFirst = computed(() => props.selection !== null && props.selection.selectId === 1)
 const selectedSecond = computed(() => props.selection !== null && props.selection.selectId === 2)
+
+const emit = defineEmits(["toggleVisibility"]);
+const handleToggleVisibility = (person) => {
+    emit("toggleVisibility", person);
+}
 </script>
 
 <template>
@@ -10,12 +17,13 @@ const selectedSecond = computed(() => props.selection !== null && props.selectio
         <v-row class="text-center">
             <v-bottom-navigation>
                 <v-col>
-                    <v-btn class="h-100 text-none" variant="outlined" rounded>
+                    <!-- <v-btn class="h-100 text-none" variant="outlined" rounded>
                         <span class="text-red font-weight-bold d-flex justify-start align-center">
                             {{ selectedFirst ? props.selection.person.name : 'Passaport 1' }}
                             <v-img v-if="selectedFirst" :src="props.selection.person.img" alt="Flag" width="40" height="16"></v-img>
                         </span>
-                    </v-btn>
+                    </v-btn> -->
+                    <Select :people="props.people" label="Passport 1" @toggle-visibility="handleToggleVisibility" />
                 </v-col>
                 <v-col>
                     <v-btn class="h-100 text-none" variant="outlined" rounded>
