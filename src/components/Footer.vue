@@ -6,6 +6,6 @@ const props = defineProps(['isMobile', 'selection'])
 </script>
 
 <template>
-    <MobileFooter v-if="props.isMobile" :selection="selection"/>
+    <MobileFooter v-if="props.isMobile"/>
     <DesktopFooter v-else />
 </template>
