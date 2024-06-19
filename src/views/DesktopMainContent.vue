@@ -31,7 +31,7 @@ import tara9 from "@/assets/images/Illustrazioni/tara/Tara9.svg";
 import tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
 */
 
-console.log(Alessandro[1].description);
+console.log(Alessandro.description);
 </script>
 
 <template>
