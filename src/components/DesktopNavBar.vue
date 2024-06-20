@@ -40,7 +40,7 @@ const updateSelected2 = (value) => {
 
         <v-col align-self="center" cols="4" class="ma-0 pa-0 d-flex justify-center align-center">
             <router-link to="/">
-                <v-img :src='websiteLogo' alt="Logo for the website" width="18vw" height="9vh"></v-img>
+                <img :src='websiteLogo' alt="Logo for the website" style="width: 18vw; height: 9vh; display: flex; justify-content: center; align-content: center;"></img>
             </router-link>
         </v-col>
 
