@@ -117,17 +117,16 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4.167vw;
-  height: 4.167vw;
+  width: 6vw;
+  height: 6vw;
   border-radius: 50%;
   background-color: #BA2D0B;
   border: 2px  solid #FFF2DB;  
 }
 
 .age-indicator span {
-  font-size: 1.823vw;
+  font-size: 3vw;
   font-weight: bold;
   color: #FFF2DB;
-  
 }
 </style>

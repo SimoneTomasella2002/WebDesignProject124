@@ -33,8 +33,8 @@ const getImageSrc = (name, index) => {
 <template>
   <v-card color="background">
     <v-row class="mt-4 d-flex justify-center align-center">
-      <v-card class="rounded-xl mx-auto d-flex justify-center align-center" width="10.208vw" color="#BA2D0B">
-        <v-card-title class="text-h6 text-md-h5 text-lg-h4" color="#FFF2DB">Età</v-card-title>
+      <v-card class="rounded-xl mx-auto d-flex justify-center align-center" width="6vw" color="red">
+        <v-card-title class="text-h6 text-md-h5 text-lg-h4" color="red">Età</v-card-title>
       </v-card>
     </v-row>
     <div class="timeline-wrapper">

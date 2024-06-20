@@ -19,13 +19,14 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
 }
 
 /* vertical timeline line */
 .timeline::before {
   content: "";
   position: absolute;
-  width: 2.302vw;
+  width: 2.5vw;
   background-color: #BA2D0B;
   top: 0;
   bottom: 0;
