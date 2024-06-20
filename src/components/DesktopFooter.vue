@@ -1,6 +1,10 @@
 <script setup>
 import websiteLogo from "@/assets/images/logo.jpg";
 
+function scrollToTheTop() {
+    window.scrollTo(0, 0);
+}
+
 function openGithubPageInASeparateTab() {
     window.open("https://github.com/SimoneTomasella2002/WebDesignProject124", "_blank");
 }
@@ -19,7 +23,7 @@ function openGithubPageInASeparateTab() {
                 </v-btn>
                 <p class="mb-2">Where to contact us: placeholder@gmail.com</p>
                 <RouterLink to="/terms">
-                    <v-btn text color="blue">Terms of service</v-btn>
+                    <v-btn @click="scrollToTheTop" text color="blue">Terms of service</v-btn>
                 </RouterLink>
             </v-card>
         </v-col>
