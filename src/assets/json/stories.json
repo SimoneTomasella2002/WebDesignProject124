@@ -1,98 +1,128 @@
 {
   "Alessandro": [
     {
-      "description": "Alessandro vive in un paese dell’entroterra ligure, in Italia, non molto distante da Genova. È molto curioso, vivace, robusto."
+      "description": "Alessandro vive in un paese dell’entroterra ligure, in Italia, non molto distante da Genova. È molto curioso, vivace, robusto.",
+      "age": "5"
     },
     {
-      "description": "Viaggio all’estero con la famiglia in Spagna per la prima volta in aereo. È facile viaggiare in Europa."
+      "description": "Viaggio all’estero con la famiglia in Spagna per la prima volta in aereo. È facile viaggiare in Europa.",
+      "age": "6"
     },
     {
-      "description": "Durante le scuole medie si innamora della biologia e decide di iscriversi al liceo scientifico. I genitori lo mandano con dei suoi amici ai campi estivi inglesi per imparare la lingua."
+      "description": "Durante le scuole medie si innamora della biologia e decide di iscriversi al liceo scientifico. I genitori lo mandano con dei suoi amici ai campi estivi inglesi per imparare la lingua.",
+      "age": "11"
     },
     {
-      "description": "Nel suo percorso di studio riesce a fare un anno di scambio culturale negli USA. È la prima volta che fa il passaporto, ed è anche la prima volta otreoceano."
+      "description": "Nel suo percorso di studio riesce a fare un anno di scambio culturale negli USA. È la prima volta che fa il passaporto, ed è anche la prima volta otreoceano.",
+      "age": "18"
     },
     {
-      "description": "Ottenuto il diploma, Ale si ritrova a pensare su dove continuare i suoi studi. Alla fine decide di specializzarsi in biochimica e fa richiesta alla Oxford University dove verrà preso. Un'opportunità irripetibile"
+      "description": "Ottenuto il diploma, Ale si ritrova a pensare su dove continuare i suoi studi. Alla fine decide di specializzarsi in biochimica e fa richiesta alla Oxford University dove verrà preso. Un'opportunità irripetibile",
+      "age": "19"
     },
     {
-      "description": "Dopo essersi trasferito a Oxford per gli studi, comincia a cercare un lavoretto part-time per poter essere più indipendente e non pesare sulla famiglia."
+      "description": "Dopo essersi trasferito a Oxford per gli studi, comincia a cercare un lavoretto part-time per poter essere più indipendente e non pesare sulla famiglia.",
+      "age": "20"
     },
     {
-      "description": "Il Regno Unito è cambiato dopo la Brexit ed è decisamente più difficile stare dietro alla burocrazia del paese. Alessandro non riesce a trovare un lavoroche gli permetta di poter studiare con tranquillità. È la prima volta che si sente veramente “immigrato”."
+      "description": "Il Regno Unito è cambiato dopo la Brexit ed è decisamente più difficile stare dietro alla burocrazia del paese. Alessandro non riesce a trovare un lavoroche gli permetta di poter studiare con tranquillità. È la prima volta che si sente veramente “immigrato”.",
+      "age": "21"
     },
     {
-      "description": "Durante un periodo a casa, mentre sta rinnovando il suo vecchio passaporto, fa la conoscenza di quella che diventerà la sua fidanzata. È la sua prima vera storia d’amore."
+      "description": "Durante un periodo a casa, mentre sta rinnovando il suo vecchio passaporto, fa la conoscenza di quella che diventerà la sua fidanzata. È la sua prima vera storia d’amore.",
+      "age": "22"
     },
     {
-      "description": "Siamo alla fine del terzo anno, il più duro per ora. Alessandro sceglie di proseguire il suo percorso universitario con una ricerca sulla biochimica applicata all'energia rinnovabile, aiutato da un professore molto stimato."
+      "description": "Siamo alla fine del terzo anno, il più duro per ora. Alessandro sceglie di proseguire il suo percorso universitario con una ricerca sulla biochimica applicata all'energia rinnovabile, aiutato da un professore molto stimato.",
+      "age": "23"
     },
     {
-      "description": "Dopo il periodo di ricerca pensa di tornare nell’Unione Europea e continuare la sua carriera da ricercatore. Sarebbe bello tornare in Italia, ma ci sono più opportunità altrove. Un giorno magari farà ritorno nella sua amata Liguria..."
+      "description": "Dopo il periodo di ricerca pensa di tornare nell’Unione Europea e continuare la sua carriera da ricercatore. Sarebbe bello tornare in Italia, ma ci sono più opportunità altrove. Un giorno magari farà ritorno nella sua amata Liguria...",
+      "age": "24"
     }
   ],
   "Tara": [
     {
-      "description": "Tara vive in un paese sulle montagne dell’Afghanistan, nella regione del Ghazni. Giudiziosa, decisa, d’aspetto sobrio."
+      "description": "Tara vive in un paese sulle montagne dell’Afghanistan, nella regione del Ghazni. Giudiziosa, decisa, d’aspetto sobrio.",
+      "age": "5"
     },
     {
-      "description": "I suoi genitori hanno deciso di far studiare lei e i suoi fratelli, così comincia ad andare a scuola in città (zone di influenza e corridoi militari occidentali, sopprattutto USA)"
+      "description": "I suoi genitori hanno deciso di far studiare lei e i suoi fratelli, così comincia ad andare a scuola in città (zone di influenza e corridoi militari occidentali, sopprattutto USA)",
+      "age": "6"
     },
     {
-      "description": "Mette il velo per la prima volta, come da tradizione della sua cultura quando si diventa donna, il velo non le copre mai i ciuffi più ribelli."
+      "description": "Mette il velo per la prima volta, come da tradizione della sua cultura quando si diventa donna, il velo non le copre mai i ciuffi più ribelli.",
+      "age": "11"
     },
     {
-      "description": "Essendo in età da marito, si sposa con un uomo sempre originario delle sue zone, lui si è opposto ai talebani ed essendo emigrato da minorenne ha cittadinanza italiana."
+      "description": "Essendo in età da marito, si sposa con un uomo sempre originario delle sue zone, lui si è opposto ai talebani ed essendo emigrato da minorenne ha cittadinanza italiana.",
+      "age": "18"
     },
     {
-      "description": "Anche suo marito la esorta ad emanciparsi, così si iscrive all’università. Ma una voce però comincia a girare: gli americani voglio andarsene dal paese."
+      "description": "Anche suo marito la esorta ad emanciparsi, così si iscrive all’università. Ma una voce però comincia a girare: gli americani voglio andarsene dal paese.",
+      "age": "19"
     },
     {
-      "description": "Tara è incinta, ma l’ombra dei talebani si fa sempre più presente. Bisogna dare un futro a questo bambino...bisogna andare via dal paese. Suo marito è tornato in Italia, lei nel frattempo si reca a Kabul, fa il passaporto e parte per l’Iran."
+      "description": "Tara è incinta, ma l’ombra dei talebani si fa sempre più presente. Bisogna dare un futro a questo bambino...bisogna andare via dal paese. Suo marito è tornato in Italia, lei nel frattempo si reca a Kabul, fa il passaporto e parte per l’Iran.",
+      "age": "20"
     },
     {
-      "description": "In Iran è ospitata da un parente che vive lì da tempo, attende il permesso di partire per raggiungere il marito, nel frattempo nasce il suo primo figlio, ora è mamma e si può solo andare avanti."
+      "description": "In Iran è ospitata da un parente che vive lì da tempo, attende il permesso di partire per raggiungere il marito, nel frattempo nasce il suo primo figlio, ora è mamma e si può solo andare avanti.",
+      "age": "21"
     },
     {
-      "description": "Finalmente arriva il permesso di ricongiungimento. Dopo tanta attesa, prende suo figlio in braccio e si incammina per l’Europa attraverso i canali umanitari della rotta balcanica."
+      "description": "Finalmente arriva il permesso di ricongiungimento. Dopo tanta attesa, prende suo figlio in braccio e si incammina per l’Europa attraverso i canali umanitari della rotta balcanica.",
+      "age": "22"
     },
     {
-      "description": "Finalmente, al compimento dei suoi 23 anni, arriva in Italia e raggiunge suo marito nella sua nuova casa. Sà di essere più fortunata di molti altri, il suo prossimo obiettivo è integrarsi nel nuovo paese."
+      "description": "Finalmente, al compimento dei suoi 23 anni, arriva in Italia e raggiunge suo marito nella sua nuova casa. Sà di essere più fortunata di molti altri, il suo prossimo obiettivo è integrarsi nel nuovo paese.",
+      "age": "23"
     },
     {
-      "description": "Dopo un anno, riesce a parlare abbastanza bene la lingua e suo figlio può andare a scuola. Anche se sà che ci saranno ancora parecchie difficoltà nell’integrarsi, spera di poter riprendere a studiare lei stessa un giorno."
+      "description": "Dopo un anno, riesce a parlare abbastanza bene la lingua e suo figlio può andare a scuola. Anche se sà che ci saranno ancora parecchie difficoltà nell’integrarsi, spera di poter riprendere a studiare lei stessa un giorno.",
+      "age": "24"
     }
   ],
   "Joy": [
     {
-      "description": "Joy è nata in un paese in Nigeria. È una ragazza albina e per questo viene presa in giro o bullizzata dai suoi compagni di scuola, a volte anche pesantemente. Ogni tanto anche i maestri la trattano male per il minimo problema."
+      "description": "Joy è nata in un paese in Nigeria. È una ragazza albina e per questo viene presa in giro o bullizzata dai suoi compagni di scuola, a volte anche pesantemente. Ogni tanto anche i maestri la trattano male per il minimo problema.",
+      "age": "5"
     },
     {
-      "description": "Un giorno Joy viene presa per le gambe da un suo compagno in piscina, e trascinata sott'acqua per affogarla. Fortunatamente suo fratello ed uno studente di medicina sono accorsi in suo aiuto e l'hanno salvata"
+      "description": "Un giorno Joy viene presa per le gambe da un suo compagno in piscina, e trascinata sott'acqua per affogarla. Fortunatamente suo fratello ed uno studente di medicina sono accorsi in suo aiuto e l'hanno salvata",
+      "age": "6"
     },
     {
-      "description": "L'ennesimo trasloco. Ogni volta che la sua famiglia si trasferiva, le violenze aumentavano verso Joy e sua sorella. Devono trasferirsi di nuovo: loro non sono benvenuti."
+      "description": "L'ennesimo trasloco. Ogni volta che la sua famiglia si trasferiva, le violenze aumentavano verso Joy e sua sorella. Devono trasferirsi di nuovo: loro non sono benvenuti.",
+      "age": "11"
     },
     {
-      "description": "Joy viene rapita. I rapitori volevano sacrificarla per un rituale. Fortunatamente riesce a scappare, ma nel tentativo di chiedere aiuto viene nuovamente rapita e venduta a dei trafficanti di esseri umani in Libia. È stato terribile"
+      "description": "Joy viene rapita. I rapitori volevano sacrificarla per un rituale. Fortunatamente riesce a scappare, ma nel tentativo di chiedere aiuto viene nuovamente rapita e venduta a dei trafficanti di esseri umani in Libia. È stato terribile",
+      "age": "18"
     },
     {
-      "description": "Un colpo di fortuna! Uno dei carcerieri ha avuto una crisi religiosa ed ha liberato tutte le prigioniere, poi le ha condotte verso un barcone pronto per la navigazione attraverso il mediterraneo. L'Europa potrebbe essere una salvezza."
+      "description": "Un colpo di fortuna! Uno dei carcerieri ha avuto una crisi religiosa ed ha liberato tutte le prigioniere, poi le ha condotte verso un barcone pronto per la navigazione attraverso il mediterraneo. L'Europa potrebbe essere una salvezza.",
+      "age": "19"
     },
     {
-      "description": "Arrivata in Italia si trova così confusa, e ferita sia nel corpo che nell'animo. Viene accolta in un centro accoglienza a Trento dove le vengono fatte tante domande sul suo passato e sulla sua vita. Riesce a mettersi in contatto con la sua famiglia tramite Facebook. La sua famiglia può tirare un sospiro di sollievo."
+      "description": "Arrivata in Italia si trova così confusa, e ferita sia nel corpo che nell'animo. Viene accolta in un centro accoglienza a Trento dove le vengono fatte tante domande sul suo passato e sulla sua vita. Riesce a mettersi in contatto con la sua famiglia tramite Facebook. La sua famiglia può tirare un sospiro di sollievo.",
+      "age": "20"
     },
     {
-      "description": "Joy si stupisce di quanto non sia discriminata in Italia, che nessuno la rifiutasse. Ma aveva paura, tanta paura che le persone stessero fingendo e che potessero ingannarla. Chiede aiuto ad una psicologa ed agli operatori del centro per capire le usanze Italiane, e come funziona questa società."
+      "description": "Joy si stupisce di quanto non sia discriminata in Italia, che nessuno la rifiutasse. Ma aveva paura, tanta paura che le persone stessero fingendo e che potessero ingannarla. Chiede aiuto ad una psicologa ed agli operatori del centro per capire le usanze Italiane, e come funziona questa società.",
+      "age": "21"
     },
     {
-      "description": "Dopo aver passato un lungo periodo di trattamento psicologico, e dopo essersi confidata a lungo con gli operatori del centro, valuta di raccogliere i suoi pensieri e la sua storia in un libro."
+      "description": "Dopo aver passato un lungo periodo di trattamento psicologico, e dopo essersi confidata a lungo con gli operatori del centro, valuta di raccogliere i suoi pensieri e la sua storia in un libro.",
+      "age": "22"
     },
     {
-      "description": "A Pieve Santo Stefano esiste l'Archivio Diaristico Nazionale, dove ognuno può pubblicare i propri pensieri, ed i più significativi vengono selezionati da una giuria e pubblicate. Joy ci prova, pubblica i suoi pensieri in un diario, e vince. Ora chiunque potrà conoscere la storia di Joy e di quello che ha dovuto passare."
+      "description": "A Pieve Santo Stefano esiste l'Archivio Diaristico Nazionale, dove ognuno può pubblicare i propri pensieri, ed i più significativi vengono selezionati da una giuria e pubblicate. Joy ci prova, pubblica i suoi pensieri in un diario, e vince. Ora chiunque potrà conoscere la storia di Joy e di quello che ha dovuto passare.",
+      "age": "23"
     },
     {
-      "description": "Joy ha un desiderio: poter tornare in Nigeria e diventare la prima Presidente donna di quello stato che l'ha rifiutata in tenera età. Vuole migliorare le condizioni di vita di chi è discriminato come lo è stata lei. Ma per ora rimarrà in Italia a studiare in università e migliorare."
+      "description": "Joy ha un desiderio: poter tornare in Nigeria e diventare la prima Presidente donna di quello stato che l'ha rifiutata in tenera età. Vuole migliorare le condizioni di vita di chi è discriminato come lo è stata lei. Ma per ora rimarrà in Italia a studiare in università e migliorare.",
+      "age": "24"
     }
   ]
 }

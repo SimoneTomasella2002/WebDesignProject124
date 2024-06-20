@@ -28,29 +28,41 @@ const getImageSrc = (name, index) => {
 
 <template>
     <v-sheet class="mt-5 mb-5" color="background">
-        <v-card class="d-flex w-100 justify-end align-center" density="compact" color="background" flat>
-            <v-card-item>
-                <v-card-text class="d-flex justify-center align-center w-0">Età</v-card-text>
-            </v-card-item>
-        </v-card>
-        <v-timeline side="start" line-color="red" line-thickness="6vw" density="comfortable" truncate-line="end">
-            <v-timeline-item
-                v-for="story in Stories[leftName]"
-                :key="story.description"
-                dot-color="red"
-                size="large"
-            >
-            <v-card class="w-100">
-                <v-card-text>{{ story.description }}</v-card-text>
-            </v-card>
+        <v-timeline side="start" line-color="red" line-thickness="30" density="comfortable" truncate-line="both">
+            <v-timeline-item line-inset="1" fill-dot dot-color="background" size="45">
+                <template #icon>
+                    <span class="rounded-lg bg-red w-100 text-center text-h6">
+                        Età
+                    </span>
+                </template>
+            </v-timeline-item>
+            <v-timeline-item v-for="story in Stories[leftName]" :key="story.description" size="65">
+                <v-card class="rounded-xl" elevation="10" height="27vh" width="67vw">
+                    <v-card-item>
+                        <v-card-text class="ma-5">{{ story.description }}</v-card-text>
+                    </v-card-item>
+                </v-card>
+                <template #icon>
+                    <span class="my-icon rounded-circle bg-red text-center">
+                        {{ story.age }}
+                    </span>
+                </template>
             </v-timeline-item>
         </v-timeline>
     </v-sheet>
 </template>
 
 <style scoped>
-.timeline::before {
-    width: 6vw;
-    border-radius: 2vw;
+.my-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #EBD9BA;
+    border: 3px solid #EBD9BA;
 }
 </style>
