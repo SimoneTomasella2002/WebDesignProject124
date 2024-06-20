@@ -9,7 +9,7 @@ import PictureContainer from "@/components/PictureContainer.vue";
         <h1>Il messaggio</h1>
       </v-col>
       <v-col align="left" cols="12">
-        <v-card class="pa-2 bg-primary">
+        <v-card class="pa-2 bg-primary text-body-1 font-weight-medium">
           <p>“Come cambiano le possibilità di trovare un posto in cui stare nel mondo in base al nostro paese di
             origine? Abbiamo tutti le stesse opportunità e diritti?”</p>
           <p>Siamo un gruppo di designer e informatici, uniti dalla passione per il racconto delle storie umane e
