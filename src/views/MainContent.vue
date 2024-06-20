@@ -21,6 +21,6 @@ const props = defineProps(
 </script>
 
 <template>
-    <MobileMainContent v-if="props.isMobile" />
+    <MobileMainContent v-if="props.isMobile" :selected1="selected1" :selected2="selected2" />
     <DesktopMainContent v-else :selected1="selected1" :selected2="selected2" />
 </template>
