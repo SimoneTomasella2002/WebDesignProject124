@@ -6,7 +6,6 @@ import StoryBoardCard from '@/components/Timeline/TimeLineItems/StoryBoard.vue';
 import EdgeCard from '@/components/Timeline/TimeLineItems/EdgeCard.vue';
 import images from '@/images';
 import Stories from '@/assets/json/stories.json';
-import backgroundImage from '@/assets/images/Sfondoprova.svg';
 
 const props = defineProps({
   selected1: {
