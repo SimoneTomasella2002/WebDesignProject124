@@ -30,11 +30,8 @@ const updateSelected2 = (value) => {
 
 <template>
     <v-app-bar scroll-behavior="hide" scroll-threshold="100" :height="100" color="primary">
-        <v-col cols="1" class="ma-0 pa-2 pa-md-6">
+        <v-col cols="2" class="ma-0 pa-2 pa-md-6">
             <Dialog />
-        </v-col>
-        <v-col cols="1" class="ma-0 pa-0">
-            <v-spacer></v-spacer>
         </v-col>
         <v-col cols="2" align-self="end" class="ma-0 pa-2">
             <Select :items="items" label="Passport 1" :selected="selected1"
@@ -61,14 +58,3 @@ const updateSelected2 = (value) => {
         </v-col>
     </v-app-bar>
 </template>
-
-<style scoped>
-.responsive-logo {
-    width: 20vw;
-    height: 10vh;
-    max-width: 390px;
-    /* Aggiungi un limite massimo se necessario */
-    max-height: 70px;
-    /* Aggiungi un limite massimo se necessario */
-}
-</style>
