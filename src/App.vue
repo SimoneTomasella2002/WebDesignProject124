@@ -40,16 +40,14 @@ onMounted(() => {
   <v-app>
     <NavBar :is-mobile="mobile" :items="people" @update:selected1="updateSelected1"
       @update:selected2="updateSelected2" />
-    <v-lazy :min-height="200" :options="{ threshold: 0.5 }" transition="fade-transition">
-      <v-main :is-mobile="mobile">
-        <router-view v-slot="{ Component, route }">
-          <transition :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass"
-            mode="out-in">
-            <component :is="Component" :is-mobile="mobile" :selected1="selected1" :selected2="selected2" />
-          </transition>
-        </router-view>
-      </v-main>
-    </v-lazy>
+    <v-main :is-mobile="mobile">
+      <router-view v-slot="{ Component, route }">
+        <transition :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass"
+          mode="out-in">
+          <component :is="Component" :is-mobile="mobile" :selected1="selected1" :selected2="selected2" />
+        </transition>
+      </router-view>
+    </v-main>
     <Footer :is-mobile="mobile" :items="people" @update:selected1="updateSelected1"
       @update:selected2="updateSelected2" />
   </v-app>
