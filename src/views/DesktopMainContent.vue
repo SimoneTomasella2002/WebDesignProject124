@@ -32,7 +32,7 @@ const getImageSrc = (name, index) => {
 </script>
 
 <template>
-  <v-card color="background" :image="backgroundImage">
+  <v-card color="background">
     <v-row class="mt-4 d-flex justify-center align-center">
       <v-card class="rounded-xl mx-auto d-flex justify-center align-center" width="10.208vw" color="#BA2D0B">
         <v-card-title class="text-h6 text-md-h5 text-lg-h4" color="#FFF2DB">Età</v-card-title>

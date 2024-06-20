@@ -51,7 +51,7 @@ const filteredItems2 = computed(() => {
 
         <v-col align-self="center" cols="4" class="ma-0 pa-0 d-flex justify-center align-center">
             <router-link to="/">
-                <v-img class="ma-1 pa-1" :src='websiteLogo' alt="Logo for the website" width="18vw" height="9vh" cover></v-img>
+                <v-img :src='websiteLogo' alt="Logo for the website" width="18vw" height="9vh"></v-img>
             </router-link>
         </v-col>
 
