@@ -34,18 +34,14 @@ const filteredItems2 = computed(() => {
 </script>
 
 <template>
-    <v-container>
-        <v-row class="text-center">
-            <v-bottom-navigation>
-                <v-col>
-                    <Select :items="filteredItems1" label="Passport 1" :selected="selected1"
-                        @update:selected="updateSelected1" />
-                </v-col>
-                <v-col>
-                    <Select :items="filteredItems2" label="Passport 2" :selected="selected2"
-                        @update:selected="updateSelected2" />
-                </v-col>
-            </v-bottom-navigation>
-        </v-row>
-    </v-container>
+    <v-bottom-navigation>
+        <v-col>
+            <Select :items="filteredItems1" label="Passport 1" :selected="selected1"
+                @update:selected="updateSelected1" />
+        </v-col>
+        <v-col>
+            <Select :items="filteredItems2" label="Passport 2" :selected="selected2"
+                @update:selected="updateSelected2" />
+        </v-col>
+    </v-bottom-navigation>
 </template>
