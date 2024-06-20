@@ -27,7 +27,12 @@ const getImageSrc = (name, index) => {
 </script>
 
 <template>
-    <v-sheet class="mt-5" color="background">
+    <v-sheet class="mt-5 mb-5" color="background">
+        <v-card class="d-flex w-100 justify-end align-center" density="compact" color="background" flat>
+            <v-card-item>
+                <v-card-text class="d-flex justify-center align-center w-0">Età</v-card-text>
+            </v-card-item>
+        </v-card>
         <v-timeline side="start" line-color="red" line-thickness="6vw" density="comfortable" truncate-line="end">
             <v-timeline-item
                 v-for="story in Stories[leftName]"
