@@ -26,14 +26,6 @@ const updateSelected2 = (value) => {
     selected2.value = value
     emit('update:selected2', value)
 }
-
-const filteredItems1 = computed(() => {
-    return props.items.filter(item => item.name !== selected2.value?.name)
-})
-
-const filteredItems2 = computed(() => {
-    return props.items.filter(item => item.name !== selected1.value?.name)
-})
 </script>
 
 <template>
@@ -45,7 +37,7 @@ const filteredItems2 = computed(() => {
             <v-spacer></v-spacer>
         </v-col>
         <v-col cols="2" align-self="end" class="ma-0 pa-2">
-            <Select :items="filteredItems1" label="Passport 1" :selected="selected1"
+            <Select :items="items" label="Passport 1" :selected="selected1"
                 @update:selected="updateSelected1" />
         </v-col>
 
@@ -56,7 +48,7 @@ const filteredItems2 = computed(() => {
         </v-col>
 
         <v-col cols="2" align-self="end" class="ma-0 pa-2">
-            <Select :items="filteredItems2" label="Passport 2" :selected="selected2"
+            <Select :items="items" label="Passport 2" :selected="selected2"
                 @update:selected="updateSelected2" />
         </v-col>
         <v-col cols="1" align-self="center" class="ma-0 pa-0 text-center">

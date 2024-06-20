@@ -32,7 +32,7 @@ const emitSelected = () => {
 <template>
     <v-select variant="outlined" density="compact" rounded :items="items" item-title="name" hint="Choose a passport"
         persistent-hint bg-color="background" :label="label" single-line return-object v-model="localSelected"
-        @change="emitSelected" clearable hide-selected hide-no-data>
+        @change="emitSelected" hide-selected hide-no-data>
         <template v-slot:selection="{ item }">
             <span
                 class="text-red font-weight-bold d-flex justify-start align-center text-truncate text-no-wrap text-md-subtitle-2 text-lg-body-1">
