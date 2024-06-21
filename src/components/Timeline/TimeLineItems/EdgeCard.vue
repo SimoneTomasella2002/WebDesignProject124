@@ -1,13 +1,6 @@
 <template>
   <div class="container">
-    <div
-      class="edge-card"
-      :class="{ 'hovered': isHovered }"
-      @mouseenter="onMouseEnter"
-      @mouseleave="onMouseLeave"
-      tabindex="0"
-      aria-label="Edge Card"
-    >
+    <div class="edge-card bg-infoBackground">
       <p>{{ text }}</p>
     </div>
   </div>
@@ -23,25 +16,13 @@ export default {
     },
   },
   data() {
-    return {
-      isHovered: false,
-    };
-  },
-  methods: {
-    onMouseEnter() {
-      this.isHovered = true;
-    },
-    onMouseLeave() {
-      this.isHovered = false;
-    },
+    return {};
   },
 };
 </script>
 
 <style scoped>
 .container {
-  position: relative;
-  width: fit-content;
   overflow: hidden;
 }
 
@@ -60,11 +41,11 @@ export default {
   height: 18.229vw;
 
 
-  background: #FFF8EC; 
+  /* background: #FFF8EC;
   border: solid 2px #978E4F;
   border-radius: 8px;
   color: black;
-  cursor: pointer;
+  cursor: pointer; */
 }
 
 
@@ -73,8 +54,8 @@ export default {
   text-align: left;
   margin: 0;
   padding: 30px;
-  margin:20px;
+  margin: 20px;
   color: rgb(37, 35, 35);
-  font-size: 1.2vw; 
+  font-size: 1.2vw;
 }
 </style>

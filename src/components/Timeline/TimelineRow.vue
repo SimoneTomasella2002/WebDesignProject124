@@ -1,10 +1,10 @@
 <template>
   <div class="timeline-row">
     <div class="sx-side">
-      <div id="sx-edge-card">
-        <slot name="sx-edge-card" :expand="expandCard === 'sx'" />
+      <div id="sx-edge-card" tabindex="0" aria-label="Edge Card">
+        <slot name="sx-edge-card" />
       </div>
-      <div class="story-board" @click="() => toggleExpand('sx')" >
+      <div class="story-board" @click="() => toggleExpand('sx')">
         <slot name="sx-story-board" />
       </div>
     </div>
@@ -12,13 +12,13 @@
     <div class="age-indicator">
       <span>{{ age }}</span>
     </div>
-    
+
     <div class="dx-side">
-      <div class="story-board" @click="() => toggleExpand('dx')" >
+      <div class="story-board" @click="() => toggleExpand('dx')">
         <slot name="dx-story-board" />
       </div>
-      <div id="dx-edge-card">
-        <slot name="dx-edge-card" :expand="expandCard === 'dx'" />
+      <div id="dx-edge-card" tabindex="0" aria-label="Edge Card">
+        <slot name="dx-edge-card" />
       </div>
     </div>
   </div>
@@ -77,15 +77,18 @@ export default {
 }
 
 .sx-side {
-  justify-content: flex-end; /* Align items to the right */
+  justify-content: flex-end;
+  /* Align items to the right */
 }
 
 .dx-side {
-  justify-content: flex-start; /* Align items to the left */
+  justify-content: flex-start;
+  /* Align items to the left */
 }
 
 .story-board {
-  margin: 0 5.208vw; /* modifica l'elemento di sinistra per cambiare il gap */
+  margin: 0 5.208vw;
+  /* modifica l'elemento di sinistra per cambiare il gap */
   border-radius: 8px;
 }
 
@@ -94,6 +97,11 @@ export default {
   position: absolute;
   z-index: 1;
   transition: transform 0.3s ease;
+  border: solid 2px #978E4F;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
 
 #sx-edge-card {
@@ -106,12 +114,16 @@ export default {
   right: 0;
 }
 
-#sx-edge-card:hover {
-  transform: translateX(1.563vw); /* Stop 30px away from the 0 position */
+#sx-edge-card:hover,
+#sx-edge-card:focus {
+  transform: translateX(1.563vw);
+  /* Stop 30px away from the 0 position */
 }
 
-#dx-edge-card:hover {
-  transform: translateX(-1.563vw); /* Stop 30px away from the 0 position */
+#dx-edge-card:hover,
+#dx-edge-card:focus {
+  transform: translateX(-1.563vw);
+  /* Stop 30px away from the 0 position */
 }
 
 .age-indicator {
@@ -122,7 +134,7 @@ export default {
   height: 6vw;
   border-radius: 50%;
   background-color: #BA2D0B;
-  border: 2px  solid #FFF2DB;  
+  border: 2px solid #FFF2DB;
 }
 
 .age-indicator span {
