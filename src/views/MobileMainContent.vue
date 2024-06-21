@@ -37,7 +37,7 @@ const side = computed(() => swipeDirection.value === 'Left' ? 'end' : 'start');
 
 <template>
     <v-window class="mb-4" color="background" :touch="{ left: () => swipe('Left'), right: () => swipe('Right') }">
-        <v-timeline class="mb-2" :side="side" line-color="red" line-thickness="30" density="comfortable"
+        <v-timeline class="mb-4" :side="side" line-color="red" line-thickness="30" density="comfortable"
             truncate-line="both">
             <v-timeline-item line-inset="1" fill-dot dot-color="background" size="45">
                 <template #icon>
