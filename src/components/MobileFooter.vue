@@ -15,8 +15,8 @@ const props = defineProps({
 
 const emit = defineEmits(['update:selected1', 'update:selected2'])
 
-const selected1 = ref(null)
-const selected2 = ref(null)
+const selected1 = ref(props.items[0])
+const selected2 = ref(props.items[1])
 
 const updateSelected1 = (value) => {
     selected1.value = value
