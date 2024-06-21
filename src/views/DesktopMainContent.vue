@@ -43,16 +43,16 @@ const getImageSrc = (name, index) => {
           v-for="([age, index]) in [[5, 0], [6, 1], [11, 2], [18, 3], [19, 4], [20, 5], [21, 6], [22, 7], [23, 8], [24, 9]]"
           :key="age" :age="age">
           <template v-slot:sx-edge-card>
-            <EdgeCard :text="getDescription(leftName, index)" />
+            <EdgeCard class="elevation-8 rounded-lg":text="getDescription(leftName, index)" tabindex="0" aria-label="Left Edge Card" />
           </template>
           <template v-slot:sx-story-board>
-            <StoryBoardCard :imageSrc="getImageSrc(leftName, index)" />
+            <StoryBoardCard :imageSrc="getImageSrc(leftName, index)" tabindex="0" aria-label="Left Story Board" />
           </template>
           <template v-slot:dx-story-board>
-            <StoryBoardCard :imageSrc="getImageSrc(rightName, index)" />
+            <StoryBoardCard :imageSrc="getImageSrc(rightName, index)" tabindex="0" aria-label="Right Story Board" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard :text="getDescription(rightName, index)" />
+            <EdgeCard class="elevation-8 rounded-lg" :text="getDescription(rightName, index)" tabindex="0" aria-label="Right Edge Card" />
           </template>
         </TimelineRow>
       </Timeline>

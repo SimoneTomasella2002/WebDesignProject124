@@ -17,6 +17,6 @@ const props = defineProps(
 </script>
 
 <template>
-    <MobileFooter v-if="props.isMobile" :items="items" :is-mobile="isMobile" />
-    <DesktopFooter v-else />
+    <MobileFooter v-if="props.isMobile" :items="items" :is-mobile="isMobile" role="navigation" />
+    <DesktopFooter v-else role="contentinfo" />
 </template>

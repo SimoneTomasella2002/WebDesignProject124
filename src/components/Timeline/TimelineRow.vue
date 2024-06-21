@@ -96,12 +96,12 @@ export default {
 }
 
 #sx-edge-card {
-  transform: translateX(-23.438vw);
+  transform: translateX(-18vw);
   left: 0;
 }
 
 #dx-edge-card {
-  transform: translateX(23.438vw);
+  transform: translateX(18vw);
   right: 0;
 }
 

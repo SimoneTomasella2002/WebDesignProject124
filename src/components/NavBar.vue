@@ -17,6 +17,6 @@ const props = defineProps(
 </script>
 
 <template>
-    <MobileNavBar v-if="props.isMobile" />
-    <DesktopNavBar v-else :items="items" />
+    <MobileNavBar v-if="props.isMobile" role="navigation"/>
+    <DesktopNavBar v-else :items="items" role="navigation"/>
 </template>

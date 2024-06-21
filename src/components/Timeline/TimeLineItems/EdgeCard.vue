@@ -52,16 +52,16 @@ export default {
 
 
   position: relative;
-  margin: 1vw 5.042vw;
+  padding: 0;
+  margin: 0;
   width: 26.042vw;
   height: 18.229vw;
 
 
   background: #FFF8EC; 
-  border: solid 1px #978E4F;
+  border: solid 2px #978E4F;
   border-radius: 8px;
   color: black;
-  box-shadow: 0 0 10px 0.3px rgba(0, 0, 0, 0.5); 
   cursor: pointer;
 }
 

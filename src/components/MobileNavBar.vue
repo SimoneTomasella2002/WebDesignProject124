@@ -21,7 +21,7 @@ const drawer = ref(false)
     <v-col cols="3">
     </v-col>
   </v-app-bar>
-  <v-navigation-drawer v-model="drawer" color="infoBackground" temporary>
+  <v-navigation-drawer v-model="drawer" color="infoBackground" role="complementary" temporary>
     <v-list>
       <v-list-item>
         <v-spacer></v-spacer>

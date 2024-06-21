@@ -22,8 +22,8 @@ export default {
   width: 26.042vw;
   height: 18.229vw;
   background-color: white;
+  border: solid 2px #978E4F;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
