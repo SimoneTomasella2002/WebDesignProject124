@@ -27,17 +27,17 @@ const vuetify = createVuetify({
     options: {
       customProperties: true,
     },
-    defaultAssets: {
-      font: {
-        family: "Inter",
-      },
-    },
   },
   icons: {
     iconfont: "mdi",
   },
   display: {
     mobileBreakpoint: 'md',
+  },
+  typography: {
+    font: {
+      family: 'Inter, sans-serif',
+    },
   },
 });
 

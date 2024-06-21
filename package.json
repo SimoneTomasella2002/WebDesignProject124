@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "typeface-inter": "^3.18.1",
     "vue": "^3.4.29",
     "vue-router": "^4.3.2",
     "vuetify": "^3.6.9"
