@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue';
 import images from '@/images';
 import Stories from '@/assets/json/stories.json';
+import MobileCard from '@/components/MobileCard.vue';
 
 const props = defineProps({
     selected1: {
@@ -17,7 +18,11 @@ const props = defineProps({
 const leftName = computed(() => props.selected1?.name || null);
 const rightName = computed(() => props.selected2?.name || null);
 
-const showText = ref(false);
+const activeId = ref(0);
+
+const updateActiveId = (id) => {
+    activeId.value == id ? activeId.value = 0 : activeId.value = id;
+}
 </script>
 
 <template>
@@ -32,19 +37,8 @@ const showText = ref(false);
                 </template>
             </v-timeline-item>
             <v-timeline-item v-for="story in Stories[leftName]" :key="story.index" size="65">
-                <v-card class="rounded-xl overflow-auto bg-primary" elevation="5" min-height="215" height="23.5vh"
-                    width="68vw" @click="{ showText = !showText; console.log(showText) }">
-                    <v-card-item class="ma-0 pa-0 rounded-xl">
-                        <v-card-text v-if="showText" class="mt-5 mx-4 pa-0">
-                            {{ story.description }}
-                        </v-card-text>
-                        <v-card-text v-else class="ma-0 pa-0 d-flex justify-center align-center rounded-xl">
-                            <v-img class="ma-0 pa-0 d-flex justify-center align-center"
-                                :src="images[leftName + story.index]" alt="Story Image" width="68vw">
-                            </v-img>
-                        </v-card-text>
-                    </v-card-item>
-                </v-card>
+                <MobileCard :id="story.index" :description="story.description" :image="images[leftName + story.index]"
+                    :show-text="activeId === story.index" @update:show-text="updateActiveId"></MobileCard>
                 <template #icon>
                     <span class="my-icon rounded-circle bg-red text-center">
                         {{ story.age }}
