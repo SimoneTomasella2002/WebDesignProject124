@@ -30,7 +30,7 @@ const updateSelected2 = (value) => {
 </script>
 
 <template>
-    <v-bottom-navigation>
+    <v-bottom-navigation class="bg-primary">
         <v-col>
             <Select :items="items" label="Passport 1" :selected="selected1" :is-mobile="isMobile"
                 @update:selected="updateSelected1" />
