@@ -4,6 +4,7 @@ import { ref, computed } from "vue";
 import Dialog from "@/components/Dialog.vue";
 import websiteLogo from "@/assets/images/logopassport.svg";
 import Select from "@/components/Select.vue";
+import SelectLanguage from "@/components/SelectLanguage.vue";
 
 const props = defineProps({
     items: {
@@ -26,6 +27,12 @@ const updateSelected2 = (value) => {
     selected2.value = value
     emit('update:selected2', value)
 }
+
+// WIP
+const updateLanguage = (value) => {
+
+}
+
 </script>
 
 <template>
@@ -53,8 +60,8 @@ const updateSelected2 = (value) => {
                 <v-card-text class="ma-0 pa-0 text-center text-secondary">About</v-card-text>
             </v-btn>
         </v-col>
-        <v-col cols="1" align-self="center" class="ma-0 pa-0 text-center">
-            <v-btn icon="mdi-web" height="36px" class="text-secondary" aria-label="Change language"></v-btn>
+        <v-col cols="1" align-self="end" class="ma-0 pa-0 text-center">
+            <SelectLanguage @update:selected="updateLanguage"/>
         </v-col>
     </v-app-bar>
 </template>

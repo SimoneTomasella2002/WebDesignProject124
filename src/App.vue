@@ -6,12 +6,14 @@ import Footer from './components/Footer.vue'
 import NavBar from './components/NavBar.vue'
 import afFlag from "@/assets/images/flags/afghanistan-flag.png";
 import itFlag from "@/assets/images/flags/italian-flag.png";
+import nigeriaFlag from "@/assets/images/flags/nigeria-flag.png";
 
 const { mobile } = useDisplay()
 
 const people = ref([
   { name: "Alessandro", img: itFlag },
   { name: "Tara", img: afFlag },
+  { name: "Joy", img: nigeriaFlag}
 ])
 
 const selected1 = ref(null)
