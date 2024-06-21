@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import images from '@/images';
 import Stories from '@/assets/json/stories.json';
 
@@ -17,18 +17,13 @@ const props = defineProps({
 const leftName = computed(() => props.selected1?.name || null);
 const rightName = computed(() => props.selected2?.name || null);
 
-const getDescription = (name, index) => {
-    return name ? (Stories[name][index]?.description || 'Descrizione non disponibile') : 'Nessun nome selezionato';
-};
-
-const getImageSrc = (name, index) => {
-    return name ? (images[`${name}${index + 1}`] || images['Tara5']) : images['Tara5'];
-};
+const showText = ref(false);
 </script>
 
 <template>
-    <v-sheet class="mt-5 mb-5" color="background">
-        <v-timeline side="start" line-color="red" line-thickness="30" density="comfortable" truncate-line="both">
+    <v-window class="mb-4" color="background">
+        <v-timeline class="mb-2" side="start" line-color="red" line-thickness="30" density="comfortable"
+            truncate-line="both">
             <v-timeline-item line-inset="1" fill-dot dot-color="background" size="45">
                 <template #icon>
                     <span class="rounded-lg bg-red w-100 text-center text-h6">
@@ -36,10 +31,18 @@ const getImageSrc = (name, index) => {
                     </span>
                 </template>
             </v-timeline-item>
-            <v-timeline-item v-for="story in Stories[leftName]" :key="story.description" size="65">
-                <v-card class="rounded-xl" elevation="10" height="27vh" width="67vw">
-                    <v-card-item>
-                        <v-card-text class="ma-5">{{ story.description }}</v-card-text>
+            <v-timeline-item v-for="story in Stories[leftName]" :key="story.index" size="65">
+                <v-card class="rounded-xl overflow-auto bg-primary" elevation="5" min-height="215" height="23.5vh"
+                    width="68vw" @click="{ showText = !showText; console.log(showText) }">
+                    <v-card-item class="ma-0 pa-0 rounded-xl">
+                        <v-card-text v-if="showText" class="mt-5 mx-4 pa-0">
+                            {{ story.description }}
+                        </v-card-text>
+                        <v-card-text v-else class="ma-0 pa-0 d-flex justify-center align-center rounded-xl">
+                            <v-img class="ma-0 pa-0 d-flex justify-center align-center"
+                                :src="images[leftName + story.index]" alt="Story Image" width="68vw">
+                            </v-img>
+                        </v-card-text>
                     </v-card-item>
                 </v-card>
                 <template #icon>
@@ -49,7 +52,7 @@ const getImageSrc = (name, index) => {
                 </template>
             </v-timeline-item>
         </v-timeline>
-    </v-sheet>
+    </v-window>
 </template>
 
 <style scoped>
@@ -62,7 +65,6 @@ const getImageSrc = (name, index) => {
     line-height: 65px;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #EBD9BA;
-    border: 3px solid #EBD9BA;
+    border: 3px solid #FFF2DB;
 }
 </style>
