@@ -5,8 +5,36 @@ import { createApp } from "vue";
 // Vuetify
 import "vuetify/styles";
 import { createVuetify } from "vuetify";
-import * as components from "vuetify/components";
-import * as directives from "vuetify/directives";
+import {
+  VApp,
+  VAppBar,
+  VMain,
+  VContainer,
+  VBtn,
+  VCard,
+  VImg,
+  VBottomNavigation,
+  VSheet,
+  VRow,
+  VDialog,
+  VWindow,
+  VCol,
+  VSelect,
+  VFooter,
+  VCardTitle,
+  VListItem,
+  VWindowItem,
+  VCardText,
+  VCardActions,
+  VNavigationDrawer,
+  VList,
+  VSpacer,
+  VToolbarTitle,
+  VAppBarNavIcon,
+  VCardItem,
+  VTimeline,
+  VTimelineItem,
+} from "vuetify/components";
 
 // Importa la configurazione del tema
 import { myCustomTheme } from "./themeConfig.js";
@@ -17,8 +45,37 @@ import Router from "./router/index";
 
 // Inizializza Vuetify con il tema personalizzato
 const vuetify = createVuetify({
-  components,
-  directives,
+  components: {
+    VApp,
+    VAppBar,
+    VMain,
+    VContainer,
+    VBtn,
+    VCard,
+    VImg,
+    VBottomNavigation,
+    VSheet,
+    VRow,
+    VDialog,
+    VWindow,
+    VCol,
+    VSelect,
+    VFooter,
+    VCardTitle,
+    VListItem,
+    VWindowItem,
+    VCardText,
+    VCardActions,
+    VNavigationDrawer,
+    VList,
+    VSpacer,
+    VToolbarTitle,
+    VAppBarNavIcon,
+    VCardItem,
+    VTimeline,
+    VTimelineItem,
+  },
+
   theme: {
     defaultTheme: "myCustomTheme",
     themes: {
@@ -32,12 +89,7 @@ const vuetify = createVuetify({
     iconfont: "mdi",
   },
   display: {
-    mobileBreakpoint: 'md',
-  },
-  typography: {
-    font: {
-      family: 'Inter, sans-serif',
-    },
+    mobileBreakpoint: "md",
   },
 });
 

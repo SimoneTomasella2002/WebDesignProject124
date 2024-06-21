@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
-import ChiSiamo from "@/views/ChiSiamo.vue";
-import TermsOfService from "@/views/TermsOfService.vue";
-import MainContent from "@/views/MainContent.vue";
+const ChiSiamo = () => import("@/views/ChiSiamo.vue");
+const TermsOfService = () => import("@/views/TermsOfService.vue");
+const MainContent = () => import("@/views/MainContent.vue");
 
 const routes = [
   { path: "/", name: "Home", component: MainContent, 
