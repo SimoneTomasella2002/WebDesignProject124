@@ -28,7 +28,6 @@ const swipeDirection = ref('None'); // Right => passport 1, Left => passport 2
 
 const swipe = (direction) => {
     swipeDirection.value = direction;
-    console.log('Swipe direction: ', swipeDirection.value);
 }
 
 const name = computed(() => swipeDirection.value === 'Left' ? rightName.value : leftName.value);

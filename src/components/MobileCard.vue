@@ -1,15 +1,9 @@
 <script setup>
-import { ref, onUpdated, computed } from 'vue';
-
 const props = defineProps({
     id: Number,
     description: String,
     image: String,
     showText: Boolean,
-})
-
-onUpdated(() => {
-    console.log('MobileCard ', props.id, ' updated');
 })
 
 const emit = defineEmits(['update:showText'])
