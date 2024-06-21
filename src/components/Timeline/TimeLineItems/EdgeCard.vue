@@ -5,6 +5,8 @@
       :class="{ 'hovered': isHovered }"
       @mouseenter="onMouseEnter"
       @mouseleave="onMouseLeave"
+      tabindex="0"
+      aria-label="Edge Card"
     >
       <p>{{ text }}</p>
     </div>

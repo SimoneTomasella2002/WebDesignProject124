@@ -7,7 +7,7 @@ const drawer = ref(false)
 </script>
 
 <template>
-  <v-app-bar color="primary" class="rounded">
+  <v-app-bar color="primary" class="rounded" role="navigation">
     <v-col align-self="start" cols="3">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
     </v-col>

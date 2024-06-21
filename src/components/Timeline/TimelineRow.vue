@@ -4,7 +4,7 @@
       <div id="sx-edge-card">
         <slot name="sx-edge-card" :expand="expandCard === 'sx'" />
       </div>
-      <div class="story-board" @click="() => toggleExpand('sx')">
+      <div class="story-board" @click="() => toggleExpand('sx')" >
         <slot name="sx-story-board" />
       </div>
     </div>
@@ -14,7 +14,7 @@
     </div>
     
     <div class="dx-side">
-      <div class="story-board" @click="() => toggleExpand('dx')">
+      <div class="story-board" @click="() => toggleExpand('dx')" >
         <slot name="dx-story-board" />
       </div>
       <div id="dx-edge-card">
@@ -86,6 +86,7 @@ export default {
 
 .story-board {
   margin: 0 5.208vw; /* modifica l'elemento di sinistra per cambiare il gap */
+  border-radius: 8px;
 }
 
 #sx-edge-card,

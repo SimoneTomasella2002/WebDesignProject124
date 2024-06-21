@@ -36,7 +36,7 @@ const updateLanguage = (value) => {
 </script>
 
 <template>
-    <v-app-bar scroll-behavior="hide" scroll-threshold="100" :height="100" color="primary">
+    <v-app-bar scroll-behavior="hide" scroll-threshold="100" :height="100" color="primary" role="navigation">
         <v-col cols="2" class="ma-0 pa-2 pa-md-6">
             <Dialog />
         </v-col>
