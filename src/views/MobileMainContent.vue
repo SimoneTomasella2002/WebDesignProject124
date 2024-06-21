@@ -35,8 +35,9 @@ const side = computed(() => swipeDirection.value === 'Left' ? 'end' : 'start');
 </script>
 
 <template>
-    <v-window class="mb-4" color="background" :touch="{ left: () => swipe('Left'), right: () => swipe('Right') }" role="main">
-        <v-timeline class="mb-4" :side="side" line-color="red" line-thickness="30" density="comfortable"
+    <v-window class="mb-4 d-flex justify-center align-center" color="background"
+        :touch="{ left: () => swipe('Left'), right: () => swipe('Right') }" role="main">
+        <v-timeline class="mb-4" :side="side" line-color="red" line-thickness="30" density="compact"
             truncate-line="both">
             <v-timeline-item line-inset="1" fill-dot dot-color="background" size="45">
                 <template #icon>
@@ -47,12 +48,13 @@ const side = computed(() => swipeDirection.value === 'Left' ? 'end' : 'start');
             </v-timeline-item>
             <v-timeline-item v-for="story in Stories[name]" :key="story.index" size="65">
                 <MobileCard :id="story.index" :description="story.description" :image="images[name + story.index]"
-                    :show-text="activeId === story.index" @update:show-text="updateActiveId"></MobileCard>
-                <template #icon>
-                    <span class="my-icon rounded-circle bg-red text-center">
-                        {{ story.age }}
-                    </span>
-                </template>
+                    :show-text="activeId === story.index" @update:show-text="updateActiveId"
+                    class="d-flex justify-center align-center" </MobileCard>
+                    <template #icon>
+                        <span class="my-icon rounded-circle bg-red text-center">
+                            {{ story.age }}
+                        </span>
+                    </template>
             </v-timeline-item>
         </v-timeline>
     </v-window>
