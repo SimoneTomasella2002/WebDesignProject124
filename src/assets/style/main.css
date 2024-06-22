@@ -18,7 +18,7 @@ body {
   border-radius: 10px;
 }
 
-/* Handle aka. Il barretta a scorrimento */
+/* Thumb aka. Il barretta a scorrimento */
 ::-webkit-scrollbar-thumb {
   background: #d2b48c; 
   border-radius: 10px;
@@ -30,7 +30,7 @@ body {
   background: #c2a685; 
 }
 
-/* Definisco la scrollbar per Firefoz */
+/* Definisco la scrollbar per Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: #d2b48c #f5f5dc;
