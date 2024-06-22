@@ -96,7 +96,7 @@ export default {
 #dx-edge-card {
   position: absolute;
   z-index: 1;
-  transition: transform 0.3s ease;
+  transition: all 0.5s ease-in-out;
   border: solid 2px #978E4F;
   border-radius: 8px;
   cursor: pointer;
@@ -104,26 +104,29 @@ export default {
   margin: 0;
 }
 
+
+
 #sx-edge-card {
   transform: translateX(-18vw);
   left: 0;
+
+
 }
 
 #dx-edge-card {
   transform: translateX(18vw);
   right: 0;
+
 }
 
 #sx-edge-card:hover,
 #sx-edge-card:focus {
   transform: translateX(1.563vw);
-  /* Stop 30px away from the 0 position */
 }
 
 #dx-edge-card:hover,
 #dx-edge-card:focus {
   transform: translateX(-1.563vw);
-  /* Stop 30px away from the 0 position */
 }
 
 .age-indicator {
