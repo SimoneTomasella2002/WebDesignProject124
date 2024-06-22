@@ -32,6 +32,9 @@ const swipe = (direction) => {
 
 const name = computed(() => swipeDirection.value === 'Left' ? rightName.value : leftName.value);
 const side = computed(() => swipeDirection.value === 'Left' ? 'end' : 'start');
+function imageName(index) {
+    return `${name.value.replace(/-/g, '_')}${index}`;
+}
 </script>
 
 <template>
@@ -47,7 +50,7 @@ const side = computed(() => swipeDirection.value === 'Left' ? 'end' : 'start');
                 </template>
             </v-timeline-item>
             <v-timeline-item v-for="story in Stories[name]" :key="story.index" size="65">
-                <MobileCard :id="story.index" :description="story.description" :image="images[name + story.index]"
+                <MobileCard :id="story.index" :description="story.description" :image="images[imageName(story.index)]"
                     :show-text="activeId === story.index" @update:show-text="updateActiveId"
                     class="d-flex justify-center align-center" </MobileCard>
                     <template #icon>

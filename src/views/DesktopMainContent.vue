@@ -21,13 +21,9 @@ const props = defineProps({
 const leftName = computed(() => props.selected1?.name || null);
 const rightName = computed(() => props.selected2?.name || null);
 
-const getDescription = (name, index) => {
-  return name ? (Stories[name][index]?.description || 'Descrizione non disponibile') : 'Nessun nome selezionato';
-};
-
-const getImageSrc = (name, index) => {
-  return name ? (images[`${name}${index + 1}`] || images['Tara5']) : images['Tara5'];
-};
+function imageName(index, name) {
+    return `${name.replace(/-/g, '_')}${index}`;
+}
 </script>
 
 <template>
@@ -40,19 +36,19 @@ const getImageSrc = (name, index) => {
     <div class="timeline-wrapper">
       <Timeline>
         <TimelineRow
-          v-for="([age, index]) in [[5, 0], [6, 1], [11, 2], [18, 3], [19, 4], [20, 5], [21, 6], [22, 7], [23, 8], [24, 9]]"
-          :key="age" :age="age">
+          v-for="(leftStory, index) in Stories[leftName]"
+          :key="leftStory.index" :age="parseInt(leftStory.age)">
           <template v-slot:sx-edge-card>
-            <EdgeCard class="elevation-8 rounded-lg":text="getDescription(leftName, index)" />
+            <EdgeCard class="elevation-8 rounded-lg":text="leftStory.description" />
           </template>
           <template v-slot:sx-story-board>
-            <StoryBoardCard class="elevation-8 rounded-lg" :imageSrc="getImageSrc(leftName, index)" />
+            <StoryBoardCard class="elevation-8 rounded-lg" :imageSrc="images[imageName(leftStory.index, leftName)]" />
           </template>
           <template v-slot:dx-story-board>
-            <StoryBoardCard class="elevation-8 rounded-lg" :imageSrc="getImageSrc(rightName, index)" />
+            <StoryBoardCard class="elevation-8 rounded-lg" :imageSrc="images[imageName(index + 1, rightName)]" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard class="elevation-8 rounded-lg" :text="getDescription(rightName, index)" />
+            <EdgeCard class="elevation-8 rounded-lg" :text="Stories[rightName][index].description" />
           </template>
         </TimelineRow>
       </Timeline>

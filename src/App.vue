@@ -7,13 +7,15 @@ import NavBar from './components/NavBar.vue'
 import afFlag from "@/assets/images/flags/afghanistan-flag.png";
 import itFlag from "@/assets/images/flags/italian-flag.png";
 import nigeriaFlag from "@/assets/images/flags/nigeria-flag.png";
+import southkoreaFlag from "@/assets/images/flags/southkorea-flag.png";
 
 const { mobile } = useDisplay()
 
 const people = ref([
   { name: "Alessandro", img: itFlag },
   { name: "Tara", img: afFlag },
-  { name: "Joy", img: nigeriaFlag}
+  { name: "Joy", img: nigeriaFlag},
+  { name: "Ji-hoon", img: southkoreaFlag}
 ])
 
 const selected1 = ref(null)

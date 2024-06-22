@@ -154,5 +154,57 @@
       "description": "Joy ha un desiderio: poter tornare in Nigeria e diventare la prima Presidente donna di quello stato che l'ha rifiutata in tenera età. Vuole migliorare le condizioni di vita di chi è discriminato come lo è stata lei. Ma per ora rimarrà in Italia a studiare in università e migliorare.",
       "age": "24"
     }
+  ],
+  "Ji-hoon": [
+    {
+      "index": 1,
+      "description": "Ji-hoon è un bambino coreano curioso appena arrivato in un nuovo mondo: gli Stati Uniti. A casa parla coreano con la famiglia, ma inizia a imparare l'inglese a scuola e guardando la TV americana.",
+      "age": "5"
+    },
+    {
+      "index": 2,
+      "description": "A sei anni si sta ancora adattando alla vita negli Stati Uniti. La scuola è un ambiente nuovo e impegnativo, dove sperimenta episodi di razzismo a scuola. I suoi compagni di classe lo prendono in giro per il suo accento e i suoi tratti asiatici.",
+      "age": "6"
+    },
+    {
+      "index": 3,
+      "description": "La sua infanzia è segnata ulteriormente da un terribile evento: la perdita del padre. Sua madre e sua zia si prendono costantemente cura di lui e di sua sorella maggiore con dedizione.",
+      "age": "11"
+    },
+    {
+      "index": 4,
+      "description": "Ji-hoon parla fluentemente inglese e si è diplomato. Sua madre, la figura centrale nella sua vita, lavora in un barbiere coreano. Nonostante parli coreano con i clienti, ha una padronanza notevole dell'inglese.",
+      "age": "18"
+    },
+    {
+      "index": 5,
+      "description": "Inizia a lavorare part-time. La sua famiglia crede fermamente nell'importanza del duro lavoro e del successo, valori che guidano anche lui. Studia con impegno e lavora per aiutare economicamente la madre e la sorella.",
+      "age": "19"
+    },
+    {
+      "index": 6,
+      "description": "Ji-hoon si sente profondamente legato alla comunità coreana, infatti la maggior parte dei suoi amici sono coreani, con i quali condivide esperienze e tradizioni. Nonostante la sua fluente conoscenza dell'inglese, trova conforto nella compagnia di persone che comprendono appieno la sua cultura.",
+      "age": "20"
+    },
+    {
+      "index": 7,
+      "description": "A ventuno anni, Ji-hoon ha l'opportunità di trasferirsi in Corea, ma decide di non farlo perché sente che la vita lì sarebbe troppo stressante per lui e la sua famiglia.",
+      "age": "21"
+    },
+    {
+      "index": 8,
+      "description": "Dopo tanti anni, Ji-hoon e la sua famiglia celebrano con entusiasmo anche le festività americane come Natale, il giorno del Ringraziamento, Halloween e il Quattro Luglio.",
+      "age": "22"
+    },
+    {
+      "index": 9,
+      "description": "A ventitré anni, Ji-hoon è il manager di un ristorante coreano in Virginia e cerca di mantenere vive entrambe le culture. A lavoro, la sua competenza e impegno lo rendono un punto di riferimento per il team.",
+      "age": "23"
+    },
+    {
+      "index": 10,
+      "description": "Ji-hoon vive felicemente con sua moglie, anche lei coreana, che è arrivata negli Stati Uniti a dieci anni. Nonostante sia arrivata più tardi di Ji-hoon, parla inglese meglio di lui. Insieme, formano una famiglia che incarna entrambe le culture, educando i loro figli in un ambiente diversificato.",
+      "age": "24"
+    }
   ]
 }
