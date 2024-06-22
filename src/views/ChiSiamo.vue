@@ -30,3 +30,9 @@ import PictureContainer from "@/components/PictureContainer.vue";
     </v-row>
   </v-container>
 </template>
+
+<style scoped>
+* {
+  font-family: 'Inter', sans-serif;
+}
+</style>

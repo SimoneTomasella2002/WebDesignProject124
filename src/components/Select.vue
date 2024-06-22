@@ -58,3 +58,9 @@ const density = computed(() => props.isMobile ? 'compact' : 'comfortable')
         </template>
     </v-select>
 </template>
+
+<style scoped>
+* {
+    font-family: 'Inter', sans-serif;
+}
+</style>

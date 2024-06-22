@@ -22,7 +22,7 @@ const leftName = computed(() => props.selected1?.name || null);
 const rightName = computed(() => props.selected2?.name || null);
 
 function imageName(index, name) {
-    return `${name.replace(/-/g, '_')}${index}`;
+  return `${name.replace(/-/g, '_')}${index}`;
 }
 </script>
 
@@ -35,11 +35,10 @@ function imageName(index, name) {
     </v-row>
     <div class="timeline-wrapper">
       <Timeline>
-        <TimelineRow
-          v-for="(leftStory, index) in Stories[leftName]"
-          :key="leftStory.index" :age="parseInt(leftStory.age)">
+        <TimelineRow v-for="(leftStory, index) in Stories[leftName]" :key="leftStory.index"
+          :age="parseInt(leftStory.age)">
           <template v-slot:sx-edge-card>
-            <EdgeCard class="elevation-8 rounded-lg":text="leftStory.description" />
+            <EdgeCard class="elevation-8 rounded-lg" :text="leftStory.description" />
           </template>
           <template v-slot:sx-story-board>
             <StoryBoardCard class="elevation-8 rounded-lg" :imageSrc="images[imageName(leftStory.index, leftName)]" />
@@ -69,6 +68,10 @@ export default {
 </script>
 
 <style scoped>
+* {
+  font-family: 'Inter', sans-serif;
+}
+
 body,
 html {
   overflow-x: hidden;
