@@ -39,6 +39,9 @@ export default {
   margin: 0;
   width: 26.042vw;
   height: 18.229vw;
+  border: solid 2px #978E4F;
+  border-radius: 8px;
+  cursor: pointer;
 
 
   /* background: #FFF8EC;

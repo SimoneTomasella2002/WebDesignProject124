@@ -96,10 +96,8 @@ export default {
 #dx-edge-card {
   position: absolute;
   z-index: 1;
-  transition: all 0.5s ease-in-out;
-  border: solid 2px #978E4F;
-  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
   padding: 0;
   margin: 0;
 }
@@ -122,11 +120,15 @@ export default {
 #sx-edge-card:hover,
 #sx-edge-card:focus {
   transform: translateX(1.563vw);
+  padding-left: 100px;
+
 }
 
 #dx-edge-card:hover,
 #dx-edge-card:focus {
   transform: translateX(-1.563vw);
+  padding-right: 100px;
+
 }
 
 .age-indicator {
