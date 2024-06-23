@@ -7,7 +7,7 @@ data: () => ({
 
 </script>
 
-<template align-center>
+<template>
     <v-btn @click="toggleSelect = !toggleSelect" density="compact" icon="mdi-translate" />
     <v-select 
         v-if = "toggleSelect"

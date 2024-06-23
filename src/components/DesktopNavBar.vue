@@ -11,12 +11,17 @@ const props = defineProps({
         type: Array,
         required: true,
     },
+    languages: {
+        type: Array,
+        required: true
+    }
 })
 
-const emit = defineEmits(['update:selected1', 'update:selected2'])
+const emit = defineEmits(['update:selected1', 'update:selected2', 'update:selectedLanguage'])
 
 const selected1 = ref(props.items[0])
 const selected2 = ref(props.items[1])
+const selectedLanguage = ref(props.languages[0])
 
 const updateSelected1 = (value) => {
     selected1.value = value
@@ -30,7 +35,8 @@ const updateSelected2 = (value) => {
 
 // WIP
 const updateLanguage = (value) => {
-
+    selectedLanguage.value = value
+    emit('update:selectedLanguage', value)
 }
 
 </script>
@@ -60,8 +66,10 @@ const updateLanguage = (value) => {
                 <v-card-text class="ma-0 pa-0 text-center text-secondary">About</v-card-text>
             </v-btn>
         </v-col>
-        <v-col cols="1" align-self="end" class="ma-0 pa-0 text-center">
-            <SelectLanguage @update:selected="updateLanguage"/>
+        <v-col cols="1" align-self="center" class="ma-0 pa-0 text-center">
+            <SelectLanguage :languages="languages" label="Language" :selected="selectedLanguage" 
+                @update:selected="updateLanguage"
+            />
         </v-col>
     </v-app-bar>
 </template>

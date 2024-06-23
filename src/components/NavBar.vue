@@ -12,11 +12,15 @@ const props = defineProps(
             type: Array,
             required: true,
         },
+        languages: {
+            type: Array,
+            required: true
+        }
     }
 )
 </script>
 
 <template>
     <MobileNavBar v-if="props.isMobile" />
-    <DesktopNavBar v-else :items="items" />
+    <DesktopNavBar v-else :items="items" :languages="languages"/>
 </template>

@@ -18,8 +18,14 @@ const people = ref([
   { name: "Ji-hoon", img: southkoreaFlag}
 ])
 
+const languages = ref([
+  { language: "Italiano" },
+  { language: "English" }
+])
+
 const selected1 = ref(null)
 const selected2 = ref(null)
+const selectedLanguage = ref(null)
 
 const updateSelected1 = (value) => {
   selected1.value = value
@@ -27,6 +33,10 @@ const updateSelected1 = (value) => {
 
 const updateSelected2 = (value) => {
   selected2.value = value
+}
+
+const updateSelectedLanguage = (value) => {
+  selectedLanguage = value
 }
 
 // Imposta i valori predefiniti per le due selezioni
@@ -42,8 +52,11 @@ onMounted(() => {
 
 <template>
   <v-app>
-    <NavBar :is-mobile="mobile" :items="people" @update:selected1="updateSelected1"
-      @update:selected2="updateSelected2" />
+    <NavBar :is-mobile="mobile" :items="people" :languages="languages" 
+      @update:selected1="updateSelected1"
+      @update:selected2="updateSelected2" 
+      @update:selectedLanguage="updateSelectedLanguage" 
+    />
     <v-main :is-mobile="mobile">
       <router-view v-slot="{ Component, route }">
         <transition :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass"
@@ -52,7 +65,9 @@ onMounted(() => {
         </transition>
       </router-view>
     </v-main>
-    <Footer :is-mobile="mobile" :items="people" @update:selected1="updateSelected1"
-      @update:selected2="updateSelected2" />
+    <Footer :is-mobile="mobile" :items="people" 
+      @update:selected1="updateSelected1"
+      @update:selected2="updateSelected2" 
+    />
   </v-app>
 </template>
