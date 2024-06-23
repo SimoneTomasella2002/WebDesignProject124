@@ -21,7 +21,6 @@ function openGithubPageInASeparateTab() {
                 <v-btn @click="openGithubPageInASeparateTab" text color="blue" class="mb-2">
                     Take a look at our code
                 </v-btn>
-                <p class="mb-2">Where to contact us: placeholder@gmail.com</p>
                 <RouterLink to="/terms">
                     <v-btn @click="scrollToTheTop" text color="blue">Terms of service</v-btn>
                 </RouterLink>
