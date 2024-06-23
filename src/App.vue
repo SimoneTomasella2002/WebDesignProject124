@@ -12,21 +12,35 @@ import southkoreaFlag from "@/assets/images/flags/southkorea-flag.png";
 const { mobile } = useDisplay()
 
 const people = ref([
-  { name: "Alessandro", img: itFlag },
-  { name: "Tara", img: afFlag },
-  { name: "Joy", img: nigeriaFlag},
-  { name: "Ji-hoon", img: southkoreaFlag}
+  { name: "Alessandro", img: itFlag, selected: true },
+  { name: "Tara", img: afFlag, selected: true },
+  { name: "Joy", img: nigeriaFlag, selected: false },
+  { name: "Ji-hoon", img: southkoreaFlag, selected: false }
 ])
 
 const selected1 = ref(null)
 const selected2 = ref(null)
 
-const updateSelected1 = (value) => {
-  selected1.value = value
+const updateSelected1 = (newValue) => {
+  selected1.value = newValue
+  people.value.forEach((person) => {
+    if (person.name === newValue.name || person.name === selected2.value.name) {
+      person.selected = true
+    } else {
+      person.selected = false
+    }
+  })
 }
 
-const updateSelected2 = (value) => {
-  selected2.value = value
+const updateSelected2 = (newValue) => {
+  selected2.value = newValue
+  people.value.forEach((person) => {
+    if (person.name === newValue.name || person.name === selected1.value.name) {
+      person.selected = true
+    } else {
+      person.selected = false
+    }
+  })
 }
 
 // Imposta i valori predefiniti per le due selezioni

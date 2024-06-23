@@ -1,23 +1,32 @@
 <template>
   <div class="container">
-    <div class="edge-card bg-infoBackground">
+    <div class="edge-card bg-infoBackground" tabindex="0" aria-label="Edge Card" @focus="emitFocus(true)"
+      @blur="emitFocus(false)">
       <p>{{ text }}</p>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "EdgeCard",
-  props: {
-    text: {
-      type: String,
-      required: true,
-    },
+<script setup>
+const props = defineProps({
+  text: {
+    type: String,
+    required: true,
   },
-  data() {
-    return {};
+  id: {
+    type: Number,
+    required: true,
   },
+  side: {
+    type: String,
+    required: true,
+  },
+});
+
+const emit = defineEmits(['update:focus']);
+
+const emitFocus = (value) => {
+  emit('update:focus', value, props.id, props.side);
 };
 </script>
 
@@ -42,13 +51,6 @@ export default {
   border: solid 2px #978E4F;
   border-radius: 8px;
   cursor: pointer;
-
-
-  /* background: #FFF8EC;
-  border: solid 2px #978E4F;
-  border-radius: 8px;
-  color: black;
-  cursor: pointer; */
 }
 
 

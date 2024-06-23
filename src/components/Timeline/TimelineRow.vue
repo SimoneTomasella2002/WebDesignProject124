@@ -1,7 +1,7 @@
 <template>
   <div class="timeline-row">
     <div class="sx-side">
-      <div id="sx-edge-card" tabindex="0" aria-label="Edge Card">
+      <div class="sx-edge-card" :class="{ 'sx-edge-card-focus': props.isFocused && props.side === 'left' }">
         <slot name="sx-edge-card" />
       </div>
       <div class="story-board" @click="() => toggleExpand('sx')">
@@ -17,44 +17,54 @@
       <div class="story-board" @click="() => toggleExpand('dx')">
         <slot name="dx-story-board" />
       </div>
-      <div id="dx-edge-card" tabindex="0" aria-label="Edge Card">
+      <div class="dx-edge-card" :class="{ 'dx-edge-card-focus': props.isFocused && props.side === 'right' }">
         <slot name="dx-edge-card" />
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "TimelineRow",
-  props: {
-    age: {
-      type: Number,
-      required: true,
-    },
+<script setup>
+import { ref, onMounted, onBeforeUnmount, onUpdated } from 'vue';
+
+const props = defineProps({
+  age: {
+    type: Number,
+    required: true,
   },
-  data() {
-    return {
-      expandCard: null,
-    };
+  isFocused: {
+    type: Boolean,
+    required: true,
   },
-  methods: {
-    toggleExpand(side) {
-      this.expandCard = this.expandCard === side ? null : side;
-    },
-    handleClickOutside(event) {
-      if (!this.$el.contains(event.target)) {
-        this.expandCard = null;
-      }
-    },
+  side: {
+    type: String,
+    required: true,
   },
-  mounted() {
-    document.addEventListener('click', this.handleClickOutside);
-  },
-  beforeUnmount() {
-    document.removeEventListener('click', this.handleClickOutside);
-  },
+});
+
+const expandCard = ref(null);
+
+const toggleExpand = (side) => {
+  expandCard.value = expandCard.value === side ? null : side;
 };
+
+const handleClickOutside = (event) => {
+  if (!event.target.closest('.timeline-row')) {
+    expandCard.value = null;
+  }
+};
+
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener('click', handleClickOutside);
+});
+
+// onUpdated(() => { // per ricordare di fixare la prop stability
+//   console.log(props.isFocused, props.side);
+// });
 </script>
 
 <style scoped>
@@ -92,8 +102,8 @@ export default {
   border-radius: 8px;
 }
 
-#sx-edge-card,
-#dx-edge-card {
+.sx-edge-card,
+.dx-edge-card {
   position: absolute;
   z-index: 1;
   cursor: pointer;
@@ -104,28 +114,28 @@ export default {
 
 
 
-#sx-edge-card {
+.sx-edge-card {
   transform: translateX(-18vw);
   left: 0;
 
 
 }
 
-#dx-edge-card {
+.dx-edge-card {
   transform: translateX(18vw);
   right: 0;
 
 }
 
-#sx-edge-card:hover,
-#sx-edge-card:focus {
+.sx-edge-card:hover,
+.sx-edge-card-focus {
   transform: translateX(1.563vw);
   padding-left: 100px;
 
 }
 
-#dx-edge-card:hover,
-#dx-edge-card:focus {
+.dx-edge-card:hover,
+.dx-edge-card-focus {
   transform: translateX(-1.563vw);
   padding-right: 100px;
 
