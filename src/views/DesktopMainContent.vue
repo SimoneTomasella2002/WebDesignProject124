@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import Timeline from '@/components/Timeline/Timeline.vue';
 import TimelineRow from '@/components/Timeline/TimelineRow.vue';
 import StoryBoardCard from '@/components/Timeline/TimeLineItems/StoryBoard.vue';
@@ -24,6 +24,20 @@ const rightName = computed(() => props.selected2?.name || null);
 function imageName(index, name) {
   return `${name.replace(/-/g, '_')}${index}`;
 }
+
+const handleFocus = (value, newId, newSide) => {
+  if (value) {
+    id.value = newId;
+    side.value = newSide;
+  }
+  else {
+    id.value = -1;
+    side.value = '';
+  }
+};
+
+const id = ref(-1);
+const side = ref('');
 </script>
 
 <template>
@@ -36,9 +50,10 @@ function imageName(index, name) {
     <div class="timeline-wrapper">
       <Timeline>
         <TimelineRow v-for="(leftStory, index) in Stories[leftName]" :key="leftStory.index"
-          :age="parseInt(leftStory.age)">
+          :age="parseInt(leftStory.age)" :isFocused="id === index" :side="side">
           <template v-slot:sx-edge-card>
-            <EdgeCard class="elevation-8 rounded-lg" :text="leftStory.description" />
+            <EdgeCard class="elevation-8 rounded-lg" :text="leftStory.description" :id="index" side="left"
+              @update:focus="handleFocus" />
           </template>
           <template v-slot:sx-story-board>
             <StoryBoardCard class="elevation-8 rounded-lg" :imageSrc="images[imageName(leftStory.index, leftName)]" />
@@ -47,25 +62,14 @@ function imageName(index, name) {
             <StoryBoardCard class="elevation-8 rounded-lg" :imageSrc="images[imageName(index + 1, rightName)]" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard class="elevation-8 rounded-lg" :text="Stories[rightName][index].description" />
+            <EdgeCard class="elevation-8 rounded-lg" :text="Stories[rightName][index].description" :id="index"
+              side="right" @update:focus="handleFocus" />
           </template>
         </TimelineRow>
       </Timeline>
     </div>
   </v-card>
 </template>
-
-<script>
-export default {
-  name: "main-content",
-  components: {
-    Timeline,
-    TimelineRow,
-    StoryBoardCard,
-    EdgeCard
-  }
-};
-</script>
 
 <style scoped>
 * {

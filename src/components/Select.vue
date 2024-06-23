@@ -47,7 +47,7 @@ const density = computed(() => props.isMobile ? 'compact' : 'comfortable')
             </span>
         </template>
         <template v-slot:item="{ props, item }">
-            <v-list-item v-bind="props" class="bg-infoBackground">
+            <v-list-item v-bind="props" class="bg-infoBackground" :disabled="item.raw.selected">
                 <template v-slot:title>
                     <span class="text-secondary d-flex justify-start align-center">
                         {{ item.raw.name }}
