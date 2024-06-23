@@ -39,6 +39,8 @@ const updateLanguage = (value) => {
     emit('update:selectedLanguage', value)
 }
 
+console.log(props.languages)
+
 </script>
 
 <template>
