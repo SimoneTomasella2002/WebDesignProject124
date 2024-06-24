@@ -1,7 +1,7 @@
 <script setup>
 import { ref, watch } from 'vue'
 
-const properties = defineProps({
+const props = defineProps({
     languages: {
         type: Array,
         required: true
@@ -14,7 +14,7 @@ const properties = defineProps({
 
 const emit = defineEmits(['update:selected'])
 
-const localSelected = ref(properties.selected)
+const localSelected = ref(props.selected)
 
 watch(localSelected, (newValue) => {
     emit('update:selected', newValue)
@@ -28,7 +28,7 @@ const emitSelected = () => {
 
 //const toggleSelect = ref(false)
 
-console.log(properties.languages + "From SelectLanguage.vue");
+console.log(props.languages + "From SelectLanguage.vue");
 
 </script>
 
@@ -74,8 +74,10 @@ console.log(properties.languages + "From SelectLanguage.vue");
 </v-select>
 -->
 
-    <v-btn id="menu-activator" icon="mdi-translate" color="secondary"></v-btn>
-    <v-menu activator="#menu-activator">
+    <v-menu>
+        <template v-slot:activator="{ props }">
+            <v-btn v-bind="props" icon="mdi-translate" color="secondary"></v-btn>
+        </template>
         <v-list
             v-for="(item, index) in props.languages"
             :key="index"
