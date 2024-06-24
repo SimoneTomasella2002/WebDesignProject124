@@ -31,10 +31,9 @@ const emitSelected = () => {
 </script>
 
 <template>
-    <v-menu @change="emitSelected">
-        <template v-slot:activator="{ props }">
-            <v-btn v-bind="props" density="compact" icon="mdi-translate" />  
-        </template>
+    <v-btn id="menu-activator" density="compact" icon="mdi-translate" ></v-btn>
+
+    <v-menu activator="#menu-activator">
         <v-list>
             <v-list-item v-for="(language) in props.languages" :disabled="props.raw.selected">
                 <v-list-item-title>{{ language }}</v-list-item-title>
