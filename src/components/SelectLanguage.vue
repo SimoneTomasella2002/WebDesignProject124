@@ -31,7 +31,7 @@ const emitSelected = () => {
 </script>
 
 <template>
-    <v-btn icon="mdi-translate" size="large">
+    <!-- <v-btn icon="mdi-translate" size="large">
         <v-menu activator="parent">
             <template v-slot:activator="{ on, attrs }">
                 <v-btn v-bind="attrs" v-on="on" icon="mdi-translate"></v-btn>
@@ -50,7 +50,7 @@ const emitSelected = () => {
                 </v-list-item>
             </v-list>
         </v-menu>
-    </v-btn>
+    </v-btn> -->
     
 <!--
     <v-select 
@@ -71,4 +71,18 @@ const emitSelected = () => {
         </template>
     </v-select>
 -->
+
+    <v-menu>
+        <template v-slot:activator="{ props }">
+            <v-btn v-bind="props" icon="mdi-translate" color="secondary"></v-btn>
+        </template>
+        <v-list
+            v-for="(item, index) in props.languages"
+            :key="index"
+            :value="index"
+        >
+            <v-list-item> {{ item.language }}</v-list-item>
+        </v-list>
+    </v-menu>
+
 </template>

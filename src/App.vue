@@ -50,7 +50,7 @@ const updateSelected2 = (newValue) => {
 }
 
 const updateSelectedLanguage = (value) => {
-  selectedLanguage = value
+  selectedLanguage.value = value
 }
 
 // Imposta i valori predefiniti per le due selezioni
