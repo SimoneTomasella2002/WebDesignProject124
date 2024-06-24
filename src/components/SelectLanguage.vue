@@ -35,6 +35,17 @@ var toggleSelect = false
         :menu-props = "{value: toggleSelect}"    
         variant="outlined" :density="density" rounded :languages="languages" 
         bg-color="background" label="Language" @change="emitSelected"
+        single-line return-object v-model="localSelected"
     >
+        <template v-slot:item="{ props, item }">
+            <v-list-item v-bind="props" class="bg-infoBackground" :disabled="item.raw.selected">
+                <template v-slot:title>
+                    <span class="text-secondary d-flex justify-start align-center">
+                        {{ item.raw.language }}
+                    </span>
+                </template>
+            </v-list-item>
+        </template>
     </v-select>
+
 </template>

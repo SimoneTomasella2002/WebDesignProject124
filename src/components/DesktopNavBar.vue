@@ -6,6 +6,10 @@ import websiteLogo from "@/assets/images/logopassport.svg";
 import Select from "@/components/Select.vue";
 import SelectLanguage from "@/components/SelectLanguage.vue";
 
+function scrollToTheTop() {
+    window.scrollTo(0, 0);
+}
+
 const props = defineProps({
     items: {
         type: Array,
@@ -54,7 +58,7 @@ console.log(props.languages)
 
         <v-col align-self="center" cols="4" class="ma-0 pa-0 d-flex justify-center align-center">
             <router-link to="/">
-                <img :src='websiteLogo' alt="Logo for the website"
+                <img :src='websiteLogo' @click="scrollToTheTop" alt="Logo for the website"
                     style="width: 18vw; height: 9vh; display: flex; justify-content: center; align-content: center;"></img>
             </router-link>
         </v-col>
