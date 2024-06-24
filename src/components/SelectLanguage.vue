@@ -38,23 +38,18 @@ console.log(props.languages + "From SelectLanguage.vue");
             <template v-slot:activator="{ on, attrs }">
                 <v-btn v-bind="attrs" v-on="on" icon="mdi-translate"></v-btn>
             </template>
-            <v-list>
-                <v-list-item 
-                    v-for="(language, index) in props.languages" 
-                    :key="index"
-                    :value="index"
-                    @click=" () => {
+<v-list>
+    <v-list-item v-for="(language, index) in props.languages" :key="index" :value="index" @click=" () => {
                         localSelected.value = language;
                         emitSelected();        
-                    }"
-                >
-                    <v-list-item-title>{{ language }}</v-list-item-title>
-                </v-list-item>
-            </v-list>
-        </v-menu>
-    </v-btn> -->
-    
-<!--
+                    }">
+        <v-list-item-title>{{ language }}</v-list-item-title>
+    </v-list-item>
+</v-list>
+</v-menu>
+</v-btn> -->
+
+    <!--
     <v-select 
         v-if = "toggleSelect"
         :menu-props = "{value: toggleSelect}"    
@@ -78,12 +73,10 @@ console.log(props.languages + "From SelectLanguage.vue");
         <template v-slot:activator="{ props }">
             <v-btn v-bind="props" icon="mdi-translate" color="secondary"></v-btn>
         </template>
-        <v-list
-            v-for="(item, index) in props.languages"
-            :key="index"
-            :value="index"
-        >
-            <v-list-item> {{ item.language }}</v-list-item>
+        <v-list>
+            <v-list-item v-for="(item, index) in props.languages" :key="index" :value="index">
+                <v-list-item-title> {{ item.language }}</v-list-item-title>
+            </v-list-item>
         </v-list>
     </v-menu>
 

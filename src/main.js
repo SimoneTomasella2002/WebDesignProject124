@@ -35,6 +35,7 @@ import {
   VTimeline,
   VTimelineItem,
   VMenu,
+  VListItemTitle,
 } from "vuetify/components";
 
 // Importa la configurazione del tema
@@ -76,6 +77,7 @@ const vuetify = createVuetify({
     VTimeline,
     VTimelineItem,
     VMenu,
+    VListItemTitle,
   },
 
   theme: {
