@@ -67,11 +67,14 @@ console.log(props.languages)
         <v-col cols="2" align-self="end" class="ma-0 pa-2">
             <Select :items="items" label="Passport 2" :selected="selected2" @update:selected="updateSelected2" />
         </v-col>
+        
         <v-col cols="1" align-self="center" class="ma-0 pa-0 text-center">
             <v-btn rounded to="/about" variant="text">
-                <v-card-text class="ma-0 pa-0 text-center text-secondary">About</v-card-text>
+                <v-card-text v-if="selectedLanguage == English" class="ma-0 pa-0 text-center text-secondary">About</v-card-text>
+                <v-card-text v-else class="ma-0 pa-0 text-center text-secondary">Chi siamo</v-card-text>
             </v-btn>
         </v-col>
+        
         <v-col cols="1" align-self="center" class="ma-0 pa-0 text-center">
             <SelectLanguage :languages="languages" label="Language" :selected="selectedLanguage" @update:selected="updateLanguage"/>
         </v-col>
