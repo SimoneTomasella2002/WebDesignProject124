@@ -1,7 +1,7 @@
 <script setup>
-import {ref, watch} from 'vue'
+import { ref, watch } from 'vue'
 
-const props = defineProps({
+const properties = defineProps({
     languages: {
         type: Array,
         required: true
@@ -10,11 +10,11 @@ const props = defineProps({
         type: Object,
         default: null
     }
-})    
+})
 
 const emit = defineEmits(['update:selected'])
 
-const localSelected = ref(props.selected)
+const localSelected = ref(properties.selected)
 
 watch(localSelected, (newValue) => {
     emit('update:selected', newValue)
@@ -22,11 +22,13 @@ watch(localSelected, (newValue) => {
 
 const emitSelected = () => {
     console.log("emitSelected has been called")
-    
+
     //emit('update:selected', localSelected.value)
 }
 
 //const toggleSelect = ref(false)
+
+console.log(properties.languages + "From SelectLanguage.vue");
 
 </script>
 
@@ -67,9 +69,9 @@ const emitSelected = () => {
                         {{ item.raw.language }}
                     </span>
                 </template>
-            </v-list-item>
-        </template>
-    </v-select>
+</v-list-item>
+</template>
+</v-select>
 -->
 
     <v-menu>
@@ -86,3 +88,19 @@ const emitSelected = () => {
     </v-menu>
 
 </template>
+
+
+<script>
+
+export default {
+    data: () => ({
+        items: [
+            { title: 'Click Me' },
+            { title: 'Click Me' },
+            { title: 'Click Me' },
+            { title: 'Click Me 2' },
+        ],
+    }),
+}
+
+</script>
