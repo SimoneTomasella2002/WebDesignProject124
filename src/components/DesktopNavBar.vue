@@ -41,6 +41,7 @@ const updateSelected2 = (newValue) => {
 const updateLanguage = (value) => {
     selectedLanguage.value = value
     emit('update:selectedLanguage', value)
+    console.log("Language has been changed to " + value + " From DesktopNavBar.vue")
 }
 
 console.log(props.languages)

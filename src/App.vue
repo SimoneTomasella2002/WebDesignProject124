@@ -51,6 +51,7 @@ const updateSelected2 = (newValue) => {
 
 const updateSelectedLanguage = (value) => {
   selectedLanguage.value = value
+  console.log("Language has been changed to " + value + " From App.vue")
 }
 
 // Imposta i valori predefiniti per le due selezioni
