@@ -21,15 +21,28 @@ watch(localSelected, (newValue) => {
 })
 
 const emitSelected = () => {
-    emit('update:selected', localSelected.value)
+    console.log("emitSelected has been called")
+    
+    //emit('update:selected', localSelected.value)
 }
 
-var toggleSelect = false
+//const toggleSelect = ref(false)
 
 </script>
 
 <template>
-    <v-btn @click="toggleSelect = !toggleSelect" density="compact" icon="mdi-translate" />
+    <v-menu @change="emitSelected">
+        <template v-slot:activator="{ props }">
+            <v-btn v-bind="props" density="compact" icon="mdi-translate" />  
+        </template>
+        <v-list>
+            <v-list-item v-for="(language) in props.languages" :disabled="props.raw.selected">
+                <v-list-item-title>{{ language }}</v-list-item-title>
+            </v-list-item>
+        </v-list>
+    </v-menu>
+    
+<!--
     <v-select 
         v-if = "toggleSelect"
         :menu-props = "{value: toggleSelect}"    
@@ -38,7 +51,7 @@ var toggleSelect = false
         single-line return-object v-model="localSelected"
     >
         <template v-slot:item="{ props, item }">
-            <v-list-item v-bind="props" class="bg-infoBackground" :disabled="item.raw.selected">
+            <v-list-item v-model="toggleSelect" v-bind="props" class="bg-infoBackground" :disabled="item.raw.selected">
                 <template v-slot:title>
                     <span class="text-secondary d-flex justify-start align-center">
                         {{ item.raw.language }}
@@ -47,5 +60,5 @@ var toggleSelect = false
             </v-list-item>
         </template>
     </v-select>
-
+-->
 </template>
