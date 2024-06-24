@@ -21,13 +21,13 @@ watch(localSelected, (newValue) => {
 })
 
 const emitSelected = (language) => {
-    console.log("emitSelected has been called")
+    console.log("emitSelected has been called with value" + language + "From SelectLanguage.vue")
     localSelected.value = language
     emit('update:selected', language)
 }
 
-console.log(props.languages + "From SelectLanguage.vue")
-console.log(props.selected + "From SelectLanguage.vue")
+console.log(props.languages.values + "From SelectLanguage.vue")
+console.log(props.selected.value + "From SelectLanguage.vue")
 
 </script>
 
