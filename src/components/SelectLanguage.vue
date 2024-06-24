@@ -1,5 +1,5 @@
 <script setup>
-import {ref, watch} from 'vue'
+import { ref, watch } from 'vue'
 
 const props = defineProps({
     languages: {
@@ -10,7 +10,7 @@ const props = defineProps({
         type: Object,
         default: null
     }
-})    
+})
 
 const emit = defineEmits(['update:selected'])
 
@@ -22,7 +22,7 @@ watch(localSelected, (newValue) => {
 
 const emitSelected = () => {
     console.log("emitSelected has been called")
-    
+
     //emit('update:selected', localSelected.value)
 }
 
@@ -31,28 +31,17 @@ const emitSelected = () => {
 </script>
 
 <template>
-    <v-btn icon="mdi-translate" size="large">
-        <v-menu activator="parent">
-            <template v-slot:activator="{ on, attrs }">
-                <v-btn v-bind="attrs" v-on="on" icon="mdi-translate"></v-btn>
-            </template>
-            <v-list>
-                <v-list-item 
-                    v-for="(language, index) in props.languages" 
-                    :key="index"
-                    :value="index"
-                    @click=" () => {
-                        localSelected.value = language;
-                        emitSelected();        
-                    }"
-                >
-                    <v-list-item-title>{{ language }}</v-list-item-title>
-                </v-list-item>
-            </v-list>
-        </v-menu>
-    </v-btn>
+    <v-btn icon="mdi-translate" id="menu-activator" size="large" />
     
-<!--
+    <v-menu activator="#menu-activator">
+        <v-list>
+            <v-list-item v-for="(item, index) in items" :key="index" :value="index">
+                <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item>
+        </v-list>
+    </v-menu>
+
+    <!--
     <v-select 
         v-if = "toggleSelect"
         :menu-props = "{value: toggleSelect}"    
@@ -67,8 +56,24 @@ const emitSelected = () => {
                         {{ item.raw.language }}
                     </span>
                 </template>
-            </v-list-item>
-        </template>
-    </v-select>
+</v-list-item>
+</template>
+</v-select>
 -->
 </template>
+
+
+<script>
+
+export default {
+    data: () => ({
+        items: [
+            { title: 'Click Me' },
+            { title: 'Click Me' },
+            { title: 'Click Me' },
+            { title: 'Click Me 2' },
+        ],
+    }),
+}
+
+</script>
