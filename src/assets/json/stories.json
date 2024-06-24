@@ -74,7 +74,7 @@
     },
     {
       "index":5,
-      "description": "Anche suo marito la esorta ad emanciparsi, così si iscrive all’università. Ma una voce però comincia a girare: gli americani voglio andarsene dal paese.",
+      "description": "La sua famiglia e suo marito la esortano ad emanciparsi, e così decide di iscriversi all’università. Ma una voce comincia a girare: gli americani voglio andarsene dal paese.",
       "age": "19"
     },
     {
@@ -84,7 +84,7 @@
     },
     {
       "index":7,
-      "description": "In Iran è ospitata da un parente che vive lì da tempo, attende il permesso di partire per raggiungere il marito, nel frattempo nasce il suo primo figlio, ora è mamma e si può solo andare avanti.",
+      "description": "In Iran è ospitata da un parente che vive lì da tempo. Mentre attende il permesso di partire per raggiungere il marito nasce il suo primo figlio. Adesso che è madre può solo andare avanti.",
       "age": "21"
     },
     {
@@ -99,20 +99,20 @@
     },
     {
       "index":10,
-      "description": "Dopo un anno, riesce a parlare abbastanza bene la lingua e suo figlio può andare a scuola. Anche se sà che ci saranno ancora parecchie difficoltà nell’integrarsi, spera di poter riprendere a studiare lei stessa un giorno.",
+      "description": "Dopo un anno, riesce a parlare abbastanza bene la lingua e suo figlio può andare a scuola. Anche se è cosciente delle numerose difficoltà nell’integrarsi, spera, un giorno, di poter riprendere a studiare.",
       "age": "24"
     }
   ],
   "Joy": [
     {
       "index": 1,
-      "description": "Joy è nata in un paese in Nigeria. È una ragazza albina e per questo viene presa in giro o bullizzata dai suoi compagni di scuola, a volte anche pesantemente. Ogni tanto anche i maestri la trattano male per il minimo problema.",
-      "description-en": "Joy was born in a country in Nigeria. She is an albino girl and because of this, she is mocked or bullied by her classmates, sometimes severely. Even teachers mistreat her over minor issues at times.",
+      "description": "Joy è nata in un paese in Nigeria. È una ragazza albina e per questo viene presa in giro e bullizzata dai suoi compagni di scuola, a volte anche pesantemente. Ogni tanto anche i maestri la trattano male per il minimo problema.",
+      "description-en": "Joy was born in a country in Nigeria. She is an albino girl and because of this, she is mocked and bullied by her classmates, sometimes severely. Even teachers mistreat her over minor issues at times.",
       "age": "5"
     },
     {
       "index": 2,
-      "description": "Un giorno Joy viene presa per le gambe da un suo compagno in piscina, e trascinata sott'acqua per affogarla. Fortunatamente suo fratello ed uno studente di medicina sono accorsi in suo aiuto e l'hanno salvata",
+      "description": "Un giorno Joy, in piscina, viene presa per le gambe da un suo compagno in piscina e trascinata sott'acqua per affogarla. Fortunatamente suo fratello ed uno studente di medicina sono accorsi in suo aiuto e l'hanno salvata",
       "description-en": "One day, Joy was grabbed by the legs by a classmate at the pool and dragged underwater in an attempt to drown her. Fortunately, her brother and a medical student came to her rescue and saved her.",
       "age": "6"
     },
@@ -168,12 +168,12 @@
   "Ji-hoon": [
     {
       "index": 1,
-      "description": "Ji-hoon è un bambino coreano curioso appena arrivato in un nuovo mondo: gli Stati Uniti. A casa parla coreano con la famiglia, ma inizia a imparare l'inglese a scuola e guardando la TV americana.",
+      "description": "Ji-hoon è un bambino coreano curioso che è appena arrivato in un nuovo mondo: gli Stati Uniti. Con la sua famiglia parla coreano, ma inizia a imparare l'inglese a scuola e guardando la TV americana.",
       "age": "5"
     },
     {
       "index": 2,
-      "description": "A sei anni si sta ancora adattando alla vita negli Stati Uniti. La scuola è un ambiente nuovo e impegnativo, dove sperimenta episodi di razzismo a scuola. I suoi compagni di classe lo prendono in giro per il suo accento e i suoi tratti asiatici.",
+      "description": "A sei anni si sta ancora adattando alla vita negli Stati Uniti. La scuola è un ambiente nuovo e impegnativo, dove sperimenta episodi di razzismo. I suoi compagni di classe lo prendono in giro per il suo accento e i suoi tratti asiatici.",
       "age": "6"
     },
     {
@@ -183,7 +183,7 @@
     },
     {
       "index": 4,
-      "description": "Ji-hoon parla fluentemente inglese e si è diplomato. Sua madre, la figura centrale nella sua vita, lavora in un barbiere coreano. Nonostante parli coreano con i clienti, ha una padronanza notevole dell'inglese.",
+      "description": "Ji-hoon parla fluentemente inglese e si è diplomato. Sua madre, la figura centrale nella sua vita, lavora da un barbiere coreano. Nonostante parli coreano con i clienti, ha una padronanza notevole dell'inglese.",
       "age": "18"
     },
     {
@@ -208,7 +208,7 @@
     },
     {
       "index": 9,
-      "description": "A ventitré anni, Ji-hoon è il manager di un ristorante coreano in Virginia e cerca di mantenere vive entrambe le culture. A lavoro, la sua competenza e impegno lo rendono un punto di riferimento per il team.",
+      "description": "A ventitré anni, Ji-hoon è il manager di un ristorante coreano in Virginia e cerca di mantenere vive entrambe le sue culture. A lavoro, la sua competenza e impegno lo rendono un punto di riferimento per il team.",
       "age": "23"
     },
     {

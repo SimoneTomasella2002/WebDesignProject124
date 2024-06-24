@@ -1,9 +1,30 @@
 <script setup>
+import {ref, watch} from 'vue'
 
-data: () => ({
-    languages: ['Italian', 'English'],
-    toggleSelect: false
+const props = defineProps({
+    languages: {
+        type: Array,
+        required: true
+    },
+    selected: {
+        type: Object,
+        default: null
+    }
+})    
+
+const emit = defineEmits(['update:selected'])
+
+const localSelected = ref(props.selected)
+
+watch(localSelected, (newValue) => {
+    emit('update:selected', newValue)
 })
+
+const emitSelected = () => {
+    emit('update:selected', localSelected.value)
+}
+
+var toggleSelect = false
 
 </script>
 
@@ -11,8 +32,9 @@ data: () => ({
     <v-btn @click="toggleSelect = !toggleSelect" density="compact" icon="mdi-translate" />
     <v-select 
         v-if = "toggleSelect"
-        label = "Language" 
-        :items = "languages" 
-        :menu-props = "{value: toggleSelect}"
-    />
+        :menu-props = "{value: toggleSelect}"    
+        variant="outlined" :density="density" rounded :languages="languages" 
+        bg-color="background" label="Language" @change="emitSelected"
+    >
+    </v-select>
 </template>

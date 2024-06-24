@@ -68,9 +68,7 @@ console.log(props.languages)
             </v-btn>
         </v-col>
         <v-col cols="1" align-self="center" class="ma-0 pa-0 text-center">
-            <SelectLanguage :languages="languages" label="Language" :selected="selectedLanguage" 
-                @update:selected="updateLanguage"
-            />
+            <SelectLanguage :languages="languages" label="Language" :selected="selectedLanguage" @update:selected="updateLanguage"/>
         </v-col>
     </v-app-bar>
 </template>
