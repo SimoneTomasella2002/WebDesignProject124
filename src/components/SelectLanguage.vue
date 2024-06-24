@@ -31,13 +31,16 @@ const emitSelected = () => {
 </script>
 
 <template>
-    <v-btn>
-        Palle
+    <v-btn icon="mdi-translate" size="large">
         <v-menu activator="parent">
+            <template v-slot:activator="{ on, attrs }">
+                <v-btn v-bind="attrs" v-on="on" icon="mdi-translate"></v-btn>
+            </template>
             <v-list>
                 <v-list-item 
                     v-for="(language, index) in props.languages" 
-                    :key="index" 
+                    :key="index"
+                    :value="index"
                     @click=" () => {
                         localSelected.value = language;
                         emitSelected();        
