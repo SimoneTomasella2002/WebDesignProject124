@@ -1,5 +1,17 @@
 <script setup>
 import PictureContainer from "@/components/PictureContainer.vue";
+
+
+/*
+  ENGLISH TRANSLATION:
+
+  "How do the chances of finding a place to stay in the world change based on our country of origin? Do we all have the same opportunities and rights?"
+
+  We are a group of designers and computer scientists, united by a passion for telling human stories and committed to a fairer and more aware world.
+
+  We believe that understanding the experiences of others is the first step towards empathy and change. With this project, we aim to open a space for reflection, examining the stories of people migrating from all parts of the world for various reasons, and comparing them.
+*/
+
 </script>
 
 <template>
