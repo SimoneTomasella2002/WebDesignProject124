@@ -13,6 +13,10 @@ const props = defineProps({
         type: Object,
         default: null,
     },
+    language: {
+        type: String,
+        required: true,
+    }
 });
 
 const leftName = computed(() => props.selected1?.name || null);
@@ -45,12 +49,15 @@ function imageName(index) {
             <v-timeline-item line-inset="1" fill-dot dot-color="background" size="45">
                 <template #icon>
                     <span class="rounded-lg bg-red w-100 text-center text-h6">
-                        Età
+                        {{ language === 'English' ? 'Age' : 'Età' }}
                     </span>
                 </template>
             </v-timeline-item>
             <v-timeline-item v-for="story in Stories[name]" :key="story.index" size="65">
-                <MobileCard :id="story.index" :description="story.description" :image="images[imageName(story.index)]"
+                <MobileCard 
+                    :id="story.index" 
+                    :description="language === 'English' ? story.description_en : story.description" 
+                    :image="images[imageName(story.index)]"
                     :show-text="activeId === story.index" @update:show-text="updateActiveId"
                     class="d-flex justify-center align-center" </MobileCard>
                     <template #icon>

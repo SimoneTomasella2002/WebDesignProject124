@@ -1,9 +1,18 @@
 <script setup>
 import { useDisplay } from 'vuetify'
 import { ref, onMounted } from 'vue';
-import DialogImage1 from '@/assets/images/dialog/Dialog-Image-1.png';
-import DialogImage2 from '@/assets/images/dialog/Dialog-Image-2.png';
-import DialogImage3 from '@/assets/images/dialog/Dialog-Image-3.png';
+import DialogImageDesktopIta1 from '@/assets/images/dialog/Dialog-Image-1_Desktop_Ita.png';
+import DialogImageDesktopIta2 from '@/assets/images/dialog/Dialog-Image-2_Desktop_Ita.png';
+import DialogImageDesktopIta3 from '@/assets/images/dialog/Dialog-Image-3_Desktop_Ita.png';
+import DialogImageDesktopEng1 from '@/assets/images/dialog/Dialog-Image-1_Desktop_Eng.png';
+import DialogImageDesktopEng2 from '@/assets/images/dialog/Dialog-Image-2_Desktop_Eng.png';
+import DialogImageDesktopEng3 from '@/assets/images/dialog/Dialog-Image-3_Desktop_Eng.png';
+import DialogImageMobileIta1 from '@/assets/images/dialog/Dialog-Image-1_Mobile_Ita.png';
+import DialogImageMobileIta2 from '@/assets/images/dialog/Dialog-Image-2_Mobile_Ita.png';
+import DialogImageMobileIta3 from '@/assets/images/dialog/Dialog-Image-3_Mobile_Ita.png';
+import DialogImageMobileEng1 from '@/assets/images/dialog/Dialog-Image-1_Mobile_Eng.png';
+import DialogImageMobileEng2 from '@/assets/images/dialog/Dialog-Image-2_Mobile_Eng.png';
+import DialogImageMobileEng3 from '@/assets/images/dialog/Dialog-Image-3_Mobile_Eng.png';
 
 const props = defineProps({
     language: {
@@ -27,14 +36,15 @@ const { mobile } = useDisplay()
 const window = ref(0);
 const length = ref(3);
 
+// Needed by v-window component in mobile view
 function getDialogImage(index) {
     switch (index) {
         case 1:
-            return DialogImage1;
+            return props.language === 'English' ? DialogImageMobileEng1 : DialogImageMobileIta1;
         case 2:
-            return DialogImage2;
+            return props.language === 'English' ? DialogImageMobileEng2 : DialogImageMobileIta2;
         case 3:
-            return DialogImage3;
+            return props.language === 'English' ? DialogImageMobileEng3 : DialogImageMobileIta3;
         default:
             return '';
     }
@@ -44,7 +54,7 @@ function getDialogImage(index) {
 
 <script>
 
-// Needed by v-window component
+// Needed by v-window component in mobile view
 export default {
     data() {
         return {
@@ -105,13 +115,13 @@ export default {
                 </v-window>
                 <v-row v-else>
                     <v-col align="right">
-                        <v-img :src="DialogImage1" alt="Placeholder" width="150px"></v-img>
+                        <v-img :src="props.language === 'English' ? DialogImageDesktopEng1 : DialogImageDesktopIta1" alt="Placeholder" width="150px"></v-img>
                     </v-col>
                     <v-col align="center">
-                        <v-img :src="DialogImage2" alt="Placeholder" width="150px"></v-img>
+                        <v-img :src="props.language === 'English' ? DialogImageDesktopEng2 : DialogImageDesktopIta2" alt="Placeholder" width="150px"></v-img>
                     </v-col>
                     <v-col>
-                        <v-img :src="DialogImage3" alt="Placeholder" width="150px"></v-img>
+                        <v-img :src="props.language === 'English' ? DialogImageDesktopEng3 : DialogImageDesktopIta3" alt="Placeholder" width="150px"></v-img>
                     </v-col>
                 </v-row>
 
