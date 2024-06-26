@@ -76,11 +76,11 @@ onMounted(() => {
       <router-view v-slot="{ Component, route }">
         <transition :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass"
           mode="out-in">
-          <component :is="Component" :is-mobile="mobile" :selected1="selected1" :selected2="selected2" />
+          <component :is="Component" :is-mobile="mobile" :selected1="selected1" :selected2="selected2" :language="selectedLanguage"/>
         </transition>
       </router-view>
     </v-main>
-    <Footer :is-mobile="mobile" :items="people" 
+    <Footer :is-mobile="mobile" :items="people" :language="selectedLanguage"
       @update:selected1="updateSelected1"
       @update:selected2="updateSelected2" 
     />

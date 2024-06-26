@@ -2,7 +2,18 @@
 import profileData from "@/assets/json/profiles.json";
 import { watch, ref } from "vue";
 
-const props = defineProps(["ProfileName"]);
+
+
+const props = defineProps({
+  ProfileName: {
+    type: String,
+    required: true
+  },
+  language: {
+    type: String,
+    required: true
+  }
+});
 
 const profiles = profileData.profiles;
 const profile = ref(null);
@@ -32,7 +43,9 @@ watch(() => props.ProfileName, (newProfileName) => {
     </v-col>
     <v-card-title>{{ profile.firstName }} {{ profile.lastName }}</v-card-title>
     <v-card-text align="left">
-      <p>{{ profile.description }}</p>
+      <p>
+        {{ language === 'English' ? profile.description_en : profile.description }}
+      </p>
     </v-card-text>
     <v-card-actions class="d-flex justify-center">
       <v-btn v-if="profile.linkedin !== ''" :href="profile.linkedin" target="_blank" class="bg-blue">

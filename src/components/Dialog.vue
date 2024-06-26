@@ -5,6 +5,14 @@ import DialogImage1 from '@/assets/images/dialog/Dialog-Image-1.png';
 import DialogImage2 from '@/assets/images/dialog/Dialog-Image-2.png';
 import DialogImage3 from '@/assets/images/dialog/Dialog-Image-3.png';
 
+const props = defineProps({
+    language: {
+        type: String,
+        required: true
+    }
+})
+
+
 // Reactive variable to control dialog visibility
 const isDialogActive = ref(false);
 
@@ -54,10 +62,10 @@ export default {
             <v-btn variant="text" rounded v-bind="activatorProps" height="60">
                 <div class="d-flex flex-column">
                     <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-secondary font-italic">
-                        How to use
+                        {{ language === 'English' ? 'How to use' : 'Come usare'}}
                     </v-card-text>
                     <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-secondary font-italic">
-                        this website?
+                        {{ language === 'English' ? 'this website?' : 'questo sito?' }}
                     </v-card-text>
                 </div>
             </v-btn>
@@ -71,15 +79,23 @@ export default {
                 </v-col>
 
                 <v-card-text v-if="mobile" align="center">
-                    <p class="mobile-dialog-title">How the possibilities change based on where you're from?</p>
+                    <p class="mobile-dialog-title">
+                        {{ language === 'English' ? "How the possibilities change based on where you're from?" : "Come cambiano le possibilità in base a dove vivi?" }}
+                    </p>
                 </v-card-text>
                 <v-card-text v-else align="center">
-                    <h1>How the possibilities change based on where you're from?</h1>
+                    <h1>
+                        {{ language === 'English' ? "How the possibilities change based on where you're from?" : "Come cambiano le possibilità in base a dove vivi?" }}
+                    </h1>
                 </v-card-text>
 
                 <v-card-text align="center">
-                    <p>Find out by comparing the stories</p>
-                    <p>that are behind passports</p>
+                    <p>
+                        {{ language === 'English' ? 'Find out by comparing the stories' : 'Scoprilo comparando le storie' }}
+                    </p>
+                    <p>
+                        {{ language === 'English' ? 'that are behind passports' : 'che si celano dietro ai passaporti' }}
+                    </p>
                 </v-card-text>
 
                 <v-window v-if="mobile" v-model="window" show-arrows>
@@ -100,8 +116,9 @@ export default {
                 </v-row>
 
                 <v-col align="center" class="mt-4 mb-3">
-                    <v-btn text="Ok! I understand" @click="isActive.value = false" color="blue"
-                        class="text-none"></v-btn>
+                    <v-btn @click="isActive.value = false" color="blue" class="text-none">
+                        {{ language === 'English' ? 'Ok! I understand' : 'Ok! Ho capito' }}
+                    </v-btn>
                 </v-col>
             </v-card>
         </template>

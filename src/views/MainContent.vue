@@ -16,11 +16,15 @@ const props = defineProps(
             type: Object,
             default: null,
         },
+        language: {
+            type: String,
+            required: true,
+        }
     }
 )
 </script>
 
 <template>
-    <MobileMainContent v-if="props.isMobile" :selected1="selected1" :selected2="selected2" />
-    <DesktopMainContent v-else :selected1="selected1" :selected2="selected2" />
+    <MobileMainContent v-if="props.isMobile" :selected1="selected1" :selected2="selected2" :language="language" />
+    <DesktopMainContent v-else :selected1="selected1" :selected2="selected2" :language="language"/>
 </template>

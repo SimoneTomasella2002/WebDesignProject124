@@ -1,6 +1,13 @@
 <script setup>
 import websiteLogo from "@/assets/images/logo.jpg";
 
+const props = defineProps ({
+    language: {
+        type: String,
+        required: true
+    }
+})
+
 function scrollToTheTop() {
     window.scrollTo(0, 0);
 }
@@ -19,26 +26,24 @@ function openGithubPageInASeparateTab() {
                     class="rounded-circle mb-2"></v-img>
                 <i class="mb-2">Behind a passport</i>
                 <v-btn @click="openGithubPageInASeparateTab" text color="blue" class="mb-2">
-                    Take a look at our code
+                    {{ language === 'English' ? "Take a look at our code" : "Guarda il nostro codice" }}
                 </v-btn>
                 <RouterLink to="/terms">
-                    <v-btn @click="scrollToTheTop" text color="blue">Terms of service</v-btn>
+                    <v-btn @click="scrollToTheTop" text color="blue">
+                        {{ language === 'English' ? "Terms of service" : "Termini di servizio" }}
+                    </v-btn>
                 </RouterLink>
             </v-card>
         </v-col>
 
-        <!-- Credits Column -->
-        <v-col cols="12" md="4">
-            <v-card flat class="d-flex flex-column align-center pa-3 bg-primary">
-                <h3 class="mb-2">Credits for used assets (WIP)</h3>
-                <p class="mb-2">placeholder for a future link</p>
-            </v-card>
-        </v-col>
+        <v-spacer></v-spacer>
 
         <!-- Team Column -->
         <v-col cols="12" md="4">
             <v-card flat class="d-flex flex-column align-center pa-3 bg-primary">
-                <h3 class="mb-2">La nostra squadra:</h3>
+                <h3 class="mb-2">
+                    {{ language === 'English' ? 'The team:' : 'La squadra:' }}
+                </h3>
                 <v-row>
                     <v-col cols="6">
                         <h4 class="mb-2">Devs:</h4>
