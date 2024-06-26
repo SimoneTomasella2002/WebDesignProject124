@@ -4,7 +4,7 @@
       <div class="sx-edge-card" :class="{ 'sx-edge-card-focus': props.isFocused && props.side === 'left' }">
         <slot name="sx-edge-card" />
       </div>
-      <div class="story-board" @click="() => toggleExpand('sx')">
+      <div class="story-board bg-infoBackground" @click="() => toggleExpand('sx')">
         <slot name="sx-story-board" />
       </div>
     </div>
@@ -14,7 +14,7 @@
     </div>
 
     <div class="dx-side">
-      <div class="story-board" @click="() => toggleExpand('dx')">
+      <div class="story-board bg-infoBackground" @click="() => toggleExpand('dx')">
         <slot name="dx-story-board" />
       </div>
       <div class="dx-edge-card" :class="{ 'dx-edge-card-focus': props.isFocused && props.side === 'right' }">
