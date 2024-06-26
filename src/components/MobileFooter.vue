@@ -11,6 +11,10 @@ const props = defineProps({
         type: Array,
         required: true,
     },
+    language: {
+        type: Object,
+        default: null,
+    }
 })
 
 const emit = defineEmits(['update:selected1', 'update:selected2'])
@@ -32,11 +36,11 @@ const updateSelected2 = (value) => {
 <template>
     <v-bottom-navigation class="bg-primary">
         <v-col>
-            <Select :items="items" label="Passport 1" :selected="selected1" :is-mobile="isMobile"
+            <Select :items="items" label="Passport 1" :selected="selected1" :is-mobile="isMobile" :language="language"
                 @update:selected="updateSelected1" />
         </v-col>
         <v-col>
-            <Select :items="items" label="Passport 2" :selected="selected2" :is-mobile="isMobile"
+            <Select :items="items" label="Passport 2" :selected="selected2" :is-mobile="isMobile" :language="language"
                 @update:selected="updateSelected2" />
         </v-col>
     </v-bottom-navigation>

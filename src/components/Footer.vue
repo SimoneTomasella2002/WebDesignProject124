@@ -21,6 +21,6 @@ const props = defineProps(
 </script>
 
 <template>
-    <MobileFooter v-if="props.isMobile" :is-mobile="isMobile" :items="items" role="navigation" />
+    <MobileFooter v-if="props.isMobile" :is-mobile="isMobile" :items="items" role="navigation" :language="language" />
     <DesktopFooter v-else role="contentinfo" :language="language" />
 </template>
