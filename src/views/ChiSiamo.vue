@@ -1,11 +1,16 @@
 <script setup>
+import { computed } from "vue";
 import PictureContainer from "@/components/PictureContainer.vue";
 
 const props = defineProps({
     language: {
-        type: String,
-        required: true
+        type: Object,
+        default: null
     }
+})
+
+const language = computed(() => {
+    return props.language.language
 })
 
 /*

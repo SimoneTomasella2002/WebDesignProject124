@@ -23,9 +23,9 @@ const languages = ref([
   { language: "English" }
 ])
 
-const selected1 = ref(null)
-const selected2 = ref(null)
-const selectedLanguage = ref(null)
+const selected1 = ref(people.value[0])
+const selected2 = ref(people.value[1])
+const selectedLanguage = ref(languages.value[0]) // Contiene l'oggetto selezionato per la lingua
 
 const updateSelected1 = (newValue) => {
   selected1.value = newValue
@@ -54,15 +54,15 @@ const updateSelectedLanguage = (value) => {
   console.log("Language has been changed to " + value + " From App.vue")
 }
 
-// Imposta i valori predefiniti per le due selezioni
-onMounted(() => {
-  if (people.value.length > 0) {
-    selected1.value = people.value[0]
-    if (people.value.length > 1) {
-      selected2.value = people.value[1]
-    }
-  }
-})
+// // Imposta i valori predefiniti per le due selezioni
+// onMounted(() => {
+//   if (people.value.length > 0) {
+//     selected1.value = people.value[0]
+//     if (people.value.length > 1) {
+//       selected2.value = people.value[1]
+//     }
+//   }
+// })
 </script>
 
 <template>

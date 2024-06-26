@@ -1,11 +1,16 @@
 <script setup>
+import { computed } from "vue";
 import websiteLogo from "@/assets/images/logo.jpg";
 
 const props = defineProps ({
     language: {
-        type: String,
-        required: true
+        type: Object,
+        default: null
     }
+})
+
+const language = computed(() => {
+    return props.language.language
 })
 
 function scrollToTheTop() {

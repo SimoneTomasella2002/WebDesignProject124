@@ -1,6 +1,6 @@
 <script setup>
 import { useDisplay } from 'vuetify'
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import DialogImageDesktopIta1 from '@/assets/images/dialog/Dialog-Image-1_Desktop_Ita.png';
 import DialogImageDesktopIta2 from '@/assets/images/dialog/Dialog-Image-2_Desktop_Ita.png';
 import DialogImageDesktopIta3 from '@/assets/images/dialog/Dialog-Image-3_Desktop_Ita.png';
@@ -16,11 +16,14 @@ import DialogImageMobileEng3 from '@/assets/images/dialog/Dialog-Image-3_Mobile_
 
 const props = defineProps({
     language: {
-        type: String,
-        required: true
+        type: Object,
+        default: null
     }
 })
 
+const language = computed(() => {
+    return props.language.language
+})
 
 // Reactive variable to control dialog visibility
 const isDialogActive = ref(false);
@@ -40,11 +43,11 @@ const length = ref(3);
 function getDialogImage(index) {
     switch (index) {
         case 1:
-            return props.language === 'English' ? DialogImageMobileEng1 : DialogImageMobileIta1;
+            return language === 'English' ? DialogImageMobileEng1 : DialogImageMobileIta1;
         case 2:
-            return props.language === 'English' ? DialogImageMobileEng2 : DialogImageMobileIta2;
+            return language === 'English' ? DialogImageMobileEng2 : DialogImageMobileIta2;
         case 3:
-            return props.language === 'English' ? DialogImageMobileEng3 : DialogImageMobileIta3;
+            return language === 'English' ? DialogImageMobileEng3 : DialogImageMobileIta3;
         default:
             return '';
     }

@@ -17,13 +17,14 @@ const props = defineProps({
     default: null,
   },
   language: {
-    type: String,
-    required: true,
+    type: Object,
+    default: null,
   },
 });
 
-const leftName = computed(() => props.selected1?.name || null);
-const rightName = computed(() => props.selected2?.name || null);
+const leftName = computed(() => props.selected1.name);
+const rightName = computed(() => props.selected2.name);
+const language = computed(() => props.language.language);
 
 function imageName(index, name) {
   return `${name.replace(/-/g, '_')}${index}`;

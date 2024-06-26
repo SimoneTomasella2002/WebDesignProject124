@@ -3,103 +3,123 @@
     {
       "index": 1,
       "description": "Alessandro vive in un paese dell’entroterra ligure, in Italia, non molto distante da Genova. È molto curioso, vivace, robusto.",
+      "description_en": "",
       "age": "5"
     },
     {
       "index": 2,
       "description": "Viaggio all’estero con la famiglia in Spagna per la prima volta in aereo. È facile viaggiare in Europa.",
+      "description_en": "",
       "age": "6"
     },
     {
       "index": 3,
       "description": "Durante le scuole medie si innamora della biologia e decide di iscriversi al liceo scientifico. I genitori lo mandano con dei suoi amici ai campi estivi inglesi per imparare la lingua.",
+      "description_en": "",
       "age": "11"
     },
     {
       "index": 4,
       "description": "Nel suo percorso di studio riesce a fare un anno di scambio culturale negli USA. È la prima volta che fa il passaporto, ed è anche la prima volta otreoceano.",
+      "description_en": "",
       "age": "18"
     },
     {
       "index": 5,
       "description": "Ottenuto il diploma, Ale si ritrova a pensare su dove continuare i suoi studi. Alla fine decide di specializzarsi in biochimica e fa richiesta alla Oxford University dove verrà preso. Un'opportunità irripetibile",
+      "description_en": "",
       "age": "19"
     },
     {
       "index": 6,
       "description": "Dopo essersi trasferito a Oxford per gli studi, comincia a cercare un lavoretto part-time per poter essere più indipendente e non pesare sulla famiglia.",
+      "description_en": "",
       "age": "20"
     },
     {
       "index": 7,
       "description": "Il Regno Unito è cambiato dopo la Brexit ed è decisamente più difficile stare dietro alla burocrazia del paese. Alessandro non riesce a trovare un lavoroche gli permetta di poter studiare con tranquillità. È la prima volta che si sente veramente “immigrato”.",
+      "description_en": "",
       "age": "21"
     },
     {
       "index": 8,
       "description": "Durante un periodo a casa, mentre sta rinnovando il suo vecchio passaporto, fa la conoscenza di quella che diventerà la sua fidanzata. È la sua prima vera storia d’amore.",
+      "description_en": "",
       "age": "22"
     },
     {
       "index": 9,
       "description": "Siamo alla fine del terzo anno, il più duro per ora. Alessandro sceglie di proseguire il suo percorso universitario con una ricerca sulla biochimica applicata all'energia rinnovabile, aiutato da un professore molto stimato.",
+      "description_en": "",
       "age": "23"
     },
     {
       "index": 10,
       "description": "Dopo il periodo di ricerca pensa di tornare nell’Unione Europea e continuare la sua carriera da ricercatore. Sarebbe bello tornare in Italia, ma ci sono più opportunità altrove. Un giorno magari farà ritorno nella sua amata Liguria...",
+      "description_en": "",
       "age": "24"
     }
   ],
   "Tara": [
     {
-      "index":1,
+      "index": 1,
       "description": "Tara vive in un paese sulle montagne dell’Afghanistan, nella regione del Ghazni. Giudiziosa, decisa, d’aspetto sobrio.",
+      "description_en": "",
       "age": "5"
     },
     {
-      "index":2,
+      "index": 2,
       "description": "I suoi genitori hanno deciso di far studiare lei e i suoi fratelli, così comincia ad andare a scuola in città (zone di influenza e corridoi militari occidentali, sopprattutto USA)",
+      "description_en": "",
       "age": "6"
     },
     {
-      "index":3,
+      "index": 3,
       "description": "Mette il velo per la prima volta, come da tradizione della sua cultura quando si diventa donna, il velo non le copre mai i ciuffi più ribelli.",
+      "description_en": "",
       "age": "11"
     },
     {
-      "index":4,
+      "index": 4,
       "description": "Essendo in età da marito, si sposa con un uomo sempre originario delle sue zone, lui si è opposto ai talebani ed essendo emigrato da minorenne ha cittadinanza italiana.",
+      "description_en": "",
       "age": "18"
     },
     {
-      "index":5,
+      "index": 5,
       "description": "La sua famiglia e suo marito la esortano ad emanciparsi, e così decide di iscriversi all’università. Ma una voce comincia a girare: gli americani voglio andarsene dal paese.",
+      "description_en": "",
       "age": "19"
     },
     {
-      "index":6,
+      "index": 6,
       "description": "Tara è incinta, ma l’ombra dei talebani si fa sempre più presente. Bisogna dare un futro a questo bambino...bisogna andare via dal paese. Suo marito è tornato in Italia, lei nel frattempo si reca a Kabul, fa il passaporto e parte per l’Iran.",
+      "description_en": "",
       "age": "20"
     },
     {
-      "index":7,
+      "index": 7,
       "description": "In Iran è ospitata da un parente che vive lì da tempo. Mentre attende il permesso di partire per raggiungere il marito nasce il suo primo figlio. Adesso che è madre può solo andare avanti.",
+      "description_en": "",
       "age": "21"
     },
     {
-      "index":8,
+      "index": 8,
       "description": "Finalmente arriva il permesso di ricongiungimento. Dopo tanta attesa, prende suo figlio in braccio e si incammina per l’Europa attraverso i canali umanitari della rotta balcanica.",
+      "description_en": "",
       "age": "22"
     },
     {
-      "index":9,
+      "index": 9,
       "description": "Finalmente, al compimento dei suoi 23 anni, arriva in Italia e raggiunge suo marito nella sua nuova casa. Sà di essere più fortunata di molti altri, il suo prossimo obiettivo è integrarsi nel nuovo paese.",
+      "description_en": "",
       "age": "23"
     },
     {
-      "index":10,
+      "index": 10,
       "description": "Dopo un anno, riesce a parlare abbastanza bene la lingua e suo figlio può andare a scuola. Anche se è cosciente delle numerose difficoltà nell’integrarsi, spera, un giorno, di poter riprendere a studiare.",
+      "description_en": "",
       "age": "24"
     }
   ],
@@ -169,51 +189,61 @@
     {
       "index": 1,
       "description": "Ji-hoon è un bambino coreano curioso che è appena arrivato in un nuovo mondo: gli Stati Uniti. Con la sua famiglia parla coreano, ma inizia a imparare l'inglese a scuola e guardando la TV americana.",
+      "description_en": "",
       "age": "5"
     },
     {
       "index": 2,
       "description": "A sei anni si sta ancora adattando alla vita negli Stati Uniti. La scuola è un ambiente nuovo e impegnativo, dove sperimenta episodi di razzismo. I suoi compagni di classe lo prendono in giro per il suo accento e i suoi tratti asiatici.",
+      "description_en": "",
       "age": "6"
     },
     {
       "index": 3,
       "description": "La sua infanzia è segnata ulteriormente da un terribile evento: la perdita del padre. Sua madre e sua zia si prendono costantemente cura di lui e di sua sorella maggiore con dedizione.",
+      "description_en": "",
       "age": "11"
     },
     {
       "index": 4,
       "description": "Ji-hoon parla fluentemente inglese e si è diplomato. Sua madre, la figura centrale nella sua vita, lavora da un barbiere coreano. Nonostante parli coreano con i clienti, ha una padronanza notevole dell'inglese.",
+      "description_en": "",
       "age": "18"
     },
     {
       "index": 5,
       "description": "Inizia a lavorare part-time. La sua famiglia crede fermamente nell'importanza del duro lavoro e del successo, valori che guidano anche lui. Studia con impegno e lavora per aiutare economicamente la madre e la sorella.",
+      "description_en": "",
       "age": "19"
     },
     {
       "index": 6,
       "description": "Ji-hoon rimane profondamente legato alla comunità coreana, sentendosi confortato dalla presenza di così tanti amici con cui condividere esperienze e tradizioni. Si sente confortato dalla presenza della sua comunità nonostante la sua fluente conoscenza dell'inglese",
+      "description_en": "",
       "age": "20"
     },
     {
       "index": 7,
       "description": "A ventuno anni, Ji-hoon ha l'opportunità di trasferirsi in Corea, ma decide di non farlo perché sente che la vita lì sarebbe troppo stressante per lui e la sua famiglia.",
+      "description_en": "",
       "age": "21"
     },
     {
       "index": 8,
       "description": "Dopo tanti anni, Ji-hoon e la sua famiglia celebrano con entusiasmo anche le festività americane come Natale, il giorno del Ringraziamento, Halloween e il Quattro Luglio.",
+      "description_en": "",
       "age": "22"
     },
     {
       "index": 9,
       "description": "A ventitré anni, Ji-hoon è il manager di un ristorante coreano in Virginia e cerca di mantenere vive entrambe le sue culture. A lavoro la sua competenza e impegno lo rendono un punto di riferimento per il team.",
+      "description_en": "",
       "age": "23"
     },
     {
       "index": 10,
       "description": "Ji-hoon vive felicemente con sua moglie, anche lei coreana e arrivata negli Stati Uniti a dieci anni. Insieme, formano una famiglia che incarna entrambe le culture educando i loro figli in un ambiente diversificato.",
+      "description_en": "",
       "age": "24"
     }
   ]

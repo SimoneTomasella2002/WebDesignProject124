@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed , onUpdated } from "vue";
 
 import Dialog from "@/components/Dialog.vue";
 import websiteLogo from "@/assets/images/logopassport.svg";
@@ -43,8 +43,11 @@ const updateLanguage = (value) => {
     console.log("Language has been changed to " + value + " From DesktopNavBar.vue")
 }
 
-console.log(props.languages)
+console.log("DesktopNavBar - Selected Language: ", selectedLanguage.value.language)
 
+const language = computed(() => {
+    return selectedLanguage.value.language
+})
 </script>
 
 <template>
@@ -70,13 +73,13 @@ console.log(props.languages)
         <v-col cols="1" align-self="center" class="ma-0 pa-0 text-center">
             <v-btn rounded to="/about" variant="text">
                 <v-card-text class="ma-0 pa-0 text-center text-secondary">
-                    {{ selectedLanguage === 'English' ? 'About' : 'Chi siamo' }}
+                    {{ language === 'English' ? "About" : "Chi siamo" }}
                 </v-card-text>
             </v-btn>
         </v-col>
         
         <v-col cols="1" align-self="center" class="ma-0 pa-0 text-center">
-            <SelectLanguage :languages="languages" label="Language" :selected="selectedLanguage" @update:selected="updateLanguage"/>
+            <SelectLanguage :languages="languages" :selected="selectedLanguage" @update:selected="updateLanguage"/>
         </v-col>
     </v-app-bar>
 </template>

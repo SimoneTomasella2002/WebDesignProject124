@@ -17,8 +17,8 @@ const props = defineProps(
             default: null,
         },
         language: {
-            type: String,
-            required: true,
+            type: Object,
+            default: null,
         }
     }
 )

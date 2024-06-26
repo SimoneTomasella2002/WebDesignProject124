@@ -19,8 +19,8 @@ const props = defineProps({
         default: null,
     },
     language: {
-        type: String,
-        required: true,
+        type: Object,
+        default: null,
     },
 })
 
@@ -37,6 +37,8 @@ const emitSelected = () => {
 }
 
 const density = computed(() => props.isMobile ? 'compact' : 'comfortable')
+
+const language = computed(() => props.language.language)
 </script>
 
 <template>
