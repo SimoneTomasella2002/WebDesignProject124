@@ -39,14 +39,13 @@ onUpdated(() => {
 </script>
 
 <template>
-
-    <v-menu>
+    <v-menu :location="mobile ? 'end' : 'bottom'">
         <template v-slot:activator="{ props }">
             <v-btn v-if="!mobile" v-bind="props" icon="mdi-translate" color="secondary"></v-btn>
             <v-btn v-else v-bind="props" prepend-icon="mdi-translate" color="secondary" variant="text" class="text-none" rounded> {{ language === 'English' ? 'Language' : 'Lingua' }}</v-btn>
         </template>
         <v-list>
-            <v-list-item @click="() => emitSelected( item )" v-for="(item, index) in props.languages" :key="index" :value="index">
+            <v-list-item :disabled="item === localSelected" @click="() => emitSelected( item )" v-for="(item, index) in props.languages" :key="index" :value="index">
                 <v-list-item-title> {{ item.language }}</v-list-item-title>
             </v-list-item>
         </v-list>
