@@ -3,7 +3,7 @@ import { computed, ref } from 'vue';
 import images from '@/images';
 import Stories from '@/assets/json/stories.json';
 import MobileCard from '@/components/MobileCard.vue';
-import backgroundImage from '@/assets/images/pattern/Pattern_1920x1080.png';
+import backgroundImage from '@/assets/images/pattern/Pattern_1080x1920.png';
 
 const props = defineProps({
     selected1: {
