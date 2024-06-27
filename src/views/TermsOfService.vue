@@ -46,6 +46,10 @@
 
 <style scoped>
 
+  * {
+      font-family: 'Inter', sans-serif;
+    }
+
   .terms-of-service-body {
     text-align: center;
   }
