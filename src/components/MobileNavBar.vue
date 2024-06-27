@@ -59,6 +59,12 @@ console.log(props.languages)
         </v-btn>
       </v-list-item>
       <v-list-item>
+        <v-btn to="/terms" prepend-icon="mdi-information-outline" variant="text" color="secondary" class="text-none"
+          rounded>
+          {{ language === 'English' ? "Terms of Service" : "Termini di Servizio" }}
+        </v-btn>
+      </v-list-item>
+      <v-list-item>
         <v-spacer></v-spacer>
       </v-list-item>
       <v-list-item>

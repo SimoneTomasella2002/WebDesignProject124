@@ -1,3 +1,13 @@
+<script>
+import { computed } from "vue";
+
+const language = computed(() => {
+    return props.language.language
+})
+
+</script>
+
+
 <template>
   <v-container>
     <v-row justify="center">
@@ -7,7 +17,12 @@
             Termini di Servizio
           </v-card-title>
           <v-card-text class="terms-of-service-body">
-            <div class="text-subtitle-1">Benvenuti su Behind a Passport!</div>
+            <div class="text-subtitle-1">
+              {{ language === 'English'
+                ? "Welcome to Behind a Passport!"
+                : "Benvenuti su Behind a Passport!"
+              }} 
+            </div>
             <p class="terms-of-service-text">Questi termini e condizioni stabiliscono le regole e le normative per l'uso del sito web di Behind a Passport, disponibile all'indirizzo https://behindapassport.life.</p>
             
             <div class="text-subtitle-1">Licenza Open Source</div>
