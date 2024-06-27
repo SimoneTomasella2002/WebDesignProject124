@@ -26,14 +26,14 @@ const language = computed(() => {
 })
 
 // Reactive variable to control dialog visibility
-const isDialogActive = ref(false);
+const isDialogActive = ref(true);
 
 // Open the dialog after 2 seconds when the component is mounted
-onMounted(() => {
-    setTimeout(() => {
-        isDialogActive.value = true;
-    }, 2000);
-});
+// onMounted(() => {
+//     setTimeout(() => {
+//         isDialogActive.value = true;
+//     }, 2000);
+// });
 
 const { mobile } = useDisplay()
 const window = ref(0);
