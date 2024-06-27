@@ -1,5 +1,12 @@
-<script>
+<script setup>
 import { computed } from "vue";
+
+const props = defineProps({
+    language: {
+        type: Object,
+        default: null
+    }
+})
 
 const language = computed(() => {
     return props.language.language
