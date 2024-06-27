@@ -68,7 +68,7 @@ console.log(props.languages)
         <v-spacer></v-spacer>
       </v-list-item>
       <v-list-item>
-        <!-- <Dialog :language="selectedLanguage"/> -->
+        <Dialog :language="selectedLanguage"/>
       </v-list-item>
     </v-list>
   </v-navigation-drawer>

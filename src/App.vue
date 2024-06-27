@@ -8,6 +8,8 @@ import afFlag from "@/assets/images/flags/afghanistan-flag.png";
 import itFlag from "@/assets/images/flags/italian-flag.png";
 import nigeriaFlag from "@/assets/images/flags/nigeria-flag.png";
 import southkoreaFlag from "@/assets/images/flags/southkorea-flag.png";
+import backgroundImage from '@/assets/images/pattern/Pattern_1920x1080.png';
+
 
 const { mobile } = useDisplay()
 
@@ -54,15 +56,6 @@ const updateSelectedLanguage = (value) => {
   console.log("Language has been changed to " + value + " From App.vue")
 }
 
-// // Imposta i valori predefiniti per le due selezioni
-// onMounted(() => {
-//   if (people.value.length > 0) {
-//     selected1.value = people.value[0]
-//     if (people.value.length > 1) {
-//       selected2.value = people.value[1]
-//     }
-//   }
-// })
 </script>
 
 <template>
@@ -72,7 +65,7 @@ const updateSelectedLanguage = (value) => {
       @update:selected2="updateSelected2" 
       @update:selectedLanguage="updateSelectedLanguage" 
     />
-    <v-main :is-mobile="mobile">
+    <v-main :is-mobile="mobile" :style="{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover' }">
       <router-view v-slot="{ Component, route }">
         <transition :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass"
           mode="out-in">
