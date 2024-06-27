@@ -58,8 +58,8 @@ const emitFocus = (value) => {
   align-items: center;
   text-align: left;
   margin: 0;
-  padding: 30px;
-  margin: 20px;
+  padding: 1.563vw;
+  margin: 1.042vw;
   color: rgb(37, 35, 35);
   font-size: 1.2vw;
 }
