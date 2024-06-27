@@ -44,55 +44,34 @@ function imageName(index) {
 </script>
 
 <template>
-    <div class="fixed-background">
-        <v-window class="pa-4 d-flex justify-center align-center" color="background"
-            :touch="{ left: () => swipe('Left'), right: () => swipe('Right') }" role="main">
-            <v-timeline class="mb-4" :side="side" line-color="red" line-thickness="30" density="compact"
-                truncate-line="both">
-                <v-timeline-item line-inset="1" fill-dot dot-color="background" size="45">
-                    <template #icon>
-                        <span class="rounded-lg bg-red w-100 text-center text-h6">
-                            {{ language === 'English' ? 'Age' : 'Età' }}
-                        </span>
-                    </template>
-                </v-timeline-item>
-                <v-timeline-item v-for="story in Stories[name]" :key="story.index" size="65">
-                    <MobileCard :id="story.index"
-                        :description="language === 'English' ? story.description_en : story.description"
-                        :image="images[imageName(story.index)]" :show-text="activeId === story.index"
-                        @update:show-text="updateActiveId" class="d-flex justify-center align-center">
-                    </MobileCard>
+    <v-window class="pa-4 d-flex justify-center align-center" color="background"
+        :style="{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed'}"
+        :touch="{ left: () => swipe('Left'), right: () => swipe('Right') }" role="main">
+        <v-timeline class="mb-4" :side="side" line-color="red" line-thickness="30" density="compact"
+            truncate-line="both">
+            <v-timeline-item line-inset="1" fill-dot dot-color="background" size="45">
+                <template #icon>
+                    <span class="rounded-lg bg-red w-100 text-center text-h6">
+                        {{ language === 'English' ? 'Age' : 'Età' }}
+                    </span>
+                </template>
+            </v-timeline-item>
+            <v-timeline-item v-for="story in Stories[name]" :key="story.index" size="65">
+                <MobileCard :id="story.index"
+                    :description="language === 'English' ? story.description_en : story.description"
+                    :image="images[imageName(story.index)]" :show-text="activeId === story.index"
+                    @update:show-text="updateActiveId" class="d-flex justify-center align-center" </MobileCard>
                     <template #icon>
                         <span class="my-icon rounded-circle bg-red text-center">
                             {{ story.age }}
                         </span>
                     </template>
-                </v-timeline-item>
-            </v-timeline>
-        </v-window>
-    </div>
+            </v-timeline-item>
+        </v-timeline>
+    </v-window>
 </template>
 
 <style scoped>
-.fixed-background {
-    position: relative;
-    z-index: 0;
-}
-
-.fixed-background::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('@/assets/images/pattern/Pattern_1080x1920.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: -1;
-}
-
 .my-icon {
     display: flex;
     align-items: center;
@@ -105,4 +84,3 @@ function imageName(index) {
     border: 3px solid #FFF2DB;
 }
 </style>
-
