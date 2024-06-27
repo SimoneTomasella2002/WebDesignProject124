@@ -3,6 +3,7 @@ import { computed, ref } from 'vue';
 import images from '@/images';
 import Stories from '@/assets/json/stories.json';
 import MobileCard from '@/components/MobileCard.vue';
+import backgroundImage from '@/assets/images/pattern/Pattern_1920x1080_SVG.svg';
 
 const props = defineProps({
     selected1: {
@@ -43,7 +44,7 @@ function imageName(index) {
 </script>
 
 <template>
-    <v-window class="mb-4 d-flex justify-center align-center" color="background"
+    <v-card class="mb-4 d-flex justify-center align-center" color="background" :image="backgroundImage"
         :touch="{ left: () => swipe('Left'), right: () => swipe('Right') }" role="main">
         <v-timeline class="mb-4" :side="side" line-color="red" line-thickness="30" density="compact"
             truncate-line="both">
@@ -68,7 +69,7 @@ function imageName(index) {
                     </template>
             </v-timeline-item>
         </v-timeline>
-    </v-window>
+    </v-card>
 </template>
 
 <style scoped>

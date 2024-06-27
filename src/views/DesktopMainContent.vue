@@ -6,6 +6,7 @@ import StoryBoardCard from '@/components/Timeline/TimeLineItems/StoryBoard.vue';
 import EdgeCard from '@/components/Timeline/TimeLineItems/EdgeCard.vue';
 import images from '@/images';
 import Stories from '@/assets/json/stories.json';
+import backgroundImage from '@/assets/images/pattern/Pattern_1920x1080_SVG.svg';
 
 const props = defineProps({
   selected1: {
@@ -46,7 +47,7 @@ const side = ref('');
 </script>
 
 <template>
-  <v-card color="background" role="main">
+  <v-card color="background" role="main" :image="backgroundImage" >
     <v-row class="mt-4 d-flex justify-center align-center">
       <v-card class="rounded-xl mx-auto d-flex justify-center align-center" width="6vw" color="red">
         <v-card-title class="text-h6 text-md-h5 text-lg-h4" color="red">
