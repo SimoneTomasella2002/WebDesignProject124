@@ -13,8 +13,6 @@
             <div class="text-subtitle-1">Licenza Open Source</div>
             <p class="terms-of-service-text">Il codice sorgente di Behind a Passport è open source e disponibile su GitHub. Utilizziamo le seguenti tecnologie: JavaScript, Vue, Vuetify, ChatGPT, GitHub Copilot, Adobe Firefly, Animate.css, Vue Router.</p>
             
-            <div class="text-subtitle-1">Proprietà Intellettuale</div>
-            <p class="terms-of-service-text">Salvo diversa indicazione, Behind a Passport e/o i suoi licenzianti detengono i diritti di proprietà intellettuale per tutto il materiale su Behind a Passport. Tutti i diritti sono riservati.</p>
             <div class="text-subtitle-1">Non è consentito:</div>
             <ul class="text-list">
               <li>Ripubblicare materiale da Behind a Passport</li>
@@ -22,6 +20,15 @@
               <li>Riprodurre, duplicare o copiare materiale da Behind a Passport</li>
               <li>Ridistribuire contenuti da Behind a Passport</li>
             </ul>
+
+            <div class="text-subtitle-1">Storie e Fonti di Ispirazione</div>
+            <p>Alcune storie presentate su Behind a Passport sono state generate con l'aiuto di ChatGPT e GitHub Copilot. Le fonti e i link da cui ci siamo ispirati per creare queste storie possono essere trovati qui:</p>
+            <p class="terms-of-service-text">https://www.tpi.it/news/joy-albina-africana-italia-20190305266193/</p>
+            <p class="terms-of-service-text">https://iir.gmu.edu/immigrant-stories-dc-baltimore/korea/summary-of-interview-with-korean-immigrant</p>
+            
+            <div class="text-subtitle-1">Font Usato</div>
+            <p class="terms-of-service-text">Il font utilizzato su Behind a Passport è preso da:</p>
+            <p class="terms-of-service-text">https://fonts.google.com/specimen/Inter</p>
             
             <div class="text-subtitle-1">Limitazione di Responsabilità</div>
             <p class="terms-of-service-text">Non garantiamo che le informazioni su questo sito web siano corrette, complete o aggiornate. Non saremo responsabili per eventuali perdite o danni di qualsiasi natura derivanti dall'uso o dall'incapacità di utilizzare il sito web o dal materiale su questo sito.</p>
@@ -35,9 +42,7 @@
             <div class="text-subtitle-1">Generato da ChatGPT</div>
             <p class="terms-of-service-text">Questo testo è stato generato da ChatGPT, un modello di intelligenza artificiale creato da OpenAI.</p>
             
-            <div class="text-subtitle-1">Informazioni di Contatto</div>
-            <p class="terms-of-service-text">Per qualsiasi domanda riguardante i nostri termini di servizio, potete contattarci all'indirizzo email [inserire email di contatto].</p>
-          </v-card-text>
+            </v-card-text>
         </v-card>
       </v-col>
     </v-row>
@@ -46,20 +51,11 @@
 
 <style scoped>
 
-  .terms-of-service-body {
-    text-align: center;
-  }
-
   .terms-of-service-text {
-    display: flex;
-    text-align: center;
-    justify-content: center;
+    max-width: 80%;
   }
 
   .text-subtitle-1 {
-    display: flex;
-    text-align: center;
-    justify-content: center;
 
 
     font-size: 1.2rem;
@@ -68,8 +64,7 @@
   }
 
   .text-list {
-    text-align: center;
-    justify-content: center;
+    margin-left: 1.5rem;
   }
 
 
