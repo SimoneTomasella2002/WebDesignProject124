@@ -48,7 +48,7 @@ const side = ref('');
 
 <template>
   <v-card color="background" role="main"
-    :style="{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }">
+    :style="{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover' }">
     <v-row class="mt-4 d-flex justify-center align-center">
       <v-card class="rounded-xl mx-auto d-flex justify-center align-center" width="6vw" color="red">
         <v-card-title class="text-h6 text-md-h5 text-lg-h4" color="red">

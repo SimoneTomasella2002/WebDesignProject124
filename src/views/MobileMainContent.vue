@@ -44,8 +44,8 @@ function imageName(index) {
 </script>
 
 <template>
-    <v-card class="mb-4 d-flex justify-center align-center" color="background"
-        :style="{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundPosition: 'center' }"
+    <v-card class="pa-4 d-flex justify-center align-center" color="background"
+        :style="{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover'}"
         :touch="{ left: () => swipe('Left'), right: () => swipe('Right') }" role="main">
         <v-timeline class="mb-4" :side="side" line-color="red" line-thickness="30" density="compact"
             truncate-line="both">
