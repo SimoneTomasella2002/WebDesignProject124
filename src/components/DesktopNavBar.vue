@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed , onUpdated } from "vue";
 
 import Dialog from "@/components/Dialog.vue";
 import websiteLogo from "@/assets/images/logopassport.svg";
@@ -37,24 +37,26 @@ const updateSelected2 = (newValue) => {
     emit('update:selected2', newValue)
 }
 
-// WIP
 const updateLanguage = (value) => {
     selectedLanguage.value = value
     emit('update:selectedLanguage', value)
     console.log("Language has been changed to " + value + " From DesktopNavBar.vue")
 }
 
-console.log(props.languages)
+console.log("DesktopNavBar - Selected Language: ", selectedLanguage.value.language)
 
+const language = computed(() => {
+    return selectedLanguage.value.language
+})
 </script>
 
 <template>
     <v-app-bar scroll-behavior="hide" scroll-threshold="100" :height="100" color="primary" role="navigation">
         <v-col cols="2" class="ma-0 pa-2 pa-md-6">
-            <Dialog />
+            <Dialog :language="selectedLanguage"/>
         </v-col>
         <v-col cols="2" align-self="end" class="ma-0 pa-2">
-            <Select :items="items" label="Passport 1" :selected="selected1" @update:selected="updateSelected1" />
+            <Select :items="items" label="Passport 1" :selected="selected1" :language="selectedLanguage" @update:selected="updateSelected1" />
         </v-col>
 
         <v-col align-self="center" cols="4" class="ma-0 pa-0 d-flex justify-center align-center">
@@ -65,18 +67,19 @@ console.log(props.languages)
         </v-col>
 
         <v-col cols="2" align-self="end" class="ma-0 pa-2">
-            <Select :items="items" label="Passport 2" :selected="selected2" @update:selected="updateSelected2" />
+            <Select :items="items" label="Passport 2" :selected="selected2" :language="selectedLanguage" @update:selected="updateSelected2" />
         </v-col>
         
         <v-col cols="1" align-self="center" class="ma-0 pa-0 text-center">
             <v-btn rounded to="/about" variant="text">
-                <v-card-text v-if="selectedLanguage == English" class="ma-0 pa-0 text-center text-secondary">About</v-card-text>
-                <v-card-text v-else class="ma-0 pa-0 text-center text-secondary">Chi siamo</v-card-text>
+                <v-card-text class="ma-0 pa-0 text-center text-secondary">
+                    {{ language === 'English' ? "About" : "Chi siamo" }}
+                </v-card-text>
             </v-btn>
         </v-col>
         
         <v-col cols="1" align-self="center" class="ma-0 pa-0 text-center">
-            <SelectLanguage :languages="languages" label="Language" :selected="selectedLanguage" @update:selected="updateLanguage"/>
+            <SelectLanguage :languages="languages" :selected="selectedLanguage" @update:selected="updateLanguage"/>
         </v-col>
     </v-app-bar>
 </template>

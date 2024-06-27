@@ -18,6 +18,10 @@ const props = defineProps({
         type: Object,
         default: null,
     },
+    language: {
+        type: Object,
+        default: null,
+    },
 })
 
 const emit = defineEmits(['update:selected'])
@@ -33,10 +37,13 @@ const emitSelected = () => {
 }
 
 const density = computed(() => props.isMobile ? 'compact' : 'comfortable')
+
+const language = computed(() => props.language.language)
 </script>
 
 <template>
-    <v-select variant="outlined" :density="density" rounded :items="items" item-title="name" hint="Choose a passport"
+    <v-select variant="outlined" :density="density" rounded :items="items" item-title="name" 
+        :hint=" language === 'English' ? 'Select a Passport' : 'Seleziona un Passaporto' "
         persistent-hint bg-color="background" :label="label" single-line return-object v-model="localSelected"
         @change="emitSelected" hide-selected hide-no-data>
         <template v-slot:selection="{ item }">

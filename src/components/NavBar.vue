@@ -21,6 +21,6 @@ const props = defineProps(
 </script>
 
 <template>
-    <MobileNavBar v-if="props.isMobile" />
+    <MobileNavBar v-if="props.isMobile" :languages="languages" />
     <DesktopNavBar v-else :items="items" :languages="languages"/>
 </template>

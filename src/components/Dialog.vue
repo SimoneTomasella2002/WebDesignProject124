@@ -1,9 +1,29 @@
 <script setup>
 import { useDisplay } from 'vuetify'
-import { ref, onMounted } from 'vue';
-import DialogImage1 from '@/assets/images/dialog/Dialog-Image-1.png';
-import DialogImage2 from '@/assets/images/dialog/Dialog-Image-2.png';
-import DialogImage3 from '@/assets/images/dialog/Dialog-Image-3.png';
+import { ref, onMounted, computed } from 'vue';
+import DialogImageDesktopIta1 from '@/assets/images/dialog/Dialog-Image-1_Desktop_Ita.png';
+import DialogImageDesktopIta2 from '@/assets/images/dialog/Dialog-Image-2_Desktop_Ita.png';
+import DialogImageDesktopIta3 from '@/assets/images/dialog/Dialog-Image-3_Desktop_Ita.png';
+import DialogImageDesktopEng1 from '@/assets/images/dialog/Dialog-Image-1_Desktop_Eng.png';
+import DialogImageDesktopEng2 from '@/assets/images/dialog/Dialog-Image-2_Desktop_Eng.png';
+import DialogImageDesktopEng3 from '@/assets/images/dialog/Dialog-Image-3_Desktop_Eng.png';
+import DialogImageMobileIta1 from '@/assets/images/dialog/Dialog-Image-1_Mobile_Ita.png';
+import DialogImageMobileIta2 from '@/assets/images/dialog/Dialog-Image-2_Mobile_Ita.png';
+import DialogImageMobileIta3 from '@/assets/images/dialog/Dialog-Image-3_Mobile_Ita.png';
+import DialogImageMobileEng1 from '@/assets/images/dialog/Dialog-Image-1_Mobile_Eng.png';
+import DialogImageMobileEng2 from '@/assets/images/dialog/Dialog-Image-2_Mobile_Eng.png';
+import DialogImageMobileEng3 from '@/assets/images/dialog/Dialog-Image-3_Mobile_Eng.png';
+
+const props = defineProps({
+    language: {
+        type: Object,
+        default: null
+    }
+})
+
+const language = computed(() => {
+    return props.language.language
+})
 
 // Reactive variable to control dialog visibility
 const isDialogActive = ref(false);
@@ -19,14 +39,15 @@ const { mobile } = useDisplay()
 const window = ref(0);
 const length = ref(3);
 
+// Needed by v-window component in mobile view
 function getDialogImage(index) {
     switch (index) {
         case 1:
-            return DialogImage1;
+            return language === 'English' ? DialogImageMobileEng1 : DialogImageMobileIta1;
         case 2:
-            return DialogImage2;
+            return language === 'English' ? DialogImageMobileEng2 : DialogImageMobileIta2;
         case 3:
-            return DialogImage3;
+            return language === 'English' ? DialogImageMobileEng3 : DialogImageMobileIta3;
         default:
             return '';
     }
@@ -36,7 +57,7 @@ function getDialogImage(index) {
 
 <script>
 
-// Needed by v-window component
+// Needed by v-window component in mobile view
 export default {
     data() {
         return {
@@ -54,10 +75,10 @@ export default {
             <v-btn variant="text" rounded v-bind="activatorProps" height="60">
                 <div class="d-flex flex-column">
                     <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-secondary font-italic">
-                        How to use
+                        {{ language === 'English' ? 'How to use' : 'Come usare'}}
                     </v-card-text>
                     <v-card-text class="ma-0 pa-0 text-left text-decoration-underline text-secondary font-italic">
-                        this website?
+                        {{ language === 'English' ? 'this website?' : 'questo sito?' }}
                     </v-card-text>
                 </div>
             </v-btn>
@@ -71,15 +92,23 @@ export default {
                 </v-col>
 
                 <v-card-text v-if="mobile" align="center">
-                    <p class="mobile-dialog-title">How the possibilities change based on where you're from?</p>
+                    <p class="mobile-dialog-title">
+                        {{ language === 'English' ? "How the possibilities change based on where you're from?" : "Come cambiano le possibilità in base a dove vivi?" }}
+                    </p>
                 </v-card-text>
                 <v-card-text v-else align="center">
-                    <h1>How the possibilities change based on where you're from?</h1>
+                    <h1>
+                        {{ language === 'English' ? "How the possibilities change based on where you're from?" : "Come cambiano le possibilità in base a dove vivi?" }}
+                    </h1>
                 </v-card-text>
 
                 <v-card-text align="center">
-                    <p>Find out by comparing the stories</p>
-                    <p>that are behind passports</p>
+                    <p>
+                        {{ language === 'English' ? 'Find out by comparing the stories' : 'Scoprilo comparando le storie' }}
+                    </p>
+                    <p>
+                        {{ language === 'English' ? 'that are behind passports' : 'che si celano dietro ai passaporti' }}
+                    </p>
                 </v-card-text>
 
                 <v-window v-if="mobile" v-model="window" show-arrows>
@@ -89,19 +118,20 @@ export default {
                 </v-window>
                 <v-row v-else>
                     <v-col align="right">
-                        <v-img :src="DialogImage1" alt="Placeholder" width="150px"></v-img>
+                        <v-img :src="props.language === 'English' ? DialogImageDesktopEng1 : DialogImageDesktopIta1" alt="Placeholder" width="150px"></v-img>
                     </v-col>
                     <v-col align="center">
-                        <v-img :src="DialogImage2" alt="Placeholder" width="150px"></v-img>
+                        <v-img :src="props.language === 'English' ? DialogImageDesktopEng2 : DialogImageDesktopIta2" alt="Placeholder" width="150px"></v-img>
                     </v-col>
                     <v-col>
-                        <v-img :src="DialogImage3" alt="Placeholder" width="150px"></v-img>
+                        <v-img :src="props.language === 'English' ? DialogImageDesktopEng3 : DialogImageDesktopIta3" alt="Placeholder" width="150px"></v-img>
                     </v-col>
                 </v-row>
 
                 <v-col align="center" class="mt-4 mb-3">
-                    <v-btn text="Ok! I understand" @click="isActive.value = false" color="blue"
-                        class="text-none"></v-btn>
+                    <v-btn @click="isActive.value = false" color="blue" class="text-none">
+                        {{ language === 'English' ? 'Ok! I understand' : 'Ok! Ho capito' }}
+                    </v-btn>
                 </v-col>
             </v-card>
         </template>

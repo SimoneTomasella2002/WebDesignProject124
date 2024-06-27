@@ -12,11 +12,15 @@ const props = defineProps(
             type: Array,
             required: true,
         },
+        language: {
+            type: Object,
+            default: null,
+        }
     }
 )
 </script>
 
 <template>
-    <MobileFooter v-if="props.isMobile" :items="items" :is-mobile="isMobile" role="navigation" />
-    <DesktopFooter v-else role="contentinfo" />
+    <MobileFooter v-if="props.isMobile" :is-mobile="isMobile" :items="items" role="navigation" :language="language" />
+    <DesktopFooter v-else role="contentinfo" :language="language" />
 </template>

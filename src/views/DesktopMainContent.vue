@@ -16,10 +16,15 @@ const props = defineProps({
     type: Object,
     default: null,
   },
+  language: {
+    type: Object,
+    default: null,
+  },
 });
 
-const leftName = computed(() => props.selected1?.name || null);
-const rightName = computed(() => props.selected2?.name || null);
+const leftName = computed(() => props.selected1.name);
+const rightName = computed(() => props.selected2.name);
+const language = computed(() => props.language.language);
 
 function imageName(index, name) {
   return `${name.replace(/-/g, '_')}${index}`;
@@ -44,7 +49,9 @@ const side = ref('');
   <v-card color="background" role="main">
     <v-row class="mt-4 d-flex justify-center align-center">
       <v-card class="rounded-xl mx-auto d-flex justify-center align-center" width="6vw" color="red">
-        <v-card-title class="text-h6 text-md-h5 text-lg-h4" color="red">Età</v-card-title>
+        <v-card-title class="text-h6 text-md-h5 text-lg-h4" color="red">
+          {{ language === 'English' ? "Age" : "Età" }}
+        </v-card-title>
       </v-card>
     </v-row>
     <div class="timeline-wrapper">
@@ -52,8 +59,13 @@ const side = ref('');
         <TimelineRow v-for="(leftStory, index) in Stories[leftName]" :key="leftStory.index"
           :age="parseInt(leftStory.age)" :isFocused="id === index" :side="side">
           <template v-slot:sx-edge-card>
-            <EdgeCard class="elevation-8 rounded-lg" :text="leftStory.description" :id="index" side="left"
-              @update:focus="handleFocus" />
+            <EdgeCard 
+              :text=" language === 'English' ? leftStory.description_en : leftStory.description" 
+              class="elevation-8 rounded-lg" 
+              :id="index" 
+              side="left"
+              @update:focus="handleFocus"
+            />
           </template>
           <template v-slot:sx-story-board>
             <StoryBoardCard class="elevation-8 rounded-lg" :imageSrc="images[imageName(leftStory.index, leftName)]" />
@@ -62,8 +74,12 @@ const side = ref('');
             <StoryBoardCard class="elevation-8 rounded-lg" :imageSrc="images[imageName(index + 1, rightName)]" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard class="elevation-8 rounded-lg" :text="Stories[rightName][index].description" :id="index"
-              side="right" @update:focus="handleFocus" />
+            <EdgeCard 
+              :text=" language === 'English' ? Stories[rightName][index].description_en : Stories[rightName][index].description"
+              class="elevation-8 rounded-lg" 
+              :id="index"
+              side="right" 
+              @update:focus="handleFocus" />
           </template>
         </TimelineRow>
       </Timeline>

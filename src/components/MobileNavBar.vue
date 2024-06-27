@@ -1,9 +1,32 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import Dialog from "@/components/Dialog.vue";
 import websiteLogo from '@/assets/images/logopassport.svg'
+import SelectLanguage from "@/components/SelectLanguage.vue";
+
+const props = defineProps ({
+  languages: {
+    type: Array,
+    required: true
+  }
+})
+
+const emit = defineEmits(['update:selectedLanguage'])
+
+const selectedLanguage = ref(props.languages[0])
+const language = computed(() => {
+  return selectedLanguage.value.language
+})
+
+const updateLanguage = (value) => {
+    selectedLanguage.value = value
+    emit('update:selectedLanguage', value)
+    console.log("Language has been changed to " + value + " From MobileNavBar.vue")
+}
 
 const drawer = ref(false)
+
+console.log(props.languages)
 </script>
 
 <template>
@@ -27,21 +50,19 @@ const drawer = ref(false)
         <v-spacer></v-spacer>
       </v-list-item>
       <v-list-item>
-        <v-btn prepend-icon="mdi-web" variant="text" color="secondary" class="text-none" rounded>
-          Language
-        </v-btn>
+        <SelectLanguage :languages="languages" :selected="selectedLanguage" :is-mobile="true" @update:selected="updateLanguage"/>
       </v-list-item>
       <v-list-item>
         <v-btn to="/about" prepend-icon="mdi-information-outline" variant="text" color="secondary" class="text-none"
           rounded>
-          About
+          {{ language === 'English' ? "About" : "Chi siamo" }}
         </v-btn>
       </v-list-item>
       <v-list-item>
         <v-spacer></v-spacer>
       </v-list-item>
       <v-list-item>
-        <Dialog />
+        <Dialog :language="selectedLanguage"/>
       </v-list-item>
     </v-list>
   </v-navigation-drawer>
