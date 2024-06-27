@@ -6,7 +6,7 @@ import StoryBoardCard from '@/components/Timeline/TimeLineItems/StoryBoard.vue';
 import EdgeCard from '@/components/Timeline/TimeLineItems/EdgeCard.vue';
 import images from '@/images';
 import Stories from '@/assets/json/stories.json';
-import backgroundImage from '@/assets/images/pattern/Pattern_1920x1080_SVG.svg';
+import backgroundImage from '@/assets/images/pattern/Pattern_1920x1080.png';
 
 const props = defineProps({
   selected1: {
@@ -47,7 +47,8 @@ const side = ref('');
 </script>
 
 <template>
-  <v-card color="background" role="main" :image="backgroundImage" >
+  <v-card color="background" role="main"
+    :style="{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }">
     <v-row class="mt-4 d-flex justify-center align-center">
       <v-card class="rounded-xl mx-auto d-flex justify-center align-center" width="6vw" color="red">
         <v-card-title class="text-h6 text-md-h5 text-lg-h4" color="red">
@@ -60,13 +61,8 @@ const side = ref('');
         <TimelineRow v-for="(leftStory, index) in Stories[leftName]" :key="leftStory.index"
           :age="parseInt(leftStory.age)" :isFocused="id === index" :side="side">
           <template v-slot:sx-edge-card>
-            <EdgeCard 
-              :text=" language === 'English' ? leftStory.description_en : leftStory.description" 
-              class="elevation-8 rounded-lg" 
-              :id="index" 
-              side="left"
-              @update:focus="handleFocus"
-            />
+            <EdgeCard :text="language === 'English' ? leftStory.description_en : leftStory.description"
+              class="elevation-8 rounded-lg" :id="index" side="left" @update:focus="handleFocus" />
           </template>
           <template v-slot:sx-story-board>
             <StoryBoardCard class="elevation-8 rounded-lg" :imageSrc="images[imageName(leftStory.index, leftName)]" />
@@ -75,12 +71,9 @@ const side = ref('');
             <StoryBoardCard class="elevation-8 rounded-lg" :imageSrc="images[imageName(index + 1, rightName)]" />
           </template>
           <template v-slot:dx-edge-card>
-            <EdgeCard 
-              :text=" language === 'English' ? Stories[rightName][index].description_en : Stories[rightName][index].description"
-              class="elevation-8 rounded-lg" 
-              :id="index"
-              side="right" 
-              @update:focus="handleFocus" />
+            <EdgeCard
+              :text="language === 'English' ? Stories[rightName][index].description_en : Stories[rightName][index].description"
+              class="elevation-8 rounded-lg" :id="index" side="right" @update:focus="handleFocus" />
           </template>
         </TimelineRow>
       </Timeline>

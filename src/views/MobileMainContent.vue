@@ -3,7 +3,7 @@ import { computed, ref } from 'vue';
 import images from '@/images';
 import Stories from '@/assets/json/stories.json';
 import MobileCard from '@/components/MobileCard.vue';
-import backgroundImage from '@/assets/images/pattern/Pattern_1920x1080_SVG.svg';
+import backgroundImage from '@/assets/images/pattern/Pattern_1920x1080.png';
 
 const props = defineProps({
     selected1: {
@@ -44,7 +44,8 @@ function imageName(index) {
 </script>
 
 <template>
-    <v-card class="mb-4 d-flex justify-center align-center" color="background" :image="backgroundImage"
+    <v-card class="mb-4 d-flex justify-center align-center" color="background"
+        :style="{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundPosition: 'center' }"
         :touch="{ left: () => swipe('Left'), right: () => swipe('Right') }" role="main">
         <v-timeline class="mb-4" :side="side" line-color="red" line-thickness="30" density="compact"
             truncate-line="both">
@@ -56,12 +57,10 @@ function imageName(index) {
                 </template>
             </v-timeline-item>
             <v-timeline-item v-for="story in Stories[name]" :key="story.index" size="65">
-                <MobileCard 
-                    :id="story.index" 
-                    :description="language === 'English' ? story.description_en : story.description" 
-                    :image="images[imageName(story.index)]"
-                    :show-text="activeId === story.index" @update:show-text="updateActiveId"
-                    class="d-flex justify-center align-center" </MobileCard>
+                <MobileCard :id="story.index"
+                    :description="language === 'English' ? story.description_en : story.description"
+                    :image="images[imageName(story.index)]" :show-text="activeId === story.index"
+                    @update:show-text="updateActiveId" class="d-flex justify-center align-center" </MobileCard>
                     <template #icon>
                         <span class="my-icon rounded-circle bg-red text-center">
                             {{ story.age }}
