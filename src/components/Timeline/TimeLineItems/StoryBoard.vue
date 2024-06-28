@@ -1,11 +1,14 @@
 <script setup>
+
 import { ref } from 'vue';
 
 const isDialogActive = ref(false);
+
 </script>
 
+
 <template>
-  <v-dialog v-model="isDialogActive" max-width="900" transition="scale-transition">
+  <v-dialog v-model="isDialogActive" max-width="900 " transition="scale-transition">
     <template v-slot:activator="{ attrs }">
       <div @click="isDialogActive = true" class="story-board-card" v-bind="attrs" style="cursor: pointer">
         <v-img tabindex="0" aria-label="Story Board Card" :src="imageSrc" alt="Story Image" class="story-image" cover>
@@ -14,11 +17,11 @@ const isDialogActive = ref(false);
     </template>
 
     <template v-slot:default="{ isActive }">
-      <div class="story-board-card">
-        <v-img tabindex="0" aria-label="Story Board Card" :src="imageSrc" alt="Story Image" class="story-image" cover>
-        </v-img>
-      </div>
+      <v-img tabindex="0" aria-label="Story Board Card" :src="imageSrc" alt="Story Image" class="story-image" cover>
+      </v-img>
+
     </template>
+
   </v-dialog>
 </template>
 
