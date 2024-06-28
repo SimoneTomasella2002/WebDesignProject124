@@ -1,17 +1,60 @@
-import { openDB } from 'idb';
+// src/indexedDB.js
 
-const dbPromise = openDB('image-store', 1, {
-    upgrade(db) {
-        db.createObjectStore('images');
-    },
-});
+const DB_NAME = 'ImageCache';
+const DB_VERSION = 1;
+const STORE_NAME = 'images';
 
-export async function setImage(key, image) {
-    const db = await dbPromise;
-    await db.put('images', image, key);
-}
+const openDB = () => {
+    return new Promise((resolve, reject) => {
+        const request = indexedDB.open(DB_NAME, DB_VERSION);
 
-export async function getImage(key) {
-    const db = await dbPromise;
-    return await db.get('images', key);
-}
+        request.onupgradeneeded = (event) => {
+            const db = event.target.result;
+            if (!db.objectStoreNames.contains(STORE_NAME)) {
+                db.createObjectStore(STORE_NAME);
+            }
+        };
+
+        request.onsuccess = (event) => {
+            resolve(event.target.result);
+        };
+
+        request.onerror = (event) => {
+            reject(event.target.error);
+        };
+    });
+};
+
+export const setImage = async (name, image) => {
+    const db = await openDB();
+    return new Promise((resolve, reject) => {
+        const transaction = db.transaction([STORE_NAME], 'readwrite');
+        const store = transaction.objectStore(STORE_NAME);
+        const request = store.put(image, name);
+
+        request.onsuccess = () => {
+            resolve();
+        };
+
+        request.onerror = (event) => {
+            reject(event.target.error);
+        };
+    });
+};
+
+export const getImage = async (name) => {
+    const db = await openDB();
+    return new Promise((resolve, reject) => {
+        const transaction = db.transaction([STORE_NAME], 'readonly');
+        const store = transaction.objectStore(STORE_NAME);
+        const request = store.get(name);
+
+        request.onsuccess = (event) => {
+            resolve(event.target.result);
+        };
+
+        request.onerror = (event) => {
+            reject(event.target.error);
+        };
+    });
+};
