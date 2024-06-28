@@ -41,8 +41,8 @@ export default {
     <v-window class="pa-4 d-flex justify-center align-center" color="background"
         :touch="{ left: () => swipe('Left'), right: () => swipe('Right') }" role="main">
         <transition
-            :enter-active-class="`${swipeDirection === 'Right' ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'} animate__fast`"
-            :leave-active-class="`${swipeDirection === 'Right' ? 'animate__animated animate__fadeOutRight' : 'animate__animated animate__fadeOutLeft'} animate__fast`"
+            :enter-active-class="`${swipeDirection === 'Right' ? 'scroll-in-left' : 'scroll-in-right'}`"
+            :leave-active-class="`${swipeDirection === 'Right' ? 'scroll-out-right' : 'scroll-out-left'}`"
             mode="out-in">
             <component :is="swipeDirection === 'Right' ? 'LeftTimeline' : 'RightTimeline'" :key="swipeDirection"
                 :selected1="selected1" :selected2="selected2" :language="language">
@@ -52,7 +52,63 @@ export default {
 </template>
 
 <style scoped>
-.animate__fast {
-    --animate-duration: 0.5s;
+.scroll-in-left {
+    animation: scroll-in-left 0.5s forwards;
+}
+
+.scroll-in-right {
+    animation: scroll-in-right 0.5s forwards;
+}
+
+.scroll-out-left {
+    animation: scroll-out-left 0.5s forwards;
+}
+
+.scroll-out-right {
+    animation: scroll-out-right 0.5s forwards;
+}
+
+@keyframes scroll-in-left {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scroll-in-right {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scroll-out-left {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes scroll-out-right {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
 }
 </style>
