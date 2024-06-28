@@ -49,7 +49,7 @@ const side = ref('');
   <v-card variant="text" role="main">
     <v-row class="mt-4 d-flex justify-center align-center">
       <v-card class="rounded-xl mx-auto d-flex justify-center align-center" width="6vw" color="red">
-        <v-card-title class="text-h6 text-md-h5 text-lg-h4" color="red">
+        <v-card-title class="text-h6 text-md-h5 text-lg-h4 text-timelineNumbers" >
           {{ language === 'English' ? "Age" : "Età" }}
         </v-card-title>
       </v-card>

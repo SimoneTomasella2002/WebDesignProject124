@@ -48,7 +48,7 @@ function imageName(index, name) {
                 density="compact" truncate-line="both">
                 <v-timeline-item line-inset="1" fill-dot dot-color="background" size="45">
                     <template #icon>
-                        <span class="rounded-lg bg-red w-100 text-center text-h6">
+                        <span class="rounded-lg bg-red w-100 text-center text-h6 text-timelineNumbers">
                             {{ language === 'English' ? 'Age' : 'Età' }}
                         </span>
                     </template>
@@ -59,7 +59,7 @@ function imageName(index, name) {
                         :image="images[imageName(story.index, leftName)]" :show-text="activeId === story.index"
                         @update:show-text="updateActiveId" class="d-flex justify-center align-center" />
                     <template #icon>
-                        <span class="my-icon rounded-circle bg-red text-center">
+                        <span class="my-icon rounded-circle bg-red text-center text-timelineNumbers">
                             {{ story.age }}
                         </span>
                     </template>
