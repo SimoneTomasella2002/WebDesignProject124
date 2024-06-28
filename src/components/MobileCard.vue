@@ -67,4 +67,10 @@ const handleUpdate = () => {
     justify-content: center;
     align-items: center;
 }
+
+.story-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 </style>
