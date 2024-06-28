@@ -15,14 +15,12 @@ const handleUpdate = () => {
 
 <template>
     <div class="card-wrapper">
-        <v-card class="rounded-xl overflow-hidden bg-primary flip-card" :class="{ 'is-flipped': showText }"
+        <v-card class="ma-0 pa-0 rounded-xl overflow-hidden bg-primary flip-card" :class="{ 'is-flipped': showText }"
             elevation="5" @click="handleUpdate">
-            <v-card-item class="ma-0 pa-0 rounded-xl">
                 <div class="card-front" v-show="!showText">
-                    <v-card-text class="ma-0 pa-0 d-flex justify-center align-center rounded-xl">
-                        <v-img class="ma-0 pa-0" :src="image" alt="Story Image" width="100%" height="100%"></v-img>
-                    </v-card-text>
+                        <v-img class="ma-0 pa-0" cover :src="image" alt="Story Image" width="100%" height="100%"></v-img>
                 </div>
+            <v-card-item class="ma-0 pa-0 rounded-xl">
                 <v-card-text class="card-back" v-show="showText" style="height: 30.608vh; width: 70vw;">
                     {{ description }}
                 </v-card-text>
@@ -68,9 +66,7 @@ const handleUpdate = () => {
     align-items: center;
 }
 
-.story-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
+
+
 </style>
