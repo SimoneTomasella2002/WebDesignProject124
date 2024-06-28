@@ -10,7 +10,7 @@
         <v-timeline-item v-for="story in Stories[leftName]" :key="story.index" size="65">
             <MobileCard :id="story.index"
                 :description="language === 'English' ? story.description_en : story.description"
-                :image="images[imageName(story.index, leftName)]" :show-text="activeId === story.index"
+                :image="imageCache[story.index]" :show-text="activeId === story.index"
                 @update:show-text="updateActiveId" class="d-flex justify-center align-center" />
             <template #icon>
                 <span class="my-icon rounded-circle bg-red text-center text-timelineNumbers">
@@ -22,10 +22,11 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, ref, watch, onMounted } from 'vue';
 import images from '@/images';
 import Stories from '@/assets/json/stories.json';
 import MobileCard from '@/components/MobileCard.vue';
+import { setImage, getImage } from '@/indexedDB';
 
 const props = defineProps({
     selected1: {
@@ -51,9 +52,31 @@ const updateActiveId = (id) => {
     activeId.value == id ? activeId.value = 0 : activeId.value = id;
 }
 
-function imageName(index, name) {
-    return `${name.replace(/-/g, '_')}${index}`;
-}
+const imageCache = ref({});
+
+const fetchImage = async (index, name) => {
+    const imageName = `${name.replace(/-/g, '_')}${index}`;
+    const cachedImage = await getImage(imageName);
+    if (cachedImage) {
+        imageCache.value = { ...imageCache.value, [index]: cachedImage };
+    } else {
+        const imageUrl = images[imageName];
+        imageCache.value = { ...imageCache.value, [index]: imageUrl };
+        await setImage(imageName, imageUrl);
+    }
+};
+
+watch(leftName, (newLeftName) => {
+    Stories[newLeftName].forEach(story => {
+        fetchImage(story.index, newLeftName);
+    });
+});
+
+onMounted(() => {
+    Stories[leftName.value].forEach(story => {
+        fetchImage(story.index, leftName.value);
+    });
+});
 </script>
 
 <style scoped>
