@@ -39,7 +39,7 @@ const props = defineProps({
     language: {
         type: Object,
         default: null,
-    },
+    }
 });
 
 const leftName = computed(() => props.selected1.name);
@@ -48,8 +48,8 @@ const language = computed(() => props.language.language);
 const activeId = ref(0);
 
 const updateActiveId = (id) => {
-    activeId.value === id ? activeId.value = 0 : activeId.value = id;
-};
+    activeId.value == id ? activeId.value = 0 : activeId.value = id;
+}
 
 function imageName(index, name) {
     return `${name.replace(/-/g, '_')}${index}`;
