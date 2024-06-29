@@ -70,12 +70,13 @@ const language = computed(() => {
             </p>
             <p class="terms-of-service-text">https://www.tpi.it/news/joy-albina-africana-italia-20190305266193/</p>
             <p class="terms-of-service-text">https://iir.gmu.edu/immigrant-stories-dc-baltimore/korea/summary-of-interview-with-korean-immigrant</p>
+            <p class="terms-of-service-text">nytimes.com/2015/08/02/fashion/a-kiss-deferred-by-bosnia-and-herzegovina-civil-war.html?_r=0</p>
             <div class="text-subtitle-1">
               {{ language === 'English' ? "Font Used" : "Font Usato" }}
             </div>
             <p class="terms-of-service-text">
               {{ language === 'English' ? "The font used on Behind a Passport is taken from:" : "Il font utilizzato su Behind a Passport è preso da:" }}
-            :</p>
+            </p>
             <p class="terms-of-service-text">https://fonts.google.com/specimen/Inter</p>
             <div class="text-subtitle-1">
               {{ language === 'English' ? "Limitation of Liability" : "Limitazione di Responsabilità" }}
@@ -123,7 +124,9 @@ const language = computed(() => {
     }
 
   .terms-of-service-body {
-    text-align: center;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .terms-of-service-text {
