@@ -1,114 +1,85 @@
-<script>
-import { ref } from 'vue';
+<script setup>
+import { computed, ref } from 'vue';
+import images from '@/images';
+import Stories from '@/assets/json/stories.json';
+import MobileCard from '@/components/MobileCard.vue';
 import LeftTimeline from '@/components/Timeline/LeftTimeline.vue';
 import RightTimeline from '@/components/Timeline/RightTimeline.vue';
 
-export default {
-    components: {
-        LeftTimeline,
-        RightTimeline
+const props = defineProps({
+    selected1: {
+        type: Object,
+        default: null,
     },
-    props: {
-        selected1: {
-            type: Object,
-            default: null,
-        },
-        selected2: {
-            type: Object,
-            default: null,
-        },
-        language: {
-            type: Object,
-            default: null,
-        }
+    selected2: {
+        type: Object,
+        default: null,
     },
-    setup() {
-        const swipeDirection = ref('Right');
-
-        const swipe = (direction) => {
-            swipeDirection.value = direction;
-        };
-
-        return {
-            swipeDirection,
-            swipe
-        };
+    language: {
+        type: Object,
+        default: null,
     }
-};
+});
+
+const leftName = computed(() => props.selected1.name);
+const rightName = computed(() => props.selected2.name);
+const language = computed(() => props.language.language);
+
+const activeId = ref(0);
+
+const updateActiveId = (id) => {
+    activeId.value == id ? activeId.value = 0 : activeId.value = id;
+}
+
+const swipeDirection = ref('Right'); // Right => passport 1, Left => passport 2
+
+const swipe = (direction) => {
+    swipeDirection.value = direction;
+}
+
+function imageName(index, name) {
+    return `${name.replace(/-/g, '_')}${index}`;
+}
 </script>
 
 <template>
     <v-window class="pa-4 d-flex justify-center align-center" color="background"
         :touch="{ left: () => swipe('Left'), right: () => swipe('Right') }" role="main">
-        <transition
-            :enter-active-class="`${swipeDirection === 'Right' ? 'scroll-in-left' : 'scroll-in-right'}`"
-            :leave-active-class="`${swipeDirection === 'Right' ? 'scroll-out-right' : 'scroll-out-left'}`"
-            mode="out-in">
-            <component :is="swipeDirection === 'Right' ? 'LeftTimeline' : 'RightTimeline'" :key="swipeDirection"
-                :selected1="selected1" :selected2="selected2" :language="language">
-            </component>
-        </transition>
+        <LeftTimeline v-show="swipeDirection === 'Right'"  :selected1="props.selected1" :selected2="props.selected2" :language="props.language" />
+        <RightTimeline v-show="swipeDirection === 'Left'" :selected1="props.selected1" :selected2="props.selected2" :language="props.language" />
     </v-window>
 </template>
 
+
 <style scoped>
-.scroll-in-left {
-    animation: scroll-in-left 0.5s forwards;
+.my-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 3px solid #FFF2DB;
 }
 
-.scroll-in-right {
-    animation: scroll-in-right 0.5s forwards;
+.scroll-left-enter-active,
+.scroll-left-leave-active,
+.scroll-right-enter-active,
+.scroll-right-leave-active {
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.scroll-out-left {
-    animation: scroll-out-left 0.5s forwards;
+.scroll-left-enter,
+.scroll-right-leave-to {
+    transform: translateX(100%);
+    opacity: 0;
 }
 
-.scroll-out-right {
-    animation: scroll-out-right 0.5s forwards;
-}
-
-@keyframes scroll-in-left {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes scroll-in-right {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes scroll-out-left {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-}
-
-@keyframes scroll-out-right {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(100%);
-        opacity: 0;
-    }
+.scroll-left-leave-to,
+.scroll-right-enter {
+    transform: translateX(-100%);
+    opacity: 0;
 }
 </style>
