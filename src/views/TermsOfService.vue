@@ -50,7 +50,7 @@ const language = computed(() => {
                 {{ language === 'English' ? "Reproduce material from Behind a Passport" : "Ripubblicare materiale da Behind a Passport" }}
               </li>
               <li>
-                {{ language === 'English' ? "Sellm rent or sub-license material from Behind a Passport" : "Vendere, affittare o concedere in sublicenza materiale da Behind a Passport" }}
+                {{ language === 'English' ? "Sell, rent or sub-license material from Behind a Passport" : "Vendere, affittare o concedere in sublicenza materiale da Behind a Passport" }}
               </li>
               <li>
                 {{ language === 'English' ? "Reproduce, duplicate, or copy material from Behind a Passport" : "Riprodurre, duplicare o copiare materiale da Behind a Passport" }}
