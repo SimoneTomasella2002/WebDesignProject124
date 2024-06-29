@@ -130,7 +130,7 @@ const language = computed(() => {
   }
 
   .terms-of-service-text {
-    max-width: 80%;
+    max-width: 100%;
   }
 
   .text-subtitle-1 {
