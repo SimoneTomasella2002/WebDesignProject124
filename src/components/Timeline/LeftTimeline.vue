@@ -10,7 +10,7 @@
         <v-timeline-item v-for="story in Stories[leftName]" :key="story.index" size="65">
             <MobileCard :id="story.index"
                 :description="language === 'English' ? story.description_en : story.description"
-                :image="images[imageName(story.index, leftName)]" :show-text="activeId === story.index"
+                :image="leftImages[story.index - 1]" :show-text="activeId === story.index"
                 @update:show-text="updateActiveId" class="d-flex justify-center align-center" />
             <template #icon>
                 <span class="my-icon rounded-circle bg-red text-center text-timelineNumbers">
@@ -22,10 +22,18 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue';
-import images from '@/images';
+import { computed, ref, watch } from 'vue';
 import Stories from '@/assets/json/stories.json';
 import MobileCard from '@/components/MobileCard.vue';
+
+import { useStore } from '@/store';
+import { storeToRefs } from 'pinia';
+
+const store = useStore();
+
+const { leftImages } = storeToRefs(store);
+
+const { changeLeftImages } = store;
 
 const props = defineProps({
     selected1: {
@@ -45,14 +53,15 @@ const props = defineProps({
 const leftName = computed(() => props.selected1.name);
 const language = computed(() => props.language.language);
 
+watch( leftName, (newLeftName) => {
+    console.log('newLeftName', newLeftName);
+    changeLeftImages(newLeftName);
+});
+
 const activeId = ref(0);
 
 const updateActiveId = (id) => {
     activeId.value == id ? activeId.value = 0 : activeId.value = id;
-}
-
-function imageName(index, name) {
-    return `${name.replace(/-/g, '_')}${index}`;
 }
 </script>
 
