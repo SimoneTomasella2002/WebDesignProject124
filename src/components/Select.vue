@@ -43,7 +43,7 @@ const language = computed(() => props.language.language)
 
 <template>
     <v-select variant="outlined" :density="density" rounded :items="items" item-title="name" 
-        :hint=" language === 'English' ? 'Select a Passport' : 'Seleziona un Passaporto' "
+        :hint="!isMobile ? (language === 'English' ? 'Select a Passport' : 'Seleziona un Passaporto') : '' "
         persistent-hint bg-color="background" :label="label" single-line return-object v-model="localSelected"
         @change="emitSelected" hide-selected hide-no-data>
         <template v-slot:selection="{ item }">
