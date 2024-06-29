@@ -10,7 +10,7 @@
         <v-timeline-item v-for="story in Stories[leftName]" :key="story.index" size="65">
             <MobileCard :id="story.index"
                 :description="language === 'English' ? story.description_en : story.description"
-                :image="leftImages[story.index - 1]" :show-text="activeId === story.index"
+                :image="getImage(story.index, leftName)" :show-text="activeId === story.index"
                 @update:show-text="updateActiveId" class="d-flex justify-center align-center" />
             <template #icon>
                 <span class="my-icon rounded-circle bg-red text-center text-timelineNumbers">
@@ -22,18 +22,10 @@
 </template>
 
 <script setup>
-import { computed, ref, watch } from 'vue';
+import { computed, ref } from 'vue';
+import images from '@/images';
 import Stories from '@/assets/json/stories.json';
 import MobileCard from '@/components/MobileCard.vue';
-
-import { useStore } from '@/store';
-import { storeToRefs } from 'pinia';
-
-const store = useStore();
-
-const { leftImages } = storeToRefs(store);
-
-const { changeLeftImages } = store;
 
 const props = defineProps({
     selected1: {
@@ -47,21 +39,40 @@ const props = defineProps({
     language: {
         type: Object,
         default: null,
-    }
+    },
 });
 
 const leftName = computed(() => props.selected1.name);
 const language = computed(() => props.language.language);
 
-watch( leftName, (newLeftName) => {
-    console.log('newLeftName', newLeftName);
-    changeLeftImages(newLeftName);
-});
-
 const activeId = ref(0);
 
 const updateActiveId = (id) => {
-    activeId.value == id ? activeId.value = 0 : activeId.value = id;
+    activeId.value === id ? activeId.value = 0 : activeId.value = id;
+};
+
+function imageName(index, name) {
+    return `${name.replace(/-/g, '_')}${index}`;
+}
+
+function saveImageToLocalStorage(key, image) {
+    localStorage.setItem(key, image);
+}
+
+function loadImageFromLocalStorage(key) {
+    return localStorage.getItem(key);
+}
+
+function getImage(index, name) {
+    const key = imageName(index, name);
+    let image = loadImageFromLocalStorage(key);
+
+    if (!image) {
+        image = images[key];  // Supponiamo che le immagini siano caricate qui
+        saveImageToLocalStorage(key, image);
+    }
+
+    return image;
 }
 </script>
 

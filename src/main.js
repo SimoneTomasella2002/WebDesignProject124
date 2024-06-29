@@ -1,7 +1,6 @@
 import "@mdi/font/css/materialdesignicons.css";
 import "./assets/style/main.css";
 import { createApp } from "vue";
-import { createPinia } from "pinia";
 
 // Vuetify
 import "vuetify/styles";
@@ -98,7 +97,5 @@ const vuetify = createVuetify({
   },
 });
 
-const pinia = createPinia();
-
 // Crea e monta l'applicazione Vue
-createApp(App).use(vuetify).use(pinia).use(Router).mount("#app");
+createApp(App).use(vuetify).use(Router).mount("#app");
