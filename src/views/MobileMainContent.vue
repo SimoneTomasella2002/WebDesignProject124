@@ -1,10 +1,8 @@
 <script setup>
-import { computed, ref } from 'vue';
-import images from '@/images';
-import Stories from '@/assets/json/stories.json';
-import MobileCard from '@/components/MobileCard.vue';
+import { ref } from 'vue';
 import LeftTimeline from '@/components/Timeline/LeftTimeline.vue';
 import RightTimeline from '@/components/Timeline/RightTimeline.vue';
+import 'animate.css';
 
 const props = defineProps({
     selected1: {
@@ -21,35 +19,25 @@ const props = defineProps({
     }
 });
 
-const leftName = computed(() => props.selected1.name);
-const rightName = computed(() => props.selected2.name);
-const language = computed(() => props.language.language);
-
-const activeId = ref(0);
-
-const updateActiveId = (id) => {
-    activeId.value == id ? activeId.value = 0 : activeId.value = id;
-}
-
 const swipeDirection = ref('Right'); // Right => passport 1, Left => passport 2
 
 const swipe = (direction) => {
     swipeDirection.value = direction;
 }
-
-function imageName(index, name) {
-    return `${name.replace(/-/g, '_')}${index}`;
-}
 </script>
 
 <template>
-    <v-window class="pa-4 d-flex justify-center align-center" color="background"
+    <v-window class="pa-4 d-flex justify-center align-center w-100" color="background"
         :touch="{ left: () => swipe('Left'), right: () => swipe('Right') }" role="main">
-        <LeftTimeline v-show="swipeDirection === 'Right'"  :selected1="props.selected1" :selected2="props.selected2" :language="props.language" />
-        <RightTimeline v-show="swipeDirection === 'Left'" :selected1="props.selected1" :selected2="props.selected2" :language="props.language" />
+        <transition
+            :enter-active-class="`${swipeDirection === 'Right' ? 'animate__animated animate__fadeInLeft' : 'animate__animated animate__fadeInRight'} animate__fast`"
+            :leave-active-class="`${swipeDirection === 'Right' ? 'animate__animated animate__fadeOutRight' : 'animate__animated animate__fadeOutLeft'} animate__fast`"
+            mode="out-in">
+            <component :is="swipeDirection === 'Right' ? LeftTimeline : RightTimeline"
+                       :selected1="props.selected1" :selected2="props.selected2" :language="props.language" />
+        </transition>
     </v-window>
 </template>
-
 
 <style scoped>
 .my-icon {
@@ -64,22 +52,7 @@ function imageName(index, name) {
     border: 3px solid #FFF2DB;
 }
 
-.scroll-left-enter-active,
-.scroll-left-leave-active,
-.scroll-right-enter-active,
-.scroll-right-leave-active {
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.scroll-left-enter,
-.scroll-right-leave-to {
-    transform: translateX(100%);
-    opacity: 0;
-}
-
-.scroll-left-leave-to,
-.scroll-right-enter {
-    transform: translateX(-100%);
-    opacity: 0;
+.animate__fast {
+    --animate-duration: 0.5s;
 }
 </style>
