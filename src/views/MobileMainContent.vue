@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import LeftTimeline from '@/components/Timeline/LeftTimeline.vue';
 import RightTimeline from '@/components/Timeline/RightTimeline.vue';
+import 'animate.css';
 
 const props = defineProps({
     selected1: {
@@ -28,13 +29,15 @@ const swipe = (direction) => {
 <template>
     <v-window class="pa-4 d-flex justify-center align-center w-100" color="background"
         :touch="{ left: () => swipe('Left'), right: () => swipe('Right') }" role="main">
-        <LeftTimeline v-show="swipeDirection === 'Right'" :selected1="props.selected1" :selected2="props.selected2"
-            :language="props.language" />
-        <RightTimeline v-show="swipeDirection === 'Left'" :selected1="props.selected1" :selected2="props.selected2"
-            :language="props.language" />
+        <transition
+            :enter-active-class="swipeDirection === 'Left' ? 'animate__animated animate__fadeInRight animate__fast' : 'animate__animated animate__fadeInLeft animate__fast'"
+            :leave-active-class="swipeDirection === 'Left' ? 'animate__animated animate__fadeOutLeft animate__fast' : 'animate__animated animate__fadeOutRight animate__fast'"
+            mode="out-in">
+            <component :is="swipeDirection === 'Right' ? LeftTimeline : RightTimeline"
+                :selected1="props.selected1" :selected2="props.selected2" :language="props.language" />
+        </transition>
     </v-window>
 </template>
-
 
 <style scoped>
 .my-icon {
