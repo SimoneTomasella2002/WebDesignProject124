@@ -29,12 +29,13 @@ const swipe = (direction) => {
     <v-window class="pa-4 d-flex justify-center align-center w-100" color="background"
         :touch="{ left: () => swipe('Left'), right: () => swipe('Right') }" role="main">
         <LeftTimeline v-show="swipeDirection === 'Right'" :selected1="props.selected1" :selected2="props.selected2"
-            :language="props.language" />
+            :language="props.language"
+            :class="{ 'move-left': swipeDirection === 'Left', 'move-right': swipeDirection === 'Right' }" />
         <RightTimeline v-show="swipeDirection === 'Left'" :selected1="props.selected1" :selected2="props.selected2"
-            :language="props.language" />
+            :language="props.language"
+            :class="{ 'move-left': swipeDirection === 'Left', 'move-right': swipeDirection === 'Right' }" />
     </v-window>
 </template>
-
 
 <style scoped>
 .my-icon {
