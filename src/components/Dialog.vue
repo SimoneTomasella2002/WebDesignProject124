@@ -43,11 +43,11 @@ const length = ref(3);
 function getDialogImage(index) {
     switch (index) {
         case 1:
-            return language === 'English' ? DialogImageMobileEng1 : DialogImageMobileIta1;
+            return language.value === 'English' ? DialogImageMobileEng1 : DialogImageMobileIta1;
         case 2:
-            return language === 'English' ? DialogImageMobileEng2 : DialogImageMobileIta2;
+            return language.value === 'English' ? DialogImageMobileEng2 : DialogImageMobileIta2;
         case 3:
-            return language === 'English' ? DialogImageMobileEng3 : DialogImageMobileIta3;
+            return language.value === 'English' ? DialogImageMobileEng3 : DialogImageMobileIta3;
         default:
             return '';
     }
@@ -118,13 +118,13 @@ export default {
                 </v-window>
                 <v-row v-else>
                     <v-col align="right">
-                        <v-img :src="props.language === 'English' ? DialogImageDesktopEng1 : DialogImageDesktopIta1" alt="Placeholder" width="150px"></v-img>
+                        <v-img :src="language === 'English' ? DialogImageDesktopEng1 : DialogImageDesktopIta1" alt="Placeholder" width="150px"></v-img>
                     </v-col>
                     <v-col align="center">
-                        <v-img :src="props.language === 'English' ? DialogImageDesktopEng2 : DialogImageDesktopIta2" alt="Placeholder" width="150px"></v-img>
+                        <v-img :src="language === 'English' ? DialogImageDesktopEng2 : DialogImageDesktopIta2" alt="Placeholder" width="150px"></v-img>
                     </v-col>
                     <v-col>
-                        <v-img :src="props.language === 'English' ? DialogImageDesktopEng3 : DialogImageDesktopIta3" alt="Placeholder" width="150px"></v-img>
+                        <v-img :src="language === 'English' ? DialogImageDesktopEng3 : DialogImageDesktopIta3" alt="Placeholder" width="150px"></v-img>
                     </v-col>
                 </v-row>
 
