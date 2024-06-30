@@ -22,6 +22,13 @@ const routes = [
       leaveClass: 'animate__animated animate__fadeOutLeft'
     }
   },
+  {
+    path: "/test", name: "Test", component: () => import("@/views/Test.vue"),
+    meta: { 
+      enterClass: 'animate__animated animate__fadeInRight',
+      leaveClass: 'animate__animated animate__fadeOutLeft'
+    }
+  }
 ];
 
 const router = createRouter({
