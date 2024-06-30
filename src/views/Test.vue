@@ -36,5 +36,6 @@ import background from '@/assets/images/pattern/Pattern_1920x1080.png';
 <style scoped>
 .container {
     background-image: url(${background});
+    background-attachment: fixed;
 }
 </style>
