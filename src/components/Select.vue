@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, computed, nextTick, onMounted, onUpdated } from 'vue'
+import { ref, watch, computed, nextTick, onMounted } from 'vue'
 
 const props = defineProps({
     isMobile: {
@@ -55,10 +55,6 @@ const checkOverflow = () => {
 }
 
 onMounted(() => {
-    checkOverflow()
-})
-
-onUpdated(() => {
     checkOverflow()
 })
 </script>
