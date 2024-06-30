@@ -88,17 +88,14 @@ onBeforeUnmount(() => {
 
 .sx-side {
   justify-content: flex-end;
-  /* Align items to the right */
 }
 
 .dx-side {
   justify-content: flex-start;
-  /* Align items to the left */
 }
 
 .story-board {
   margin: 0 5.208vw;
-  /* modifica l'elemento di sinistra per cambiare il gap */
   border-radius: 8px;
 }
 
@@ -107,38 +104,52 @@ onBeforeUnmount(() => {
   position: absolute;
   z-index: 1;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   padding: 0;
   margin: 0;
 }
 
 
+.dx-edge-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0vw; /* NON CANCELLARE */
+  right: -100vw;
+  background-color: transparent;
+  z-index: -1; 
+}
+
+.sx-edge-card::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100vw;
+  right: 0vw; /* NON CANCELLARE */
+  background-color: transparent;
+  z-index: -1; 
+}
 
 .sx-edge-card {
   transform: translateX(-18vw);
   left: 0;
-
-
 }
 
 .dx-edge-card {
   transform: translateX(18vw);
   right: 0;
-
 }
 
 .sx-edge-card:hover,
 .sx-edge-card-focus {
   transform: translateX(1.563vw);
-  padding-left: 100px;
-
 }
 
 .dx-edge-card:hover,
 .dx-edge-card-focus {
   transform: translateX(-1.563vw);
-  padding-right: 100px;
-
 }
 
 .age-indicator {
