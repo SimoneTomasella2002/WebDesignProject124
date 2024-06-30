@@ -74,6 +74,7 @@ const mobileBackground = reactive({
 const iphoneBackground = reactive({
   backgroundImage: `url(${patternBackgroundImage})`,
   backgroundRepeat: 'repeat',
+  backgroundAttachment: 'fixed',
   backgroundSize: '15rem'
 })
 
