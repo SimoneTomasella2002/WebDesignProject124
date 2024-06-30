@@ -10,6 +10,7 @@ import nigeriaFlag from "@/assets/images/flags/nigeria-flag.png";
 import southkoreaFlag from "@/assets/images/flags/southkorea-flag.png";
 import desktopBackgroundImage from '@/assets/images/pattern/Pattern_1920x1080.png';
 import mobileBackgroundImage from '@/assets/images/pattern/Pattern_1080x1920.png';
+import patternBackgroundImage from '@/assets/images/pattern/Pattern.svg';
 
 const { mobile } = useDisplay()
 
@@ -71,9 +72,9 @@ const mobileBackground = reactive({
 })
 
 const iphoneBackground = reactive({
-  backgroundImage: `url(${mobileBackgroundImage})`,
+  backgroundImage: `url(${patternBackgroundImage})`,
   backgroundRepeat: 'repeat',
-  backgroundSize: 'contain'
+  backgroundSize: '15rem'
 })
 
 // Function to check if the device is an iPhone
