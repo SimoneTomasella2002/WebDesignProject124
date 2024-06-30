@@ -41,7 +41,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <v-window class="pa-4 d-flex justify-center align-center w-100" color="background"
+    <v-window class="py-4" color="background"
         :touch="{ left: () => swipe('Left'), right: () => swipe('Right') }" role="main">
         <transition
             :enter-active-class="swipeDirection === 'Left' ? 'animate__animated animate__fadeInRight animate__fast' : 'animate__animated animate__fadeInLeft animate__fast'"
@@ -54,18 +54,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.my-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 65px;
-    height: 65px;
-    line-height: 65px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border: 3px solid #FFF2DB;
-}
-
 .animate__fast {
     --animate-duration: 0.5s;
 }

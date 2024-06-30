@@ -1,5 +1,5 @@
 <template>
-    <v-timeline class="mt-2 mb-4" side="end" line-color="red" line-thickness="30" density="compact" truncate-line="both">
+    <v-timeline class="mb-4" side="end" line-color="red" line-thickness="30" density="compact" truncate-line="both">
         <v-timeline-item line-inset="1" fill-dot dot-color="background" size="45">
             <template #icon>
                 <span class="rounded-lg bg-red w-100 text-center text-h6 text-timelineNumbers">
