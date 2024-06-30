@@ -36,8 +36,8 @@ console.log(props.languages)
     </v-col>
     <v-col align-self="center" cols="6">
       <v-toolbar-title class="d-flex justify-center align-center">
-        <RouterLink to="/">
-          <v-img :src="websiteLogo" alt="Logo for the website" width="50vw" height="6vh"></v-img>
+        <RouterLink to="/" class="d-flex justify-center align-center">
+          <img :src="websiteLogo" alt="Logo for the website" width="140vw"></img>
         </RouterLink>
       </v-toolbar-title>
     </v-col>

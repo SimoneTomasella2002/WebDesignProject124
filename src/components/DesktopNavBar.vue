@@ -1,10 +1,13 @@
 <script setup>
-import { ref, computed , onUpdated } from "vue";
+import { ref, computed } from "vue";
+import { useDisplay } from "vuetify";
 
 import Dialog from "@/components/Dialog.vue";
 import websiteLogo from "@/assets/images/logopassport.svg";
 import Select from "@/components/Select.vue";
 import SelectLanguage from "@/components/SelectLanguage.vue";
+
+const { name } = useDisplay();
 
 function scrollToTheTop() {
     window.scrollTo(0, 0);
@@ -48,6 +51,14 @@ console.log("DesktopNavBar - Selected Language: ", selectedLanguage.value.langua
 const language = computed(() => {
     return selectedLanguage.value.language
 })
+
+const width = computed(() => {
+    switch(name.value){
+        case 'md': return '170vw'
+        case 'lg': return '230vw'
+        case 'xl': return '290vw'
+    }
+})
 </script>
 
 <template>
@@ -59,10 +70,9 @@ const language = computed(() => {
             <Select :items="items" label="Passport 1" :selected="selected1" :language="selectedLanguage" @update:selected="updateSelected1" />
         </v-col>
 
-        <v-col align-self="center" cols="4" class="ma-0 pa-0 d-flex justify-center align-center">
-            <router-link to="/">
-                <img :src='websiteLogo' @click="scrollToTheTop" alt="Logo for the website"
-                    style="width: 18vw; height: 9vh; display: flex; justify-content: center; align-content: center;"></img>
+        <v-col align-self="center" cols="4" class="d-flex justify-center align-center">
+            <router-link to="/" class="d-flex justify-center align-center">
+                <img :src='websiteLogo' @click="scrollToTheTop" alt="Logo for the website" :width="width"></img>
             </router-link>
         </v-col>
 
