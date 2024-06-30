@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import LeftTimeline from '@/components/Timeline/LeftTimeline.vue';
 import RightTimeline from '@/components/Timeline/RightTimeline.vue';
 
@@ -23,6 +23,21 @@ const swipeDirection = ref('Right'); // Right => passport 1, Left => passport 2
 const swipe = (direction) => {
     swipeDirection.value = direction;
 }
+
+// Function to clear the local storage only the first time
+function clearLocalStorageOnce() {
+    const isCleared = localStorage.getItem('isLocalStorageCleared');
+
+    if (!isCleared) {
+        localStorage.clear();
+        localStorage.setItem('isLocalStorageCleared', 'true');
+    }
+}
+
+// Call clearLocalStorageOnce when the component is mounted
+onMounted(() => {
+    clearLocalStorageOnce();
+});
 </script>
 
 <template>

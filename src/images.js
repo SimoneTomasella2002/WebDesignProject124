@@ -19,7 +19,7 @@ import Tara7 from "@/assets/images/Illustrazioni/tara/Tara7.svg";
 import Tara8 from "@/assets/images/Illustrazioni/tara/Tara8.svg";
 import Tara9 from "@/assets/images/Illustrazioni/tara/Tara9.svg";
 import Tara10 from "@/assets/images/Illustrazioni/tara/Tara10.svg";
-import Joy1 from "@/assets/images/Illustrazioni/tara/Tara1.svg";
+import Joy1 from "@/assets/images/Illustrazioni/joy/Joy1.svg";
 import Joy2 from "@/assets/images/Illustrazioni/joy/Joy2.svg";
 import Joy3 from "@/assets/images/Illustrazioni/joy/Joy3.svg";
 import Joy4 from "@/assets/images/Illustrazioni/joy/Joy4.svg";
