@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, computed, nextTick, onMounted } from 'vue'
+import { ref, watch, computed, nextTick, onMounted, onUpdated, onBeforeUnmount } from 'vue'
 
 const props = defineProps({
     isMobile: {
@@ -28,34 +28,35 @@ const emit = defineEmits(['update:selected'])
 
 const localSelected = ref(props.selected)
 const spanRef = ref(null)
+const isOverflowing = ref(false)
+let resizeObserver
 
-watch(localSelected, (newValue) => {
-    emit('update:selected', newValue)
-    checkOverflow()
+watch(localSelected, () => {
+    nextTick(checkOverflow)
 })
 
 const emitSelected = () => {
     emit('update:selected', localSelected.value)
-    checkOverflow()
+    nextTick(checkOverflow)
 }
 
 const density = computed(() => props.isMobile ? 'compact' : 'comfortable')
 
 const language = computed(() => props.language.language)
 
-const isOverflowing = ref(false)
-
 const checkOverflow = () => {
-    nextTick(() => {
-        if (spanRef.value) {
-            const spanElement = spanRef.value
-            isOverflowing.value = spanElement.scrollWidth > spanElement.clientWidth
-        }
-    })
+    if (spanRef.value) {
+        const spanElement = spanRef.value
+        isOverflowing.value = spanElement.scrollWidth > spanElement.clientWidth
+    }
 }
 
-// Controlla l'overflow inizialmente quando il componente è montato
+
 onMounted(() => {
+    checkOverflow()
+})
+
+onUpdated(() => {
     checkOverflow()
 })
 </script>
