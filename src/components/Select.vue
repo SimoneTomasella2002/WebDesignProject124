@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, computed, nextTick } from 'vue'
+import { ref, watch, computed, nextTick, onMounted } from 'vue'
 
 const props = defineProps({
     isMobile: {
@@ -54,7 +54,8 @@ const checkOverflow = () => {
     })
 }
 
-watch(localSelected, () => {
+// Controlla l'overflow inizialmente quando il componente è montato
+onMounted(() => {
     checkOverflow()
 })
 </script>
