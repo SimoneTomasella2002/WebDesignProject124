@@ -1,5 +1,4 @@
 <script setup>
-import background from '@/assets/images/pattern/Pattern_1920x1080.png';
 </script>
 
 <template>
@@ -29,13 +28,52 @@ import background from '@/assets/images/pattern/Pattern_1920x1080.png';
         <p>The background-image is fixed. Try to scroll down the page.</p>
         <p>The background-image is fixed. Try to scroll down the page.</p>
         <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
         <p>If you do not see any scrollbars, try to resize the browser window.</p>
     </v-container>
 </template>
-
-<style scoped>
-.container {
-    background-image: url(${background});
-    background-attachment: fixed !important;
-}
-</style>

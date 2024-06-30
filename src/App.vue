@@ -1,6 +1,6 @@
 <script setup>
 import { useDisplay } from 'vuetify'
-import { ref, onMounted } from "vue";
+import { ref, reactive, computed } from "vue";
 
 import Footer from './components/Footer.vue'
 import NavBar from './components/NavBar.vue'
@@ -8,8 +8,8 @@ import afFlag from "@/assets/images/flags/afghanistan-flag.png";
 import itFlag from "@/assets/images/flags/italian-flag.png";
 import nigeriaFlag from "@/assets/images/flags/nigeria-flag.png";
 import southkoreaFlag from "@/assets/images/flags/southkorea-flag.png";
-import backgroundImage from '@/assets/images/pattern/Pattern_1920x1080.png';
-
+import desktopBackgroundImage from '@/assets/images/pattern/Pattern_1920x1080.png';
+import mobileBackgroundImage from '@/assets/images/pattern/Pattern_1080x1920.png';
 
 const { mobile } = useDisplay()
 
@@ -56,6 +56,32 @@ const updateSelectedLanguage = (value) => {
   console.log("Language has been changed to " + value + " From App.vue")
 }
 
+const desktopBackground = reactive({
+  backgroundImage: `url(${desktopBackgroundImage})`,
+  backgroundRepeat: 'no-repeat',
+  backgroundAttachment: 'fixed',
+  backgroundSize: 'cover'
+})
+
+const mobileBackground = reactive({
+  backgroundImage: `url(${mobileBackgroundImage})`,
+  backgroundRepeat: 'no-repeat',
+  backgroundAttachment: 'fixed',
+  backgroundSize: 'cover'
+})
+
+const iphoneBackground = reactive({
+  backgroundImage: `url(${mobileBackgroundImage})`,
+  backgroundRepeat: 'repeat',
+  backgroundSize: 'contain'
+})
+
+// Function to check if the device is an iPhone
+const isIphone = computed(() => {
+  return /iPhone/.test(navigator.userAgent)
+})
+
+console.log("Is iPhone: " + isIphone.value)
 </script>
 
 <template>
@@ -65,7 +91,7 @@ const updateSelectedLanguage = (value) => {
       @update:selected2="updateSelected2" 
       @update:selectedLanguage="updateSelectedLanguage" 
     />
-    <v-main :is-mobile="mobile" :style="{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover' }">
+    <v-main :is-mobile="mobile" :style="!mobile ? desktopBackground : isIphone ? iphoneBackground : mobileBackground">
       <router-view v-slot="{ Component, route }">
         <transition :enter-active-class="route.meta.enterClass" :leave-active-class="route.meta.leaveClass"
           mode="out-in">
