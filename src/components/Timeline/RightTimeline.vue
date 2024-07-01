@@ -13,8 +13,9 @@
                 <v-timeline-item v-for="story in Stories[rightName]" :key="story.index" size="65">
                     <MobileCard :id="story.index"
                         :description="language === 'English' ? story.description_en : story.description"
-                        :image="`/illustrations/${rightName}/${rightName + story.index}.svg`" :show-text="activeId === story.index"
-                        @update:show-text="updateActiveId" class="d-flex justify-center align-center" />
+                        :image-src="`/illustrations/${rightName}/${rightName + story.index}.svg`"
+                        :show-text="activeId === story.index" @update:show-text="updateActiveId"
+                        class="d-flex justify-center align-center" />
                     <template #icon>
                         <span class="my-icon rounded-circle bg-red text-center text-timelineNumbers">
                             {{ story.age }}
@@ -27,9 +28,10 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, ref, watch, onMounted } from 'vue';
 import Stories from '@/assets/json/stories.json';
 import MobileCard from '@/components/MobileCard.vue';
+import { cacheImage } from '@/indexedDBCache';
 
 const props = defineProps({
     selected1: {
@@ -52,8 +54,40 @@ const language = computed(() => props.language.language);
 const activeId = ref(0);
 
 const updateActiveId = (id) => {
-    activeId.value === id ? activeId.value = 0 : activeId.value = id;
+    activeId.value = activeId.value === id ? 0 : id;
 };
+
+const preloadAdjacentImages = (currentIndex) => {
+    const stories = Stories[rightName.value];
+    const preloadIndexes = [currentIndex - 1, currentIndex + 1];
+
+    preloadIndexes.forEach((index) => {
+        if (index >= 0 && index < stories.length) {
+            const src = `/illustrations/${rightName.value}/${rightName.value + stories[index].index}.svg`;
+            cacheImage(src).catch(console.error);
+        }
+    });
+};
+
+watch(activeId, (newId) => {
+    preloadAdjacentImages(newId);
+});
+
+watch(() => props.selected2, () => {
+    activeId.value = 0;
+
+    Stories[rightName.value].forEach((story) => {
+        const src = `/illustrations/${rightName.value}/${rightName.value + story.index}.svg`;
+        cacheImage(src).catch(console.error);
+    });
+});
+
+onMounted(() => {
+    Stories[rightName.value].forEach((story) => {
+        const src = `/illustrations/${rightName.value}/${rightName.value + story.index}.svg`;
+        cacheImage(src).catch(console.error);
+    });
+});
 </script>
 
 <style scoped>

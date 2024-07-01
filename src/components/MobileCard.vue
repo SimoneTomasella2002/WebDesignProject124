@@ -1,13 +1,32 @@
+<template>
+    <div class="card-wrapper">
+        <v-card class="ma-0 pa-0 rounded-xl overflow-hidden bg-primary flip-card"
+            :style="{ height: computedHeight, maxHeight: maxComputedHeight }" :class="{ 'is-flipped': showText }"
+            elevation="5" @click="handleUpdate">
+            <div class="card-front" v-show="!showText">
+                <v-img class="ma-0 pa-0" :src="cachedImage" cover alt="Story Image" width="100%" height="100%"></v-img>
+            </div>
+            <v-card-item class="ma-0 pa-0 rounded-xl">
+                <v-card-text class="card-back" v-show="showText"
+                    :style="{ height: computedHeight, maxHeight: maxComputedHeight, width: '70vw' }">
+                    {{ description }}
+                </v-card-text>
+            </v-card-item>
+        </v-card>
+    </div>
+</template>
+
 <script setup>
-import { computed } from 'vue';
+import { computed, ref, watch, onMounted } from 'vue';
 import { useDisplay } from 'vuetify';
+import { cacheImage } from '@/indexedDBCache';
 
 const { name, width } = useDisplay();
 
 const props = defineProps({
     id: Number,
     description: String,
-    image: String,
+    imageSrc: String,
     showText: Boolean,
 })
 
@@ -40,24 +59,27 @@ const maxComputedHeight = computed(() => {
             return '200px'
     }
 })
+
+const cachedImage = ref(props.imageSrc);
+
+const updateCachedImage = async () => {
+    if (!props.imageSrc) {
+        console.warn('Image source is empty or undefined');
+        return;
+    }
+    try {
+        cachedImage.value = await cacheImage(props.imageSrc);
+    } catch (error) {
+        console.error('Error caching image:', error);
+        cachedImage.value = props.imageSrc;
+    }
+};
+
+onMounted(updateCachedImage);
+
+// Osserva i cambiamenti della prop imageSrc
+watch(() => props.imageSrc, updateCachedImage);
 </script>
-
-<template>
-    <div class="card-wrapper">
-        <v-card class="ma-0 pa-0 rounded-xl overflow-hidden bg-primary flip-card" :style="{ height: computedHeight, maxHeight: maxComputedHeight}" :class="{ 'is-flipped': showText }"
-            elevation="5" @click="handleUpdate">
-            <div class="card-front" v-show="!showText">
-                <v-img class="ma-0 pa-0" :src="image" cover alt="Story Image" width="100%" height="100%"></v-img>
-            </div>
-            <v-card-item class="ma-0 pa-0 rounded-xl">
-                <v-card-text class="card-back" v-show="showText" :style="{height: computedHeight, maxHeight: maxComputedHeight, width: '70vw'}">
-                    {{ description }}
-                </v-card-text>
-            </v-card-item>
-        </v-card>
-    </div>
-</template>
-
 
 <style scoped>
 .card-wrapper {

@@ -21,12 +21,9 @@ const language = computed(() => {
 const updateLanguage = (value) => {
     selectedLanguage.value = value
     emit('update:selectedLanguage', value)
-    console.log("Language has been changed to " + value + " From MobileNavBar.vue")
 }
 
 const drawer = ref(false)
-
-console.log(props.languages)
 </script>
 
 <template>

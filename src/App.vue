@@ -54,7 +54,6 @@ const updateSelected2 = (newValue) => {
 
 const updateSelectedLanguage = (value) => {
   selectedLanguage.value = value
-  console.log("Language has been changed to " + value + " From App.vue")
 }
 
 const desktopBackground = reactive({
@@ -81,8 +80,6 @@ const iphoneBackground = reactive({
 const isIphone = computed(() => {
   return /iPhone/.test(navigator.userAgent)
 })
-
-console.log("Is iPhone: " + isIphone.value)
 </script>
 
 <template>

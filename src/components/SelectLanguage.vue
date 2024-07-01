@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, onUpdated, computed } from 'vue'
+import { ref, watch, computed } from 'vue'
 
 const props = defineProps({
     languages: {
@@ -32,10 +32,6 @@ const emitSelected = (item) => {
     localSelected.value = item
     emit('update:selected', item)
 }
-
-onUpdated(() => {
-    console.log("SelectLanguage - Selected Language: ", localSelected.value)
-})
 </script>
 
 <template>
