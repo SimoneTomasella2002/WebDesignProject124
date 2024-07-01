@@ -56,7 +56,7 @@ const width = computed(() => {
     switch(name.value){
         case 'md': return '170vw'
         case 'lg': return '230vw'
-        case 'xl': return '290vw'
+        case 'xl': return '260vw'
     }
 })
 </script>
