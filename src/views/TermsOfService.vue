@@ -72,17 +72,16 @@ const language = computed(() => {
             <br>
             <a class="terms-of-service-text" href="https://iir.gmu.edu/immigrant-stories-dc-baltimore/korea/summary-of-interview-with-korean-immigrant"> {{ language === 'English' ? "Ji-hoon's story" : "Storia di Ji-hoon" }}</a>
             <br>
-            <a class="terms-of-service-text" href="nytimes.com/2015/08/02/fashion/a-kiss-deferred-by-bosnia-and-herzegovina-civil-war.html?_r=0"> {{ language === 'English' ? "Graphics inspiration" : "Ispirazione grafica" }}</a>
+            <a class="terms-of-service-text" href="nytimes.com/2015/08/02/fashion/a-kiss-deferred-by-bosnia-and-herzegovina-civil-war.html?_r=0"> {{ language === 'English' ? "Graphics inspiration - studio Moth" : "Ispirazione grafica - studio Moth" }}</a>
             <div class="text-subtitle-1">
               {{ language === 'English' ? "Font Used" : "Font Usato" }}
             </div>
             <p class="terms-of-service-text">
               {{ language === 'English' ? "The font used on Behind a Passport is taken from:" : "Il font utilizzato su Behind a Passport è preso da:" }}
             </p>
-            <a class="terms-of-service-text" href="https://fonts.google.com/specimen/Inter">https://fonts.google.com/specimen/Inter</a>
+            <a class="terms-of-service-text" href="https://fonts.google.com/specimen/Inter">Google Fonts - Inter</a>
             <div class="text-subtitle-1">
               {{ language === 'English' ? "Limitation of Liability" : "Limitazione di Responsabilità" }}
-              Limitazione di Responsabilità
             </div>
             <p class="terms-of-service-text">
               {{ language === 'English' 
