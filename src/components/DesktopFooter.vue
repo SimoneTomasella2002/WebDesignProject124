@@ -44,8 +44,8 @@ function openGithubPageInASeparateTab() {
         <v-spacer></v-spacer>
 
         <!-- Team Column -->
-        <v-col cols="12" md="4">
-            <v-card flat class="d-flex flex-column align-center pa-3 bg-primary">
+        <v-col cols="12" md="6">
+            <v-card flat class="d-flex flex-column align-space-evenly pa-3 bg-primary">
                 <h3 class="mb-2">
                     {{ language === 'English' ? 'The team:' : 'La squadra:' }}
                 </h3>
