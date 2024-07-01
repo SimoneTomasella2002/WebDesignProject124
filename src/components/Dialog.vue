@@ -70,7 +70,7 @@ export default {
 </script>
 
 <template>
-    <v-dialog v-model="isDialogActive" max-width="800" transition="dialog-top-transition">
+    <v-dialog v-model="isDialogActive" max-width="900" transition="dialog-top-transition">
         <template v-slot:activator="{ props: activatorProps }">
             <v-btn variant="text" rounded v-bind="activatorProps" height="60">
                 <div class="d-flex flex-column">
