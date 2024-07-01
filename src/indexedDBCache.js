@@ -79,3 +79,33 @@ export const cacheImage = async (url) => {
     throw error;
   }
 };
+
+export const clearImageCache = () => {
+  return new Promise(async (resolve, reject) => {
+    if (!db) {
+      try {
+        await openDB();
+      } catch (error) {
+        reject("Error opening database: " + error);
+        return;
+      }
+    }
+
+    const transaction = db.transaction([STORE_NAME], "readwrite");
+    const store = transaction.objectStore(STORE_NAME);
+    const request = store.clear();
+
+    request.onerror = () => {
+      reject("Error clearing image cache");
+    };
+
+    request.onsuccess = () => {
+      console.log("Image cache cleared successfully");
+      resolve();
+    };
+
+    transaction.oncomplete = () => {
+      console.log("Transaction completed");
+    };
+  });
+};

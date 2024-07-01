@@ -19,7 +19,7 @@
 <script setup>
 import { computed, ref, watch, onMounted } from 'vue';
 import { useDisplay } from 'vuetify';
-import { cacheImage } from '@/indexedDBCache';
+import { cacheImage, clearImageCache } from '@/indexedDBCache';
 
 const { name, width } = useDisplay();
 
@@ -75,7 +75,7 @@ const updateCachedImage = async () => {
     }
 };
 
-onMounted(updateCachedImage);
+onMounted(updateCachedImage, clearImageCache);
 
 // Osserva i cambiamenti della prop imageSrc
 watch(() => props.imageSrc, updateCachedImage);
