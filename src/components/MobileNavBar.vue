@@ -29,7 +29,7 @@ const drawer = ref(false)
 <template>
   <v-app-bar color="primary" class="rounded" role="navigation">
     <v-col align-self="start" cols="3">
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="drawer = !drawer" title="menu"></v-app-bar-nav-icon>
     </v-col>
     <v-col align-self="center" cols="6">
       <v-toolbar-title class="d-flex justify-center align-center">
@@ -42,7 +42,7 @@ const drawer = ref(false)
     </v-col>
   </v-app-bar>
   <v-navigation-drawer v-model="drawer" color="infoBackground" role="complementary" temporary>
-    <v-list>
+    <v-list role="group">
       <v-list-item>
         <v-spacer></v-spacer>
       </v-list-item>
